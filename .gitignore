@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Playwright artifacts
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# Allure reports
+allure-results/
+allure-report/
+
+# K6 artifacts
+*.out
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Misc
+.cache/
+.coverage/
+dist/
+build/

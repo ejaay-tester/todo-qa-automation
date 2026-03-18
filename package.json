@@ -8,5 +8,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "@playwright/test": "^1.58.2",
+    "ajv": "^8.18.0",
+    "ajv-formats": "^3.0.1",
+    "allure-playwright": "^3.6.0"
+  }
 }
