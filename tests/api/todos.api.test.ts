@@ -43,4 +43,32 @@ test.describe("Todo API Tests", () => {
     expect(todoResponse.data).toHaveProperty("_id")
     expect(todoResponse.data.title).toBe("First todo title")
   })
+
+  test.only("Should get all todos", async ({ request }) => {
+    // Login with existing user account
+    const loginResponse = await request.post(
+      "http://localhost:3000/api/auth/login",
+      {
+        data: {
+          email: "testuser1@yopmail.com",
+          password: "TestP@ssword123",
+        },
+      },
+    )
+    const token = (await loginResponse.json()).data.token
+
+    // GET with auth token
+    const response = await request.get("http://localhost:3000/api/todos", {
+      headers: { Authorization: `Bearer ${token}` },
+    })
+
+    expect(response.status()).toBe(200)
+    const responseBody = await response.json()
+
+    const todos = responseBody.data
+    expect(Array.isArray(todos)).toBeTruthy()
+    expect(todos.length).toBeGreaterThan(0)
+
+    console.log(todos)
+  })
 })
