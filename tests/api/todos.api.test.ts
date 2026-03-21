@@ -1,4 +1,5 @@
-import { test, expect } from "@playwright/test"
+// import { test, expect } from "@playwright/test"
+import { test, expect } from "../fixtures/auth.fixture"
 
 test.describe("Todo API Tests", () => {
   // Create a new todo
@@ -48,27 +49,13 @@ test.describe("Todo API Tests", () => {
     expect(todoResponse.data.title).toBe("First todo title")
   })
 
-  test.only("Should get all todos", async ({ request }) => {
-    // Step 1: Login with existing user account
-    // Method: POST
-    // Endpoint: api/auth/login
-    const loginResponse = await request.post(
-      "http://localhost:3000/api/auth/login",
-      {
-        data: {
-          email: "testuser1@yopmail.com",
-          password: "TestP@ssword123",
-        },
-      },
-    )
-    const token = (await loginResponse.json()).data.token
-
-    // Step 2: Fetch all todos with auth token
+  test.only("Should get all todos", async ({ authenticatedRequest }) => {
+    // Fetch all todos with auth token
     // Method: POST
     // Endpoint: api/todos
-    const response = await request.get("http://localhost:3000/api/todos", {
-      headers: { Authorization: `Bearer ${token}` },
-    })
+    const response = await authenticatedRequest.get(
+      "http://localhost:3000/api/todos",
+    )
 
     expect(response.status()).toBe(200)
     const responseBody = await response.json()
