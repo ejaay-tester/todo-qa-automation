@@ -4,6 +4,8 @@ test.describe("Todo API Tests", () => {
   // Create a new todo
   test("Should create a new todo", async ({ request }) => {
     // Step 1: Register a new user
+    // Method: POST
+    // Endpoint: api/auth/register
 
     console.log("Registering user...")
     const registerResponse = await request.post(
@@ -24,6 +26,8 @@ test.describe("Todo API Tests", () => {
     const token = registerData.data.token
 
     // Step 2: Create a new todo with authentication
+    // Method: POST
+    // Endpoint: api/todos
     console.log("Creating todo...")
     const response = await request.post("http://localhost:3000/api/todos", {
       headers: { Authorization: `Bearer ${token}` },
@@ -45,7 +49,9 @@ test.describe("Todo API Tests", () => {
   })
 
   test.only("Should get all todos", async ({ request }) => {
-    // Login with existing user account
+    // Step 1: Login with existing user account
+    // Method: POST
+    // Endpoint: api/auth/login
     const loginResponse = await request.post(
       "http://localhost:3000/api/auth/login",
       {
@@ -57,7 +63,9 @@ test.describe("Todo API Tests", () => {
     )
     const token = (await loginResponse.json()).data.token
 
-    // GET with auth token
+    // Step 2: Fetch all todos with auth token
+    // Method: POST
+    // Endpoint: api/todos
     const response = await request.get("http://localhost:3000/api/todos", {
       headers: { Authorization: `Bearer ${token}` },
     })
