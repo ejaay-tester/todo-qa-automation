@@ -77,40 +77,19 @@ export const test = base.extend<AuthFixture>({
    * THE FIXTURE FUNCTION: {} IS FOR DEPENDENCY FIXTURE
    * 'use' IS THE CALLBACK TO THE TEST
    */
-  authenticatedRequest: async ({}, use) => {
-    // 1. Create a temporary, unauthenticated request context to handle the login
-    const unauthenticatedRequest = await request.newContext()
-
-    // 2. Send a POST request to the login endpoint with hardcoded credentials
-    const loginResponse = await unauthenticatedRequest.post(
-      "http://localhost:3000/api/auth/login",
-      {
-        data: {
-          email: "testuser1@yopmail.com",
-          password: "TestP@ssword123",
-        },
-      },
-    )
-
-    // 3. Parse the JSON response body to extract the data object
-    const { data } = await loginResponse.json()
-
-    // 4. Extract the JWT token from the nested data property
-    const token = data.token
-
-    // 5. Create a NEW request context that ALWAYS includes this token
+  authenticatedRequest: async ({ registeredUser }, use) => {
+    // Create a NEW request context that ALWAYS includes this token
     const authenticatedRequestContext = await request.newContext({
-      // 6. Automatically inject the Bearer token into every request made via this context
       extraHTTPHeaders: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${registeredUser.token}`,
       },
     })
 
-    // 7. 'use' acts like a bridge; it passes the 'authenticatedRequestContext' into the test block
+    // 'use' acts like a bridge; it passes the 'authenticatedRequestContext' into the test block
     // The test runs while this line is 'hanging'
     await use(authenticatedRequestContext)
 
-    // 8. After the test finishes (Pass or Fail), close the context to free up memory
+    // After the test finishes (Pass or Fail), close the context to free up memory
     await authenticatedRequestContext.dispose()
   },
 })
