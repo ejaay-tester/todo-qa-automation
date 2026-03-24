@@ -1,11 +1,6 @@
 // Import Playwright's base test engine
 //  and the request utility for API calls
-import {
-  test as base,
-  expect,
-  request,
-  APIRequestContext,
-} from "@playwright/test"
+import { test as base, request, APIRequestContext } from "@playwright/test"
 
 // Define the type/shape of auth fixture
 // so TS knows what authenticatedRequest is
@@ -48,9 +43,10 @@ export const test = base.extend<AuthFixture>({
         data: registerPayload,
       },
     )
-
+    if (registerResponse.status() !== 201) {
+      throw new Error(`Registration failed: ${registerResponse.status()}`)
+    }
     console.log("Register Status:", registerResponse.status())
-    expect(registerResponse.status()).toBe(201)
 
     const registerBody = await registerResponse.json()
     console.log("Register Data:", registerBody)
