@@ -9,7 +9,6 @@ type AuthFixture = {
     id: string
     email: string
     password: string
-    token: string
   }
 
   authenticatedRequest: APIRequestContext
@@ -19,12 +18,11 @@ type AuthFixture = {
 export const test = base.extend<AuthFixture>({
   /**
    * FIXTURE 1: USER REGISTRATION
-   * HANDLES USER REGISTRATION
-   * CREATES A FRESH USER EVERY TIME
+   * - Handles user registration
+   * - Creates a fresh user every time
+   * - DOES NOT return token
    */
-  registeredUser: async ({}, use) => {
-    const unauthenticatedRequest = await request.newContext()
-
+  registeredUser: async ({ request }, use) => {
     const generateUser = (ts = Date.now()) => ({
       email: `testuser_${ts}@yopmail.com`,
       password: "TestP@ssword123",
@@ -36,15 +34,14 @@ export const test = base.extend<AuthFixture>({
 
     console.log("Registering user...")
 
-    const registerResponse = await unauthenticatedRequest.post(
-      "/api/auth/register",
-      {
-        data: userData,
-      },
-    )
-    if (registerResponse.status() !== 201) {
+    const registerResponse = await request.post("/api/auth/register", {
+      data: userData,
+    })
+
+    if (!registerResponse.ok()) {
       throw new Error(`Registration failed: ${registerResponse.status()}`)
     }
+
     console.log("Register Status:", registerResponse.status())
 
     // Get the data once
@@ -53,41 +50,49 @@ export const test = base.extend<AuthFixture>({
     // Log the actual data
     console.log("Register Data:", responseBody)
 
-    // Destructure the id and token from the data object
-    const {
-      data: { _id: id, email, token },
-    } = responseBody
-
-    if (!token) {
-      throw new Error("No token returned on registration!")
-    }
+    const id = responseBody.data.user.id || responseBody.data.user._id
 
     // Use the properties from the created userData object
     // MUST match the Type/Shape above exactly
     await use({
       id,
-      email,
+      email: userData.email,
       password: userData.password,
-      token,
     })
-
-    // Optional: Add logic here to delete the user after the test if your API supports it
-    await unauthenticatedRequest.dispose()
   },
 
   // ==========  ==========
 
   /**
-   * FIXTURE 2: USER LOGIN
-   * HANDLES USER LOGIN
-   * THE FIXTURE FUNCTION: {} IS FOR DEPENDENCY FIXTURE
-   * 'use' IS THE CALLBACK TO THE TEST
+   * FIXTURE 2: AUTHENTICATED REQUEST
+   * - Logs in using registeredUser
+   * - Injects token into request context
    */
-  authenticatedRequest: async ({ registeredUser }, use) => {
-    // Create a NEW request context that ALWAYS includes this token
+  authenticatedRequest: async ({ registeredUser, request: apiClient }, use) => {
+    console.log("Loggin in user...")
+
+    const loginResponse = await apiClient.post("/api/auth/login", {
+      data: {
+        email: registeredUser.email,
+        password: registeredUser.password,
+      },
+    })
+
+    if (!loginResponse.ok()) {
+      throw new Error(`Login failed: ${loginResponse.status()}`)
+    }
+
+    const loginBody = await loginResponse.json()
+
+    const token = loginBody?.data?.token
+
+    if (!token) {
+      throw new Error("No token returned from login!")
+    }
+
     const authenticatedRequestContext = await request.newContext({
       extraHTTPHeaders: {
-        Authorization: `Bearer ${registeredUser.token}`,
+        Authorization: `Bearer ${token}`,
       },
     })
 
