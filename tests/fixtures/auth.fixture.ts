@@ -23,7 +23,7 @@ export const test = base.extend<AuthFixture>({
    * CREATES A FRESH USER EVERY TIME
    */
   registeredUser: async ({}, use) => {
-    const apiContext = await request.newContext()
+    const unauthenticatedRequest = await request.newContext()
 
     const uniqueName = `testuser_${Date.now()}`
     const uniqueEmail = `${uniqueName}@yopmail.com` // Unique timestamped email
@@ -37,7 +37,7 @@ export const test = base.extend<AuthFixture>({
 
     console.log("Registering user...")
 
-    const registerResponse = await apiContext.post(
+    const registerResponse = await unauthenticatedRequest.post(
       "http://localhost:3000/api/auth/register",
       {
         data: registerPayload,
@@ -48,10 +48,10 @@ export const test = base.extend<AuthFixture>({
     }
     console.log("Register Status:", registerResponse.status())
 
-    const registerBody = await registerResponse.json()
-    console.log("Register Data:", registerBody)
+    const registerResponseBody = await registerResponse.json()
+    console.log("Register Data:", registerResponseBody)
 
-    const token = registerBody.data.token
+    const token = registerResponseBody.data.token
 
     if (!token) {
       throw new Error("No token returned on registration!")
@@ -59,14 +59,14 @@ export const test = base.extend<AuthFixture>({
 
     // Pass the USER details to the test - MUST match the Type/Shape above exactly
     await use({
-      id: registerBody.data._id,
+      id: registerResponseBody.data._id,
       email: uniqueEmail,
       password: password,
       token: token,
     })
 
     // Optional: Add logic here to delete the user after the test if your API supports it
-    await apiContext.dispose()
+    await unauthenticatedRequest.dispose()
   },
 
   // ==========  ==========
@@ -79,10 +79,10 @@ export const test = base.extend<AuthFixture>({
    */
   authenticatedRequest: async ({}, use) => {
     // 1. Create a temporary, unauthenticated request context to handle the login
-    const loginContext = await request.newContext()
+    const unauthenticatedRequest = await request.newContext()
 
     // 2. Send a POST request to the login endpoint with hardcoded credentials
-    const loginResponse = await loginContext.post(
+    const loginResponse = await unauthenticatedRequest.post(
       "http://localhost:3000/api/auth/login",
       {
         data: {
@@ -99,19 +99,19 @@ export const test = base.extend<AuthFixture>({
     const token = data.token
 
     // 5. Create a NEW request context that ALWAYS includes this token
-    const authContext = await request.newContext({
+    const authenticatedRequestContext = await request.newContext({
       // 6. Automatically inject the Bearer token into every request made via this context
       extraHTTPHeaders: {
         Authorization: `Bearer ${token}`,
       },
     })
 
-    // 7. 'use' acts like a bridge; it passes the 'authContext' into the test block
+    // 7. 'use' acts like a bridge; it passes the 'authenticatedRequestContext' into the test block
     // The test runs while this line is 'hanging'
-    await use(authContext)
+    await use(authenticatedRequestContext)
 
     // 8. After the test finishes (Pass or Fail), close the context to free up memory
-    await authContext.dispose()
+    await authenticatedRequestContext.dispose()
   },
 })
 
