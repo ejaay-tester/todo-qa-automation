@@ -25,22 +25,21 @@ export const test = base.extend<AuthFixture>({
   registeredUser: async ({}, use) => {
     const unauthenticatedRequest = await request.newContext()
 
-    const uniqueName = `testuser_${Date.now()}`
-    const uniqueEmail = `${uniqueName}@yopmail.com` // Unique timestamped email
-    const password = `TestP@ssw0rd123`
+    const generateUser = (ts = Date.now()) => ({
+      email: `testuser_${ts}@yopmail.com`,
+      password: "TestP@ssword123",
+      name: `testuser_${ts}`,
+    })
 
-    const registerPayload = {
-      email: uniqueEmail,
-      password: password,
-      name: uniqueName,
-    }
+    // Call the function to get the actual user object
+    const userData = generateUser()
 
     console.log("Registering user...")
 
     const registerResponse = await unauthenticatedRequest.post(
       "/api/auth/register",
       {
-        data: registerPayload,
+        data: userData,
       },
     )
     if (registerResponse.status() !== 201) {
@@ -48,21 +47,28 @@ export const test = base.extend<AuthFixture>({
     }
     console.log("Register Status:", registerResponse.status())
 
-    const registerResponseBody = await registerResponse.json()
-    console.log("Register Data:", registerResponseBody)
+    // Get the data once
+    const responseBody = await registerResponse.json()
 
-    const token = registerResponseBody.data.token
+    // Log the actual data
+    console.log("Register Data:", responseBody)
+
+    // Destructure the id and token from the data object
+    const {
+      data: { _id: id, email, token },
+    } = responseBody
 
     if (!token) {
       throw new Error("No token returned on registration!")
     }
 
-    // Pass the USER details to the test - MUST match the Type/Shape above exactly
+    // Use the properties from the created userData object
+    // MUST match the Type/Shape above exactly
     await use({
-      id: registerResponseBody.data._id,
-      email: uniqueEmail,
-      password: password,
-      token: token,
+      id,
+      email,
+      password: userData.password,
+      token,
     })
 
     // Optional: Add logic here to delete the user after the test if your API supports it
