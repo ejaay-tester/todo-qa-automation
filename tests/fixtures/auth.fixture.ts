@@ -38,7 +38,7 @@ export const test = base.extend<AuthFixture>({
     console.log("Registering user...")
 
     const registerResponse = await unauthenticatedRequest.post(
-      "http://localhost:3000/api/auth/register",
+      "/api/auth/register",
       {
         data: registerPayload,
       },
