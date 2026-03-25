@@ -1,13 +1,14 @@
 // import { test, expect } from "@playwright/test"
 import { test, expect } from "../fixtures/auth.fixture"
 
-test.describe("Todo API Tests", () => {
+test.describe("Todos API - CRUD", () => {
   /**
    * CREATE TODO
-   * Method: POST
-   * Endpoint: /api/todos
+   * - Method: POST | Endpoint: /api/todos
+   * - Test Type: Happy Path
+   * - Assertions: 201, response contains _id, data matches payload
    */
-  test.only("Should create a new todo", async ({ authenticatedRequest }) => {
+  test("Should create a new todo", async ({ authenticatedRequest }) => {
     console.log("Creating new todo...")
     const createTodoResponse = await authenticatedRequest.post("/api/todos", {
       data: {
@@ -27,10 +28,33 @@ test.describe("Todo API Tests", () => {
     expect(createTodoBody.data.title).toBe("First todo title")
   })
 
-  test("Should get all todos", async ({ authenticatedRequest }) => {
-    // Fetch all todos with auth token
-    // Method: POST
-    // Endpoint: api/todos
+  /**
+   * CREATE TODO
+   * - Method: POST | Endpoint: /api/todos
+   * - Test Type: Negative - Validation Cases
+   * - Expect: 400, validation error message
+   */
+  test("Should fail when title is missing", async ({
+    authenticatedRequest,
+  }) => {})
+
+  test("Should fail with empty payload", async ({ authenticatedRequest }) => {})
+
+  /**
+   * CREATE TODO
+   * - Method: POST | Endpoint: /api/todos
+   * - Test Type: Negative - Auth Cases
+   * - Expect: 401 Unauthorized
+   */
+  test("Should fail without token", async ({ request }) => {})
+
+  /**
+   * FETCH ALL TODOS
+   * - Method: GET | Endpoint: /api/todos
+   * - Test Type: Happy Path
+   * - Assertions: 200, array response, only user's todos
+   */
+  test("Should return all todos for user", async ({ authenticatedRequest }) => {
     const response = await authenticatedRequest.get("/api/todos")
 
     expect(response.status()).toBe(200)
@@ -42,4 +66,61 @@ test.describe("Todo API Tests", () => {
 
     console.log(todos)
   })
+
+  /**
+   * FETCH SINGLE TODO
+   * - Method: GET | Endpoint: /api/todos/:id
+   * - Test Type: Happy Path
+   * - Flow: Create todo -> Fetch by ID -> Validate data
+   */
+  test("Should get a todo by ID", async () => {})
+
+  /**
+   * FETCH SINGLE TODO
+   * - Method: GET | Endpoint: /api/todos/:id
+   * - Test Type: Negative
+   * - Expect: 404
+   */
+  test("Should return 404 for non-existing todo", async () => {})
+
+  /**
+   * UPDATE TODO
+   * - Method: PUT/PATCH | Endpoint: /api/todos/:id
+   * - Test Type: Happy Path
+   * - Flow: Create todo -> Update it -> Validate updated fields
+   */
+  test("Should update a todo", async () => {})
+
+  /**
+   * UPDATE TODO
+   * - Method: PUT/PATCH | Endpoint: /api/todos/:id
+   * - Test Type: Negative
+   * - Expect: 404
+   */
+  test("Should fail updating non-existing todo", async () => {})
+
+  /**
+   * UPDATE TODO
+   * - Method: PUT/PATCH | Endpoint: /api/todos/:id
+   * - Test Type: Negative
+   * - Expect: 403 Forbidden
+   */
+  test("Should not allow updating another user's todo", async () => {})
+
+  /**
+   * DELETE TODO
+   * - Method: DELETE | Endpoint: /api/todos/:id
+   * - Test Type: Happy Path
+   * - Flow: Create todo -> Delete it -> Verify deletion (GET -> 404)
+   */
+  test("Should delete a todo", async () => {})
+
+  /**
+   * DELETE TODO
+   * - Method: DELETE | Endpoint: /api/todos/:id
+   * - Test Type: Negative
+   * - Expect: 404 and 403
+   */
+  test("Should fail deleting non-existing todo", async () => {})
+  test("Should not delete another user's todo", async () => {})
 })
