@@ -69,7 +69,7 @@ export const test = base.extend<AuthFixture>({
    * - Injects token into request context
    */
   authenticatedRequest: async ({ registeredUser, request: apiClient }, use) => {
-    console.log("Loggin in user...")
+    console.log("User logging in...")
 
     const loginResponse = await apiClient.post("/api/auth/login", {
       data: {
@@ -78,13 +78,19 @@ export const test = base.extend<AuthFixture>({
       },
     })
 
+    console.log("Verifying user credentials... ")
+
     if (!loginResponse.ok()) {
       throw new Error(`Login failed: ${loginResponse.status()}`)
     }
 
     const loginBody = await loginResponse.json()
 
-    const token = loginBody?.data?.token
+    const userMetadata = loginBody.data.user
+
+    console.log(`Successful login: `, userMetadata)
+
+    const token = loginBody.data.token
 
     if (!token) {
       throw new Error("No token returned from login!")
