@@ -3,6 +3,11 @@ import { test, expect } from "../fixtures/auth.fixture"
 
 test.describe("Todos API - CRUD", () => {
   /**
+   * IDEAL TEST FLOW PATTERN
+   * Every test should follow: Arrange -> Act -> Assert
+   */
+
+  /**
    * CREATE TODO
    * - Method: POST | Endpoint: /api/todos
    * - Test Type: Happy Path
@@ -123,4 +128,19 @@ test.describe("Todos API - CRUD", () => {
    */
   test("Should fail deleting non-existing todo", async () => {})
   test("Should not delete another user's todo", async () => {})
+
+  /**
+   * Test Type: Cross-User Security Test | Data Isolation
+   * Flow: Create User A -> Create Todo | Create User B -> Fetch Todos
+   * Assert: User B does NOT see User A data
+   */
+  test("User A should NOT see User B todos", async () => {})
+
+  /**
+   * Test Type: Edge Cases
+   * Large Input, Special Characters, Boolean Logic
+   */
+  test("Should handle very long title", async () => {})
+  test("Should accept special characters", async () => {})
+  test("Should toggle completed status", async () => {})
 })
