@@ -1,5 +1,5 @@
-// import { test, expect } from "@playwright/test"
 import { test, expect } from "../fixtures/auth.fixture"
+import { Todo, CreateTodoPayload } from "../../types/todo.type"
 
 test.describe("Todos API - CRUD", () => {
   /**
@@ -59,17 +59,83 @@ test.describe("Todos API - CRUD", () => {
    * - Test Type: Happy Path
    * - Assertions: 200, array response, only user's todos
    */
-  test("Should return all todos for user", async ({ authenticatedRequest }) => {
+  test.only("Should return all todos for user", async ({
+    authenticatedRequest,
+  }) => {
+    // ===== ARRANGE =====
+    console.log("Creating new todo...")
+
+    const todoPayloads: CreateTodoPayload[] = [
+      {
+        title: "Register new user",
+        description: "register new user description",
+        completed: false,
+      },
+      {
+        title: "Login new user",
+        description: "login new user description",
+        completed: false,
+      },
+      {
+        title: "Create new todos for the user",
+        completed: false,
+      },
+      {
+        title: "Fetch all todos of the user",
+        completed: false,
+      },
+    ]
+
+    const createdTodos: Todo[] = []
+
+    for (const payload of todoPayloads) {
+      const response = await authenticatedRequest.post("/api/todos", {
+        data: payload,
+      })
+
+      expect(response.status()).toBe(201)
+
+      const createdTodo: Todo = (await response.json()).data
+      createdTodos.push(createdTodo)
+
+      console.log(`Created todo: ${createdTodo.title} (${createdTodo._id})`)
+    }
+
+    // ===== ACT =====
     const response = await authenticatedRequest.get("/api/todos")
-
     expect(response.status()).toBe(200)
-    const responseBody = await response.json()
 
-    const todos = responseBody.data
-    expect(Array.isArray(todos)).toBeTruthy()
-    expect(todos.length).toBeGreaterThan(0)
+    const fetchedTodos: Todo[] = (await response.json()).data
 
-    console.log(todos)
+    // ===== ASSERT =====
+    // Validate Structure
+    expect(Array.isArray(fetchedTodos)).toBeTruthy()
+    expect(fetchedTodos.length).toBeGreaterThan(0)
+
+    // Precompute IDs (clean + efficient)
+    const createdTodoIds = createdTodos.map((todo) => todo._id)
+    const fetchedTodoIds = fetchedTodos.map((todo) => todo._id)
+
+    // Validate existence
+    createdTodoIds.forEach((id) => {
+      expect(fetchedTodoIds).toContain(id)
+    })
+
+    // Validate data integrity
+    createdTodos.forEach((created) => {
+      const match = fetchedTodos.find((todo) => todo._id === created._id)
+
+      expect(match).toBeTruthy()
+      expect(match?.title).toBe(created.title)
+    })
+
+    // Validate ownership
+    const userId = createdTodos[0].userId
+    fetchedTodos.forEach((todo) => {
+      expect(todo.userId).toBe(userId)
+    })
+
+    console.log(`Fetched ${fetchedTodos.length} todos`)
   })
 
   /**
