@@ -167,35 +167,49 @@ test.describe("Todos API - CRUD", () => {
     const createdTodos: Todo[] = []
 
     for (const payload of payloads) {
-      const response = await authenticatedRequest.post("api/todos", {
+      const response = await authenticatedRequest.post("/api/todos", {
         data: payload,
       })
 
       expect(response.status()).toBe(201)
 
-      const createdTodo: Todo = (await response.json()).data
+      const body = await response.json()
+
+      expect(body).toHaveProperty("data")
+      expect(body.data._id).toBeDefined()
+
+      const createdTodo: Todo = body.data
       createdTodos.push(createdTodo)
 
       console.log(`Created todo: ${createdTodo.title} (${createdTodo._id})`)
     }
 
-    const targetTodo = createdTodos[0]
+    expect(createdTodos.length).toBeGreaterThanOrEqual(3)
+
+    const targetTodo = createdTodos[2]
+    const targetTodoId = targetTodo._id
 
     // ===== ACT =====
     const response = await authenticatedRequest.get(
-      `/api/todos/${targetTodo._id}`,
+      `/api/todos/${targetTodoId}`,
     )
     expect(response.status()).toBe(200)
 
-    const fetchedTodo: Todo = (await response.json()).data
+    const body = await response.json()
+    expect(body).toHaveProperty("data")
+    expect(body.data._id).toBeDefined()
+
+    const fetchedTodo: Todo = body.data
 
     // ===== ASSERT =====
-    expect(fetchedTodo._id).toBe(targetTodo._id)
+    expect(fetchedTodo._id).toBe(targetTodoId)
     expect(fetchedTodo.title).toBe(targetTodo.title)
-    expect(fetchedTodo.description).toBe(fetchedTodo.description)
-    expect(fetchedTodo.userId).toBe(fetchedTodo.userId)
+    expect(fetchedTodo.description).toBe(targetTodo.description)
+    expect(fetchedTodo.userId).toBe(targetTodo.userId)
 
-    console.log(`Fetched todo: ${fetchedTodo.title}`)
+    console.log(
+      `Fetched Todo ID: ${fetchedTodo._id} | Expected Todo ID: ${targetTodoId}`,
+    )
   })
 
   /**
