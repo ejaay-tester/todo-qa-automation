@@ -59,9 +59,7 @@ test.describe("Todos API - CRUD", () => {
    * - Test Type: Happy Path
    * - Assertions: 200, array response, only user's todos
    */
-  test.only("Should return all todos for user", async ({
-    authenticatedRequest,
-  }) => {
+  test("Should return all todos for user", async ({ authenticatedRequest }) => {
     // ===== ARRANGE =====
     console.log("Creating new todo...")
 
@@ -144,7 +142,61 @@ test.describe("Todos API - CRUD", () => {
    * - Test Type: Happy Path
    * - Flow: Create todo -> Fetch by ID -> Validate data
    */
-  test("Should get a todo by ID", async () => {})
+  test.only("Should get a todo by ID", async ({ authenticatedRequest }) => {
+    // ===== ARRANGE =====
+    console.log("Creating new todo")
+
+    const payloads: CreateTodoPayload[] = [
+      {
+        title: "First todo title",
+        description: "First todo description",
+        completed: false,
+      },
+      {
+        title: "Second todo title",
+        description: "Second todo description",
+        completed: false,
+      },
+      {
+        title: "Third todo title",
+        description: "Third todo description",
+        completed: false,
+      },
+    ]
+
+    const createdTodos: Todo[] = []
+
+    for (const payload of payloads) {
+      const response = await authenticatedRequest.post("api/todos", {
+        data: payload,
+      })
+
+      expect(response.status()).toBe(201)
+
+      const createdTodo: Todo = (await response.json()).data
+      createdTodos.push(createdTodo)
+
+      console.log(`Created todo: ${createdTodo.title} (${createdTodo._id})`)
+    }
+
+    const targetTodo = createdTodos[0]
+
+    // ===== ACT =====
+    const response = await authenticatedRequest.get(
+      `/api/todos/${targetTodo._id}`,
+    )
+    expect(response.status()).toBe(200)
+
+    const fetchedTodo: Todo = (await response.json()).data
+
+    // ===== ASSERT =====
+    expect(fetchedTodo._id).toBe(targetTodo._id)
+    expect(fetchedTodo.title).toBe(targetTodo.title)
+    expect(fetchedTodo.description).toBe(fetchedTodo.description)
+    expect(fetchedTodo.userId).toBe(fetchedTodo.userId)
+
+    console.log(`Fetched todo: ${fetchedTodo.title}`)
+  })
 
   /**
    * FETCH SINGLE TODO
