@@ -1,4 +1,4 @@
-import { test, expect } from "../fixtures/auth.fixture"
+import { test, expect } from "../../fixtures/auth.fixture"
 import { Todo, CreateTodoPayload } from "../../types/todo.type"
 
 test.describe("Todos API - CRUD", () => {
