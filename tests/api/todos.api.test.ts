@@ -1,5 +1,6 @@
 import { test, expect } from "../../fixtures/auth.fixture"
 import { Todo, CreateTodoPayload } from "../../types/todo.type"
+import { generateUniqueString } from "../../utils/data.util"
 
 test.describe("Todos API - CRUD", () => {
   /**
@@ -59,27 +60,29 @@ test.describe("Todos API - CRUD", () => {
    * - Test Type: Happy Path
    * - Assertions: 200, array response, only user's todos
    */
-  test("Should return all todos for user", async ({ authenticatedRequest }) => {
+  test.only("Should return all todos for user", async ({
+    authenticatedRequest,
+  }) => {
     // ===== ARRANGE =====
     console.log("Creating new todo...")
 
     const todoPayloads: CreateTodoPayload[] = [
       {
-        title: "Register new user",
-        description: "register new user description",
+        title: generateUniqueString("todo"),
+        description: generateUniqueString("desc"),
         completed: false,
       },
       {
-        title: "Login new user",
-        description: "login new user description",
+        title: generateUniqueString("todo"),
+        description: generateUniqueString("desc"),
         completed: false,
       },
       {
-        title: "Create new todos for the user",
+        title: generateUniqueString("todo"),
         completed: false,
       },
       {
-        title: "Fetch all todos of the user",
+        title: generateUniqueString("todo"),
         completed: false,
       },
     ]
@@ -96,7 +99,9 @@ test.describe("Todos API - CRUD", () => {
       const createdTodo: Todo = (await response.json()).data
       createdTodos.push(createdTodo)
 
-      console.log(`Created todo: ${createdTodo.title} (${createdTodo._id})`)
+      console.log(
+        `Created todo: ${createdTodo.title} | ${createdTodo.description} | (${createdTodo._id}) `,
+      )
     }
 
     // ===== ACT =====
@@ -142,7 +147,7 @@ test.describe("Todos API - CRUD", () => {
    * - Test Type: Happy Path
    * - Flow: Create todo -> Fetch by ID -> Validate data
    */
-  test.only("Should get a todo by ID", async ({ authenticatedRequest }) => {
+  test("Should get a todo by ID", async ({ authenticatedRequest }) => {
     // ===== ARRANGE =====
     console.log("Creating new todo")
 
