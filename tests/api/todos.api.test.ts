@@ -140,29 +140,21 @@ test.describe("Todos API - CRUD", () => {
     // ===== ARRANGE =====
     console.log("Creating new todo")
 
-    const payloads: CreateTodoPayload[] = [
-      {
-        title: "First todo title",
-        description: "First todo description",
+    const todoPayloads: CreateTodoPayload[] = []
+
+    for (let i = 1; i <= 3; i++) {
+      todoPayloads.push({
+        title: generateUniqueString(`todo-${i}`),
+        description: generateUniqueString(`todo-${i}`),
         completed: false,
-      },
-      {
-        title: "Second todo title",
-        description: "Second todo description",
-        completed: false,
-      },
-      {
-        title: "Third todo title",
-        description: "Third todo description",
-        completed: false,
-      },
-    ]
+      })
+    }
 
     const createdTodos: Todo[] = []
 
-    for (const payload of payloads) {
+    for (const todo of todoPayloads) {
       const response = await authenticatedRequest.post("/api/todos", {
-        data: payload,
+        data: todo,
       })
 
       expect(response.status()).toBe(201)
