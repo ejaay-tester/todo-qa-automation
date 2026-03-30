@@ -125,9 +125,9 @@ test.describe("Todos API - CRUD", () => {
     })
 
     // Validate ownership
-    const userId = createdTodos[0].userId
+    // const userId = createdTodos[0].userId
     fetchedTodos.forEach((todo) => {
-      expect(todo.userId).toBe(userId)
+      expect(createdTodoIds).toBe(todo._id)
     })
 
     console.log(`Fetched ${fetchedTodos.length} todos`)
