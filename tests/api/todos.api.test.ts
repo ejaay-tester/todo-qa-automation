@@ -60,9 +60,7 @@ test.describe("Todos API - CRUD", () => {
    * - Test Type: Happy Path
    * - Assertions: 200, array response, only user's todos
    */
-  test.only("Should return all todos for user", async ({
-    authenticatedRequest,
-  }) => {
+  test("Should return all todos for user", async ({ authenticatedRequest }) => {
     // ===== ARRANGE =====
     console.log("Creating new todo...")
 
@@ -97,9 +95,14 @@ test.describe("Todos API - CRUD", () => {
     const response = await authenticatedRequest.get("/api/todos")
     expect(response.status()).toBe(200)
 
-    const fetchedTodos: Todo[] = (await response.json()).data
+    const body = await response.json()
+    expect(body).toHaveProperty("data")
+    expect(body.data._id).toBeDefined()
+
+    const fetchedTodos: Todo[] = body.data
 
     // ===== ASSERT =====
+
     // Validate Structure
     expect(Array.isArray(fetchedTodos)).toBeTruthy()
     expect(fetchedTodos.length).toBeGreaterThan(0)
@@ -145,7 +148,7 @@ test.describe("Todos API - CRUD", () => {
     for (let i = 1; i <= 3; i++) {
       todoPayloads.push({
         title: generateUniqueString(`todo-${i}`),
-        description: generateUniqueString(`todo-${i}`),
+        description: generateUniqueString(`desc-${i}`),
         completed: false,
       })
     }
