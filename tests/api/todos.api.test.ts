@@ -66,32 +66,21 @@ test.describe("Todos API - CRUD", () => {
     // ===== ARRANGE =====
     console.log("Creating new todo...")
 
-    const todoPayloads: CreateTodoPayload[] = [
-      {
-        title: generateUniqueString("todo"),
-        description: generateUniqueString("desc"),
+    const todoPayloads: CreateTodoPayload[] = []
+
+    for (let i = 1; i <= 3; i++) {
+      todoPayloads.push({
+        title: generateUniqueString(`todo-${i}`),
+        description: generateUniqueString(`desc-${i}`),
         completed: false,
-      },
-      {
-        title: generateUniqueString("todo"),
-        description: generateUniqueString("desc"),
-        completed: false,
-      },
-      {
-        title: generateUniqueString("todo"),
-        completed: false,
-      },
-      {
-        title: generateUniqueString("todo"),
-        completed: false,
-      },
-    ]
+      })
+    }
 
     const createdTodos: Todo[] = []
 
-    for (const payload of todoPayloads) {
+    for (const todo of todoPayloads) {
       const response = await authenticatedRequest.post("/api/todos", {
-        data: payload,
+        data: todo,
       })
 
       expect(response.status()).toBe(201)
