@@ -63,11 +63,15 @@ test.describe("Todos API - CRUD", () => {
   test.only("Should return all todos for user", async ({
     authenticatedRequest,
   }) => {
-    // ===== ARRANGE =====
+    /**
+     * ARRANGE
+     * Setup the test data and environment
+     */
     console.log("Creating new todo...")
 
     const todoPayloads: CreateTodoPayload[] = []
 
+    // 1. Generate 3 unique tasks to be used as our 'test batch'
     for (let i = 1; i <= 3; i++) {
       todoPayloads.push({
         title: generateUniqueString(`todo-${i}`),
@@ -78,11 +82,13 @@ test.describe("Todos API - CRUD", () => {
 
     const createdTodos: Todo[] = []
 
+    // 2. Submit the generated tasks to the database via API and save the responses
     for (const todo of todoPayloads) {
       const response = await authenticatedRequest.post("/api/todos", {
         data: todo,
       })
 
+      // Ensure each task was successfully created (HTTP Status 201)
       expect(response.status()).toBe(201)
 
       const createdTodo: Todo = (await response.json()).data
@@ -93,34 +99,51 @@ test.describe("Todos API - CRUD", () => {
       )
     }
 
-    // ===== ACT =====
+    /**
+     * ACT
+     * Execute the actual system behavior being tested
+     */
+
+    // 3. Request the full list of tasks from the database for this user
     const response = await authenticatedRequest.get("/api/todos")
+
+    // Ensure the request was successful (HTTP Status 200)
     expect(response.status()).toBe(200)
 
     const body = await response.json()
+
+    // Ensure the response body contains the expected data field
     expect(body).toHaveProperty("data")
 
     const fetchedTodos: Todo[] = body.data
 
-    // ===== ASSERT =====
+    /**
+     * ASSERT
+     * Verify the results are correct (The Quality Check)
+     */
 
-    // Structure Check
+    // 4. Structure Check
+    // Verify we received a list/array and the count is correct
     expect(Array.isArray(fetchedTodos)).toBeTruthy()
-    expect(fetchedTodos.length).toBe(createdTodos.length) // Ensures an exact 1:1 match count
+    expect(fetchedTodos.length).toBe(createdTodos.length) // Ensures no missing or extra tasks
 
-    // Validate Data Integrity & Existence
+    // 5. Data Integrity & Existence
+    // "Is the data we fetch is identical to what we sent?"
     createdTodos.forEach((created) => {
+      // Find the specific task in the retrieved/fetched list using its ID
       const match = fetchedTodos.find((fetched) => fetched._id === created._id)
 
-      expect(match).toBeDefined() // Better than truthy for objects
+      expect(match).toBeDefined() // Verify the tasks exists in the results
       expect(match).toMatchObject({
+        // Verify Title, Description, and Status match exactly
         title: created.title,
         description: created.description,
         completed: created.completed,
       })
     })
 
-    // Ownership Check (Ensures no extra data leaked in)
+    // 6. Ownership Check (Ensures no extra data leaked in)
+    // Verify that the fetched tasks list contains only the items we just created
     const createdTodoIds = createdTodos.map((created) => created._id)
     fetchedTodos.forEach((fetched) => {
       expect(createdTodoIds).toContain(fetched._id)
