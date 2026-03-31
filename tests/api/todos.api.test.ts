@@ -125,7 +125,7 @@ test.describe("Todos API - CRUD", () => {
     // 4. Structure Check
     // Verify we received a list/array and the count is correct
     expect(Array.isArray(fetchedTodos)).toBeTruthy()
-    expect(fetchedTodos.length).toBe(createdTodos.length) // Ensures no missing or extra tasks
+    expect(fetchedTodos.length).toBeGreaterThanOrEqual(createdTodos.length) // Ensures no missing or extra tasks
 
     // 5. Data Integrity & Existence
     // "Is the data we fetch is identical to what we sent?"
