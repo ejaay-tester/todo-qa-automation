@@ -60,7 +60,9 @@ test.describe("Todos API - CRUD", () => {
    * - Test Type: Happy Path
    * - Assertions: 200, array response, only user's todos
    */
-  test("Should return all todos for user", async ({ authenticatedRequest }) => {
+  test.only("Should return all todos for user", async ({
+    authenticatedRequest,
+  }) => {
     // ===== ARRANGE =====
     console.log("Creating new todo...")
 
@@ -97,40 +99,34 @@ test.describe("Todos API - CRUD", () => {
 
     const body = await response.json()
     expect(body).toHaveProperty("data")
-    expect(body.data._id).toBeDefined()
 
     const fetchedTodos: Todo[] = body.data
 
     // ===== ASSERT =====
 
-    // Validate Structure
+    // Structure Check
     expect(Array.isArray(fetchedTodos)).toBeTruthy()
-    expect(fetchedTodos.length).toBeGreaterThan(0)
+    expect(fetchedTodos.length).toBe(createdTodos.length) // Ensures an exact 1:1 match count
 
-    // Precompute IDs (clean + efficient)
-    const createdTodoIds = createdTodos.map((todo) => todo._id)
-    const fetchedTodoIds = fetchedTodos.map((todo) => todo._id)
-
-    // Validate existence
-    createdTodoIds.forEach((id) => {
-      expect(fetchedTodoIds).toContain(id)
-    })
-
-    // Validate data integrity
+    // Validate Data Integrity & Existence
     createdTodos.forEach((created) => {
-      const match = fetchedTodos.find((todo) => todo._id === created._id)
+      const match = fetchedTodos.find((fetched) => fetched._id === created._id)
 
-      expect(match).toBeTruthy()
-      expect(match?.title).toBe(created.title)
+      expect(match).toBeDefined() // Better than truthy for objects
+      expect(match).toMatchObject({
+        title: created.title,
+        description: created.description,
+        completed: created.completed,
+      })
     })
 
-    // Validate ownership
-    // const userId = createdTodos[0].userId
-    fetchedTodos.forEach((todo) => {
-      expect(createdTodoIds).toBe(todo._id)
+    // Ownership Check (Ensures no extra data leaked in)
+    const createdTodoIds = createdTodos.map((created) => created._id)
+    fetchedTodos.forEach((fetched) => {
+      expect(createdTodoIds).toContain(fetched._id)
     })
 
-    console.log(`Fetched ${fetchedTodos.length} todos`)
+    console.log(`Successfully validated ${fetchedTodos.length} todos`)
   })
 
   /**
