@@ -60,9 +60,7 @@ test.describe("Todos API - CRUD", () => {
    * - Test Type: Happy Path
    * - Assertions: 200, array response, only user's todos
    */
-  test.only("Should return all todos for user", async ({
-    authenticatedRequest,
-  }) => {
+  test("Should return all todos for user", async ({ authenticatedRequest }) => {
     /**
      * ARRANGE
      * Setup the test data and environment
@@ -234,7 +232,101 @@ test.describe("Todos API - CRUD", () => {
    * - Test Type: Happy Path
    * - Flow: Create todo -> Update it -> Validate updated fields
    */
-  test("Should update a todo", async () => {})
+  test.only("Should update a todo", async ({ authenticatedRequest }) => {
+    /**
+     * ARRANGE
+     * Setup the test data and environment
+     */
+    console.log("Creating new todo...")
+
+    const todoPayloads: CreateTodoPayload[] = []
+
+    // 1. Generate unique todos to be used for update todo
+    for (let i = 1; i <= 3; i++) {
+      todoPayloads.push({
+        title: generateUniqueString(`todo-${i}`),
+        description: generateUniqueString(`desc-${i}`),
+        completed: false,
+      })
+    }
+
+    const createdTodos: Todo[] = []
+
+    // 2. Submit generated todos to the database via API POST method and save the responses
+    for (const todo of todoPayloads) {
+      const response = await authenticatedRequest.post("/api/todos", {
+        data: todo,
+      })
+
+      // Ensure each task was successfully created (HTTP Status 201)
+      expect(response.status()).toBe(201)
+
+      const createdTodo: Todo = (await response.json()).data
+      createdTodos.push(createdTodo)
+
+      console.log(
+        `Created todo: ${createdTodo._id} | ${createdTodo.title} | ${createdTodo.description} | ${createdTodo.completed}`,
+      )
+    }
+
+    expect(createdTodos.length).toBeGreaterThanOrEqual(todoPayloads.length)
+
+    /**
+     * ACT
+     * Update the created todo
+     */
+    const targetTodo = createdTodos[0]
+    const targetTodoId = targetTodo._id
+
+    const updatedPayload = {
+      title: generateUniqueString(`updated-title`),
+      description: generateUniqueString(`updated-desc`),
+      completed: true,
+    }
+
+    // 3.
+    const response = await authenticatedRequest.put(
+      `/api/todos/${targetTodoId}`,
+      {
+        data: updatedPayload,
+      },
+    )
+
+    expect(response.status()).toBe(200)
+
+    const updatedTodo: Todo = (await response.json()).data
+
+    console.log(
+      `Updated todo: ${updatedTodo._id} | ${updatedTodo.title} | ${updatedTodo.description} | ${updatedTodo.completed}`,
+    )
+
+    /**
+     * ASSERT
+     * Validate updated fields
+     */
+
+    expect(updatedTodo._id).toBe(targetTodoId)
+
+    expect(updatedTodo).toMatchObject({
+      title: updatedPayload.title,
+      description: updatedPayload.description,
+      completed: updatedPayload.completed,
+    })
+
+    // Fetch the updated todos list
+    const getAllTodosResponse = await authenticatedRequest.get("/api/todos")
+    expect(getAllTodosResponse.status()).toBe(200)
+
+    const allTodos: Todo[] = (await getAllTodosResponse.json()).data
+
+    // Log the entire list to see all records
+    console.log("--- Full Todo List ---")
+    allTodos.forEach((todo, index) => {
+      console.log(
+        `[${index}] - ${todo._id} | ${todo.title} | ${todo.description} | ${todo.completed} `,
+      )
+    })
+  })
 
   /**
    * UPDATE TODO
