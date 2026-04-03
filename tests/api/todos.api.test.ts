@@ -232,7 +232,9 @@ test.describe("Todos API - CRUD", () => {
    * - Test Type: Happy Path
    * - Flow: Create todo -> Update it -> Validate updated fields
    */
-  test.only("Should update a todo", async ({ authenticatedRequest }) => {
+  test.only("Should update a todo and reflect changes in the full list", async ({
+    authenticatedRequest,
+  }) => {
     /**
      * ARRANGE
      * Setup the test data and environment
@@ -250,7 +252,7 @@ test.describe("Todos API - CRUD", () => {
       })
     }
 
-    const createdTodos: Todo[] = []
+    const todos: Todo[] = []
 
     // 2. Submit generated todos to the database via API POST method and save the responses
     for (const todo of todoPayloads) {
@@ -258,74 +260,95 @@ test.describe("Todos API - CRUD", () => {
         data: todo,
       })
 
-      // Ensure each task was successfully created (HTTP Status 201)
+      // Ensure each todo was successfully created (HTTP Status 201)
       expect(response.status()).toBe(201)
 
-      const createdTodo: Todo = (await response.json()).data
-      createdTodos.push(createdTodo)
+      const body = await response.json()
+      const createdTodo: Todo = body.data
+      todos.push(createdTodo)
 
       console.log(
         `Created todo: ${createdTodo._id} | ${createdTodo.title} | ${createdTodo.description} | ${createdTodo.completed}`,
       )
     }
+    expect(todos.length).toBeGreaterThanOrEqual(todoPayloads.length)
 
-    expect(createdTodos.length).toBeGreaterThanOrEqual(todoPayloads.length)
-
-    /**
-     * ACT
-     * Update the created todo
-     */
-    const targetTodo = createdTodos[0]
-    const targetTodoId = targetTodo._id
-
-    const updatedPayload = {
+    const targetTodoId = todos[0]._id
+    const updatedTodoPayload = {
       title: generateUniqueString(`updated-title`),
       description: generateUniqueString(`updated-desc`),
       completed: true,
     }
 
-    // 3.
-    const response = await authenticatedRequest.put(
+    /**
+     * ACT
+     * Update the created todo
+     */
+
+    // 3. Update the specific todo details of the user
+    const updateResponse = await authenticatedRequest.put(
       `/api/todos/${targetTodoId}`,
       {
-        data: updatedPayload,
+        data: updatedTodoPayload,
       },
     )
 
-    expect(response.status()).toBe(200)
+    // Ensure the request was successful (HTTP Status 200)
+    expect(updateResponse.status()).toBe(200)
 
-    const updatedTodo: Todo = (await response.json()).data
+    const updateBody = await updateResponse.json()
+    expect(updateBody).toHaveProperty("data")
+
+    const updatedTodo = updateBody.data
 
     console.log(
       `Updated todo: ${updatedTodo._id} | ${updatedTodo.title} | ${updatedTodo.description} | ${updatedTodo.completed}`,
     )
 
     /**
-     * ASSERT
-     * Validate updated fields
+     * ASSERT  & VERIFY LIST
      */
 
+    // 4. Ensure that the _id of the updatedTodo was match the targetTodoId
     expect(updatedTodo._id).toBe(targetTodoId)
 
-    expect(updatedTodo).toMatchObject({
-      title: updatedPayload.title,
-      description: updatedPayload.description,
-      completed: updatedPayload.completed,
-    })
+    // 5. Verify the response, if it match the updated payload
+    expect(updatedTodo).toMatchObject(updatedTodoPayload)
 
-    // Fetch the updated todos list
-    const getAllTodosResponse = await authenticatedRequest.get("/api/todos")
-    expect(getAllTodosResponse.status()).toBe(200)
+    // 6. Verify the updated todo list
+    const listResponse = await authenticatedRequest.get("/api/todos")
+    expect(listResponse.status()).toBe(200)
 
-    const allTodos: Todo[] = (await getAllTodosResponse.json()).data
+    const listBody = await listResponse.json()
+    expect(listBody).toHaveProperty("data")
+    const allTodos = listBody.data
+
+    // 7. Verify the record is correct within the list
+    const updatedTodoInList = allTodos.find(
+      (todo: Todo) => todo._id === targetTodoId,
+    )
+
+    // Check if the updated todo was exist on the full todo list
+    expect(
+      updatedTodoInList,
+      "Updated todo should exist in the full list",
+    ).toBeDefined()
+
+    // Ensure that the updated todo details was the same on the update payload
+    expect(updatedTodoInList).toMatchObject(updatedTodoPayload)
+
+    // Ensure we did not lose the other todos
+    expect(allTodos.length).toBeGreaterThanOrEqual(todos.length)
 
     // Log the entire list to see all records
     console.log("--- Full Todo List ---")
-    allTodos.forEach((todo, index) => {
+    allTodos.forEach((todo: Todo, index: number) => {
       console.log(
         `[${index}] - ${todo._id} | ${todo.title} | ${todo.description} | ${todo.completed} `,
       )
     })
+
+    console.log(`Successfully updated and verified todo: ${targetTodoId}`)
   })
 
   /**
