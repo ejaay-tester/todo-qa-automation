@@ -261,7 +261,10 @@ test.describe("Todos API - CRUD", () => {
       })
 
       // Ensure each todo was successfully created (HTTP Status 201)
-      expect(response.status()).toBe(201)
+      expect(
+        response.status(),
+        "POST /api/todos should create a new todo",
+      ).toBe(201)
 
       const body = await response.json()
       const createdTodo: Todo = body.data
@@ -294,7 +297,10 @@ test.describe("Todos API - CRUD", () => {
     )
 
     // Ensure the request was successful (HTTP Status 200)
-    expect(updateResponse.status()).toBe(200)
+    expect(
+      updateResponse.status(),
+      "PUT /api/todos/:id should return 200 OK",
+    ).toBe(200)
 
     const updateBody = await updateResponse.json()
     expect(updateBody).toHaveProperty("data")
@@ -317,7 +323,9 @@ test.describe("Todos API - CRUD", () => {
 
     // 6. Verify the updated todo list
     const listResponse = await authenticatedRequest.get("/api/todos")
-    expect(listResponse.status()).toBe(200)
+    expect(listResponse.status(), "GET /api/todos should return 200 OK").toBe(
+      200,
+    )
 
     const listBody = await listResponse.json()
     expect(listBody).toHaveProperty("data")
