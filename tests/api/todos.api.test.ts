@@ -256,18 +256,18 @@ test.describe("Todos API - CRUD", () => {
 
     // 2. Submit generated todos to the database via API POST method and save the responses
     for (const todo of todoPayloads) {
-      const response = await authenticatedRequest.post("/api/todos", {
+      const createResponse = await authenticatedRequest.post("/api/todos", {
         data: todo,
       })
 
       // Ensure each todo was successfully created (HTTP Status 201)
       expect(
-        response.status(),
+        createResponse.status(),
         "POST /api/todos should create a new todo",
       ).toBe(201)
 
-      const body = await response.json()
-      const createdTodo: Todo = body.data
+      const createBody = await createResponse.json()
+      const createdTodo: Todo = createBody.data
       todos.push(createdTodo)
 
       console.log(
