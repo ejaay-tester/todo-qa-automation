@@ -267,6 +267,10 @@ test.describe("Todos API - CRUD", () => {
       ).toBe(201)
 
       const createBody = await createResponse.json()
+      expect(
+        createBody,
+        "Create response should contain a 'data' object",
+      ).toHaveProperty("data")
       const createdTodo: Todo = createBody.data
       todos.push(createdTodo)
 
@@ -303,10 +307,14 @@ test.describe("Todos API - CRUD", () => {
     ).toBe(200)
 
     const updateBody = await updateResponse.json()
-    expect(updateBody).toHaveProperty("data")
+    expect(
+      updateBody,
+      "Update response should contain a 'data' object",
+    ).toHaveProperty("data")
 
     const updatedTodo = updateBody.data
 
+    console.log("Updating todo...")
     console.log(
       `Updated todo: ${updatedTodo._id} | ${updatedTodo.title} | ${updatedTodo.description} | ${updatedTodo.completed}`,
     )
@@ -328,7 +336,10 @@ test.describe("Todos API - CRUD", () => {
     )
 
     const listBody = await listResponse.json()
-    expect(listBody).toHaveProperty("data")
+    expect(
+      listBody,
+      "List response should contain a 'data' array",
+    ).toHaveProperty("data")
     const allTodos = listBody.data
 
     // 7. Verify the record is correct within the list
@@ -349,6 +360,7 @@ test.describe("Todos API - CRUD", () => {
     expect(allTodos.length).toBeGreaterThanOrEqual(todos.length)
 
     // Log the entire list to see all records
+    console.log("Fetching todos...")
     console.log("--- Full Todo List ---")
     allTodos.forEach((todo: Todo, index: number) => {
       console.log(
