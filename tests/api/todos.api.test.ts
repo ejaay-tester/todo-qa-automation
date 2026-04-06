@@ -354,10 +354,16 @@ test.describe("Todos API - CRUD", () => {
     ).toBeDefined()
 
     // Ensure that the updated todo details was the same on the update payload
-    expect(updatedTodoInList).toMatchObject(updatedTodoPayload)
+    expect(
+      updatedTodoInList,
+      "The todo in the list should match the updated payload values",
+    ).toMatchObject(updatedTodoPayload)
 
     // Ensure we did not lose the other todos
-    expect(allTodos.length).toBeGreaterThanOrEqual(todos.length)
+    expect(
+      allTodos.length,
+      "Total todos count should remain consistent after update",
+    ).toBeGreaterThanOrEqual(todos.length)
 
     // Log the entire list to see all records
     console.log("Fetching todos...")
