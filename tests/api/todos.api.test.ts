@@ -241,6 +241,8 @@ test.describe("Todos API - CRUD", () => {
      */
     const createdTodos =
       await test.step("Setup: Create multiple todos", async () => {
+        const createdTodos: Todo[] = []
+
         console.log("Creating new todo...")
 
         // Generate unique todos to be used for update todo
@@ -252,8 +254,6 @@ test.describe("Todos API - CRUD", () => {
             completed: false,
           })
         }
-
-        const todos: Todo[] = []
 
         // Submit generated todos to the database via API POST method and save the responses
         for (const todo of todoPayloads) {
@@ -272,14 +272,14 @@ test.describe("Todos API - CRUD", () => {
           ).toHaveProperty("data")
 
           const createdTodo: Todo = createBody.data
-          todos.push(createdTodo)
+          createdTodos.push(createdTodo)
 
           console.log(
             `Created todo: ${createdTodo._id} | ${createdTodo.title} | ${createdTodo.description} | ${createdTodo.completed}`,
           )
         }
-        expect(todos.length).toBeGreaterThanOrEqual(todoPayloads.length)
-        return todos
+        expect(createdTodos.length).toBeGreaterThanOrEqual(todoPayloads.length)
+        return createdTodos
       })
 
     // DATA FOR THE UPDATE
@@ -314,14 +314,14 @@ test.describe("Todos API - CRUD", () => {
           "Update response should contain a 'data' object",
         ).toHaveProperty("data")
 
-        const updatedData = updateBody.data
+        const updatedTodo: Todo = updateBody.data
 
         console.log("Updating todo...")
         console.log(
-          `Updated todo: ${updatedData._id} | ${updatedData.title} | ${updatedData.description} | ${updatedData.completed}`,
+          `Updated todo: ${updatedTodo._id} | ${updatedTodo.title} | ${updatedTodo.description} | ${updatedTodo.completed}`,
         )
 
-        return updatedData
+        return updatedTodo
       })
 
     /**
