@@ -1,6 +1,6 @@
 import { APIRequestContext, expect } from "@playwright/test"
 
-export class TodoController {
+export class TodoClient {
   constructor(private request: APIRequestContext) {}
 
   async createTodo(payload: any) {
