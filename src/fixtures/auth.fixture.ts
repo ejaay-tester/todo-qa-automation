@@ -15,7 +15,7 @@ type AuthFixture = {
 }
 
 // Extend the base test to include the custom 'authenticatedRequest' fixture
-export const test = base.extend<AuthFixture>({
+const test = base.extend<AuthFixture>({
   /**
    * FIXTURE 1: USER REGISTRATION
    * - Handles user registration
@@ -111,5 +111,6 @@ export const test = base.extend<AuthFixture>({
   },
 })
 
+export const authTest = test
 // Re-export 'expect' so we can import everything from this one file in the test
 export { expect } from "@playwright/test"
