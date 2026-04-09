@@ -1,4 +1,4 @@
-import { authTest } from "./auth.fixture"
+import { authTest } from "../fixtures/auth.fixture"
 import { TodoClient } from "../api/TodoClient"
 
 // Define the type for the new fixture you are adding
