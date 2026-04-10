@@ -73,7 +73,7 @@ test.describe("Todos API - CRUD", () => {
       // Check if the updated todo was exist on the full todo list
       expect(
         updatedTodoInList,
-        "The updated todo should exist in the full list",
+        `Todo with ID ${createdTodo._id} should exist in the full list`,
       ).toBeDefined()
 
       // Ensure that the updated todo details was the same on the update payload
