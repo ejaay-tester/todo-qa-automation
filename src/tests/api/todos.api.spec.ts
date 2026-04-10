@@ -22,11 +22,14 @@ test.describe("Todos API - CRUD", () => {
 
         console.log("Creating new todo...")
         const createdTodo = await todoClient.create(initialPayload)
+        console.log(
+          `Created Todo: ${createdTodo._id} - ${createdTodo.title} | ${createdTodo.description} | ${createdTodo.completed}`,
+        )
 
         const updatePayload = {
           ...initialPayload,
-          title: "Updated Title",
-          description: "Updated Description",
+          title: "Updated Title 123",
+          description: "Updated Description 456",
           completed: true,
         }
         return { createdTodo, updatePayload }
@@ -39,7 +42,15 @@ test.describe("Todos API - CRUD", () => {
     const updatedTodo =
       await test.step("Act: Update specific todo", async () => {
         // Pass the update payload directly
-        return await todoClient.update(createdTodo._id, updatePayload)
+        console.log("Updating todo...")
+        const updatedTodo = await todoClient.update(
+          createdTodo._id,
+          updatePayload,
+        )
+        console.log(
+          `Updated Todo: ${updatedTodo._id} - ${updatedTodo.title} | ${updatedTodo.description} | ${updatedTodo.completed}`,
+        )
+        return updatedTodo
       })
 
     /**
