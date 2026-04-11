@@ -4,12 +4,60 @@ import { Todo, CreateTodoPayload } from "../../types/todo.type"
 
 test.describe("Todos API - CRUD", () => {
   /**
+   * CREATE TODO
+   * - Method: POST | Endpoint: /api/
+   * - Test Type: Happy Path
+   * - Assertions: 201, response contains _id, data matches payload
+   */
+  test.only("Should create todo", async ({ todoClient }) => {
+    // Generate payload once at the start of the test scope
+    const payload = TodoFactory.createTodoPayload()
+
+    /**
+     * ARRANGE & ACT
+     * We combine these because in API testing, 'creating' is the action
+     */
+    const createdTodo =
+      await test.step("Act: Create todo via API", async () => {
+        // The API Client should handle .json() and .status() checks internally
+        console.log("Creating new todo...")
+        return await todoClient.create(payload)
+      })
+
+    console.log(
+      `Created todo: ${createdTodo._id} - ${createdTodo.title} | ${createdTodo.description} | ${createdTodo.completed}`,
+    )
+
+    /**
+     * ASSERT
+     * Focus on validating the BUSINESS logic, not the technical details
+     */
+    await test.step("Assert: Verify the created todo matches payload", async () => {
+      // Verify the unique identifier exists
+      expect(
+        createdTodo._id,
+        "Response should contain a valid _id",
+      ).toBeDefined()
+
+      // Verify all sent data matches what was returned
+      // MatchObject is pro-level: it ignores extra fields like 'createdAt
+      expect(
+        createdTodo,
+        "Returned todo should match the initial payload",
+      ).toMatchObject(payload)
+
+      // Verify specific state
+      expect(createdTodo.completed).toBe(false)
+    })
+  })
+
+  /**
    * UPDATE TODO
    * - Method: PUT/PATCH | Endpoint: /api/todos/:id
    * - Test Type: Happy Path
    * - Flow: Create todo -> Update it -> Validate updated fields
    */
-  test.only("Should update a todo and reflect changes in the full list", async ({
+  test("Should update a todo and reflect changes in the full list", async ({
     todoClient,
   }) => {
     /**
