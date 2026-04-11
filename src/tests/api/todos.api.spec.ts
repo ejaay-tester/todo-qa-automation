@@ -1,6 +1,6 @@
 import { test, expect } from "../../fixtures/base.fixture"
 import { TodoFactory } from "../../factories/TodoFactory"
-import { Todo, CreateTodoPayload } from "../../types/todo.type"
+import { Todo } from "../../types/todo.type"
 
 test.describe("Todos API - CRUD", () => {
   /**
