@@ -9,7 +9,7 @@ export interface Todo {
   updatedAt: string
 }
 
-export type CreateTodoPayload = {
+export type TodoPayload = {
   title: string
   description?: string
   completed: boolean
