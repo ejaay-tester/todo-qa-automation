@@ -9,7 +9,7 @@ test.describe("Todos API - CRUD", () => {
    * - Test Type: Happy Path
    * - Assertions: 201, response contains _id, data matches payload
    */
-  test.only("Should create todo", async ({ todoClient }) => {
+  test("Should create todo", async ({ todoClient }) => {
     // Generate payload once at the start of the test scope
     const payload = TodoFactory.createTodoPayload()
 
@@ -48,6 +48,62 @@ test.describe("Todos API - CRUD", () => {
 
       // Verify specific state
       expect(createdTodo.completed).toBe(false)
+    })
+  })
+
+  /**
+   * FETCH ALL TODOS
+   * - Method: GET | Endpoint: /api/todos/
+   * - Test Type: Happy Path
+   * - Assertions: 200, array response, only user's todos
+   */
+  test.only("Should return all todos for user", async ({ todoClient }) => {
+    // Arrange: Create multiple todos and capture them in an array[]
+    const createdTodos =
+      await test.step("Setup: Create multiple todos", async () => {
+        const todoList = []
+
+        console.log("Creating new todo...")
+        for (let i = 0; i < 3; i++) {
+          const payload = TodoFactory.createTodoPayload()
+          const todo = await todoClient.create(payload)
+          todoList.push(todo)
+
+          console.log(
+            `Created todo: ${todo._id} - ${todo.title} | ${todo.description} | ${todo.completed}`,
+          )
+        }
+        return todoList
+      })
+
+    // Act: Fetch todos of the user
+    const fetchedAllTodos =
+      await test.step("Act: Fetch todos of the user", async () => {
+        return await todoClient.getAll()
+      })
+
+    // Assert: Verify integrity
+    await test.step("Assert: Verify data integrity", async () => {
+      // Place logs at the start of assertion
+      console.log("--- Full Todo List ---")
+      fetchedAllTodos.forEach((todo, index) => {
+        console.log(
+          `[${index}] - ${todo._id} | ${todo.title} | ${todo.description} | ${todo.completed}`,
+        )
+      })
+
+      // Perform the verification logic
+      for (const created of createdTodos) {
+        const found = fetchedAllTodos.find((todo) => todo._id === created._id)
+
+        expect(
+          found,
+          `Created todo [${created._id}] should be in the list`,
+        ).toBeDefined()
+        expect(found).toMatchObject(created)
+      }
+
+      expect(fetchedAllTodos.length).toBeGreaterThanOrEqual(createdTodos.length)
     })
   })
 
