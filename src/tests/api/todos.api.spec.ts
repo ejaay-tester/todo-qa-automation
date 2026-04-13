@@ -125,10 +125,7 @@ test.describe("Todos API - CRUD", () => {
   test("Should update a todo and reflect changes in the full list", async ({
     todoClient,
   }) => {
-    /**
-     * ARRANGE
-     * Setup the test data and environment
-     */
+    // ARRANGE: Setup the data and environment
     const { createdTodo, updatePayload } =
       await test.step("Setup: Create todo/s", async () => {
         const initialPayload = TodoFactory.createTodoPayload()
@@ -148,10 +145,7 @@ test.describe("Todos API - CRUD", () => {
         return { createdTodo, updatePayload }
       })
 
-    /**
-     * ACT
-     * Update the specific todo
-     */
+    // ACT: Update the specific todo
     const updatedTodo =
       await test.step("Act: Update specific todo", async () => {
         // Pass the update payload directly
@@ -166,49 +160,47 @@ test.describe("Todos API - CRUD", () => {
         return updatedTodo
       })
 
-    /**
-     * ASSERT
-     * Verify the updated todo list
-     */
+    //ASSERT: Verify the updated todo list
     await test.step("Assert: Verify update in response and full list", async () => {
-      // Ensure that the _id of the updatedTodo was match the updatePayload
-      expect(
-        updatedTodo,
-        "Update failure: API response does not reflect requested changes",
-      ).toMatchObject(updatePayload)
-
-      // Fetch full list using the client
+      // Get data and log first - always ensures you see the state before it crash
       const allTodos = await todoClient.getAll()
-      const updatedTodoInList = allTodos.find(
-        (todo: Todo) => todo._id === createdTodo._id,
-      )
-
-      // Check if the updated todo was exist on the full todo list
-      expect(
-        updatedTodoInList,
-        `Persistence error: Updated todo [${createdTodo._id}] missing from collection`,
-      ).toBeDefined()
-
-      // Ensure that the updated todo details was the same on the update payload
-      expect(
-        updatedTodoInList,
-        "Data integrity error: Global list does not reflect the specific todo update",
-      ).toMatchObject(updatePayload)
-
-      // Ensure we did not lose the other todos
-      // expect(
-      //   allTodos.length,
-      //   "Total todos count should remain consistent after update",
-      // ).toBeGreaterThanOrEqual(createdTodo.length)
-
-      // Log the entire list to see all records
-      console.log("Fetching todos...")
+      console.log("Fetching all todos...")
       console.log("--- Full Todo List ---")
       allTodos.forEach((todo: Todo, index: number) => {
         console.log(
           `[${index}] - ${todo._id} | ${todo.title} | ${todo.description} | ${todo.completed} `,
         )
       })
+
+      // Extra Safety: Check that the ID returned in the update response
+      // matches the ID that was originally created
+      expect(
+        updatedTodo._id,
+        "ID Mismatch: The update response returned a different ID than expected",
+      ).toBe(createdTodo._id)
+
+      // Check Payload: Check if the content (title, desc, etc.) matches
+      expect(
+        updatedTodo,
+        "Update failure: API response does not reflect requested changes",
+      ).toMatchObject(updatePayload)
+
+      // Verify persistence in the global list
+      const updatedTodoInList = allTodos.find(
+        (todo: Todo) => todo._id === createdTodo._id,
+      )
+
+      // Check if the updated todo exists on the full todo list
+      expect(
+        updatedTodoInList,
+        `Persistence error: Updated todo [${createdTodo._id}] missing from collection`,
+      ).toBeDefined()
+
+      // Ensure that the updated todo details are the same on the update payload
+      expect(
+        updatedTodoInList,
+        "Data integrity error: Global list does not reflect the specific todo update",
+      ).toMatchObject(updatePayload)
     })
   })
 })
