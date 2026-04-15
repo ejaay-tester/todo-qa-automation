@@ -9,7 +9,7 @@ test.describe("Todos API - CRUD", () => {
    * - Test Type: Happy Path
    * - Assertions: 201, response contains _id, data matches payload
    */
-  test("Should create todo", async ({ todoClient }) => {
+  test("API | POST /todos | Should create todo", async ({ todoClient }) => {
     // Generate payload once at the start of the test scope
     const payload = TodoFactory.createTodoPayload()
 
@@ -60,7 +60,9 @@ test.describe("Todos API - CRUD", () => {
    * - Test Type: Happy Path
    * - Assertions: 200, array response, only user's todos
    */
-  test.only("Should return all todos for user", async ({ todoClient }) => {
+  test.only("API | GET /todos | Should return all todos for user", async ({
+    todoClient,
+  }) => {
     // Arrange: Create multiple todos and capture them in an array[]
     const createdTodos =
       await test.step("Setup: Create multiple todos", async () => {
@@ -122,7 +124,7 @@ test.describe("Todos API - CRUD", () => {
    * - Test Type: Happy Path
    * - Flow: Create todo -> Update it -> Validate updated fields
    */
-  test("Should update a todo and reflect changes in the full list", async ({
+  test("API | PUT /todos/:id | Should update a todo and reflect changes in the full list", async ({
     todoClient,
   }) => {
     // ARRANGE: Setup the data and environment
