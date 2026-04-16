@@ -1,4 +1,5 @@
 import { APIRequestContext, APIResponse, expect } from "@playwright/test"
+import * as allure from "allure-js-commons"
 import { Todo, TodoPayload } from "../types/todo.type"
 
 export class TodoClient {
@@ -6,7 +7,9 @@ export class TodoClient {
 
   /**
    * PRIVATE HELPER: Safe JSON Parsing
-   * Separates the parsing action from error handling for better readability
+   * This method handles both the .json() parsing
+   * and the validation of the data structure (checking for the data property)
+   * in one reusable place
    */
   private async parseResponseJson<T>(
     response: APIResponse,
@@ -40,45 +43,110 @@ export class TodoClient {
 
   // CREATE
   async create(payload: TodoPayload): Promise<Todo> {
-    const response = await this.request.post("/api/todos", { data: payload })
-    expect(response.status(), "POST /api/todos should return 201").toBe(201)
-    return this.parseResponseJson<Todo>(response, "POST")
+    // Use allure.step for technical API details
+    return await allure.step(`POST /api/todos`, async () => {
+      // Attach the request/response for easy debugging in Allure
+      await allure.attachment(
+        "Request Payload",
+        JSON.stringify(payload, null, 2),
+        "application/json",
+      )
+
+      const response = await this.request.post("/api/todos", {
+        data: payload,
+      })
+
+      // Parse and Attach Response before asserting
+      // This ensures if status is 500, we see the error body in Allure
+      const data = await this.parseResponseJson<Todo>(response, "POST")
+      await allure.attachment(
+        "Response Body",
+        JSON.stringify(data, null, 2),
+        "application/json",
+      )
+
+      // Assert last
+      expect(response.status(), "POST /api/todos should return 201").toBe(201)
+
+      return data
+    })
   }
 
   // READ
   async getAll(): Promise<Todo[]> {
-    const response = await this.request.get("/api/todos")
-    expect(response.status(), "GET /api/todos should return 200").toBe(200)
-    const data = await this.parseResponseJson<Todo[]>(response, "GET ALL")
+    return await allure.step(`GET /api/todos`, async () => {
+      const response = await this.request.get("/api/todos")
 
-    expect(Array.isArray(data), "Expected an array of todos").toBeTruthy()
-    return data
+      const data = await this.parseResponseJson<Todo[]>(response, "GET ALL")
+      await allure.attachment(
+        "Response Body",
+        JSON.stringify(data, null, 2),
+        "application/json",
+      )
+
+      expect(response.status(), "GET /api/todos should return 200").toBe(200)
+      expect(Array.isArray(data), "Expected an array of todos").toBeTruthy()
+
+      return data
+    })
   }
 
   async get(id: string): Promise<Todo> {
-    const response = await this.request.get(`/api/todos/${id}`)
-    expect(response.status(), `GET /api/todos/${id} should return 200`).toBe(
-      200,
-    )
-    return this.parseResponseJson<Todo>(response, "GET")
+    return await allure.step(`GET /api/todos/${id}`, async () => {
+      const response = await this.request.get(`/api/todos/${id}`)
+
+      const data = await this.parseResponseJson<Todo>(response, "GET")
+      await allure.attachment(
+        "Response Body",
+        JSON.stringify(data, null, 2),
+        "application/json",
+      )
+
+      expect(response.status(), `GET /api/todos/${id} should return 200`).toBe(
+        200,
+      )
+
+      return data
+    })
   }
 
   // UPDATE
   async update(id: string, payload: TodoPayload): Promise<Todo> {
-    const response = await this.request.put(`/api/todos/${id}`, {
-      data: payload,
+    return await allure.step(`PUT /api/todos/${id}`, async () => {
+      await allure.attachment(
+        "Request Payload",
+        JSON.stringify(payload, null, 2),
+        "application/json",
+      )
+
+      const response = await this.request.put(`/api/todos/${id}`, {
+        data: payload,
+      })
+
+      const data = await this.parseResponseJson<Todo>(response, "PUT")
+      await allure.attachment(
+        "Response Body",
+        JSON.stringify(data, null, 2),
+        "application/json",
+      )
+
+      expect(response.status(), `PUT /api/todos/${id} should return 200`).toBe(
+        200,
+      )
+
+      return data
     })
-    expect(response.status(), `PUT /api/todos/${id} should return 200`).toBe(
-      200,
-    )
-    return this.parseResponseJson<Todo>(response, "PUT")
   }
 
   // DELETE
   async delete(id: string): Promise<void> {
-    const response = await this.request.delete(`/api/todos/${id}`)
-    expect(response.status(), `DELETE /api/todos/${id} should return 204`).toBe(
-      204,
-    )
+    return await allure.step(`DELETE /api/todos/${id}`, async () => {
+      const response = await this.request.delete(`/api/todos/${id}`)
+
+      expect(
+        response.status(),
+        `DELETE /api/todos/${id} should return 204`,
+      ).toBe(204)
+    })
   }
 }
