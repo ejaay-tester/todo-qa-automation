@@ -60,7 +60,7 @@ test.describe("Todos API - CRUD", () => {
    * - Test Type: Happy Path
    * - Assertions: 200, array response, only user's todos
    */
-  test.only("GET /todos > returns list of all user todos", async ({
+  test("GET /todos > returns list of all user todos", async ({
     todoClient,
   }) => {
     // Arrange: Create multiple todos and capture them in an array[]
