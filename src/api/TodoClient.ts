@@ -6,10 +6,10 @@ export class TodoClient {
   constructor(private request: APIRequestContext) {}
 
   /**
-   * PRIVATE HELPER: Safe JSON Parsing
-   * This method handles both the .json() parsing
-   * and the validation of the data structure (checking for the data property)
-   * in one reusable place
+   * PRIVATE HELPER:
+   * Helper is for the logic
+   * This method handles the .json() parsing (safe json parsing)
+   * Parsing the full response
    */
   private async parseResponseJson(response: APIResponse): Promise<any> {
     try {
@@ -22,13 +22,15 @@ export class TodoClient {
 
   /**
    * CRUD METHODS
+   * Main methods are for assertions
+   * and reporting
    */
 
   // CREATE
   async create(payload: TodoPayload): Promise<Todo> {
     // Use allure.step for technical API details
     return await allure.step(`POST /api/todos`, async () => {
-      // Log what we sent
+      // Attach Request (Always safe)
       await allure.attachment(
         "Request Payload",
         JSON.stringify(payload, null, 2),
@@ -39,22 +41,27 @@ export class TodoClient {
         data: payload,
       })
 
-      expect(response.status(), "POST /api/todos should return 201").toBe(201)
-
+      // Get the Body but don't validate yet
       // Parse JSON (This happens inside the parseResponseJson helper)
       const body = await this.parseResponseJson(response)
 
-      expect(
-        body,
-        "POST response should contain 'data' property",
-      ).toHaveProperty("data")
-
-      // Attach response (Evidence for the report)
+      // Attach Response (Evidence for the report)
       await allure.attachment(
         "Response Body",
         JSON.stringify(body.data, null, 2),
         "application/json",
       )
+
+      // Aseert Status (FAIL-FAST #1)
+      // If status is 500, test stops here. You have the attachment above to see why
+      expect(response.status(), "POST /api/todos should return 201").toBe(201)
+
+      // Validate Data Structure (FAIL-FAST #2)
+      // Now check if the 'data' property exists
+      expect(
+        body,
+        "POST response should contain 'data' property",
+      ).toHaveProperty("data")
 
       return body.data
     })
@@ -65,25 +72,24 @@ export class TodoClient {
     return await allure.step(`GET /api/todos`, async () => {
       const response = await this.request.get("/api/todos")
 
-      expect(response.status(), "GET /api/todos should return 200").toBe(200)
-
       const body = await this.parseResponseJson(response)
+      await allure.attachment(
+        "Response Body",
+        JSON.stringify(body.data, null, 2),
+        "application/json",
+      )
+
+      expect(response.status(), "GET /api/todos should return 200").toBe(200)
 
       expect(
         body,
-        "POST response should contain 'data' property",
+        "GET response should contain 'data' property",
       ).toHaveProperty("data")
 
       expect(
         Array.isArray(body.data),
         "Expected an array of todos",
       ).toBeTruthy()
-
-      await allure.attachment(
-        "Response Body",
-        JSON.stringify(body.data, null, 2),
-        "application/json",
-      )
 
       return body.data
     })
@@ -93,22 +99,21 @@ export class TodoClient {
     return await allure.step(`GET /api/todos/${id}`, async () => {
       const response = await this.request.get(`/api/todos/${id}`)
 
-      expect(response.status(), `GET /api/todos/${id} should return 200`).toBe(
-        200,
-      )
-
       const body = await this.parseResponseJson(response)
-
-      expect(
-        body,
-        "POST response should contain 'data' property",
-      ).toHaveProperty("data")
-
       await allure.attachment(
         "Response Body",
         JSON.stringify(body.data, null, 2),
         "application/json",
       )
+
+      expect(response.status(), `GET /api/todos/${id} should return 200`).toBe(
+        200,
+      )
+
+      expect(
+        body,
+        "GET response should contain 'data' property",
+      ).toHaveProperty("data")
 
       return body.data
     })
@@ -127,22 +132,21 @@ export class TodoClient {
         data: payload,
       })
 
-      expect(response.status(), `PUT /api/todos/${id} should return 200`).toBe(
-        200,
-      )
-
       const body = await this.parseResponseJson(response)
-
-      expect(
-        body,
-        "POST response should contain 'data' property",
-      ).toHaveProperty("data")
-
       await allure.attachment(
         "Response Body",
         JSON.stringify(body.data, null, 2),
         "application/json",
       )
+
+      expect(response.status(), `PUT /api/todos/${id} should return 200`).toBe(
+        200,
+      )
+
+      expect(
+        body,
+        "PUT response should contain 'data' property",
+      ).toHaveProperty("data")
 
       return body.data
     })
