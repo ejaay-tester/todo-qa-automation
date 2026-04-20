@@ -3,54 +3,58 @@ import { TodoFactory } from "../../factories/TodoFactory"
 import { Todo } from "../../types/todo.type"
 
 test.describe("Todos API - CRUD", () => {
-  /**
-   * CREATE TODO
-   * - Method: POST | Endpoint: /api/
-   * - Test Type: Happy Path
-   * - Assertions: 201, response contains _id, data matches payload
-   */
-  test("POST /todos > creates todo with valid data", async ({ todoClient }) => {
-    // Generate payload once at the start of the test scope
-    const payload = TodoFactory.createTodoPayload()
-
+  test.describe("POST /api/todos", () => {
     /**
-     * ARRANGE & ACT
-     * We combine these because in API testing, 'creating' is the action
+     * CREATE TODO
+     * - Method: POST | Endpoint: /api/
+     * - Test Type: Happy Path
+     * - Assertions: 201, response contains _id, data matches payload
      */
-    const createdTodo =
-      await test.step("Act: Create todo via API", async () => {
-        // The API Client should handle .json() and .status() checks internally
-        console.log("Creating new todo...")
-        return await todoClient.create(payload)
+    test("POST /todos > creates todo with valid data", async ({
+      todoClient,
+    }) => {
+      // Generate payload once at the start of the test scope
+      const payload = TodoFactory.createTodoPayload()
+
+      /**
+       * ARRANGE & ACT
+       * We combine these because in API testing, 'creating' is the action
+       */
+      const createdTodo =
+        await test.step("Act: Create todo via API", async () => {
+          // The API Client should handle .json() and .status() checks internally
+          console.log("Creating new todo...")
+          return await todoClient.create(payload)
+        })
+
+      console.log(
+        `Created todo: ${createdTodo._id} - ${createdTodo.title} | ${createdTodo.description} | ${createdTodo.completed}`,
+      )
+
+      /**
+       * ASSERT
+       * Focus on validating the BUSINESS logic, not the technical details
+       */
+      await test.step("Assert: Verify the created todo matches payload", async () => {
+        // Verify the unique identifier exists
+        expect(
+          createdTodo._id,
+          "API response missing unique identifier (_id)",
+        ).toBeDefined()
+
+        // Verify all sent data matches what was returned
+        // MatchObject is pro-level: it ignores extra fields like 'createdAt
+        expect(
+          createdTodo,
+          "Created resource data mismatch: Response does not match sent payload",
+        ).toMatchObject(payload)
+
+        // Verify specific state
+        expect(
+          createdTodo.completed,
+          "New todo state mismatch: Default 'completed' status must be false",
+        ).toBe(false)
       })
-
-    console.log(
-      `Created todo: ${createdTodo._id} - ${createdTodo.title} | ${createdTodo.description} | ${createdTodo.completed}`,
-    )
-
-    /**
-     * ASSERT
-     * Focus on validating the BUSINESS logic, not the technical details
-     */
-    await test.step("Assert: Verify the created todo matches payload", async () => {
-      // Verify the unique identifier exists
-      expect(
-        createdTodo._id,
-        "API response missing unique identifier (_id)",
-      ).toBeDefined()
-
-      // Verify all sent data matches what was returned
-      // MatchObject is pro-level: it ignores extra fields like 'createdAt
-      expect(
-        createdTodo,
-        "Created resource data mismatch: Response does not match sent payload",
-      ).toMatchObject(payload)
-
-      // Verify specific state
-      expect(
-        createdTodo.completed,
-        "New todo state mismatch: Default 'completed' status must be false",
-      ).toBe(false)
     })
   })
 
