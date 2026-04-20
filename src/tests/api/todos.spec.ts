@@ -209,4 +209,22 @@ test.describe("Todos API", () => {
       })
     })
   })
+
+  test.describe("DELETE /api/todos/:id", () => {
+    /**
+     * DELETE TODO
+     * - Method: DELETE | Endpoint: /api/todos/:id
+     * - Test Type: Happy Path
+     * - Flow: Create todo -> Delete -> Verify deletion (HTTP 404)
+     */
+    test("removes specific todo of a user", async () => {})
+
+    /**
+     * DELETE TODO
+     * - Method: DELETE | Endpoint: /api/todos/:id
+     * - Test Type: Negative
+     */
+    test("fail deleting non-existing todo", async () => {})
+    test("fail deleting another user's todo", async () => {})
+  })
 })
