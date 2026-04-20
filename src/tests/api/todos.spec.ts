@@ -10,9 +10,7 @@ test.describe("Todos API - CRUD", () => {
      * - Test Type: Happy Path
      * - Assertions: 201, response contains _id, data matches payload
      */
-    test("POST /todos > creates todo with valid data", async ({
-      todoClient,
-    }) => {
+    test("creates todo with valid data", async ({ todoClient }) => {
       // Generate payload once at the start of the test scope
       const payload = TodoFactory.createTodoPayload()
 
@@ -58,67 +56,67 @@ test.describe("Todos API - CRUD", () => {
     })
   })
 
-  /**
-   * FETCH ALL TODOS
-   * - Method: GET | Endpoint: /api/todos/
-   * - Test Type: Happy Path
-   * - Assertions: 200, array response, only user's todos
-   */
-  test("GET /todos > returns list of all user todos", async ({
-    todoClient,
-  }) => {
-    // Arrange: Create multiple todos and capture them in an array[]
-    const createdTodos =
-      await test.step("Setup: Seed 3 todos for user", async () => {
-        const todoList = []
+  test.describe("GET /api/todos", () => {
+    /**
+     * FETCH ALL TODOS
+     * - Method: GET | Endpoint: /api/todos/
+     * - Test Type: Happy Path
+     * - Assertions: 200, array response, only user's todos
+     */
+    test("returns list of all user todos", async ({ todoClient }) => {
+      // Arrange: Create multiple todos and capture them in an array[]
+      const createdTodos =
+        await test.step("Setup: Seed 3 todos for user", async () => {
+          const todoList = []
 
-        console.log("Creating new todo...")
-        for (let i = 0; i < 3; i++) {
-          const payload = TodoFactory.createTodoPayload()
-          const todo = await todoClient.create(payload)
-          todoList.push(todo)
+          console.log("Creating new todo...")
+          for (let i = 0; i < 3; i++) {
+            const payload = TodoFactory.createTodoPayload()
+            const todo = await todoClient.create(payload)
+            todoList.push(todo)
 
+            console.log(
+              `Created todo: ${todo._id} - ${todo.title} | ${todo.description} | ${todo.completed}`,
+            )
+          }
+          return todoList
+        })
+
+      // Act: Fetch todos of the user
+      const fetchedAllTodos =
+        await test.step("Act: Fetch todos of the user", async () => {
+          return await todoClient.getAll()
+        })
+
+      // Assert: Verify integrity
+      await test.step("Assert: Verify data integrity", async () => {
+        // Place logs at the start of assertion
+        console.log("--- Full Todo List ---")
+        fetchedAllTodos.forEach((todo, index) => {
           console.log(
-            `Created todo: ${todo._id} - ${todo.title} | ${todo.description} | ${todo.completed}`,
+            `[${index}] - ${todo._id} | ${todo.title} | ${todo.description} | ${todo.completed}`,
           )
+        })
+
+        // Perform the verification logic
+        for (const created of createdTodos) {
+          const found = fetchedAllTodos.find((todo) => todo._id === created._id)
+
+          expect(
+            found,
+            `Persistence error: Todo [${created._id}] not found in collection fetch`,
+          ).toBeDefined()
+          expect(
+            found,
+            `Data integrity error: Collection item [${created._id}] properties do not match original`,
+          ).toMatchObject(created)
         }
-        return todoList
-      })
-
-    // Act: Fetch todos of the user
-    const fetchedAllTodos =
-      await test.step("Act: Fetch todos of the user", async () => {
-        return await todoClient.getAll()
-      })
-
-    // Assert: Verify integrity
-    await test.step("Assert: Verify data integrity", async () => {
-      // Place logs at the start of assertion
-      console.log("--- Full Todo List ---")
-      fetchedAllTodos.forEach((todo, index) => {
-        console.log(
-          `[${index}] - ${todo._id} | ${todo.title} | ${todo.description} | ${todo.completed}`,
-        )
-      })
-
-      // Perform the verification logic
-      for (const created of createdTodos) {
-        const found = fetchedAllTodos.find((todo) => todo._id === created._id)
 
         expect(
-          found,
-          `Persistence error: Todo [${created._id}] not found in collection fetch`,
-        ).toBeDefined()
-        expect(
-          found,
-          `Data integrity error: Collection item [${created._id}] properties do not match original`,
-        ).toMatchObject(created)
-      }
-
-      expect(
-        fetchedAllTodos.length,
-        "Collection count mismatch: Total todos is less than the number of items created",
-      ).toBeGreaterThanOrEqual(createdTodos.length)
+          fetchedAllTodos.length,
+          "Collection count mismatch: Total todos is less than the number of items created",
+        ).toBeGreaterThanOrEqual(createdTodos.length)
+      })
     })
   })
 
