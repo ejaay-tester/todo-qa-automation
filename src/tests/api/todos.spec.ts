@@ -120,13 +120,13 @@ test.describe("Todos API", () => {
     })
   })
 
+  /**
+   * UPDATE TODO
+   * - Method: PUT/PATCH | Endpoint: /api/todos/:id
+   */
   test.describe("PUT /api/todos/:id", () => {
-    /**
-     * UPDATE TODO
-     * - Method: PUT/PATCH | Endpoint: /api/todos/:id
-     * - Test Type: Happy Path
-     * - Flow: Create todo -> Update it -> Validate updated fields
-     */
+    // Happy Path
+    // Flow: Create Todo -> Update -> Validate updated fields
     test("updates todo and reflect changes in full list", async ({
       todoClient,
     }) => {
@@ -208,22 +208,24 @@ test.describe("Todos API", () => {
         ).toMatchObject(updatePayload)
       })
     })
+
+    // Negative
+    // Expect: 404
+    test("fail updating non-existing todo", async () => {})
+    test("fail updating another user's todo", async () => {})
   })
 
+  /**
+   * DELETE TODO
+   * - Method: DELETE | Endpoint: /api/todos/:id
+   */
   test.describe("DELETE /api/todos/:id", () => {
-    /**
-     * DELETE TODO
-     * - Method: DELETE | Endpoint: /api/todos/:id
-     * - Test Type: Happy Path
-     * - Flow: Create todo -> Delete -> Verify deletion (HTTP 404)
-     */
+    // Happy Path
+    // Flow: Create Todo -> Delete -> Verify deletion (HTTP 204)
     test("removes specific todo of a user", async () => {})
 
-    /**
-     * DELETE TODO
-     * - Method: DELETE | Endpoint: /api/todos/:id
-     * - Test Type: Negative
-     */
+    // Negative
+    // Expect 404 and 403
     test("fail deleting non-existing todo", async () => {})
     test("fail deleting another user's todo", async () => {})
   })
