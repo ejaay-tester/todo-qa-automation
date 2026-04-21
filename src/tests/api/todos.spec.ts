@@ -63,6 +63,12 @@ test.describe("Todos API", () => {
     // Negative - Auth Cases
     // Expect: 401 Unauthorized
     test("fail todo creation without token", async () => {})
+
+    // Edge Cases
+    // Large input, special characters, boolean logic
+    test("accepts very long title", async () => {})
+    test("accepts special characters", async () => {})
+    test("toggle completed status", async () => {})
   })
 
   /**
