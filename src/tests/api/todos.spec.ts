@@ -56,13 +56,14 @@ test.describe("Todos API", () => {
     })
   })
 
+  /**
+   * FETCH ALL TODOS
+   * - Method: GET | Endpoint: /api/todos
+   */
+
   test.describe("GET /api/todos", () => {
-    /**
-     * FETCH ALL TODOS
-     * - Method: GET | Endpoint: /api/todos/
-     * - Test Type: Happy Path
-     * - Assertions: 200, array response, only user's todos
-     */
+    // Happy Path
+    // Assertions: 200, array response, only user's todos
     test("returns list of all user todos", async ({ todoClient }) => {
       // Arrange: Create multiple todos and capture them in an array[]
       const createdTodos =
@@ -118,6 +119,14 @@ test.describe("Todos API", () => {
         ).toBeGreaterThanOrEqual(createdTodos.length)
       })
     })
+
+    // Happy Path
+    // Flow: Create Todo -> Fetch by ID -> Validate data
+    test("returns todo by ID", async () => {})
+
+    // Negative
+    // Expect: 404
+    test("returns 404 for non-existing todo", async () => {})
   })
 
   /**
