@@ -3,13 +3,13 @@ import { TodoFactory } from "../../factories/TodoFactory"
 import { Todo } from "../../types/todo.type"
 
 test.describe("Todos API", () => {
+  /**
+   * CREATE TODO
+   * - Method: POST | Endpoint: /api/todos
+   */
   test.describe("POST /api/todos", () => {
-    /**
-     * CREATE TODO
-     * - Method: POST | Endpoint: /api/
-     * - Test Type: Happy Path
-     * - Assertions: 201, response contains _id, data matches payload
-     */
+    // Happy Path
+    // Assertions: 201, response contains _id, matches payload
     test("creates todo with valid data", async ({ todoClient }) => {
       // Generate payload once at the start of the test scope
       const payload = TodoFactory.createTodoPayload()
@@ -54,6 +54,15 @@ test.describe("Todos API", () => {
         ).toBe(false)
       })
     })
+
+    // Negative - Validation Cases
+    // Expect: 400, Validation error message
+    test("fail todo creation when title is missing", async () => {})
+    test("fail todo creation with empty payload", async () => {})
+
+    // Negative - Auth Cases
+    // Expect: 401 Unauthorized
+    test("fail todo creation without token", async () => {})
   })
 
   /**
