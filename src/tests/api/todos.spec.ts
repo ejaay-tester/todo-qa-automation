@@ -136,6 +136,11 @@ test.describe("Todos API", () => {
     // Negative
     // Expect: 404
     test("returns 404 for non-existing todo", async () => {})
+
+    // Cross-User Security Test | Data Isolation
+    // Flow: Create User A -> Create Todo -> Create User B -> Fetch Todos
+    // Assert: User B does NOT see User A todos
+    test("User A should  NOT see User B todos, vice versa", async () => {})
   })
 
   /**
