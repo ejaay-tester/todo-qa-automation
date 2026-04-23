@@ -3,164 +3,111 @@ import * as allure from "allure-js-commons"
 import { Todo, TodoPayload } from "../types/todo.type"
 
 export class TodoClient {
+  private readonly endpoint = "/api/todos"
+
   constructor(private request: APIRequestContext) {}
 
   /**
-   * PRIVATE HELPER:
-   * Helper is for the logic
-   * This method handles the .json() parsing (safe json parsing)
-   * Parsing the full response
+   * GENERIC REQUEST HANDLER
+   * This handles
+   * Allure Reporting,
+   * Fail-Fast Assertions,
+   * JSON parsing,
+   * and Type Casting
+   * for all methods
    */
-  private async parseResponseJson(response: APIResponse): Promise<any> {
-    try {
-      // Just return the JSON
-      return await response.json()
-    } catch (error) {
-      throw new Error(`Failed to parse JSON: ${error}`)
-    }
+
+  private async handleRequest<T>(
+    method: string,
+    url: string,
+    response: APIResponse,
+    payload?: any,
+  ): Promise<T> {
+    return await allure.step(`${method} ${url}`, async () => {
+      // 1. Attach Request Payload if it exists
+      if (payload) {
+        await allure.attachment(
+          "Request Payload",
+          JSON.stringify(payload, null, 2),
+          "application/json",
+        )
+      }
+
+      // 2. Parse Response (Safety check for empty body like 204 No Content)
+      const body =
+        response.status() !== 204
+          ? await response.json().catch((error) => {
+              throw new Error(`Failed to parse JSON: (${error})`)
+            })
+          : {}
+
+      // 3. Attach Response Body
+      await allure.attachment(
+        "Response Body",
+        JSON.stringify(body, null, 2),
+        "application/json",
+      )
+
+      // 4. Fail-Fast Assertions
+      // Validates status range 200-299
+      expect(
+        response.ok(),
+        `${method} ${url} failed with status ${response.status()}`,
+      ).toBeTruthy()
+
+      // 5. Data Integrity Check
+      if (response.status() !== 204) {
+        expect(body, "API response missing 'data' property").toHaveProperty(
+          "data",
+        )
+
+        // Array Check
+        // If the expected type is an array, verify the response data is also an array
+        if (Array.isArray(body.data)) {
+          expect(
+            body.data,
+            `Expected ${method} ${url} to return an array in todos`,
+          ).toBeInstanceOf(Array)
+        }
+      }
+
+      return body.data as T
+    })
   }
 
   /**
    * CRUD METHODS
-   * Main methods are for assertions
-   * and reporting
    */
 
   // CREATE
   async create(payload: TodoPayload): Promise<Todo> {
-    // Use allure.step for technical API details
-    return await allure.step(`POST /api/todos`, async () => {
-      // Attach Request (Always safe)
-      await allure.attachment(
-        "Request Payload",
-        JSON.stringify(payload, null, 2),
-        "application/json",
-      )
-
-      const response = await this.request.post("/api/todos", {
-        data: payload,
-      })
-
-      // Get the Body but don't validate yet
-      // Parse JSON (This happens inside the parseResponseJson helper)
-      const body = await this.parseResponseJson(response)
-
-      // Attach Response (Evidence for the report)
-      await allure.attachment(
-        "Response Body",
-        JSON.stringify(body.data, null, 2),
-        "application/json",
-      )
-
-      // Aseert Status (FAIL-FAST #1)
-      // If status is 500, test stops here. You have the attachment above to see why
-      expect(response.status(), "POST /api/todos should return 201").toBe(201)
-
-      // Validate Data Structure (FAIL-FAST #2)
-      // Now check if the 'data' property exists
-      expect(
-        body,
-        "POST response should contain 'data' property",
-      ).toHaveProperty("data")
-
-      return body.data
-    })
+    const response = await this.request.post(this.endpoint, { data: payload })
+    return this.handleRequest<Todo>("POST", this.endpoint, response, payload)
   }
 
   // READ
   async getAll(): Promise<Todo[]> {
-    return await allure.step(`GET /api/todos`, async () => {
-      const response = await this.request.get("/api/todos")
-
-      const body = await this.parseResponseJson(response)
-      await allure.attachment(
-        "Response Body",
-        JSON.stringify(body.data, null, 2),
-        "application/json",
-      )
-
-      expect(response.status(), "GET /api/todos should return 200").toBe(200)
-
-      expect(
-        body,
-        "GET response should contain 'data' property",
-      ).toHaveProperty("data")
-
-      expect(
-        Array.isArray(body.data),
-        "Expected an array of todos",
-      ).toBeTruthy()
-
-      return body.data
-    })
+    const response = await this.request.get(this.endpoint)
+    return this.handleRequest<Todo[]>("GET", this.endpoint, response)
   }
 
   async get(id: string): Promise<Todo> {
-    return await allure.step(`GET /api/todos/${id}`, async () => {
-      const response = await this.request.get(`/api/todos/${id}`)
-
-      const body = await this.parseResponseJson(response)
-      await allure.attachment(
-        "Response Body",
-        JSON.stringify(body.data, null, 2),
-        "application/json",
-      )
-
-      expect(response.status(), `GET /api/todos/${id} should return 200`).toBe(
-        200,
-      )
-
-      expect(
-        body,
-        "GET response should contain 'data' property",
-      ).toHaveProperty("data")
-
-      return body.data
-    })
+    const url = `${this.endpoint}/${id}`
+    const response = await this.request.get(url)
+    return this.handleRequest<Todo>("GET", url, response)
   }
 
   // UPDATE
-  async update(id: string, payload: TodoPayload): Promise<Todo> {
-    return await allure.step(`PUT /api/todos/${id}`, async () => {
-      await allure.attachment(
-        "Request Payload",
-        JSON.stringify(payload, null, 2),
-        "application/json",
-      )
-
-      const response = await this.request.put(`/api/todos/${id}`, {
-        data: payload,
-      })
-
-      const body = await this.parseResponseJson(response)
-      await allure.attachment(
-        "Response Body",
-        JSON.stringify(body.data, null, 2),
-        "application/json",
-      )
-
-      expect(response.status(), `PUT /api/todos/${id} should return 200`).toBe(
-        200,
-      )
-
-      expect(
-        body,
-        "PUT response should contain 'data' property",
-      ).toHaveProperty("data")
-
-      return body.data
-    })
+  async update(id: string, payload: Partial<TodoPayload>): Promise<Todo> {
+    const url = `${this.endpoint}/${id}`
+    const response = await this.request.put(url, { data: payload })
+    return this.handleRequest<Todo>("PUT", url, response, payload)
   }
 
   // DELETE
   async delete(id: string): Promise<void> {
-    return await allure.step(`DELETE /api/todos/${id}`, async () => {
-      const response = await this.request.delete(`/api/todos/${id}`)
-
-      expect(
-        response.status(),
-        `DELETE /api/todos/${id} should return 204`,
-      ).toBe(204)
-    })
+    const url = `${this.endpoint}/${id}`
+    const response = await this.request.delete(url)
+    await this.handleRequest<void>("DELETE", url, response)
   }
 }
