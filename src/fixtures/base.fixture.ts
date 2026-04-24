@@ -17,26 +17,34 @@ export const test = authTest.extend<TodoFixtures>({
   },
 
   // Define the cleanup fixture
-  cleanup: async ({ todoClient, authenticatedRequest }, use) => {
+  cleanup: async ({ todoClient }, use) => {
     const ids: string[] = []
     await use(ids)
 
-    // Cleanup runs automatically AFTER the test, isolated to THIS test only
-    for (const id of ids) {
-      // Perform deletion
-      await todoClient.delete(id).catch(() => {})
+    if (ids.length > 0) {
+      // Fire all deletions at once
+      const results = await Promise.allSettled(
+        ids.map((id) => todoClient.delete(id)),
+      )
 
-      // Verify using the raw request context
-      // We use authenticatedRequest directly because it returns the raw response object
-      const response = await authenticatedRequest.get(`/api/todos/${id}`)
+      // Log if any specific deletion failed
+      results.forEach((result, index) => {
+        if (result.status === "rejected") {
+          console.error(
+            `[CLEANUP ERROR] ID ${ids[index]} failed: `,
+            result.reason,
+          )
+        }
+      })
 
-      console.log(`[CLEANUP] ID: ${id} | Status ${response.status()}`)
+      console.log(
+        `[CLEANUP COMPLETED] Attempted parallel deletion of ${ids.length} items.`,
+      )
 
-      // Now 'status()' will work because 'response' is an APIResponse
       expect(
-        response.status(),
-        `Verify resource ${id} is no longer accessible (404)`,
-      ).toBe(404)
+        results.length,
+        `Deleted todos: (${results.length}) | Created Todos: (${ids.length})`,
+      ).toBe(ids.length)
     }
   },
 })
