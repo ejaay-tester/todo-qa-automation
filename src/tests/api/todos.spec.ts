@@ -1,6 +1,5 @@
 import { test, expect } from "../../fixtures/base.fixture"
 import { TodoFactory } from "../../factories/TodoFactory"
-import { Todo } from "../../types/todo.type"
 
 test.describe("Todos API", () => {
   /**
@@ -10,7 +9,7 @@ test.describe("Todos API", () => {
   test.describe("POST /api/todos", () => {
     // Happy Path
     // Assertions: 201, response contains _id, matches payload
-    test("creates todo with valid data", async ({ todoClient }) => {
+    test("creates todo with valid data", async ({ todoClient, cleanup }) => {
       // Generate payload once at the start of the test scope
       const payload = TodoFactory.createTodoPayload()
 
@@ -22,7 +21,9 @@ test.describe("Todos API", () => {
         await test.step("Act: Create todo via API", async () => {
           // The API Client should handle .json() and .status() checks internally
           console.log("Creating new todo...")
-          return await todoClient.create(payload)
+          const todo = await todoClient.create(payload)
+          cleanup.push(todo._id)
+          return todo
         })
 
       console.log(
@@ -35,16 +36,13 @@ test.describe("Todos API", () => {
        */
       await test.step("Assert: Verify the created todo matches payload", async () => {
         // Verify the unique identifier exists
-        expect(
-          createdTodo._id,
-          "API response missing unique identifier (_id)",
-        ).toBeDefined()
+        expect(createdTodo._id, "API response missing _id").toBeDefined()
 
         // Verify all sent data matches what was returned
         // MatchObject is pro-level: it ignores extra fields like 'createdAt
         expect(
           createdTodo,
-          "Created resource data mismatch: Response does not match sent payload",
+          "Response does not match sent payload",
         ).toMatchObject(payload)
 
         // Verify specific state
@@ -57,18 +55,18 @@ test.describe("Todos API", () => {
 
     // Negative - Validation Cases
     // Expect: 400, Validation error message
-    test("fail todo creation when title is missing", async () => {})
-    test("fail todo creation with empty payload", async () => {})
+    // test("fail todo creation when title is missing", async () => {})
+    // test("fail todo creation with empty payload", async () => {})
 
     // Negative - Auth Cases
     // Expect: 401 Unauthorized
-    test("fail todo creation without token", async () => {})
+    // test("fail todo creation without token", async () => {})
 
     // Edge Cases
     // Large input, special characters, boolean logic
-    test("accepts very long title", async () => {})
-    test("accepts special characters", async () => {})
-    test("toggle completed status", async () => {})
+    // test("accepts very long title", async () => {})
+    // test("accepts special characters", async () => {})
+    // test("toggle completed status", async () => {})
   })
 
   /**
@@ -79,7 +77,7 @@ test.describe("Todos API", () => {
   test.describe("GET /api/todos", () => {
     // Happy Path
     // Assertions: 200, array response, only user's todos
-    test("returns list of all user todos", async ({ todoClient }) => {
+    test("returns list of all user todos", async ({ todoClient, cleanup }) => {
       // Arrange: Create multiple todos and capture them in an array[]
       const createdTodos =
         await test.step("Setup: Seed 3 todos for user", async () => {
@@ -90,6 +88,7 @@ test.describe("Todos API", () => {
             const payload = TodoFactory.createTodoPayload()
             const todo = await todoClient.create(payload)
             todoList.push(todo)
+            cleanup.push(todo._id)
 
             console.log(
               `Created todo: ${todo._id} - ${todo.title} | ${todo.description} | ${todo.completed}`,
@@ -137,16 +136,16 @@ test.describe("Todos API", () => {
 
     // Happy Path
     // Flow: Create Todo -> Fetch by ID -> Validate data
-    test("returns todo by ID", async () => {})
+    // test("returns todo by ID", async () => {})
 
     // Negative
     // Expect: 404
-    test("returns 404 for non-existing todo", async () => {})
+    // test("returns 404 for non-existing todo", async () => {})
 
     // Cross-User Security Test | Data Isolation
     // Flow: Create User A -> Create Todo -> Create User B -> Fetch Todos
     // Assert: User B does NOT see User A todos
-    test("User A should  NOT see User B todos, vice versa", async () => {})
+    // test("User A should  NOT see User B todos, vice versa", async () => {})
   })
 
   /**
@@ -158,6 +157,7 @@ test.describe("Todos API", () => {
     // Flow: Create Todo -> Update -> Validate updated fields
     test("updates todo and reflect changes in full list", async ({
       todoClient,
+      cleanup,
     }) => {
       // ARRANGE: Setup the data and environment
       const { createdTodo, updatePayload } =
@@ -166,6 +166,7 @@ test.describe("Todos API", () => {
 
           console.log("Creating new todo...")
           const createdTodo = await todoClient.create(initialPayload)
+          cleanup.push(createdTodo._id)
           console.log(
             `Created Todo: ${createdTodo._id} - ${createdTodo.title} | ${createdTodo.description} | ${createdTodo.completed}`,
           )
@@ -200,7 +201,7 @@ test.describe("Todos API", () => {
         const allTodos = await todoClient.getAll()
         console.log("Fetching all todos...")
         console.log("--- Full Todo List ---")
-        allTodos.forEach((todo: Todo, index: number) => {
+        allTodos.forEach((todo, index) => {
           console.log(
             `[${index}] - ${todo._id} | ${todo.title} | ${todo.description} | ${todo.completed} `,
           )
@@ -221,7 +222,7 @@ test.describe("Todos API", () => {
 
         // Verify persistence in the global list
         const updatedTodoInList = allTodos.find(
-          (todo: Todo) => todo._id === createdTodo._id,
+          (todo) => todo._id === createdTodo._id,
         )
 
         // Check if the updated todo exists on the full todo list
@@ -240,8 +241,8 @@ test.describe("Todos API", () => {
 
     // Negative
     // Expect: 404
-    test("fail updating non-existing todo", async () => {})
-    test("fail updating another user's todo", async () => {})
+    // test("fail updating non-existing todo", async () => {})
+    // test("fail updating another user's todo", async () => {})
   })
 
   /**
@@ -251,11 +252,10 @@ test.describe("Todos API", () => {
   test.describe("DELETE /api/todos/:id", () => {
     // Happy Path
     // Flow: Create Todo -> Delete -> Verify deletion (HTTP 204)
-    test("removes specific todo of a user", async () => {})
-
+    // test("removes specific todo of a user", async () => {})
     // Negative
     // Expect 404 and 403
-    test("fail deleting non-existing todo", async () => {})
-    test("fail deleting another user's todo", async () => {})
+    // test("fail deleting non-existing todo", async () => {})
+    // test("fail deleting another user's todo", async () => {})
   })
 })
