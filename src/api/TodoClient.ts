@@ -42,31 +42,44 @@ export class TodoClient {
           : {}
 
       // 3. Attach Response Body
-      await allure.attachment(
-        "Response Body",
-        JSON.stringify(body, null, 2),
-        "application/json",
-      )
+      if (response.status() !== 204) {
+        await allure.attachment(
+          "Response Body",
+          JSON.stringify(body, null, 2),
+          "application/json",
+        )
+      } else {
+        await allure.attachment(
+          "Response Body",
+          "No Content (204 Successful Deletion)",
+          "text/plain",
+        )
+      }
 
       // 4. Fail-Fast Assertions
-      // Validates status range 200-299
-      expect(
-        response.ok(),
-        `${method} ${url} failed with status ${response.status()}`,
-      ).toBeTruthy()
 
-      // 5. Data Integrity Check
+      // Validates status range 200-299
+      // We pass the whole response to expect(response).toBeOK()
+      // If it fails, Playwright automatically generates a professional error message
+      // including the status code and URL
+      expect(
+        response,
+        `Verify ${method} ${url} returns success status`,
+      ).toBeOK()
+
+      // Data Integrity Check
       if (response.status() !== 204) {
-        expect(body, "API response missing 'data' property").toHaveProperty(
-          "data",
-        )
+        expect(
+          body,
+          `Check if ${method} response contains 'data' property`,
+        ).toHaveProperty("data")
 
         // Array Check
         // If the expected type is an array, verify the response data is also an array
         if (Array.isArray(body.data)) {
           expect(
             body.data,
-            `Expected ${method} ${url} to return an array in todos`,
+            `Verify 'data' is an array for ${method} collection`,
           ).toBeInstanceOf(Array)
         }
       }
