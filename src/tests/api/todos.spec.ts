@@ -20,15 +20,11 @@ test.describe("Todos API", () => {
       const createdTodo =
         await test.step("Act: Create todo via API", async () => {
           // The API Client should handle .json() and .status() checks internally
-          console.log("Creating new todo...")
+
           const todo = await todoClient.create(payload)
           cleanup.push(todo._id)
           return todo
         })
-
-      console.log(
-        `Created todo: ${createdTodo._id} - ${createdTodo.title} | ${createdTodo.description} | ${createdTodo.completed}`,
-      )
 
       /**
        * ASSERT
@@ -86,16 +82,11 @@ test.describe("Todos API", () => {
         await test.step("Setup: Seed 3 todos for user", async () => {
           const todoList = []
 
-          console.log("Creating new todo...")
           for (let i = 0; i < 3; i++) {
             const payload = TodoFactory.createTodoPayload()
             const todo = await todoClient.create(payload)
             todoList.push(todo)
             cleanup.push(todo._id)
-
-            console.log(
-              `Created todo: ${todo._id} - ${todo.title} | ${todo.description} | ${todo.completed}`,
-            )
           }
           return todoList
         })
@@ -109,12 +100,6 @@ test.describe("Todos API", () => {
       // Assert: Verify integrity
       await test.step("Assert: Verify data integrity", async () => {
         // Place logs at the start of assertion
-        console.log("--- Full Todo List ---")
-        fetchedAllTodos.forEach((todo, index) => {
-          console.log(
-            `[${index}] - ${todo._id} | ${todo.title} | ${todo.description} | ${todo.completed}`,
-          )
-        })
 
         // Perform the verification logic
         for (const created of createdTodos) {
@@ -168,12 +153,8 @@ test.describe("Todos API", () => {
         await test.step("Setup: Create todo/s", async () => {
           const initialPayload = TodoFactory.createTodoPayload()
 
-          console.log("Creating new todo...")
           const createdTodo = await todoClient.create(initialPayload)
           cleanup.push(createdTodo._id)
-          console.log(
-            `Created Todo: ${createdTodo._id} - ${createdTodo.title} | ${createdTodo.description} | ${createdTodo.completed}`,
-          )
 
           const updatePayload = {
             ...initialPayload,
@@ -188,14 +169,11 @@ test.describe("Todos API", () => {
       const updatedTodo =
         await test.step("Act: Update specific todo", async () => {
           // Pass the update payload directly
-          console.log("Updating todo...")
           const updatedTodo = await todoClient.update(
             createdTodo._id,
             updatePayload,
           )
-          console.log(
-            `Updated Todo: ${updatedTodo._id} - ${updatedTodo.title} | ${updatedTodo.description} | ${updatedTodo.completed}`,
-          )
+
           return updatedTodo
         })
 
@@ -203,13 +181,6 @@ test.describe("Todos API", () => {
       await test.step("Assert: Verify update in response and full list", async () => {
         // Get data and log first - always ensures you see the state before it crash
         const allTodos = await todoClient.getAll()
-        console.log("Fetching all todos...")
-        console.log("--- Full Todo List ---")
-        allTodos.forEach((todo, index) => {
-          console.log(
-            `[${index}] - ${todo._id} | ${todo.title} | ${todo.description} | ${todo.completed} `,
-          )
-        })
 
         // Extra Safety: Check that the ID returned in the update response
         // matches the ID that was originally created
