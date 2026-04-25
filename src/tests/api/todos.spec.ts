@@ -36,19 +36,22 @@ test.describe("Todos API", () => {
        */
       await test.step("Assert: Verify the created todo matches payload", async () => {
         // Verify the unique identifier exists
-        expect(createdTodo._id, "API response missing _id").toBeDefined()
+        expect(
+          createdTodo._id,
+          `[REQUIREMENT] API response must contain a valid unique identifier (_id)`,
+        ).toBeDefined()
 
         // Verify all sent data matches what was returned
         // MatchObject is pro-level: it ignores extra fields like 'createdAt
         expect(
           createdTodo,
-          "Response does not match sent payload",
+          `[REQUIREMENT] Created todo (${createdTodo._id}) must match the sent payload`,
         ).toMatchObject(payload)
 
         // Verify specific state
         expect(
           createdTodo.completed,
-          "New todo state mismatch: Default 'completed' status must be false",
+          `[REQUIREMENT] New todo (${createdTodo._id}) must default to 'false' completed status`,
         ).toBe(false)
       })
     })
@@ -119,17 +122,18 @@ test.describe("Todos API", () => {
 
           expect(
             found,
-            `Persistence error: Todo [${created._id}] not found in collection fetch`,
+            `[REQUIREMENT] Created todo (${created._id}) must persist in the collection fetch`,
           ).toBeDefined()
+
           expect(
             found,
-            `Data integrity error: Collection item [${created._id}] properties do not match original`,
+            `[REQUIREMENT] Data integrity check - Todo (${created._id}) properties must match the original payload`,
           ).toMatchObject(created)
         }
 
         expect(
           fetchedAllTodos.length,
-          "Collection count mismatch: Total todos is less than the number of items created",
+          "[REQUIREMENT] Total count must include all newly created items",
         ).toBeGreaterThanOrEqual(createdTodos.length)
       })
     })
@@ -211,13 +215,13 @@ test.describe("Todos API", () => {
         // matches the ID that was originally created
         expect(
           updatedTodo._id,
-          "ID Mismatch: The update response returned a different ID than expected",
+          `[REQUIREMENT] ID Consistency Check - Response ID (${updatedTodo._id}) must match Origin ID (${createdTodo._id})`,
         ).toBe(createdTodo._id)
 
         // Check Payload: Check if the content (title, desc, etc.) matches
         expect(
           updatedTodo,
-          "Update failure: API response does not reflect requested changes",
+          `[REQUIREMENT] Updated todo (${updatedTodo._id}) must match the sent updated payload`,
         ).toMatchObject(updatePayload)
 
         // Verify persistence in the global list
@@ -228,13 +232,13 @@ test.describe("Todos API", () => {
         // Check if the updated todo exists on the full todo list
         expect(
           updatedTodoInList,
-          `Persistence error: Updated todo [${createdTodo._id}] missing from collection`,
+          `[REQUIREMENT] Persistence Check - Updated todo (${createdTodo._id}) must persist in the collection`,
         ).toBeDefined()
 
         // Ensure that the updated todo details are the same on the update payload
         expect(
           updatedTodoInList,
-          "Data integrity error: Global list does not reflect the specific todo update",
+          `[REQUIREMENT] Consistency Check - Global list must reflect updated data for todo (${createdTodo._id})`,
         ).toMatchObject(updatePayload)
       })
     })
