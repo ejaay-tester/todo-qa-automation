@@ -34,23 +34,23 @@ const test = base.extend<AuthFixture>({
 
     console.log("Registering user...")
 
-    const registerResponse = await request.post("/api/auth/register", {
+    const response = await request.post("/api/auth/register", {
       data: userData,
     })
 
-    if (!registerResponse.ok()) {
-      throw new Error(`Registration failed: ${registerResponse.status()}`)
+    if (!response.ok()) {
+      throw new Error(`Registration failed: ${response.status()}`)
     }
 
-    console.log("Register Status:", registerResponse.status())
+    console.log(`Register status: ${response.status()}`)
 
     // Get the data once
-    const responseBody = await registerResponse.json()
+    const body = await response.json()
 
     // Log the actual data
-    console.log("Register Data:", responseBody)
+    console.log(`Registered User: ${body.data.user.email}`)
 
-    const id = responseBody.data.user.id || responseBody.data.user._id
+    const id = body.data.user.id
 
     // Use the properties from the created userData object
     // MUST match the Type/Shape above exactly
@@ -71,26 +71,24 @@ const test = base.extend<AuthFixture>({
   authenticatedRequest: async ({ registeredUser, request: apiClient }, use) => {
     console.log("User logging in...")
 
-    const loginResponse = await apiClient.post("/api/auth/login", {
+    const response = await apiClient.post("/api/auth/login", {
       data: {
         email: registeredUser.email,
         password: registeredUser.password,
       },
     })
 
-    console.log("Verifying user credentials... ")
+    console.log(`Login status: ${response.status()}`)
 
-    if (!loginResponse.ok()) {
-      throw new Error(`Login failed: ${loginResponse.status()}`)
+    if (!response.ok()) {
+      throw new Error(`Login failed: ${response.status()}`)
     }
 
-    const loginBody = await loginResponse.json()
+    const body = await response.json()
 
-    const userMetadata = loginBody.data.user
+    console.log(`Successful login: ${body.data.user.email}`)
 
-    console.log(`Successful login: `, userMetadata)
-
-    const token = loginBody.data.token
+    const token = body.data.token
 
     if (!token) {
       throw new Error("No token returned from login!")
