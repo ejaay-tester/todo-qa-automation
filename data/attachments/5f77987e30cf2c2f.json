@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-GUUI2",
+    "description": "Desc-GUUI2",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69ef380a2bb32eb5faf0359d",
+    "_id": "69ef380c2bb32eb5faf035a4",
+    "createdAt": "2026-04-27T10:18:52.348Z",
+    "updatedAt": "2026-04-27T10:18:52.348Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,19 @@
+Registering user...
+Register Status: 201
+Register Data: {
+  success: true,
+  message: 'User registered successfully',
+  data: {
+    user: {
+      id: '69ef38042bb32eb5faf03589',
+      email: 'testuser_1777285124614@yopmail.com'
+    }
+  }
+}
+User logging in...
+Verifying user credentials... 
+Successful login:  {
+  id: '69ef38042bb32eb5faf03589',
+  email: 'testuser_1777285124614@yopmail.com'
+}
+[CLEANUP COMPLETED] Attempted parallel deletion of 1 items.

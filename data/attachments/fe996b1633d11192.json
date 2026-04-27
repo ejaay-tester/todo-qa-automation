@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-8ATPU",
+    "description": "Desc-8ATPU",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69ef37ef2bb32eb5faf0352b",
+    "_id": "69ef37f12bb32eb5faf03532",
+    "createdAt": "2026-04-27T10:18:25.631Z",
+    "updatedAt": "2026-04-27T10:18:25.631Z",
+    "__v": 0
+  }
+}

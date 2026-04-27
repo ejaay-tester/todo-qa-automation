@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-RDP1L",
+    "description": "Desc-RDP1L",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69ef380a2bb32eb5faf0359d",
+    "_id": "69ef380c2bb32eb5faf035a2",
+    "createdAt": "2026-04-27T10:18:52.152Z",
+    "updatedAt": "2026-04-27T10:18:52.152Z",
+    "__v": 0
+  }
+}

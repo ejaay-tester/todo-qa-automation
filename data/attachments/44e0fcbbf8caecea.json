@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-39ZX4",
+    "description": "Desc-39ZX4",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69ef38152bb32eb5faf035d5",
+    "_id": "69ef38172bb32eb5faf035d8",
+    "createdAt": "2026-04-27T10:19:03.038Z",
+    "updatedAt": "2026-04-27T10:19:03.038Z",
+    "__v": 0
+  }
+}

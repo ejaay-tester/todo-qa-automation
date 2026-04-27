@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-EL51W",
+    "description": "Desc-EL51W",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69ef38082bb32eb5faf03595",
+    "_id": "69ef38092bb32eb5faf03598",
+    "createdAt": "2026-04-27T10:18:49.893Z",
+    "updatedAt": "2026-04-27T10:18:49.893Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-T9QMN",
+    "description": "Desc-T9QMN",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69ef37f92bb32eb5faf03551",
+    "_id": "69ef37fb2bb32eb5faf03558",
+    "createdAt": "2026-04-27T10:18:35.089Z",
+    "updatedAt": "2026-04-27T10:18:35.089Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-267QX",
+    "description": "Desc-267QX",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69ef38022bb32eb5faf03577",
+    "_id": "69ef38032bb32eb5faf0357e",
+    "createdAt": "2026-04-27T10:18:43.849Z",
+    "updatedAt": "2026-04-27T10:18:43.849Z",
+    "__v": 0
+  }
+}

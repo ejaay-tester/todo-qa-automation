@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-24LD4",
+    "description": "Desc-24LD4",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69ef38132bb32eb5faf035c3",
+    "_id": "69ef38142bb32eb5faf035ca",
+    "createdAt": "2026-04-27T10:19:00.731Z",
+    "updatedAt": "2026-04-27T10:19:00.731Z",
+    "__v": 0
+  }
+}

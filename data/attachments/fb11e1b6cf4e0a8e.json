@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-6ORQZ",
+    "description": "Desc-6ORQZ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69ef37ed2bb32eb5faf03523",
+    "_id": "69ef37ee2bb32eb5faf03526",
+    "createdAt": "2026-04-27T10:18:22.996Z",
+    "updatedAt": "2026-04-27T10:18:22.996Z",
+    "__v": 0
+  }
+}
