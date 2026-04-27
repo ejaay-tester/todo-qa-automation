@@ -1,0 +1,14 @@
+Registering user...
+Register Status: 201
+Register Data: {
+  success: true,
+  message: 'User registered successfully',
+  data: {
+    user: {
+      id: '69ef2b21cbc5f9ae52379e05',
+      email: 'testuser_1777281825414@yopmail.com'
+    }
+  }
+}
+User logging in...
+Verifying user credentials... 
