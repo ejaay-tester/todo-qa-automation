@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-E3NHI",
+    "description": "Desc-E3NHI",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69ef3d034ddf5e3338c0bdcc",
+    "_id": "69ef3d054ddf5e3338c0bdd3",
+    "createdAt": "2026-04-27T10:40:05.135Z",
+    "updatedAt": "2026-04-27T10:40:05.135Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-4GCBL",
+    "description": "Desc-4GCBL",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69ef3d064ddf5e3338c0bdde",
+    "_id": "69ef3d074ddf5e3338c0bde1",
+    "createdAt": "2026-04-27T10:40:07.626Z",
+    "updatedAt": "2026-04-27T10:40:07.626Z",
+    "__v": 0
+  }
+}

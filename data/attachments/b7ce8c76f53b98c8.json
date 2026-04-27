@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-GLXHJ",
+    "description": "Desc-GLXHJ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69ef3d0c4ddf5e3338c0bdf2",
+    "_id": "69ef3d0d4ddf5e3338c0bdf5",
+    "createdAt": "2026-04-27T10:40:13.835Z",
+    "updatedAt": "2026-04-27T10:40:13.835Z",
+    "__v": 0
+  }
+}

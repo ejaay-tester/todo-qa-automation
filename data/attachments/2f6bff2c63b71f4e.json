@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-PT7CR",
+    "description": "Desc-PT7CR",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69ef3cea4ddf5e3338c0bd6c",
+    "_id": "69ef3ceb4ddf5e3338c0bd6f",
+    "createdAt": "2026-04-27T10:39:39.550Z",
+    "updatedAt": "2026-04-27T10:39:39.550Z",
+    "__v": 0
+  }
+}

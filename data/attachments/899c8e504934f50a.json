@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-ATLMI",
+    "description": "Desc-ATLMI",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69ef3d014ddf5e3338c0bdc4",
+    "_id": "69ef3d024ddf5e3338c0bdc7",
+    "createdAt": "2026-04-27T10:40:02.457Z",
+    "updatedAt": "2026-04-27T10:40:02.457Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-XCVY3",
+    "description": "Desc-XCVY3",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69ef3cfa4ddf5e3338c0bda6",
+    "_id": "69ef3cfc4ddf5e3338c0bdad",
+    "createdAt": "2026-04-27T10:39:56.032Z",
+    "updatedAt": "2026-04-27T10:39:56.032Z",
+    "__v": 0
+  }
+}

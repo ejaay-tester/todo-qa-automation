@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-EN2CP",
+    "description": "Desc-EN2CP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69ef3cf74ddf5e3338c0bd9e",
+    "_id": "69ef3cf94ddf5e3338c0bda1",
+    "createdAt": "2026-04-27T10:39:53.236Z",
+    "updatedAt": "2026-04-27T10:39:53.236Z",
+    "__v": 0
+  }
+}

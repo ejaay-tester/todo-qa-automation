@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-52JTO",
+    "description": "Desc-52JTO",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69ef3d0c4ddf5e3338c0bdf2",
+    "_id": "69ef3d0e4ddf5e3338c0bdf7",
+    "createdAt": "2026-04-27T10:40:14.086Z",
+    "updatedAt": "2026-04-27T10:40:14.086Z",
+    "__v": 0
+  }
+}
