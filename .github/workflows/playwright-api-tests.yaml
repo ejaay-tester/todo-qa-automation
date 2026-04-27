@@ -6,7 +6,7 @@ on:
       - "playwright.config.ts" # Catch global config changes
       - "package.json" # Catch new dependency installs
       - "package-lock.json"
-  workflow_dispatch: # Allows you to run the test manually from GitHub UI
+  workflow_dispatch: # This allows the manual "Run Workflow" button to appear
 
 jobs:
   test:
