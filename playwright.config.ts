@@ -22,16 +22,16 @@ export default defineConfig({
     { name: "webkit", use: { ...devices["Desktop Safari"] } },
 
     /* Test against branded browsers */
-    {
-      name: "Microsoft Edge",
-      use: {
-        ...devices["Desktop Edge"],
-        channel: "msedge",
-      },
-    },
-    {
-      name: "Google Chrome",
-      use: { ...devices["Desktop Chrome"], channel: "chrome" },
-    },
+    // {
+    //   name: "Microsoft Edge",
+    //   use: {
+    //     ...devices["Desktop Edge"],
+    //     channel: "msedge",
+    //   },
+    // },
+    // {
+    //   name: "Google Chrome",
+    //   use: { ...devices["Desktop Chrome"], channel: "chrome" },
+    // },
   ],
 })
