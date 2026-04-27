@@ -1,0 +1,7 @@
+Registering user...
+Register status: 201
+Registered User: testuser_1777286727205@yopmail.com
+User logging in...
+Login status: 200
+Successful login: testuser_1777286727205@yopmail.com
+[CLEANUP COMPLETED] Attempted parallel deletion of 1 items.

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-RY4RY",
+    "description": "Desc-RY4RY",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69ef3e474ddf5e3338c0be10",
+    "_id": "69ef3e494ddf5e3338c0be13",
+    "createdAt": "2026-04-27T10:45:29.238Z",
+    "updatedAt": "2026-04-27T10:45:29.238Z",
+    "__v": 0
+  }
+}
