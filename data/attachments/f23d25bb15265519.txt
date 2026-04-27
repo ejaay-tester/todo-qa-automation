@@ -5,8 +5,8 @@ Register Data: {
   message: 'User registered successfully',
   data: {
     user: {
-      id: '69ef2ea0cbc5f9ae52379e20',
-      email: 'testuser_1777282720502@yopmail.com'
+      id: '69ef30a5c094ed515d8ece1a',
+      email: 'testuser_1777283236897@yopmail.com'
     }
   }
 }
