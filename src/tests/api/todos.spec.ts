@@ -1,5 +1,6 @@
 import { test, expect } from "../../fixtures/base.fixture"
 import { TodoFactory } from "../../factories/TodoFactory"
+import { create } from "node:domain"
 
 test.describe("Todos API", () => {
   /**
@@ -80,17 +81,22 @@ test.describe("Todos API", () => {
       // Arrange: Create multiple todos and capture them in an array[]
       const createdTodos =
         await test.step("Setup: Seed 3 todos for user", async () => {
-          const todoList = []
+          // Generate an array of 3 payload objects
+          const payloads = Array.from({ length: 3 }, () =>
+            TodoFactory.createTodoPayload(),
+          )
 
-          for (let i = 0; i < 3; i++) {
-            const payload = TodoFactory.createTodoPayload()
-            const todo = await todoClient.create(payload)
-            todoList.push(todo)
-            cleanup.push(todo._id)
-          }
-          return todoList
+          // Map those payloads to API creation promises
+          const todos = payloads.map((payload) => todoClient.create(payload))
+
+          // Wait for all creations to finish
+          const results = await Promise.all(todos)
+
+          // Track IDs for cleanup
+          results.forEach((todo) => cleanup.push(todo._id))
+
+          return results
         })
-
       // Act: Fetch todos of the user
       const fetchedAllTodos =
         await test.step("Act: Fetch todos of the user", async () => {
@@ -224,13 +230,34 @@ test.describe("Todos API", () => {
    * DELETE TODO
    * - Method: DELETE | Endpoint: /api/todos/:id
    */
-  test.describe("DELETE /api/todos/:id", () => {
-    // Happy Path
-    // Flow: Create Todo -> Delete -> Verify deletion (HTTP 204)
-    // test("removes specific todo of a user", async () => {})
-    // Negative
-    // Expect 404 and 403
-    // test("fail deleting non-existing todo", async () => {})
-    // test("fail deleting another user's todo", async () => {})
-  })
+  // test.describe("DELETE /api/todos/:id", () => {
+  //   // Happy Path
+  //   // Flow: Create Todo -> Delete -> Verify deletion (HTTP 204)
+  //   test("removes specific todo of a user", async ({ todoClient }) => {
+  //     // ARRANGE: Setup the data
+  //     const createdTodo = await test.step("Setup: Create todo", async () => {
+  //       const payload = TodoFactory.createTodoPayload()
+  //       return await todoClient.create(payload)
+  //     })
+
+  //     // ACT: Delete specific todo
+  //     await test.step("Act: Delete specific todo", async () => {
+  //       await todoClient.delete(createdTodo._id)
+  //     })
+
+  //     // ASSERT: Verify the todo is actually gone
+  //     await test.step("Assert: Verify todo is no longer exists", async () => {
+  //       const response = await todoClient.get(createdTodo._id)
+
+  //       expect(
+  //         response,
+  //         `[REQUIREMENT] Deleted todo should not persist in the collection`,
+  //       ).toBeNull()
+  //     })
+  //   })
+  //   // Negative
+  //   // Expect 404 and 403
+  //   // test("fail deleting non-existing todo", async () => {})
+  //   // test("fail deleting another user's todo", async () => {})
+  // })
 })
