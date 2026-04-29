@@ -23,41 +23,64 @@ const test = base.extend<AuthFixture>({
    * - DOES NOT return token
    */
   registeredUser: async ({ request }, use) => {
-    const generateUser = (ts = Date.now()) => ({
-      email: `testuser_${ts}@yopmail.com`,
+    const userData = {
+      email: `testuser_${Date.now()}@yopmail.com`,
       password: "TestP@ssword123",
-      name: `testuser_${ts}`,
-    })
+      name: `testuser_${Date.now()}`,
+    }
 
     // Call the function to get the actual user object
-    const userData = generateUser()
+    // const userData = generateUser()
 
     console.log("Registering user...")
 
-    const response = await request.post("/api/auth/register", {
-      data: userData,
-    })
-
-    if (!response.ok()) {
-      throw new Error(`Registration failed: ${response.status()}`)
+    let response
+    try {
+      response = await request.post("/api/auth/register", {
+        data: userData,
+      })
+    } catch (error) {
+      throw new Error(
+        `[Connection Failure] - API is unreachable. Check if the server is running. \n${error}`,
+      )
     }
 
-    console.log(`Register status: ${response.status()}`)
+    if (!response.ok()) {
+      const status = response.status()
+      const errorBody = await response.text()
+      const errorMessage = `❌ API Error: POST /api/auth/register
+      Status: ${status}
+      Response: ${errorBody.substring(0, 500)}`.trim()
+
+      if (status >= 500) {
+        throw new Error(
+          `[SERVER ERROR] (5xx): The API is likely down or crashing.\n${errorMessage}`,
+        )
+      } else if (status === 429) {
+        throw new Error(
+          `[ERROR] (4xx): Too many request. Try again in a few minutes.\n${errorMessage}`,
+        )
+      }
+    }
+
+    console.log(`✅ Success user registration (${response.status()})`)
 
     // Get the data once
     const body = await response.json()
 
     // Log the actual data
-    console.log(`Registered User: ${body.data.user.email}`)
+    console.log(`Registered user: ${body.data.user.email}`)
 
     const id = body.data.user.id
+    const email = userData.email
+    const password = userData.password
 
     // Use the properties from the created userData object
     // MUST match the Type/Shape above exactly
     await use({
       id,
-      email: userData.email,
-      password: userData.password,
+      email,
+      password,
     })
   },
 
@@ -71,27 +94,49 @@ const test = base.extend<AuthFixture>({
   authenticatedRequest: async ({ registeredUser, request: apiClient }, use) => {
     console.log("User logging in...")
 
-    const response = await apiClient.post("/api/auth/login", {
-      data: {
-        email: registeredUser.email,
-        password: registeredUser.password,
-      },
-    })
-
-    console.log(`Login status: ${response.status()}`)
+    let response
+    try {
+      response = await apiClient.post("/api/auth/login", {
+        data: {
+          email: registeredUser.email,
+          password: registeredUser.password,
+        },
+      })
+    } catch (error) {
+      throw new Error(
+        `[Connection Failure] - Login failed because server is down. \n${error}`,
+      )
+    }
 
     if (!response.ok()) {
-      throw new Error(`Login failed: ${response.status()}`)
+      const status = response.status()
+      const errorBody = await response.text()
+      const errorMessage = `❌ API Error: POST /api/auth/login
+      Status: ${status}
+      Response: ${errorBody.substring(0, 500)}`.trim()
+
+      if (status >= 500) {
+        throw new Error(
+          `[SERVER ERROR] (5xx): The API is likely down or crashing.\n${errorMessage}`,
+        )
+      } else if (status === 429) {
+        throw new Error(
+          `[ERROR] (4xx): Too many request. Try again in a few minutes.\n${errorMessage}`,
+        )
+      }
     }
+    console.log(`✅ Successful user login (${response.status()})`)
 
     const body = await response.json()
 
-    console.log(`Successful login: ${body.data.user.email}`)
+    console.log(`Logged-in user: ${body.data.user.email}`)
 
     const token = body.data.token
 
     if (!token) {
-      throw new Error("No token returned from login!")
+      throw new Error(
+        `[AUTHENTICATION ERROR] (${response.status()}): Session expired or token missing.`,
+      )
     }
 
     const authenticatedRequestContext = await request.newContext({
