@@ -33,6 +33,29 @@ export class TodoClient {
         )
       }
 
+      // Global Error Handler
+      if (!response.ok()) {
+        const status = response.status()
+        const errorBody = await response.text() // Get raw text in case it's not JSON
+
+        const errorMessage = `❌ API Error: ${method} ${url}
+        Status: ${status}
+        Response: ${errorBody.substring(0, 500)}`.trim()
+
+        if (status >= 500) {
+          throw new Error(
+            `[SERVER ERROR] (5xx): The API is likely down or crashing.\n${errorMessage}`,
+          )
+        } else if (status === 401 || status === 403) {
+          throw new Error(
+            `[AUTHENTICATION ERROR] (4xx): Session expired or permissions missing.\n${errorMessage}`,
+          )
+        }
+
+        // Fallback for other non-ok statuses
+        expect(response.ok(), errorMessage).toBeTruthy()
+      }
+
       // 2. Parse Response (Safety check for empty body like 204 No Content)
       const body =
         response.status() !== 204
