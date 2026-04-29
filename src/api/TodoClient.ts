@@ -8,6 +8,27 @@ export class TodoClient {
   constructor(private request: APIRequestContext) {}
 
   /**
+   * PRIVATE HELPER
+   * This handles low-level
+   * network/connection failures
+   * before the API even responds
+   */
+  private async executeRequest(
+    requestFn: () => Promise<APIResponse>,
+  ): Promise<APIResponse> {
+    try {
+      return await requestFn()
+    } catch (error) {
+      throw new Error(
+        `[NETWORK FAILURE] - The API is unreachable. Check if the server is running. \n` +
+          `• Check if your server is running.\n` +
+          `• Check if your URL is correct.\n` +
+          `• Raw Error: ${error}`,
+      )
+    }
+  }
+
+  /**
    * GENERIC REQUEST HANDLER
    * This handles
    * Allure Reporting,
@@ -117,33 +138,41 @@ export class TodoClient {
 
   // CREATE
   async create(payload: TodoPayload): Promise<Todo> {
-    const response = await this.request.post(this.endpoint, { data: payload })
+    // Wrap the request in safeCall
+    const response = await this.executeRequest(() =>
+      this.request.post(this.endpoint, { data: payload }),
+    )
+
     return this.handleRequest<Todo>("POST", this.endpoint, response, payload)
   }
 
   // READ
   async getAll(): Promise<Todo[]> {
-    const response = await this.request.get(this.endpoint)
+    const response = await this.executeRequest(() =>
+      this.request.get(this.endpoint),
+    )
     return this.handleRequest<Todo[]>("GET", this.endpoint, response)
   }
 
   async get(id: string): Promise<Todo> {
     const url = `${this.endpoint}/${id}`
-    const response = await this.request.get(url)
+    const response = await this.executeRequest(() => this.request.get(url))
     return this.handleRequest<Todo>("GET", url, response)
   }
 
   // UPDATE
   async update(id: string, payload: Partial<TodoPayload>): Promise<Todo> {
     const url = `${this.endpoint}/${id}`
-    const response = await this.request.put(url, { data: payload })
+    const response = await this.executeRequest(() =>
+      this.request.put(url, { data: payload }),
+    )
     return this.handleRequest<Todo>("PUT", url, response, payload)
   }
 
   // DELETE
   async delete(id: string): Promise<void> {
     const url = `${this.endpoint}/${id}`
-    const response = await this.request.delete(url)
+    const response = await this.executeRequest(() => this.request.delete(url))
     await this.handleRequest<void>("DELETE", url, response)
   }
 }
