@@ -154,9 +154,13 @@ export class TodoClient {
     return this.handleRequest<Todo[]>("GET", this.endpoint, response)
   }
 
-  async get(id: string): Promise<Todo> {
+  async get(id: string, failOnNotFound = true): Promise<Todo | null> {
     const url = `${this.endpoint}/${id}`
     const response = await this.executeRequest(() => this.request.get(url))
+
+    // Additional logic for DELETE tests
+    if (!failOnNotFound && response.status() === 404) return null
+
     return this.handleRequest<Todo>("GET", url, response)
   }
 
