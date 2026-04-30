@@ -230,34 +230,36 @@ test.describe("Todos API", () => {
    * DELETE TODO
    * - Method: DELETE | Endpoint: /api/todos/:id
    */
-  // test.describe("DELETE /api/todos/:id", () => {
-  //   // Happy Path
-  //   // Flow: Create Todo -> Delete -> Verify deletion (HTTP 204)
-  //   test("removes specific todo of a user", async ({ todoClient }) => {
-  //     // ARRANGE: Setup the data
-  //     const createdTodo = await test.step("Setup: Create todo", async () => {
-  //       const payload = TodoFactory.createTodoPayload()
-  //       return await todoClient.create(payload)
-  //     })
+  test.describe("DELETE /api/todos/:id", () => {
+    // Happy Path
+    // Flow: Create Todo -> Delete -> Verify deletion (HTTP 204)
+    test("removes specific todo of a user", async ({ todoClient }) => {
+      // ARRANGE: Setup the data
+      const createdTodo = await test.step("Setup: Create todo", async () => {
+        const payload = TodoFactory.createTodoPayload()
+        return await todoClient.create(payload)
+      })
 
-  //     // ACT: Delete specific todo
-  //     await test.step("Act: Delete specific todo", async () => {
-  //       await todoClient.delete(createdTodo._id)
-  //     })
+      // ACT: Delete specific todo
+      await test.step("Act: Delete specific todo", async () => {
+        await todoClient.delete(createdTodo._id)
+      })
 
-  //     // ASSERT: Verify the todo is actually gone
-  //     await test.step("Assert: Verify todo is no longer exists", async () => {
-  //       const response = await todoClient.get(createdTodo._id)
+      // ASSERT: Verify the todo is actually gone
+      await test.step("Assert: Verify todo is no longer exists", async () => {
+        const response = await todoClient.get(createdTodo._id, false)
 
-  //       expect(
-  //         response,
-  //         `[REQUIREMENT] Deleted todo should not persist in the collection`,
-  //       ).toBeNull()
-  //     })
-  //   })
-  //   // Negative
-  //   // Expect 404 and 403
-  //   // test("fail deleting non-existing todo", async () => {})
-  //   // test("fail deleting another user's todo", async () => {})
-  // })
+        expect(
+          response,
+          `[REQUIREMENT] Deleted todo should not persist in the collection/database`,
+        ).toBeNull()
+      })
+    })
+
+    //   // Negative
+    //   // Expect 404 and 403
+    //   // test("fail deleting non-existing todo", async () => {})
+    //   // test("fail deleting another user's todo", async () => {})
+    // })
+  })
 })
