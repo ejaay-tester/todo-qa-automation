@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "69f4bd2577c6d3c9841eb381",
+      "title": "Todo-CZGUM",
+      "description": "Desc-CZGUM",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f4bd2477c6d3c9841eb37a",
+      "createdAt": "2026-05-01T14:48:05.717Z",
+      "updatedAt": "2026-05-01T14:48:05.717Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f4bd2577c6d3c9841eb37f",
+      "title": "Todo-WS8A9",
+      "description": "Desc-WS8A9",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f4bd2477c6d3c9841eb37a",
+      "createdAt": "2026-05-01T14:48:05.674Z",
+      "updatedAt": "2026-05-01T14:48:05.674Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f4bd2577c6d3c9841eb37d",
+      "title": "Todo-LKBWU",
+      "description": "Desc-LKBWU",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f4bd2477c6d3c9841eb37a",
+      "createdAt": "2026-05-01T14:48:05.650Z",
+      "updatedAt": "2026-05-01T14:48:05.650Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-WS8A9",
+    "description": "Desc-WS8A9",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4bd2477c6d3c9841eb37a",
+    "_id": "69f4bd2577c6d3c9841eb37f",
+    "createdAt": "2026-05-01T14:48:05.674Z",
+    "updatedAt": "2026-05-01T14:48:05.674Z",
+    "__v": 0
+  }
+}

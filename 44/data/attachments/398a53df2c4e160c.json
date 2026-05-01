@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-MMQII",
+    "description": "Desc-MMQII",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4bd2777c6d3c9841eb38c",
+    "_id": "69f4bd2877c6d3c9841eb38f",
+    "createdAt": "2026-05-01T14:48:08.676Z",
+    "updatedAt": "2026-05-01T14:48:08.676Z",
+    "__v": 0
+  }
+}

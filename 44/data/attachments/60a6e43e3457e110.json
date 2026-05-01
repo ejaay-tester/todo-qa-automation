@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-I6PVS",
+    "description": "Desc-I6PVS",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4bd1577c6d3c9841eb343",
+    "_id": "69f4bd1777c6d3c9841eb346",
+    "createdAt": "2026-05-01T14:47:51.395Z",
+    "updatedAt": "2026-05-01T14:47:51.395Z",
+    "__v": 0
+  }
+}

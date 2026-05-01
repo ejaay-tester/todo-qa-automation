@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "69f4bd3277c6d3c9841eb3b0",
+      "title": "Todo-IP1RZ",
+      "description": "Desc-IP1RZ",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f4bd3077c6d3c9841eb3a9",
+      "createdAt": "2026-05-01T14:48:18.194Z",
+      "updatedAt": "2026-05-01T14:48:18.194Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f4bd3177c6d3c9841eb3ae",
+      "title": "Todo-NBNCK",
+      "description": "Desc-NBNCK",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f4bd3077c6d3c9841eb3a9",
+      "createdAt": "2026-05-01T14:48:17.992Z",
+      "updatedAt": "2026-05-01T14:48:17.992Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f4bd3177c6d3c9841eb3ac",
+      "title": "Todo-R38TX",
+      "description": "Desc-R38TX",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f4bd3077c6d3c9841eb3a9",
+      "createdAt": "2026-05-01T14:48:17.958Z",
+      "updatedAt": "2026-05-01T14:48:17.958Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

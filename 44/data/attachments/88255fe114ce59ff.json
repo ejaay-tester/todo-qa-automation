@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-R38TX",
+    "description": "Desc-R38TX",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4bd3077c6d3c9841eb3a9",
+    "_id": "69f4bd3177c6d3c9841eb3ac",
+    "createdAt": "2026-05-01T14:48:17.958Z",
+    "updatedAt": "2026-05-01T14:48:17.958Z",
+    "__v": 0
+  }
+}

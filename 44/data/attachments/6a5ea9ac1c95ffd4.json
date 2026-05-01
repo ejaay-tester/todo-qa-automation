@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-TJ7EX",
+    "description": "Desc-TJ7EX",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4bd3677c6d3c9841eb3c7",
+    "_id": "69f4bd3777c6d3c9841eb3ca",
+    "createdAt": "2026-05-01T14:48:23.661Z",
+    "updatedAt": "2026-05-01T14:48:23.661Z",
+    "__v": 0
+  }
+}
