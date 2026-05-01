@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-PJDPD",
+    "description": "Desc-PJDPD",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b97477c6d3c9841eb2ad",
+    "_id": "69f4b97577c6d3c9841eb2b0",
+    "createdAt": "2026-05-01T14:32:21.979Z",
+    "updatedAt": "2026-05-01T14:32:21.979Z",
+    "__v": 0
+  }
+}

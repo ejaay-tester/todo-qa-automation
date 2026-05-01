@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-OV5PZ",
+    "description": "Desc-OV5PZ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b96e77c6d3c9841eb287",
+    "_id": "69f4b96f77c6d3c9841eb28a",
+    "createdAt": "2026-05-01T14:32:15.386Z",
+    "updatedAt": "2026-05-01T14:32:15.386Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-FBPYM",
+    "description": "Desc-FBPYM",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b96b77c6d3c9841eb27e",
+    "_id": "69f4b96c77c6d3c9841eb281",
+    "createdAt": "2026-05-01T14:32:12.242Z",
+    "updatedAt": "2026-05-01T14:32:12.242Z",
+    "__v": 0
+  }
+}

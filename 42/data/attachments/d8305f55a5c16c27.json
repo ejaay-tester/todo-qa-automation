@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-EA9I1",
+    "description": "Desc-EA9I1",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b97077c6d3c9841eb28f",
+    "_id": "69f4b97177c6d3c9841eb296",
+    "createdAt": "2026-05-01T14:32:17.362Z",
+    "updatedAt": "2026-05-01T14:32:17.362Z",
+    "__v": 0
+  }
+}

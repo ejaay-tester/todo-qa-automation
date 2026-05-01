@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-106BP",
+    "description": "Desc-106BP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b96677c6d3c9841eb260",
+    "_id": "69f4b96777c6d3c9841eb263",
+    "createdAt": "2026-05-01T14:32:07.682Z",
+    "updatedAt": "2026-05-01T14:32:07.682Z",
+    "__v": 0
+  }
+}

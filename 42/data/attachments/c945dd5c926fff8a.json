@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-HP8SS",
+    "description": "Desc-HP8SS",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b95e77c6d3c9841eb243",
+    "_id": "69f4b95f77c6d3c9841eb246",
+    "createdAt": "2026-05-01T14:31:59.981Z",
+    "updatedAt": "2026-05-01T14:31:59.981Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-PE390",
+    "description": "Desc-PE390",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b95c77c6d3c9841eb231",
+    "_id": "69f4b95d77c6d3c9841eb234",
+    "createdAt": "2026-05-01T14:31:57.692Z",
+    "updatedAt": "2026-05-01T14:31:57.692Z",
+    "__v": 0
+  }
+}

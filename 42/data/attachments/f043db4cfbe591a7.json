@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-NTKUN",
+    "description": "Desc-NTKUN",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b96877c6d3c9841eb272",
+    "_id": "69f4b96977c6d3c9841eb275",
+    "createdAt": "2026-05-01T14:32:09.842Z",
+    "updatedAt": "2026-05-01T14:32:09.842Z",
+    "__v": 0
+  }
+}

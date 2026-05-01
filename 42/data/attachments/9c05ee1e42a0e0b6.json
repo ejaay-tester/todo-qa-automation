@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "69f4b97177c6d3c9841eb296",
+      "title": "Todo-EA9I1",
+      "description": "Desc-EA9I1",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f4b97077c6d3c9841eb28f",
+      "createdAt": "2026-05-01T14:32:17.362Z",
+      "updatedAt": "2026-05-01T14:32:17.362Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f4b97177c6d3c9841eb294",
+      "title": "Todo-HEAFX",
+      "description": "Desc-HEAFX",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f4b97077c6d3c9841eb28f",
+      "createdAt": "2026-05-01T14:32:17.343Z",
+      "updatedAt": "2026-05-01T14:32:17.343Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f4b97177c6d3c9841eb292",
+      "title": "Todo-OQT8J",
+      "description": "Desc-OQT8J",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f4b97077c6d3c9841eb28f",
+      "createdAt": "2026-05-01T14:32:17.342Z",
+      "updatedAt": "2026-05-01T14:32:17.342Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}
