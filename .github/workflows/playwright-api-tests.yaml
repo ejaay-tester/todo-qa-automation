@@ -12,6 +12,10 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest # Uses a standard Linux machine
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     steps:
       - uses: actions/checkout@v4 # 1. Copies your code to the machine
 
@@ -41,6 +45,7 @@ jobs:
       - name: Generate Allure Report
         uses: simple-elf/allure-report-action@master
         if: always()
+        id: allure-report
         with:
           allure_results: allure-results
           gh_pages: gh-pages
@@ -50,11 +55,12 @@ jobs:
 
       - name: Deploy Allure Report to Github Pages
         if: always()
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
           publish_dir: allure-history
           publish_branch: gh-pages
+          force_orphan: true
 
       - name: Upload Test Report
         if: always() # Always runs even if tests fail
