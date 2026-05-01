@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-V66PI",
+    "description": "Desc-V66PI",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4ba9e77c6d3c9841eb2d0",
+    "_id": "69f4ba9f77c6d3c9841eb2d3",
+    "createdAt": "2026-05-01T14:37:19.631Z",
+    "updatedAt": "2026-05-01T14:37:19.631Z",
+    "__v": 0
+  }
+}

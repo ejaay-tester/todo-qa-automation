@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "69f4ba9b77c6d3c9841eb2c5",
+      "title": "Todo-VA266",
+      "description": "Desc-VA266",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f4ba9977c6d3c9841eb2be",
+      "createdAt": "2026-05-01T14:37:15.338Z",
+      "updatedAt": "2026-05-01T14:37:15.338Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f4ba9b77c6d3c9841eb2c3",
+      "title": "Todo-V1PAC",
+      "description": "Desc-V1PAC",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f4ba9977c6d3c9841eb2be",
+      "createdAt": "2026-05-01T14:37:15.300Z",
+      "updatedAt": "2026-05-01T14:37:15.300Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f4ba9b77c6d3c9841eb2c1",
+      "title": "Todo-YFNXE",
+      "description": "Desc-YFNXE",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f4ba9977c6d3c9841eb2be",
+      "createdAt": "2026-05-01T14:37:15.161Z",
+      "updatedAt": "2026-05-01T14:37:15.161Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

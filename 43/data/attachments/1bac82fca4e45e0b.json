@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "69f4baa877c6d3c9841eb2f4",
+      "title": "Todo-G8BTB",
+      "description": "Desc-G8BTB",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f4baa677c6d3c9841eb2ed",
+      "createdAt": "2026-05-01T14:37:28.549Z",
+      "updatedAt": "2026-05-01T14:37:28.549Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f4baa877c6d3c9841eb2f2",
+      "title": "Todo-2X0ZU",
+      "description": "Desc-2X0ZU",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f4baa677c6d3c9841eb2ed",
+      "createdAt": "2026-05-01T14:37:28.545Z",
+      "updatedAt": "2026-05-01T14:37:28.545Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f4baa877c6d3c9841eb2f0",
+      "title": "Todo-INNFB",
+      "description": "Desc-INNFB",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f4baa677c6d3c9841eb2ed",
+      "createdAt": "2026-05-01T14:37:28.454Z",
+      "updatedAt": "2026-05-01T14:37:28.454Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

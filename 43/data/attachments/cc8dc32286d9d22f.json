@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-V1PAC",
+    "description": "Desc-V1PAC",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4ba9977c6d3c9841eb2be",
+    "_id": "69f4ba9b77c6d3c9841eb2c3",
+    "createdAt": "2026-05-01T14:37:15.300Z",
+    "updatedAt": "2026-05-01T14:37:15.300Z",
+    "__v": 0
+  }
+}

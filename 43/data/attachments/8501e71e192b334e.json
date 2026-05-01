@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-C8QKQ",
+    "description": "Desc-C8QKQ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4bab777c6d3c9841eb33a",
+    "_id": "69f4bab977c6d3c9841eb33d",
+    "createdAt": "2026-05-01T14:37:45.229Z",
+    "updatedAt": "2026-05-01T14:37:45.229Z",
+    "__v": 0
+  }
+}
