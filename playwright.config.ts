@@ -7,7 +7,11 @@ export default defineConfig({
 
   fullyParallel: true,
 
-  reporter: [["line"], ["allure-playwright", { resultsDir: "allure-results" }]],
+  reporter: [
+    ["line"],
+    ["html", { outputFolder: "playwright-report" }],
+    ["allure-playwright", { outputFolder: "allure-results" }],
+  ],
 
   use: {
     baseURL: process.env.RENDER_STAGING_URL || "http://localhost:3000",
