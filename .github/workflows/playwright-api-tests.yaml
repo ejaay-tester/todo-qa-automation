@@ -42,6 +42,18 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
+      - name: Copy History From Last Run
+        if: always()
+        continue-on-error: true
+        run: |
+          if [ -d "gh-pages/last-history" ]; then
+            echo "Found last-history, copying into allure-results/history"
+            mkdir -p allure-results/history
+            cp -r gh-pages/last-history/. allure-results/history/
+          else
+            echo "No last-history found (likely first run), skipping."
+          fi
+
       - name: Generate Allure Report
         uses: simple-elf/allure-report-action@master
         if: always()
