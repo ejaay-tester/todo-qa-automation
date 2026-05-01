@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "69f4b6c277c6d3c9841eb14d",
+      "title": "Todo-UTVTU",
+      "description": "Desc-UTVTU",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f4b6c177c6d3c9841eb146",
+      "createdAt": "2026-05-01T14:20:50.691Z",
+      "updatedAt": "2026-05-01T14:20:50.691Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f4b6c277c6d3c9841eb14b",
+      "title": "Todo-OXTEV",
+      "description": "Desc-OXTEV",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f4b6c177c6d3c9841eb146",
+      "createdAt": "2026-05-01T14:20:50.680Z",
+      "updatedAt": "2026-05-01T14:20:50.680Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f4b6c277c6d3c9841eb149",
+      "title": "Todo-VW8QB",
+      "description": "Desc-VW8QB",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f4b6c177c6d3c9841eb146",
+      "createdAt": "2026-05-01T14:20:50.676Z",
+      "updatedAt": "2026-05-01T14:20:50.676Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

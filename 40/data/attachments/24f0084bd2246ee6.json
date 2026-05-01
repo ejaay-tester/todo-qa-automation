@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-OXTEV",
+    "description": "Desc-OXTEV",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b6c177c6d3c9841eb146",
+    "_id": "69f4b6c277c6d3c9841eb14b",
+    "createdAt": "2026-05-01T14:20:50.680Z",
+    "updatedAt": "2026-05-01T14:20:50.680Z",
+    "__v": 0
+  }
+}

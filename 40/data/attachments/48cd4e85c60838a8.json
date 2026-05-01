@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-KVY0E",
+    "description": "Desc-KVY0E",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b6ca77c6d3c9841eb16d",
+    "_id": "69f4b6cb77c6d3c9841eb170",
+    "createdAt": "2026-05-01T14:20:59.676Z",
+    "updatedAt": "2026-05-01T14:20:59.676Z",
+    "__v": 0
+  }
+}

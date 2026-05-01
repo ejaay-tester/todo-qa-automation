@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-H9NBT",
+    "description": "Desc-H9NBT",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b6bb77c6d3c9841eb135",
+    "_id": "69f4b6bc77c6d3c9841eb138",
+    "createdAt": "2026-05-01T14:20:44.438Z",
+    "updatedAt": "2026-05-01T14:20:44.438Z",
+    "__v": 0
+  }
+}

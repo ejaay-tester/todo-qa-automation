@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-1SY9U",
+    "description": "Desc-1SY9U",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b6cc77c6d3c9841eb175",
+    "_id": "69f4b6ce77c6d3c9841eb17a",
+    "createdAt": "2026-05-01T14:21:02.251Z",
+    "updatedAt": "2026-05-01T14:21:02.251Z",
+    "__v": 0
+  }
+}

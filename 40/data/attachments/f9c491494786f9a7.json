@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-FCWZV",
+    "description": "Desc-FCWZV",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b6d277c6d3c9841eb193",
+    "_id": "69f4b6d377c6d3c9841eb196",
+    "createdAt": "2026-05-01T14:21:07.744Z",
+    "updatedAt": "2026-05-01T14:21:07.744Z",
+    "__v": 0
+  }
+}

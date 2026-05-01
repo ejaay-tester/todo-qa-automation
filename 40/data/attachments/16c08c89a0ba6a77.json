@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-2VTBK",
+    "description": "Desc-2VTBK",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b6b377c6d3c9841eb10f",
+    "_id": "69f4b6b477c6d3c9841eb112",
+    "createdAt": "2026-05-01T14:20:36.658Z",
+    "updatedAt": "2026-05-01T14:20:36.658Z",
+    "__v": 0
+  }
+}
