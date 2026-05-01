@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-JXRXB",
+    "description": "Desc-JXRXB",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b58377c6d3c9841eb0cb",
+    "_id": "69f4b58477c6d3c9841eb0ce",
+    "createdAt": "2026-05-01T14:15:32.729Z",
+    "updatedAt": "2026-05-01T14:15:32.729Z",
+    "__v": 0
+  }
+}

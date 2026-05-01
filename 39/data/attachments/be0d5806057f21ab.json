@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-LLH6L",
+    "description": "Desc-LLH6L",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b57777c6d3c9841eb09c",
+    "_id": "69f4b57977c6d3c9841eb09f",
+    "createdAt": "2026-05-01T14:15:21.335Z",
+    "updatedAt": "2026-05-01T14:15:21.335Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "69f4b57677c6d3c9841eb091",
+      "title": "Todo-E4LXM",
+      "description": "Desc-E4LXM",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f4b57577c6d3c9841eb08a",
+      "createdAt": "2026-05-01T14:15:18.837Z",
+      "updatedAt": "2026-05-01T14:15:18.837Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f4b57677c6d3c9841eb08f",
+      "title": "Todo-DYPKM",
+      "description": "Desc-DYPKM",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f4b57577c6d3c9841eb08a",
+      "createdAt": "2026-05-01T14:15:18.836Z",
+      "updatedAt": "2026-05-01T14:15:18.836Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f4b57677c6d3c9841eb08d",
+      "title": "Todo-UR70Y",
+      "description": "Desc-UR70Y",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f4b57577c6d3c9841eb08a",
+      "createdAt": "2026-05-01T14:15:18.766Z",
+      "updatedAt": "2026-05-01T14:15:18.766Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

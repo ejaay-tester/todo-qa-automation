@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-4SJSO",
+    "description": "Desc-4SJSO",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b58077c6d3c9841eb0b9",
+    "_id": "69f4b58277c6d3c9841eb0bc",
+    "createdAt": "2026-05-01T14:15:30.137Z",
+    "updatedAt": "2026-05-01T14:15:30.137Z",
+    "__v": 0
+  }
+}

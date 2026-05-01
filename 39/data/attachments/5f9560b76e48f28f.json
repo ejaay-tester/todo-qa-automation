@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-SREVI",
+    "description": "Desc-SREVI",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b58b77c6d3c9841eb0e8",
+    "_id": "69f4b58d77c6d3c9841eb0eb",
+    "createdAt": "2026-05-01T14:15:41.244Z",
+    "updatedAt": "2026-05-01T14:15:41.244Z",
+    "__v": 0
+  }
+}

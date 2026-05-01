@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-VUQYP",
+    "description": "Desc-VUQYP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b58e77c6d3c9841eb0fa",
+    "_id": "69f4b58f77c6d3c9841eb0fd",
+    "createdAt": "2026-05-01T14:15:43.830Z",
+    "updatedAt": "2026-05-01T14:15:43.830Z",
+    "__v": 0
+  }
+}

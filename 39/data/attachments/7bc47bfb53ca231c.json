@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "69f4b58d77c6d3c9841eb0ef",
+      "title": "Todo-CPKUN",
+      "description": "Desc-CPKUN",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f4b58b77c6d3c9841eb0e8",
+      "createdAt": "2026-05-01T14:15:41.320Z",
+      "updatedAt": "2026-05-01T14:15:41.320Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f4b58d77c6d3c9841eb0ed",
+      "title": "Todo-WKQU4",
+      "description": "Desc-WKQU4",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f4b58b77c6d3c9841eb0e8",
+      "createdAt": "2026-05-01T14:15:41.293Z",
+      "updatedAt": "2026-05-01T14:15:41.293Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f4b58d77c6d3c9841eb0eb",
+      "title": "Todo-SREVI",
+      "description": "Desc-SREVI",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f4b58b77c6d3c9841eb0e8",
+      "createdAt": "2026-05-01T14:15:41.244Z",
+      "updatedAt": "2026-05-01T14:15:41.244Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

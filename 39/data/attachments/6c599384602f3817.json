@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-VOFUU",
+    "description": "Desc-VOFUU",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b58977c6d3c9841eb0e0",
+    "_id": "69f4b58b77c6d3c9841eb0e3",
+    "createdAt": "2026-05-01T14:15:39.030Z",
+    "updatedAt": "2026-05-01T14:15:39.030Z",
+    "__v": 0
+  }
+}
