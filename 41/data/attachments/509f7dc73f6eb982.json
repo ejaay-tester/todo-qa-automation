@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-T1MUQ",
+    "description": "Desc-T1MUQ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b85a77c6d3c9841eb1f1",
+    "_id": "69f4b85b77c6d3c9841eb1f4",
+    "createdAt": "2026-05-01T14:27:39.734Z",
+    "updatedAt": "2026-05-01T14:27:39.734Z",
+    "__v": 0
+  }
+}

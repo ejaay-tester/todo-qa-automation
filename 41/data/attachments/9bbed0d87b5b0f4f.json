@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-Q93HP",
+    "description": "Desc-Q93HP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b85277c6d3c9841eb1cb",
+    "_id": "69f4b85377c6d3c9841eb1ce",
+    "createdAt": "2026-05-01T14:27:31.969Z",
+    "updatedAt": "2026-05-01T14:27:31.969Z",
+    "__v": 0
+  }
+}

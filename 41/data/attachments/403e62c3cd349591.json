@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-MKB0Q",
+    "description": "Desc-MKB0Q",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b85477c6d3c9841eb1d3",
+    "_id": "69f4b85677c6d3c9841eb1d6",
+    "createdAt": "2026-05-01T14:27:34.241Z",
+    "updatedAt": "2026-05-01T14:27:34.241Z",
+    "__v": 0
+  }
+}

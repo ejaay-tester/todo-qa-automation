@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-R34UR",
+    "description": "Desc-R34UR",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b86277c6d3c9841eb214",
+    "_id": "69f4b86477c6d3c9841eb217",
+    "createdAt": "2026-05-01T14:27:48.141Z",
+    "updatedAt": "2026-05-01T14:27:48.141Z",
+    "__v": 0
+  }
+}

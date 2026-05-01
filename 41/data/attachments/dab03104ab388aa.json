@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-CNVGQ",
+    "description": "Desc-CNVGQ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b86077c6d3c9841eb202",
+    "_id": "69f4b86177c6d3c9841eb209",
+    "createdAt": "2026-05-01T14:27:45.564Z",
+    "updatedAt": "2026-05-01T14:27:45.564Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-SW5GU",
+    "description": "Desc-SW5GU",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b84577c6d3c9841eb19c",
+    "_id": "69f4b84777c6d3c9841eb19f",
+    "createdAt": "2026-05-01T14:27:19.467Z",
+    "updatedAt": "2026-05-01T14:27:19.467Z",
+    "__v": 0
+  }
+}

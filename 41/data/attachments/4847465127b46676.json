@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-ND919",
+    "description": "Desc-ND919",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f4b84e77c6d3c9841eb1c2",
+    "_id": "69f4b85077c6d3c9841eb1c5",
+    "createdAt": "2026-05-01T14:27:28.235Z",
+    "updatedAt": "2026-05-01T14:27:28.235Z",
+    "__v": 0
+  }
+}
