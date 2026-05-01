@@ -45,7 +45,7 @@ jobs:
           allure_results: allure-results
           gh_pages: gh-pages
           allure_report: allure-report
-          allure_history: gh-pages/history
+          allure_history: history
           keep_histories: 20
 
       - name: Deploy Allure Report to Github Pages
