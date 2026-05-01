@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - "src/**" # Covers api, factories, fixtures, tests, types, etc.
+      - ".github/workflows/playwright-api-tests.yaml"
       - "playwright.config.ts" # Catch global config changes
       - "package.json" # Catch new dependency installs
       - "package-lock.json"
