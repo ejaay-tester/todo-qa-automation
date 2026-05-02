@@ -22,72 +22,121 @@ env:
   KEEP_HISTORIES: 20
 
 jobs:
-  test:
-    runs-on: ubuntu-latest # Uses a standard Linux machine
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
-    steps:
-      - uses: actions/checkout@v4 # 1. Copies your code to the machine
+  # ─────────────────────────────────────────────
+  # JOB 1: Run Tests
+  # Responsibility: checkout, install, test, upload raw results
+  # ─────────────────────────────────────────────
 
+  test:
+    name: Run Playwright Tests
+    runs-on: ubuntu-latest # Uses a standard Linux machine
+
+    steps:
+      # Copies your code to the machine
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Installs Node.js
       - name: Setup Node.js
-        uses: actions/setup-node@v4 # 2. Installs Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: ${{ env.NODE_VERSION }}
           cache: "npm" # Speeds up future runs by caching packages
 
+      # Installs the project's libraries
       - name: Install dependencies
-        run: npm ci # 3. Installs your project's libraries
+        run: npm ci
 
+      # Caches browsers binaries - saves 1-2 mins on subsequent runs
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
+      - name: Install Playwright browsers
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: npx playwright install --with-deps
+
+      # Executes the tests
       - name: Run Playwright tests
         env:
           # This maps your GitHub Secret to the variable Playwright uses
           RENDER_STAGING_URL: ${{ secrets.RENDER_STAGING_URL }}
-        run: npx playwright test # 4. Executes the tests
+        run: npx playwright test
 
-      - name: Get Allure History
-        uses: actions/checkout@v4
+      # Pass raw results to the next job via artifact
+      - name: Upload Allure results
         if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results
+          path: ${{ env.ALLURE_RESULTS_DIR }}/
+          retention-days: 1 # Short-lived - only needed by the report job
+
+      # Keep the human-readable Playwright HTML report longer
+      - name: Upload Playwright HTML Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
+
+  # ─────────────────────────────────────────────
+  # JOB 2: Publish Allure Report
+  # Responsibility: build and deploy the Allure report with history
+  # Runs after test job, even on failure
+  # ─────────────────────────────────────────────
+
+  publish-report:
+    name: Publish Allure Report
+    runs-on: ubuntu-latest
+    needs: test # Always waits for test job to finish first
+    if: always() # Runs even if tests fail
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Download Allure results from test job
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-results
+          path: ${{ env.ALLURE_RESULTS_DIR }}
+
+      - name: Checkout gh-pages history
+        uses: actions/checkout@v4
         continue-on-error: true
         with:
           ref: gh-pages
           path: gh-pages
 
-      - name: Copy History From Last Run
-        if: always()
+      - name: Copy history from last run into allure-results
         continue-on-error: true
         run: |
           if [ -d "gh-pages/last-history" ]; then
-            echo "Found last-history, copying into allure-results/history"
-            mkdir -p allure-results/history
-            cp -r gh-pages/last-history/. allure-results/history/
+            echo "Found last-history - copying into allure-results/history"
+            mkdir -p ${{ env.ALLURE_RESULTS_DIR }}/history
+            cp -r gh-pages/last-history/. ${{ env.ALLURE_RESULTS_DIR }}/history/
           else
             echo "No last-history found (likely first run), skipping."
           fi
 
       - name: Generate Allure Report
-        uses: simple-elf/allure-report-action@master
-        if: always()
+        uses: simple-elf/allure-report-action@v1.9
         with:
-          allure_results: allure-results
+          allure_results: ${{ env.ALLURE_RESULTS_DIR }}
           gh_pages: gh-pages
           allure_report: allure-report
-          allure_history: allure-history
-          keep_histories: 20
+          allure_history: ${{ env.ALLURE_HISTORY_DIR }}
+          keep_histories: ${{ env.KEEP_HISTORIES }}
 
       - name: Deploy Allure Report to Github Pages
-        if: always()
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
-          publish_dir: allure-history
+          publish_dir: ${{ env.ALLURE_HISTORY_DIR }}
           publish_branch: gh-pages
-
-      - name: Upload Test Report
-        if: always() # Always runs even if tests fail
-        uses: actions/upload-artifact@v4 # 5. Saves your test results
-        with:
-          name: playwright-report
-          path: playwright-report/
-          retention-days: 30
