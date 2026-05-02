@@ -1,53 +1,73 @@
 name: Playwright API Tests
 
+# ─────────────────────────────────────────────────────────────────────────────
+# TRIGGERS
+# Runs on push only when relevant files change (avoids wasting CI minutes
+# on docs/README edits), or manually via the "Run Workflow" button.
+# ─────────────────────────────────────────────────────────────────────────────
 on:
   push:
     paths:
       - "src/**" # Covers api, factories, fixtures, tests, types, etc.
-      - ".github/workflows/playwright-api-tests.yaml"
-      - "playwright.config.ts" # Catch global config changes
-      - "package.json" # Catch new dependency installs
-      - "package-lock.json"
-  workflow_dispatch: # This allows the manual "Run Workflow" button to appear
+      - ".github/workflows/playwright-api-tests.yaml" # Re-run if the workflow itself changes
+      - "playwright.config.ts" # Catch global Playwright config changes
+      - "package.json" # Catch new dependency additions/installs
+      - "package-lock.json" # Catch lockfile changes
+  workflow_dispatch: # Enables the manual "Run Workflow" button in GitHub Actions UI
 
-# Prevents redundant runs if you push twice quickly
+# ─────────────────────────────────────────────────────────────────────────────
+# CONCURRENCY CONTROL
+# If a new push happens while a run is in progress on the same branch,
+# the older run is cancelled to avoid redundant work and history conflicts.
+# ─────────────────────────────────────────────────────────────────────────────
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+# ─────────────────────────────────────────────────────────────────────────────
+# GLOBAL ENVIRONMENT VARIABLES
+# Centralized config — update versions or paths here without touching each step.
+# ─────────────────────────────────────────────────────────────────────────────
 env:
   NODE_VERSION: "20"
-  ALLURE_RESULTS_DIR: allure-results
-  ALLURE_HISTORY_DIR: allure-history
-  KEEP_HISTORIES: 20
+  ALLURE_RESULTS_DIR: allure-results # Raw JSON output from Playwright/Allure
+  ALLURE_HISTORY_DIR: allure-history # Final built report for deployment
+  KEEP_HISTORIES: 20 # Number of past runs shown in Allure trend chart
 
 jobs:
-  # ─────────────────────────────────────────────
-  # JOB 1: Run Tests
-  # Responsibility: checkout, install, test, upload raw results
-  # ─────────────────────────────────────────────
+  # ───────────────────────────────────────────────────────────────────────────
+  # JOB 1: test
+  # Purpose:  Check out the repo, install dependencies, execute Playwright
+  #           tests, and upload the raw results as artifacts for Job 2.
+  # Note:     Permissions are intentionally omitted here — this job only
+  #           reads code and uploads artifacts; it doesn't need write access.
+  # ───────────────────────────────────────────────────────────────────────────
 
   test:
     name: Run Playwright Tests
     runs-on: ubuntu-latest # Uses a standard Linux machine
 
     steps:
-      # Copies your code to the machine
+      # Checks out your repository code onto the runner VM
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Installs Node.js
+      # Installs the specified Node.js version with npm caching enabled
+      # to speed up dependency installation on subsequent runs
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: "npm" # Speeds up future runs by caching packages
 
-      # Installs the project's libraries
+      # Performs a clean install based on package-lock.json
+      # (faster and more deterministic than `npm install`)
       - name: Install dependencies
         run: npm ci
 
-      # Caches browsers binaries - saves 1-2 mins on subsequent runs
+      # Restores cached Playwright browser binaries if the lockfile hasn't changed.
+      # Cache key is OS + package-lock.json hash — invalidates when deps change.
+      # Saves ~1-2 minutes on subsequent runs
       - name: Cache Playwright browsers
         uses: actions/cache@v4
         id: playwright-cache
@@ -55,58 +75,77 @@ jobs:
           path: ~/.cache/ms-playwright
           key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
 
+      # ✅ Pre-install OS dependencies via npx (faster, separate from browser download)
+      # This avoids the slow apt-get update inside --with-deps hanging the runner
+      - name: Install Playwright OS dependencies
+        run: npx playwright install-deps
+
+      # Only downloads browser binaries if cache miss — skips on cache hit
+      # Separated from OS deps so each concern is independently cached/skipped
       - name: Install Playwright browsers
         if: steps.playwright-cache.outputs.cache-hit != 'true'
-        run: npx playwright install --with-deps
+        run: npx playwright install
 
-      # Executes the tests
+      # Executes the full Playwright test suite.
+      # RENDER_STAGING_URL is injected from GitHub Secrets so it's never
+      # hardcoded in the codebase.
       - name: Run Playwright tests
         env:
           # This maps your GitHub Secret to the variable Playwright uses
           RENDER_STAGING_URL: ${{ secrets.RENDER_STAGING_URL }}
         run: npx playwright test
 
-      # Pass raw results to the next job via artifact
+      # Uploads the raw Allure JSON results so the publish-report job can
+      # consume them. Short retention since they're only needed temporarily.
       - name: Upload Allure results
-        if: always()
+        if: always() # Run even if tests fail so we always get a report
         uses: actions/upload-artifact@v4
         with:
           name: allure-results
           path: ${{ env.ALLURE_RESULTS_DIR }}/
-          retention-days: 1 # Short-lived - only needed by the report job
+          retention-days: 1 # Short-lived - consumed by publish-report job only
 
-      # Keep the human-readable Playwright HTML report longer
+      # Uploads the human-readable Playwright HTML report as a separate artifact.
+      # Useful for quick inspection directly in the GitHub Actions UI.
       - name: Upload Playwright HTML Report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
           path: playwright-report/
-          retention-days: 30
+          retention-days: 30 # Keep for 30 days for historical reference
 
-  # ─────────────────────────────────────────────
-  # JOB 2: Publish Allure Report
-  # Responsibility: build and deploy the Allure report with history
-  # Runs after test job, even on failure
-  # ─────────────────────────────────────────────
+  # ───────────────────────────────────────────────────────────────────────────
+  # JOB 2: publish-report
+  # Purpose:  Download raw results from Job 1, stitch in previous run history
+  #           for Allure trend tracking, generate the full Allure report,
+  #           and deploy it to GitHub Pages.
+  # Depends:  Runs after `test` job completes — even if tests failed.
+  # Permissions: Needs write access to push the report to the gh-pages branch.
+  # ───────────────────────────────────────────────────────────────────────────
 
   publish-report:
     name: Publish Allure Report
     runs-on: ubuntu-latest
-    needs: test # Always waits for test job to finish first
-    if: always() # Runs even if tests fail
+    needs: test # Waits for Job 1 to complete before starting
+    if: always() # Runs regardless of whether tests passed or failed
     permissions:
-      contents: write
-      pages: write
-      id-token: write
+      contents: write # Required to push to the gh-pages branch
+      pages: write # Required for GitHub Pages deployment
+      id-token: write # Required for OIDC-based auth with GitHub Pages
 
     steps:
+      # Downloads the raw allure-results artifact uploaded by the test job.
+      # This is the bridge between Job 1 and Job 2.
       - name: Download Allure results from test job
         uses: actions/download-artifact@v4
         with:
           name: allure-results
           path: ${{ env.ALLURE_RESULTS_DIR }}
 
+      # Checks out the gh-pages branch which contains all previous run folders
+      # and the last-history directory used for trend data.
+      # continue-on-error: true - handles the case where gh-pages doesn't exist yet (first run).
       - name: Checkout gh-pages history
         uses: actions/checkout@v4
         continue-on-error: true
@@ -114,6 +153,10 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
+      # Copies the last run's history data into allure-results/history so the
+      # Allure report generator can build accurate trend charts.
+      # Without this step, the trend chart would always be 1 run behind.
+      # continue-on-error: true - safely handles missing history on first runs.
       - name: Copy history from last run into allure-results
         continue-on-error: true
         run: |
@@ -125,15 +168,23 @@ jobs:
             echo "No last-history found (likely first run), skipping."
           fi
 
+      # Generates the full Allure HTML report by combining:
+      #   - allure-results/       → current run's test data
+      #   - gh-pages/             → numbered history folders (e.g. 39/, 40/, 41/)
+      #   - allure-results/history → trend/history metadata from the previous run
+      # Outputs the final deployable report into allure-history/.
       - name: Generate Allure Report
-        uses: simple-elf/allure-report-action@v1.9
+        uses: simple-elf/allure-report-action@v1.9 # Pinned version for stability
         with:
           allure_results: ${{ env.ALLURE_RESULTS_DIR }}
           gh_pages: gh-pages
           allure_report: allure-report
           allure_history: ${{ env.ALLURE_HISTORY_DIR }}
-          keep_histories: ${{ env.KEEP_HISTORIES }}
+          keep_histories: ${{ env.KEEP_HISTORIES }} # Max runs shown in trend chart
 
+      # Deploys the generated allure-history/ folder to the gh-pages branch.
+      # No force_orphan — this preserves the cumulative numbered run folders
+      # (e.g. 39/, 40/, 41/) which are required for the trend chart to work.
       - name: Deploy Allure Report to Github Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
