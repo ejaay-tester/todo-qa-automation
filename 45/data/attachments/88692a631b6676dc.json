@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-WVAT8",
+    "description": "Desc-WVAT8",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5844f56157345e5ab1757",
+    "_id": "69f5845156157345e5ab175a",
+    "createdAt": "2026-05-02T04:57:53.081Z",
+    "updatedAt": "2026-05-02T04:57:53.081Z",
+    "__v": 0
+  }
+}

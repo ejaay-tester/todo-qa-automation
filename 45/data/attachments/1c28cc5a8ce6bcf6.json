@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-9VIEN",
+    "description": "Desc-9VIEN",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5845b56157345e5ab1786",
+    "_id": "69f5845d56157345e5ab1789",
+    "createdAt": "2026-05-02T04:58:05.167Z",
+    "updatedAt": "2026-05-02T04:58:05.167Z",
+    "__v": 0
+  }
+}

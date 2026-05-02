@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-LA3GR",
+    "description": "Desc-LA3GR",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5844956157345e5ab173d",
+    "_id": "69f5844b56157345e5ab1740",
+    "createdAt": "2026-05-02T04:57:47.183Z",
+    "updatedAt": "2026-05-02T04:57:47.183Z",
+    "__v": 0
+  }
+}

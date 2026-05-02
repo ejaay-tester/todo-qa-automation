@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-HVXSI",
+    "description": "Desc-HVXSI",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5846456157345e5ab17a3",
+    "_id": "69f5846656157345e5ab17aa",
+    "createdAt": "2026-05-02T04:58:14.042Z",
+    "updatedAt": "2026-05-02T04:58:14.042Z",
+    "__v": 0
+  }
+}

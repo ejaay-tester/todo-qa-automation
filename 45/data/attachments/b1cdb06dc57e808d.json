@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-AMBLI",
+    "description": "Desc-AMBLI",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5846256157345e5ab179b",
+    "_id": "69f5846356157345e5ab179e",
+    "createdAt": "2026-05-02T04:58:11.772Z",
+    "updatedAt": "2026-05-02T04:58:11.772Z",
+    "__v": 0
+  }
+}

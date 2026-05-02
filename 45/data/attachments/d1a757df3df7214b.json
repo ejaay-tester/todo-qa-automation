@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-CW97N",
+    "description": "Desc-CW97N",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5844c56157345e5ab1745",
+    "_id": "69f5844d56157345e5ab174a",
+    "createdAt": "2026-05-02T04:57:49.623Z",
+    "updatedAt": "2026-05-02T04:57:49.623Z",
+    "__v": 0
+  }
+}

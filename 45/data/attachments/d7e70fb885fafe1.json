@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-CZ1KP",
+    "description": "Desc-CZ1KP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5845e56157345e5ab1792",
+    "_id": "69f5846056157345e5ab1795",
+    "createdAt": "2026-05-02T04:58:08.157Z",
+    "updatedAt": "2026-05-02T04:58:08.157Z",
+    "__v": 0
+  }
+}

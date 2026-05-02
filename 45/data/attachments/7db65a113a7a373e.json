@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-KZZN0",
+    "description": "Desc-KZZN0",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5846456157345e5ab17a3",
+    "_id": "69f5846556157345e5ab17a6",
+    "createdAt": "2026-05-02T04:58:13.971Z",
+    "updatedAt": "2026-05-02T04:58:13.971Z",
+    "__v": 0
+  }
+}

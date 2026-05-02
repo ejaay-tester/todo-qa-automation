@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-WOMJ2",
+    "description": "Desc-WOMJ2",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5845656157345e5ab176c",
+    "_id": "69f5845756157345e5ab176f",
+    "createdAt": "2026-05-02T04:57:59.669Z",
+    "updatedAt": "2026-05-02T04:57:59.669Z",
+    "__v": 0
+  }
+}

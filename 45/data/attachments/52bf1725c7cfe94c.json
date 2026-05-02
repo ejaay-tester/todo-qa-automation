@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-R35PM",
+    "description": "Desc-R35PM",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5845856157345e5ab1774",
+    "_id": "69f5845a56157345e5ab1777",
+    "createdAt": "2026-05-02T04:58:02.166Z",
+    "updatedAt": "2026-05-02T04:58:02.166Z",
+    "__v": 0
+  }
+}
