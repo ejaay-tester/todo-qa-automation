@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-OAF1D",
+    "description": "Desc-OAF1D",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5871a56157345e5ab17e4",
+    "_id": "69f5871c56157345e5ab17e7",
+    "createdAt": "2026-05-02T05:09:48.015Z",
+    "updatedAt": "2026-05-02T05:09:48.015Z",
+    "__v": 0
+  }
+}

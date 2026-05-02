@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-JQXS9",
+    "description": "Desc-JQXS9",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5872056157345e5ab17f9",
+    "_id": "69f5872156157345e5ab17fc",
+    "createdAt": "2026-05-02T05:09:53.835Z",
+    "updatedAt": "2026-05-02T05:09:53.835Z",
+    "__v": 0
+  }
+}

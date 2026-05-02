@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "69f5872e56157345e5ab1837",
+      "title": "Todo-ARXVX",
+      "description": "Desc-ARXVX",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f5872c56157345e5ab1830",
+      "createdAt": "2026-05-02T05:10:06.057Z",
+      "updatedAt": "2026-05-02T05:10:06.057Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f5872e56157345e5ab1835",
+      "title": "Todo-IWG92",
+      "description": "Desc-IWG92",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f5872c56157345e5ab1830",
+      "createdAt": "2026-05-02T05:10:06.034Z",
+      "updatedAt": "2026-05-02T05:10:06.034Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f5872e56157345e5ab1833",
+      "title": "Todo-CNZUH",
+      "description": "Desc-CNZUH",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f5872c56157345e5ab1830",
+      "createdAt": "2026-05-02T05:10:06.022Z",
+      "updatedAt": "2026-05-02T05:10:06.022Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

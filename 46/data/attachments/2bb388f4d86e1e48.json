@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-W19GP",
+    "description": "Desc-W19GP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5871656157345e5ab17ca",
+    "_id": "69f5871756157345e5ab17cd",
+    "createdAt": "2026-05-02T05:09:43.734Z",
+    "updatedAt": "2026-05-02T05:09:43.734Z",
+    "__v": 0
+  }
+}

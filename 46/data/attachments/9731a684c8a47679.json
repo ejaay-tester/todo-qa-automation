@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-SZUAM",
+    "description": "Desc-SZUAM",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5872756157345e5ab181f",
+    "_id": "69f5872856157345e5ab1822",
+    "createdAt": "2026-05-02T05:10:00.771Z",
+    "updatedAt": "2026-05-02T05:10:00.771Z",
+    "__v": 0
+  }
+}

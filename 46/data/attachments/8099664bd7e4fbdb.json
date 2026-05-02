@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-201OA",
+    "description": "Desc-201OA",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5871d56157345e5ab17f0",
+    "_id": "69f5871e56157345e5ab17f3",
+    "createdAt": "2026-05-02T05:09:50.518Z",
+    "updatedAt": "2026-05-02T05:09:50.518Z",
+    "__v": 0
+  }
+}

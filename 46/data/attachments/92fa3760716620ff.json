@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-GFY9J",
+    "description": "Desc-GFY9J",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5871856157345e5ab17d2",
+    "_id": "69f5871956157345e5ab17d7",
+    "createdAt": "2026-05-02T05:09:45.774Z",
+    "updatedAt": "2026-05-02T05:09:45.774Z",
+    "__v": 0
+  }
+}

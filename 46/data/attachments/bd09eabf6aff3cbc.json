@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-P3HLP",
+    "description": "Desc-P3HLP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5873156157345e5ab184e",
+    "_id": "69f5873256157345e5ab1851",
+    "createdAt": "2026-05-02T05:10:10.812Z",
+    "updatedAt": "2026-05-02T05:10:10.812Z",
+    "__v": 0
+  }
+}
