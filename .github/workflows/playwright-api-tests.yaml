@@ -174,7 +174,7 @@ jobs:
       #   - allure-results/history → trend/history metadata from the previous run
       # Outputs the final deployable report into allure-history/.
       - name: Generate Allure Report
-        uses: simple-elf/allure-report-action@v1.9 # Pinned version for stability
+        uses: simple-elf/allure-report-action@3d0f5c19b2f71df8ce14a2b52fa3b1f72c14c010 # Pinned version for stability
         with:
           allure_results: ${{ env.ALLURE_RESULTS_DIR }}
           gh_pages: gh-pages
