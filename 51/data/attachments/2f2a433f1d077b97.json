@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-WXT2K",
+    "description": "Desc-WXT2K",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5adb7b33a1f6fe2732d17",
+    "_id": "69f5adb8b33a1f6fe2732d1a",
+    "createdAt": "2026-05-02T07:54:32.639Z",
+    "updatedAt": "2026-05-02T07:54:32.639Z",
+    "__v": 0
+  }
+}

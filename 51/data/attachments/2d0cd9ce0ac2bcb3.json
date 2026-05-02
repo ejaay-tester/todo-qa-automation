@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-PVISQ",
+    "description": "Desc-PVISQ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5adc7b33a1f6fe2732d57",
+    "_id": "69f5adc8b33a1f6fe2732d5a",
+    "createdAt": "2026-05-02T07:54:48.534Z",
+    "updatedAt": "2026-05-02T07:54:48.534Z",
+    "__v": 0
+  }
+}

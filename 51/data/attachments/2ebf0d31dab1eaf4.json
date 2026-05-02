@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-GSPBQ",
+    "description": "Desc-GSPBQ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5adbcb33a1f6fe2732d28",
+    "_id": "69f5adbeb33a1f6fe2732d2f",
+    "createdAt": "2026-05-02T07:54:38.416Z",
+    "updatedAt": "2026-05-02T07:54:38.416Z",
+    "__v": 0
+  }
+}

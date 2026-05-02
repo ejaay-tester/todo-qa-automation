@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-RCZXE",
+    "description": "Desc-RCZXE",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5adb0b33a1f6fe2732cf1",
+    "_id": "69f5adb1b33a1f6fe2732cf4",
+    "createdAt": "2026-05-02T07:54:25.555Z",
+    "updatedAt": "2026-05-02T07:54:25.555Z",
+    "__v": 0
+  }
+}

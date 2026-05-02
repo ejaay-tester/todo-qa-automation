@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-R6KXK",
+    "description": "Desc-R6KXK",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5adccb33a1f6fe2732d75",
+    "_id": "69f5adcdb33a1f6fe2732d78",
+    "createdAt": "2026-05-02T07:54:53.645Z",
+    "updatedAt": "2026-05-02T07:54:53.645Z",
+    "__v": 0
+  }
+}

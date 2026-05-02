@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-NW1VW",
+    "description": "Desc-NW1VW",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5adc1b33a1f6fe2732d46",
+    "_id": "69f5adc3b33a1f6fe2732d49",
+    "createdAt": "2026-05-02T07:54:43.274Z",
+    "updatedAt": "2026-05-02T07:54:43.274Z",
+    "__v": 0
+  }
+}

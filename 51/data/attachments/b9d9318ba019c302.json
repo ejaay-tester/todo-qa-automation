@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "69f5adbeb33a1f6fe2732d2f",
+      "title": "Todo-GSPBQ",
+      "description": "Desc-GSPBQ",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f5adbcb33a1f6fe2732d28",
+      "createdAt": "2026-05-02T07:54:38.416Z",
+      "updatedAt": "2026-05-02T07:54:38.416Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f5adbeb33a1f6fe2732d2d",
+      "title": "Todo-DUME9",
+      "description": "Desc-DUME9",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f5adbcb33a1f6fe2732d28",
+      "createdAt": "2026-05-02T07:54:38.292Z",
+      "updatedAt": "2026-05-02T07:54:38.292Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f5adbeb33a1f6fe2732d2b",
+      "title": "Todo-7WCRD",
+      "description": "Desc-7WCRD",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f5adbcb33a1f6fe2732d28",
+      "createdAt": "2026-05-02T07:54:38.268Z",
+      "updatedAt": "2026-05-02T07:54:38.268Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-IPCLN",
+    "description": "Desc-IPCLN",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5adc9b33a1f6fe2732d69",
+    "_id": "69f5adcab33a1f6fe2732d6c",
+    "createdAt": "2026-05-02T07:54:50.975Z",
+    "updatedAt": "2026-05-02T07:54:50.975Z",
+    "__v": 0
+  }
+}

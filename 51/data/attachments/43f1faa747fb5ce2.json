@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-KZ12D",
+    "description": "Desc-KZ12D",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f5adbab33a1f6fe2732d20",
+    "_id": "69f5adbcb33a1f6fe2732d23",
+    "createdAt": "2026-05-02T07:54:36.146Z",
+    "updatedAt": "2026-05-02T07:54:36.146Z",
+    "__v": 0
+  }
+}
