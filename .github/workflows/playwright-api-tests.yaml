@@ -1,4 +1,5 @@
 name: Playwright API Tests
+
 on:
   push:
     paths:
@@ -8,6 +9,11 @@ on:
       - "package.json" # Catch new dependency installs
       - "package-lock.json"
   workflow_dispatch: # This allows the manual "Run Workflow" button to appear
+
+# Prevents redundant runs if you push twice quickly
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test:
