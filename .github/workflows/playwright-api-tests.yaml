@@ -15,6 +15,12 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  NODE_VERSION: "20"
+  ALLURE_RESULTS_DIR: allure-results
+  ALLURE_HISTORY_DIR: allure-history
+  KEEP_HISTORIES: 20
+
 jobs:
   test:
     runs-on: ubuntu-latest # Uses a standard Linux machine
