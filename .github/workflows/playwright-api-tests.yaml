@@ -46,6 +46,7 @@ jobs:
   test:
     name: Run Playwright Tests
     runs-on: ubuntu-latest # Uses a standard Linux machine
+    timeout-mintues: 30 # Safety net - kills the job if it hangs (e.g. frozen browser install)
 
     steps:
       # Checks out your repository code onto the runner VM
@@ -129,6 +130,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: test # Waits for Job 1 to complete before starting
     if: always() # Runs regardless of whether tests passed or failed
+    timeout-minutes: 10 # Report generation and deploy should never exceed 10 mins
     permissions:
       contents: write # Required to push to the gh-pages branch
       pages: write # Required for GitHub Pages deployment
