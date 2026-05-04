@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-1EYUZ",
+    "description": "Desc-1EYUZ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f86c835fbc6f5fd17f8df1",
+    "_id": "69f86c855fbc6f5fd17f8df8",
+    "createdAt": "2026-05-04T09:53:09.309Z",
+    "updatedAt": "2026-05-04T09:53:09.309Z",
+    "__v": 0
+  }
+}

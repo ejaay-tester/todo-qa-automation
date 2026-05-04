@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-CNDHK",
+    "description": "Desc-CNDHK",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f86c8f5fbc6f5fd17f8e20",
+    "_id": "69f86c905fbc6f5fd17f8e25",
+    "createdAt": "2026-05-04T09:53:20.974Z",
+    "updatedAt": "2026-05-04T09:53:20.974Z",
+    "__v": 0
+  }
+}

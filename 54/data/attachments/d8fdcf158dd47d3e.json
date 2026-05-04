@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "69f86c905fbc6f5fd17f8e27",
+      "title": "Todo-9LIFG",
+      "description": "Desc-9LIFG",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f86c8f5fbc6f5fd17f8e20",
+      "createdAt": "2026-05-04T09:53:20.988Z",
+      "updatedAt": "2026-05-04T09:53:20.988Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f86c905fbc6f5fd17f8e25",
+      "title": "Todo-CNDHK",
+      "description": "Desc-CNDHK",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f86c8f5fbc6f5fd17f8e20",
+      "createdAt": "2026-05-04T09:53:20.974Z",
+      "updatedAt": "2026-05-04T09:53:20.974Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f86c905fbc6f5fd17f8e23",
+      "title": "Todo-QI35T",
+      "description": "Desc-QI35T",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f86c8f5fbc6f5fd17f8e20",
+      "createdAt": "2026-05-04T09:53:20.952Z",
+      "updatedAt": "2026-05-04T09:53:20.952Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

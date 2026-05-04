@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "69f86c785fbc6f5fd17f8dc9",
+      "title": "Todo-T84XR",
+      "description": "Desc-T84XR",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f86c765fbc6f5fd17f8dc2",
+      "createdAt": "2026-05-04T09:52:56.006Z",
+      "updatedAt": "2026-05-04T09:52:56.006Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f86c785fbc6f5fd17f8dc7",
+      "title": "Todo-YL13P",
+      "description": "Desc-YL13P",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f86c765fbc6f5fd17f8dc2",
+      "createdAt": "2026-05-04T09:52:56.002Z",
+      "updatedAt": "2026-05-04T09:52:56.002Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f86c775fbc6f5fd17f8dc5",
+      "title": "Todo-66ESH",
+      "description": "Desc-66ESH",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f86c765fbc6f5fd17f8dc2",
+      "createdAt": "2026-05-04T09:52:55.971Z",
+      "updatedAt": "2026-05-04T09:52:55.971Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}
