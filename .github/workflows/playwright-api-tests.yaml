@@ -46,7 +46,7 @@ jobs:
   test:
     name: Run Playwright Tests
     runs-on: ubuntu-latest # Uses a standard Linux machine
-    timeout-mintues: 30 # Safety net - kills the job if it hangs (e.g. frozen browser install)
+    timeout-minutes: 30 # Safety net - kills the job if it hangs (e.g. frozen browser install)
 
     steps:
       # Checks out your repository code onto the runner VM
