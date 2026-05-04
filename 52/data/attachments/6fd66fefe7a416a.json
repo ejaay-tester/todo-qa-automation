@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-HK0J4",
+    "description": "Desc-HK0J4",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f86406c8263c20147fa488",
+    "_id": "69f86407c8263c20147fa48d",
+    "createdAt": "2026-05-04T09:16:55.425Z",
+    "updatedAt": "2026-05-04T09:16:55.425Z",
+    "__v": 0
+  }
+}

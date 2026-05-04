@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-SUD3F",
+    "description": "Desc-SUD3F",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f86420c8263c20147fa504",
+    "_id": "69f86422c8263c20147fa507",
+    "createdAt": "2026-05-04T09:17:22.118Z",
+    "updatedAt": "2026-05-04T09:17:22.118Z",
+    "__v": 0
+  }
+}

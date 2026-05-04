@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-LB2Q5",
+    "description": "Desc-LB2Q5",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f86411c8263c20147fa4b7",
+    "_id": "69f86413c8263c20147fa4be",
+    "createdAt": "2026-05-04T09:17:07.120Z",
+    "updatedAt": "2026-05-04T09:17:07.120Z",
+    "__v": 0
+  }
+}

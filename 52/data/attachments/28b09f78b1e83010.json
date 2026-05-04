@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-TIK41",
+    "description": "Desc-TIK41",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f86411c8263c20147fa4b7",
+    "_id": "69f86413c8263c20147fa4bc",
+    "createdAt": "2026-05-04T09:17:07.118Z",
+    "updatedAt": "2026-05-04T09:17:07.118Z",
+    "__v": 0
+  }
+}

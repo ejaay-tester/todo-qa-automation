@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-R09IM",
+    "description": "Desc-R09IM",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f86419c8263c20147fa4de",
+    "_id": "69f8641bc8263c20147fa4e1",
+    "createdAt": "2026-05-04T09:17:15.175Z",
+    "updatedAt": "2026-05-04T09:17:15.175Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,6 @@
+Registering user...
+✅ Success user registration (201)
+Registered user: testuser_1777886230434@yopmail.com
+User logging in...
+✅ Successful user login (200)
+Logged-in user: testuser_1777886230434@yopmail.com

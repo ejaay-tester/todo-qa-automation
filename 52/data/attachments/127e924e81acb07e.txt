@@ -1,0 +1,7 @@
+Registering user...
+✅ Success user registration (201)
+Registered user: testuser_1777886223188@yopmail.com
+User logging in...
+✅ Successful user login (200)
+Logged-in user: testuser_1777886223188@yopmail.com
+[CLEANUP COMPLETED] Attempted parallel deletion of 1 items.
