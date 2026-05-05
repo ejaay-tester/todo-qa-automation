@@ -203,7 +203,7 @@ jobs:
       # No force_orphan — this preserves the cumulative numbered run folders
       # (e.g. 39/, 40/, 41/) which are required for the trend chart to work.
       - name: Deploy Allure Report to Github Pages
-        uses: peaceiris/actions-gh-pages@4b09552702d0b65573696410d4707c765da2630b # latest commit SHA dated March 18, 2025
+        uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e # v4.0.0
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
           publish_dir: ${{ env.ALLURE_HISTORY_DIR }}
