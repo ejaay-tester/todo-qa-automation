@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-S52TP",
+    "description": "Desc-S52TP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f9a48ea4adf5f90e5c6539",
+    "_id": "69f9a490a4adf5f90e5c6540",
+    "createdAt": "2026-05-05T08:04:32.026Z",
+    "updatedAt": "2026-05-05T08:04:32.026Z",
+    "__v": 0
+  }
+}

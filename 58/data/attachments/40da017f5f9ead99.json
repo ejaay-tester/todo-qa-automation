@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-FP1NZ",
+    "description": "Desc-FP1NZ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f9a482a4adf5f90e5c650a",
+    "_id": "69f9a484a4adf5f90e5c650f",
+    "createdAt": "2026-05-05T08:04:20.414Z",
+    "updatedAt": "2026-05-05T08:04:20.414Z",
+    "__v": 0
+  }
+}

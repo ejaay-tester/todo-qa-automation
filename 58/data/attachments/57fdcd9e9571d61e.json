@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "69f9a490a4adf5f90e5c6540",
+      "title": "Todo-S52TP",
+      "description": "Desc-S52TP",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f9a48ea4adf5f90e5c6539",
+      "createdAt": "2026-05-05T08:04:32.026Z",
+      "updatedAt": "2026-05-05T08:04:32.026Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f9a490a4adf5f90e5c653e",
+      "title": "Todo-G4JS4",
+      "description": "Desc-G4JS4",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f9a48ea4adf5f90e5c6539",
+      "createdAt": "2026-05-05T08:04:32.015Z",
+      "updatedAt": "2026-05-05T08:04:32.015Z",
+      "__v": 0
+    },
+    {
+      "_id": "69f9a48fa4adf5f90e5c653c",
+      "title": "Todo-75QMF",
+      "description": "Desc-75QMF",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69f9a48ea4adf5f90e5c6539",
+      "createdAt": "2026-05-05T08:04:31.989Z",
+      "updatedAt": "2026-05-05T08:04:31.989Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

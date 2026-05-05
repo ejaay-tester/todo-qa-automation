@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-5NQVO",
+    "description": "Desc-5NQVO",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f9a499a4adf5f90e5c6568",
+    "_id": "69f9a49ba4adf5f90e5c656d",
+    "createdAt": "2026-05-05T08:04:43.307Z",
+    "updatedAt": "2026-05-05T08:04:43.307Z",
+    "__v": 0
+  }
+}

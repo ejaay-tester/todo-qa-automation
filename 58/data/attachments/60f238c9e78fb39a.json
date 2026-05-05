@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-QXBWP",
+    "description": "Desc-QXBWP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f9a491a4adf5f90e5c654b",
+    "_id": "69f9a492a4adf5f90e5c654e",
+    "createdAt": "2026-05-05T08:04:34.690Z",
+    "updatedAt": "2026-05-05T08:04:34.690Z",
+    "__v": 0
+  }
+}

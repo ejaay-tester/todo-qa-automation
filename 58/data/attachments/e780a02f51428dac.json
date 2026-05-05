@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-GWYYW",
+    "description": "Desc-GWYYW",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f9a497a4adf5f90e5c6560",
+    "_id": "69f9a499a4adf5f90e5c6563",
+    "createdAt": "2026-05-05T08:04:41.084Z",
+    "updatedAt": "2026-05-05T08:04:41.084Z",
+    "__v": 0
+  }
+}

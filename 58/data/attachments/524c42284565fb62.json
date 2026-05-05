@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-IXZB7",
+    "description": "Desc-IXZB7",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f9a482a4adf5f90e5c650a",
+    "_id": "69f9a484a4adf5f90e5c6511",
+    "createdAt": "2026-05-05T08:04:20.441Z",
+    "updatedAt": "2026-05-05T08:04:20.441Z",
+    "__v": 0
+  }
+}

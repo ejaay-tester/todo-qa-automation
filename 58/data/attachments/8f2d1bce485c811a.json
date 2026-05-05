@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-4NFHJ",
+    "description": "Desc-4NFHJ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f9a48ca4adf5f90e5c6531",
+    "_id": "69f9a48da4adf5f90e5c6534",
+    "createdAt": "2026-05-05T08:04:29.730Z",
+    "updatedAt": "2026-05-05T08:04:29.730Z",
+    "__v": 0
+  }
+}

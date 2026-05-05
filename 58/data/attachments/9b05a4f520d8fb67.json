@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-YUJPR",
+    "description": "Desc-YUJPR",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f9a499a4adf5f90e5c6568",
+    "_id": "69f9a49ba4adf5f90e5c656b",
+    "createdAt": "2026-05-05T08:04:43.291Z",
+    "updatedAt": "2026-05-05T08:04:43.291Z",
+    "__v": 0
+  }
+}

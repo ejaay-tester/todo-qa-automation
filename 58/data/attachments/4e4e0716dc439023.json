@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-0IGF9",
+    "description": "Desc-0IGF9",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f9a49fa4adf5f90e5c6586",
+    "_id": "69f9a4a0a4adf5f90e5c6589",
+    "createdAt": "2026-05-05T08:04:48.688Z",
+    "updatedAt": "2026-05-05T08:04:48.688Z",
+    "__v": 0
+  }
+}

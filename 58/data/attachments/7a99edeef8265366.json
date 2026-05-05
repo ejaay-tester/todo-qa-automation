@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-WP91U",
+    "description": "Desc-WP91U",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f9a494a4adf5f90e5c6557",
+    "_id": "69f9a495a4adf5f90e5c655a",
+    "createdAt": "2026-05-05T08:04:37.579Z",
+    "updatedAt": "2026-05-05T08:04:37.579Z",
+    "__v": 0
+  }
+}
