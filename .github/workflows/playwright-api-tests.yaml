@@ -137,6 +137,20 @@ jobs:
       id-token: write # Required for OIDC-based auth with GitHub Pages
 
     steps:
+      # Surfaces whether the test job passed or failed in the
+      # publish job's logs - useful when debugging a report without switching jobs.
+      - name: Check test job result
+        run: |
+          if [ "${{ needs.test.result }}" === "success" ]; then
+            echo "✅ Test job passed — publishing report"
+          elif [ "${{ needs.test.result }}" === "failure" ]; then
+            echo "❌ Test job failed — publishing report to capture failures"
+          elif [ "${{ needs.test.result }}" === "cancelled" ]; then
+            echo "⚠️  Test job was cancelled — report may be incomplete"
+          else
+            echo "ℹ️  Test job result: ${{ needs.test.result }}"
+          fi
+
       # Downloads the raw allure-results artifact uploaded by the test job.
       # This is the bridge between Job 1 and Job 2.
       - name: Download Allure results from test job
