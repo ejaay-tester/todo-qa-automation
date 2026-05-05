@@ -51,12 +51,12 @@ jobs:
     steps:
       # Checks out your repository code onto the runner VM
       - name: Checkout Repository
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        uses: actions/checkout@900f2210b1d28bbbd0bd22d17926b9e224e8f231 # latest commit SHA dated May 5, 2026
 
       # Installs the specified Node.js version with npm caching enabled
       # to speed up dependency installation on subsequent runs
       - name: Setup Node.js
-        uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
+        uses: actions/setup-node@670825a89dc0abd596e7a3abd0f5e3f6e5faf37c # latest commit SHA dated April 23, 2026
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: "npm" # Speeds up future runs by caching packages
@@ -70,7 +70,7 @@ jobs:
       # Cache key is OS + package-lock.json hash — invalidates when deps change.
       # Saves ~1-2 minutes on subsequent runs
       - name: Cache Playwright browsers
-        uses: actions/cache@1bd1e32a3bdc45362d1e726936510720a7c6158d # v4.2.0
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         id: playwright-cache
         with:
           path: ~/.cache/ms-playwright
@@ -101,7 +101,7 @@ jobs:
       # consume them. Short retention since they're only needed temporarily.
       - name: Upload Allure results
         if: always() # Run even if tests fail so we always get a report
-        uses: actions/upload-artifact@v65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4.6.0
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: allure-results
           path: ${{ env.ALLURE_RESULTS_DIR }}/
@@ -111,7 +111,7 @@ jobs:
       # Useful for quick inspection directly in the GitHub Actions UI.
       - name: Upload Playwright HTML Report
         if: always()
-        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4.6.0
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: playwright-report
           path: playwright-report/
@@ -155,7 +155,7 @@ jobs:
       # Downloads the raw allure-results artifact uploaded by the test job.
       # This is the bridge between Job 1 and Job 2.
       - name: Download Allure results from test job
-        uses: actions/download-artifact@fa0a91b85d4f404e444306234caec7f66e81e3f7 # v4.1.8
+        uses: actions/download-artifact@484a0b528fb4d7bd804637ccb632e47a0e638317 #v8.0.1
         with:
           name: allure-results
           path: ${{ env.ALLURE_RESULTS_DIR }}
@@ -164,7 +164,7 @@ jobs:
       # and the last-history directory used for trend data.
       # continue-on-error: true - handles the case where gh-pages doesn't exist yet (first run).
       - name: Checkout gh-pages history
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        uses: actions/checkout@900f2210b1d28bbbd0bd22d17926b9e224e8f231 # latest commit SHA dated May 5, 2026
         continue-on-error: true
         with:
           ref: gh-pages
@@ -191,7 +191,7 @@ jobs:
       #   - allure-results/history → trend/history metadata from the previous run
       # Outputs the final deployable report into allure-history/.
       - name: Generate Allure Report
-        uses: simple-elf/allure-report-action@53ebb757a2097edc77c53ecef4d454fc2f2f774c # Pinned version for stability
+        uses: simple-elf/allure-report-action@53ebb757a2097edc77c53ecef4d454fc2f2f774c # v1.13
         with:
           allure_results: ${{ env.ALLURE_RESULTS_DIR }}
           gh_pages: gh-pages
@@ -203,7 +203,7 @@ jobs:
       # No force_orphan — this preserves the cumulative numbered run folders
       # (e.g. 39/, 40/, 41/) which are required for the trend chart to work.
       - name: Deploy Allure Report to Github Pages
-        uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d231e62369c1b574e # v4.0.0
+        uses: peaceiris/actions-gh-pages@4b09552702d0b65573696410d4707c765da2630b # latest commit SHA dated March 18, 2025
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
           publish_dir: ${{ env.ALLURE_HISTORY_DIR }}
