@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-AQRMP",
+    "description": "Desc-AQRMP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f991859472e7f1ad817d3d",
+    "_id": "69f991879472e7f1ad817d42",
+    "createdAt": "2026-05-05T06:43:19.187Z",
+    "updatedAt": "2026-05-05T06:43:19.187Z",
+    "__v": 0
+  }
+}

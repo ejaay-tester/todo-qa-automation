@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-TNCFG",
+    "description": "Desc-TNCFG",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f991889472e7f1ad817d4f",
+    "_id": "69f991899472e7f1ad817d52",
+    "createdAt": "2026-05-05T06:43:21.792Z",
+    "updatedAt": "2026-05-05T06:43:21.792Z",
+    "__v": 0
+  }
+}

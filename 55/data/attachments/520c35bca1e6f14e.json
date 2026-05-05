@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-B35MU",
+    "description": "Desc-B35MU",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69f991859472e7f1ad817d3d",
+    "_id": "69f991879472e7f1ad817d40",
+    "createdAt": "2026-05-05T06:43:19.174Z",
+    "updatedAt": "2026-05-05T06:43:19.174Z",
+    "__v": 0
+  }
+}
