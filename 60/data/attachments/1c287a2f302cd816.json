@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-KP01P",
+    "description": "Desc-KP01P",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69faf1b2e5b6b55aa6555413",
+    "_id": "69faf1b3e5b6b55aa6555416",
+    "createdAt": "2026-05-06T07:45:55.624Z",
+    "updatedAt": "2026-05-06T07:45:55.624Z",
+    "__v": 0
+  }
+}

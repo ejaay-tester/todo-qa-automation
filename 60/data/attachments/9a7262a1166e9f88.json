@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-ABIRT",
+    "description": "Desc-ABIRT",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69faf1a5e5b6b55aa65553e4",
+    "_id": "69faf1a7e5b6b55aa65553eb",
+    "createdAt": "2026-05-06T07:45:43.759Z",
+    "updatedAt": "2026-05-06T07:45:43.759Z",
+    "__v": 0
+  }
+}

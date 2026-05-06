@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "69faf1a7e5b6b55aa65553eb",
+      "title": "Todo-ABIRT",
+      "description": "Desc-ABIRT",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69faf1a5e5b6b55aa65553e4",
+      "createdAt": "2026-05-06T07:45:43.759Z",
+      "updatedAt": "2026-05-06T07:45:43.759Z",
+      "__v": 0
+    },
+    {
+      "_id": "69faf1a7e5b6b55aa65553e9",
+      "title": "Todo-0SGRR",
+      "description": "Desc-0SGRR",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69faf1a5e5b6b55aa65553e4",
+      "createdAt": "2026-05-06T07:45:43.680Z",
+      "updatedAt": "2026-05-06T07:45:43.680Z",
+      "__v": 0
+    },
+    {
+      "_id": "69faf1a7e5b6b55aa65553e7",
+      "title": "Todo-YC2IL",
+      "description": "Desc-YC2IL",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69faf1a5e5b6b55aa65553e4",
+      "createdAt": "2026-05-06T07:45:43.676Z",
+      "updatedAt": "2026-05-06T07:45:43.676Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}
