@@ -88,6 +88,24 @@ jobs:
         if: steps.playwright-cache.outputs.cache-hit != 'true'
         run: npx playwright install
 
+      # Pings the staging server before tests starts so Render wakes up
+      # Retries up to 10 times with 10s delay - handles cold start (~30-60s)
+      - name: Warm up staging server
+        run: |
+          echo "Pinging staging server to wake it up..."
+          for i in {1..10}; do 
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" ${{ secrets.RENDER_STAGING_URL }}/health || echo "000")
+            echo "Attempt $i - HTTP STATUS"
+            if [ "$STATUS" == "200" ] || [ "$STATUS" == "404" ]; then
+              echo "✅ Server is awake"
+              break
+            fi
+            echo "⏳ Server not ready yet, waiting 10s..."
+            sleep 10
+          done
+        env:
+          RENDER_STAGING_URL: ${{ secrets.RENDER_STAGING_URL }}
+
       # Executes the full Playwright test suite.
       # RENDER_STAGING_URL is injected from GitHub Secrets so it's never
       # hardcoded in the codebase.
