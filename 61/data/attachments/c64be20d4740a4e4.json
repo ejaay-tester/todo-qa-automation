@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-8NKOQ",
+    "description": "Desc-8NKOQ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fafb14720691d005a118d7",
+    "_id": "69fafb15720691d005a118da",
+    "createdAt": "2026-05-06T08:25:57.748Z",
+    "updatedAt": "2026-05-06T08:25:57.748Z",
+    "__v": 0
+  }
+}

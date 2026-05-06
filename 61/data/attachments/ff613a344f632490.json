@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "69fafb05720691d005a11891",
+      "title": "Todo-U50Y5",
+      "description": "Desc-U50Y5",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69fafb03720691d005a1188a",
+      "createdAt": "2026-05-06T08:25:41.455Z",
+      "updatedAt": "2026-05-06T08:25:41.455Z",
+      "__v": 0
+    },
+    {
+      "_id": "69fafb05720691d005a1188f",
+      "title": "Todo-85ZWC",
+      "description": "Desc-85ZWC",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69fafb03720691d005a1188a",
+      "createdAt": "2026-05-06T08:25:41.433Z",
+      "updatedAt": "2026-05-06T08:25:41.433Z",
+      "__v": 0
+    },
+    {
+      "_id": "69fafb05720691d005a1188d",
+      "title": "Todo-C65T5",
+      "description": "Desc-C65T5",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69fafb03720691d005a1188a",
+      "createdAt": "2026-05-06T08:25:41.256Z",
+      "updatedAt": "2026-05-06T08:25:41.256Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo is successfully updated",
+  "data": {
+    "_id": "69fafafc720691d005a11870",
+    "title": "Updated Title 123",
+    "description": "Updated Description 456",
+    "completed": true,
+    "priority": "medium",
+    "userId": "69fafafa720691d005a1186d",
+    "createdAt": "2026-05-06T08:25:32.257Z",
+    "updatedAt": "2026-05-06T08:25:32.656Z",
+    "__v": 0
+  }
+}
