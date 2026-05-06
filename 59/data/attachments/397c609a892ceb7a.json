@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-X0OAZ",
+    "description": "Desc-X0OAZ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69faedeeea77d5571be7e840",
+    "_id": "69faedefea77d5571be7e843",
+    "createdAt": "2026-05-06T07:29:51.948Z",
+    "updatedAt": "2026-05-06T07:29:51.948Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-33GQ2",
+    "description": "Desc-33GQ2",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69faedd1ea77d5571be7e7c4",
+    "_id": "69faedd2ea77d5571be7e7c7",
+    "createdAt": "2026-05-06T07:29:22.959Z",
+    "updatedAt": "2026-05-06T07:29:22.959Z",
+    "__v": 0
+  }
+}
