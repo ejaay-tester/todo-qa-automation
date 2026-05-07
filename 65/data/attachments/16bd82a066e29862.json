@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-ULVEU",
+    "description": "Desc-ULVEU",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fc52f6c7ba49271158d52b",
+    "_id": "69fc52f7c7ba49271158d52e",
+    "createdAt": "2026-05-07T08:53:11.454Z",
+    "updatedAt": "2026-05-07T08:53:11.454Z",
+    "__v": 0
+  }
+}

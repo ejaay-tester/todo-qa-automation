@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-OKYZF",
+    "description": "Desc-OKYZF",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fc52e2c7ba49271158d4d5",
+    "_id": "69fc52e4c7ba49271158d4da",
+    "createdAt": "2026-05-07T08:52:52.008Z",
+    "updatedAt": "2026-05-07T08:52:52.008Z",
+    "__v": 0
+  }
+}

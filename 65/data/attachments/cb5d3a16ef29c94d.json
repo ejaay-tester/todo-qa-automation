@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-HD939",
+    "description": "Desc-HD939",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fc52f0c7ba49271158d516",
+    "_id": "69fc52f1c7ba49271158d519",
+    "createdAt": "2026-05-07T08:53:05.655Z",
+    "updatedAt": "2026-05-07T08:53:05.655Z",
+    "__v": 0
+  }
+}

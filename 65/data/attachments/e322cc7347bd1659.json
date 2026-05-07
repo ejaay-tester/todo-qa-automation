@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-KW0AW",
+    "description": "Desc-KW0AW",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fc52edc7ba49271158d504",
+    "_id": "69fc52efc7ba49271158d509",
+    "createdAt": "2026-05-07T08:53:03.310Z",
+    "updatedAt": "2026-05-07T08:53:03.310Z",
+    "__v": 0
+  }
+}
