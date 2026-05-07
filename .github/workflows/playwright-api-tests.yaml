@@ -88,21 +88,32 @@ jobs:
         if: steps.playwright-cache.outputs.cache-hit != 'true'
         run: npx playwright install
 
-      # Pings the staging server before tests starts so Render wakes up
-      # Retries up to 10 times with 10s delay - handles cold start (~30-60s)
+      # Pings the staging server repeatedly before tests starts so Render's free
+      # tier has time to wake up from its idle state (~30-60s cold start).
+      # Accepts HTTP 200 (healthy) or 404 (awake but no /health route) as success.
+      # Uses exit 0 on max attempts so a sleeping server warns but doesn't block CI.
       - name: Warm up staging server
         run: |
-          echo "Pinging staging server to wake it up..."
-          for i in {1..10}; do 
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "🔁 Warming up staging server..."
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          MAX_ATTEMPTS=10
+          WAIT_SECONDS=10
+          for i in $(seq 1 $MAX_ATTEMPTS); do 
             STATUS=$(curl -s -o /dev/null -w "%{http_code}" ${{ secrets.RENDER_STAGING_URL }}/health || echo "000")
-            echo "Attempt $i - HTTP STATUS"
+            echo "🌐 Attempt $i/$MAX_ATTEMPTS - HTTP $STATUS"
             if [ "$STATUS" == "200" ] || [ "$STATUS" == "404" ]; then
-              echo "✅ Server is awake"
+              echo "✅ Server is awake and responding (HTTP $STATUS)"
               break
             fi
-            echo "⏳ Server not ready yet, waiting 10s..."
-            sleep 10
+            if [ "$i" == "$MAX_ATTEMPTS"]; then
+              echo "❌ Server did not respond after $MAX_ATTEMPTS attempts — tests may fail"
+              exit 0  # Warn but don't block the pipeline — let tests run and report the actual failure
+            fi
+            echo "⏳ Not ready yet — retrying in ${WAIT_SECONDS}s..."
+            sleep $WAIT_SECONDS
           done
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
         env:
           RENDER_STAGING_URL: ${{ secrets.RENDER_STAGING_URL }}
 
