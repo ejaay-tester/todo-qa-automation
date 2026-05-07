@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-531CC",
+    "description": "Desc-531CC",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fc21bce9e544e6f6f3d5b0",
+    "_id": "69fc21bde9e544e6f6f3d5b3",
+    "createdAt": "2026-05-07T05:23:09.987Z",
+    "updatedAt": "2026-05-07T05:23:09.987Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-5VZZH",
+    "description": "Desc-5VZZH",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fc21ade9e544e6f6f3d563",
+    "_id": "69fc21afe9e544e6f6f3d568",
+    "createdAt": "2026-05-07T05:22:55.130Z",
+    "updatedAt": "2026-05-07T05:22:55.130Z",
+    "__v": 0
+  }
+}

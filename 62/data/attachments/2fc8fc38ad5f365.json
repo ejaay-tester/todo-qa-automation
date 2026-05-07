@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-NO221",
+    "description": "Desc-NO221",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fc21a5e9e544e6f6f3d546",
+    "_id": "69fc21a6e9e544e6f6f3d549",
+    "createdAt": "2026-05-07T05:22:46.795Z",
+    "updatedAt": "2026-05-07T05:22:46.795Z",
+    "__v": 0
+  }
+}
