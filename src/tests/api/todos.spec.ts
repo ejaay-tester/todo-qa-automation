@@ -1,6 +1,5 @@
 import { test, expect } from "../../fixtures/base.fixture"
 import { TodoFactory } from "../../factories/TodoFactory"
-import { create } from "node:domain"
 
 test.describe("Todos API", () => {
   /**
