@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-DNUZ6",
+    "description": "Desc-DNUZ6",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fc43f3e82a538807a684b0",
+    "_id": "69fc43f4e82a538807a684b7",
+    "createdAt": "2026-05-07T07:49:08.532Z",
+    "updatedAt": "2026-05-07T07:49:08.532Z",
+    "__v": 0
+  }
+}

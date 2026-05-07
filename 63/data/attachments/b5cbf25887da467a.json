@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-EPHAY",
+    "description": "Desc-EPHAY",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fc440ae82a538807a6850e",
+    "_id": "69fc440ce82a538807a68513",
+    "createdAt": "2026-05-07T07:49:32.315Z",
+    "updatedAt": "2026-05-07T07:49:32.315Z",
+    "__v": 0
+  }
+}

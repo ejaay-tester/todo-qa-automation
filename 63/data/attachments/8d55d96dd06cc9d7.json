@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-UMHHK",
+    "description": "Desc-UMHHK",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fc43f0e82a538807a684a8",
+    "_id": "69fc43f2e82a538807a684ab",
+    "createdAt": "2026-05-07T07:49:06.275Z",
+    "updatedAt": "2026-05-07T07:49:06.275Z",
+    "__v": 0
+  }
+}
