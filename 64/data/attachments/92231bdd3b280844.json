@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-PELO8",
+    "description": "Desc-PELO8",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fc4d76d15116192d4fd17d",
+    "_id": "69fc4d78d15116192d4fd184",
+    "createdAt": "2026-05-07T08:29:44.031Z",
+    "updatedAt": "2026-05-07T08:29:44.031Z",
+    "__v": 0
+  }
+}

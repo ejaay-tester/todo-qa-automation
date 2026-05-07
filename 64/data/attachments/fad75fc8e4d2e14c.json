@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-IF1SP",
+    "description": "Desc-IF1SP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fc4d86d15116192d4fd1be",
+    "_id": "69fc4d87d15116192d4fd1c1",
+    "createdAt": "2026-05-07T08:29:59.694Z",
+    "updatedAt": "2026-05-07T08:29:59.694Z",
+    "__v": 0
+  }
+}

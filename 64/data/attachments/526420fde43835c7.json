@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-KW0OP",
+    "description": "Desc-KW0OP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fc4d83d15116192d4fd1ac",
+    "_id": "69fc4d84d15116192d4fd1af",
+    "createdAt": "2026-05-07T08:29:56.992Z",
+    "updatedAt": "2026-05-07T08:29:56.992Z",
+    "__v": 0
+  }
+}
