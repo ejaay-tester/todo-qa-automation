@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-47PDI",
+    "description": "Desc-47PDI",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fd8ea87588d97c9ef3f07b",
+    "_id": "69fd8ea97588d97c9ef3f07e",
+    "createdAt": "2026-05-08T07:20:09.296Z",
+    "updatedAt": "2026-05-08T07:20:09.296Z",
+    "__v": 0
+  }
+}

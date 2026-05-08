@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-T3FGT",
+    "description": "Desc-T3FGT",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fd8e9d7588d97c9ef3f04c",
+    "_id": "69fd8e9e7588d97c9ef3f04f",
+    "createdAt": "2026-05-08T07:19:58.471Z",
+    "updatedAt": "2026-05-08T07:19:58.471Z",
+    "__v": 0
+  }
+}

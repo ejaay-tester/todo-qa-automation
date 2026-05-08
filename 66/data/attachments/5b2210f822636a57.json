@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-BT73N",
+    "description": "Desc-BT73N",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fd8ea27588d97c9ef3f05d",
+    "_id": "69fd8ea47588d97c9ef3f062",
+    "createdAt": "2026-05-08T07:20:04.296Z",
+    "updatedAt": "2026-05-08T07:20:04.296Z",
+    "__v": 0
+  }
+}
