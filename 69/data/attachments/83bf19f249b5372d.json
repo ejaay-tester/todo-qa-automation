@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "69fee8eb31911170a3e75f4b",
+      "title": "Todo-WYI05",
+      "description": "Desc-WYI05",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69fee8ea31911170a3e75f44",
+      "createdAt": "2026-05-09T07:57:31.918Z",
+      "updatedAt": "2026-05-09T07:57:31.918Z",
+      "__v": 0
+    },
+    {
+      "_id": "69fee8eb31911170a3e75f49",
+      "title": "Todo-YCVV0",
+      "description": "Desc-YCVV0",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69fee8ea31911170a3e75f44",
+      "createdAt": "2026-05-09T07:57:31.816Z",
+      "updatedAt": "2026-05-09T07:57:31.816Z",
+      "__v": 0
+    },
+    {
+      "_id": "69fee8eb31911170a3e75f47",
+      "title": "Todo-1LME3",
+      "description": "Desc-1LME3",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69fee8ea31911170a3e75f44",
+      "createdAt": "2026-05-09T07:57:31.801Z",
+      "updatedAt": "2026-05-09T07:57:31.801Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

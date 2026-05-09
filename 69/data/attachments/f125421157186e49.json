@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-IDYEN",
+    "description": "Desc-IDYEN",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fee8f531911170a3e75f73",
+    "_id": "69fee8f631911170a3e75f76",
+    "createdAt": "2026-05-09T07:57:42.382Z",
+    "updatedAt": "2026-05-09T07:57:42.382Z",
+    "__v": 0
+  }
+}

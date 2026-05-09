@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "69fee90131911170a3e75fa9",
+      "title": "Todo-GSAK7",
+      "description": "Desc-GSAK7",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69fee8ff31911170a3e75fa2",
+      "createdAt": "2026-05-09T07:57:53.288Z",
+      "updatedAt": "2026-05-09T07:57:53.288Z",
+      "__v": 0
+    },
+    {
+      "_id": "69fee90131911170a3e75fa7",
+      "title": "Todo-26SZ6",
+      "description": "Desc-26SZ6",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69fee8ff31911170a3e75fa2",
+      "createdAt": "2026-05-09T07:57:53.287Z",
+      "updatedAt": "2026-05-09T07:57:53.287Z",
+      "__v": 0
+    },
+    {
+      "_id": "69fee90131911170a3e75fa5",
+      "title": "Todo-LUBOL",
+      "description": "Desc-LUBOL",
+      "completed": false,
+      "priority": "medium",
+      "userId": "69fee8ff31911170a3e75fa2",
+      "createdAt": "2026-05-09T07:57:53.267Z",
+      "updatedAt": "2026-05-09T07:57:53.267Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

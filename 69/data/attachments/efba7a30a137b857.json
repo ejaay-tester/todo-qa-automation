@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-GSAK7",
+    "description": "Desc-GSAK7",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fee8ff31911170a3e75fa2",
+    "_id": "69fee90131911170a3e75fa9",
+    "createdAt": "2026-05-09T07:57:53.288Z",
+    "updatedAt": "2026-05-09T07:57:53.288Z",
+    "__v": 0
+  }
+}
