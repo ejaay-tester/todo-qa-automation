@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-J92MC",
+    "description": "Desc-J92MC",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fedb30e4c8e82b7d208f27",
+    "_id": "69fedb31e4c8e82b7d208f2c",
+    "createdAt": "2026-05-09T06:58:57.485Z",
+    "updatedAt": "2026-05-09T06:58:57.485Z",
+    "__v": 0
+  }
+}

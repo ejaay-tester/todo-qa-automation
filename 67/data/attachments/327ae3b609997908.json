@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-FYXRA",
+    "description": "Desc-FYXRA",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fedb30e4c8e82b7d208f27",
+    "_id": "69fedb31e4c8e82b7d208f2e",
+    "createdAt": "2026-05-09T06:58:57.601Z",
+    "updatedAt": "2026-05-09T06:58:57.601Z",
+    "__v": 0
+  }
+}

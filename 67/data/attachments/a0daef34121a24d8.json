@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-P4XMY",
+    "description": "Desc-P4XMY",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fedb19e4c8e82b7d208ec9",
+    "_id": "69fedb1ae4c8e82b7d208ece",
+    "createdAt": "2026-05-09T06:58:34.738Z",
+    "updatedAt": "2026-05-09T06:58:34.738Z",
+    "__v": 0
+  }
+}
