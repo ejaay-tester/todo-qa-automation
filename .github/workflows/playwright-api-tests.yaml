@@ -106,7 +106,7 @@ jobs:
               echo "✅ Server is awake and responding (HTTP $STATUS)"
               break
             fi
-            if [ "$i" == "$MAX_ATTEMPTS"]; then
+            if [ "$i" == "$MAX_ATTEMPTS" ]; then
               echo "❌ Server did not respond after $MAX_ATTEMPTS attempts — tests may fail"
               exit 0  # Warn but don't block the pipeline — let tests run and report the actual failure
             fi
