@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-69ANC",
+    "description": "Desc-69ANC",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fee77631911170a3e75ee6",
+    "_id": "69fee77831911170a3e75eed",
+    "createdAt": "2026-05-09T07:51:20.358Z",
+    "updatedAt": "2026-05-09T07:51:20.358Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-TASNN",
+    "description": "Desc-TASNN",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fee76a31911170a3e75eb7",
+    "_id": "69fee76b31911170a3e75eba",
+    "createdAt": "2026-05-09T07:51:07.432Z",
+    "updatedAt": "2026-05-09T07:51:07.432Z",
+    "__v": 0
+  }
+}

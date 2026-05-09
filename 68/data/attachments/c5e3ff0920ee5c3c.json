@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-I75Y4",
+    "description": "Desc-I75Y4",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fee77431911170a3e75ede",
+    "_id": "69fee77531911170a3e75ee1",
+    "createdAt": "2026-05-09T07:51:17.918Z",
+    "updatedAt": "2026-05-09T07:51:17.918Z",
+    "__v": 0
+  }
+}

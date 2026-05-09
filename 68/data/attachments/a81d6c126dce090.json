@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-9LCNO",
+    "description": "Desc-9LCNO",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fee78231911170a3e75f15",
+    "_id": "69fee78331911170a3e75f18",
+    "createdAt": "2026-05-09T07:51:31.605Z",
+    "updatedAt": "2026-05-09T07:51:31.605Z",
+    "__v": 0
+  }
+}

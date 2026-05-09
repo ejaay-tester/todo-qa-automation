@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-Q53F1",
+    "description": "Desc-Q53F1",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fee77631911170a3e75ee6",
+    "_id": "69fee77831911170a3e75eeb",
+    "createdAt": "2026-05-09T07:51:20.353Z",
+    "updatedAt": "2026-05-09T07:51:20.353Z",
+    "__v": 0
+  }
+}

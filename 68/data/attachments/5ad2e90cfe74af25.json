@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-BGJ81",
+    "description": "Desc-BGJ81",
+    "completed": false,
+    "priority": "medium",
+    "userId": "69fee76d31911170a3e75ec9",
+    "_id": "69fee76f31911170a3e75ecc",
+    "createdAt": "2026-05-09T07:51:11.222Z",
+    "updatedAt": "2026-05-09T07:51:11.222Z",
+    "__v": 0
+  }
+}
