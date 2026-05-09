@@ -134,7 +134,7 @@ jobs:
         with:
           name: allure-results
           path: ${{ env.ALLURE_RESULTS_DIR }}/
-          retention-days: 1 # Short-lived - consumed by publish-report job only
+          retention-days: 5 # Increased to avoid race condition
 
       # Uploads the human-readable Playwright HTML report as a separate artifact.
       # Useful for quick inspection directly in the GitHub Actions UI.
