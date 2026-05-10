@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-CKA73",
+    "description": "Desc-CKA73",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a005ae30bbae7f29a26d051",
+    "_id": "6a005ae50bbae7f29a26d054",
+    "createdAt": "2026-05-10T10:16:05.356Z",
+    "updatedAt": "2026-05-10T10:16:05.356Z",
+    "__v": 0
+  }
+}
