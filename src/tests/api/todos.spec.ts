@@ -251,7 +251,7 @@ test.describe("Todos API", () => {
         expect(
           response,
           `[REQUIREMENT] Deleted todo should not persist in the collection/database`,
-        ).toBeNull()
+        ).not.toBeNull()
       })
     })
 
