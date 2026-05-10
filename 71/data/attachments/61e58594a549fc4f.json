@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-KZGSM",
+    "description": "Desc-KZGSM",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a004cf3caf2ced17d2a3888",
+    "_id": "6a004cf4caf2ced17d2a388b",
+    "createdAt": "2026-05-10T09:16:36.496Z",
+    "updatedAt": "2026-05-10T09:16:36.496Z",
+    "__v": 0
+  }
+}

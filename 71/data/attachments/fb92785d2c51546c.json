@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-53U2I",
+    "description": "Desc-53U2I",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a004ce5caf2ced17d2a3847",
+    "_id": "6a004ce7caf2ced17d2a384c",
+    "createdAt": "2026-05-10T09:16:23.231Z",
+    "updatedAt": "2026-05-10T09:16:23.231Z",
+    "__v": 0
+  }
+}

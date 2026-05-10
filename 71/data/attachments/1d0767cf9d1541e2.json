@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-C8R7G",
+    "description": "Desc-C8R7G",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a004cebcaf2ced17d2a3865",
+    "_id": "6a004ceccaf2ced17d2a3868",
+    "createdAt": "2026-05-10T09:16:28.425Z",
+    "updatedAt": "2026-05-10T09:16:28.425Z",
+    "__v": 0
+  }
+}
