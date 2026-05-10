@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-05G29",
+    "description": "Desc-05G29",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a005f63fc3ee8be25063395",
+    "_id": "6a005f64fc3ee8be25063398",
+    "createdAt": "2026-05-10T10:35:16.508Z",
+    "updatedAt": "2026-05-10T10:35:16.508Z",
+    "__v": 0
+  }
+}
