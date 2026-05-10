@@ -238,9 +238,39 @@ jobs:
           publish_dir: ${{ env.ALLURE_HISTORY_DIR }}
           publish_branch: gh-pages
 
-      # Added Slack Notification
-      # Sends a Slack message every push on the repo. Fires from the publish report so it can
-      # include the Allure report URL. Requires SLACK_WEBHOOK_URL secret.
+      # Parse failed tests from JUnit XML and store as output
+      - name: Extract failed tests
+        id: failed-tests
+        if: always()
+        run: |
+          FAILED_TESTS=""
+
+          # Only parse if results.xml exists
+          if [ -f "allure-results/results.xml" ]; then
+            # Extract all failed test names from JUnit XML
+            FAILED_TESTS=$(grep -oP '(?<=name=")[^"]*' allure-results/results.xml \
+              | head -20 \
+              | while read -r name; do
+                  echo "• $name"
+                done \
+              | tr '\n' '\n')
+
+            # Fallback if grep finds nothing
+            if [ -z "$FAILED_TESTS" ]; then
+              FAILED_TESTS="No failed test details found in results"
+            fi
+          else
+            FAILED_TESTS="results.xml not found — check JUnit reporter config"
+          fi
+
+          # Store as step output (escape newlines for GitHub Actions)
+          echo "list<<EOF" >> $GITHUB_OUTPUT
+          echo "$FAILED_TESTS" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      # Sends a Slack notification with failed tests included
+      # Fires from the publish report so it can include the Allure report URL.
+      # Requires SLACK_WEBHOOK_URL secret.
       #
       # To set up:
       #  1. Go to https://api.slack.com/apps -> Create App -> Incoming Webhooks
@@ -252,9 +282,24 @@ jobs:
           if [ "${{ needs.test.result }}" == "success" ]; then
             COLOR="good"
             STATUS="✅ *Playwright tests passed*"
+            FIELDS="[
+              { \"title\": \"Branch\",  \"value\": \"${{ github.ref_name }}\",   \"short\": true },
+              { \"title\": \"Author\",  \"value\": \"${{ github.actor }}\",      \"short\": true },
+              { \"title\": \"Commit\",  \"value\": \"${{ github.sha }}\",        \"short\": false },
+              { \"title\": \"Report\",  \"value\": \"https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/\", \"short\": false },
+              { \"title\": \"Run\",     \"value\": \"${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\", \"short\": false }
+            ]"
           else
             COLOR="danger"
             STATUS="❌ *Playwright tests failed*"
+            FIELDS="[
+              { \"title\": \"Branch\",  \"value\": \"${{ github.ref_name }}\",   \"short\": true },
+              { \"title\": \"Author\",  \"value\": \"${{ github.actor }}\",      \"short\": true },
+              { \"title\": \"Commit\",  \"value\": \"${{ github.sha }}\",        \"short\": false },
+              { \"title\": \"Failed Tests\", \"value\": \"${{ steps.failed-tests.outputs.list }}\", \"short\": false },
+              { \"title\": \"Report\",  \"value\": \"https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/\", \"short\": false },
+              { \"title\": \"Run\",     \"value\": \"${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\", \"short\": false }
+            ]"
           fi
 
           curl -s -X POST "${{ secrets.SLACK_WEBHOOK_URL }}" \
@@ -263,12 +308,6 @@ jobs:
               \"text\": \"$STATUS\",
               \"attachments\": [{
                 \"color\": \"$COLOR\",
-                \"fields\": [
-                  { \"title\": \"Branch\",  \"value\": \"${{ github.ref_name }}\",   \"short\": true },
-                  { \"title\": \"Author\",  \"value\": \"${{ github.actor }}\",      \"short\": true },
-                  { \"title\": \"Commit\",  \"value\": \"${{ github.sha }}\",        \"short\": false },
-                  { \"title\": \"Report\",  \"value\": \"https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/\", \"short\": false },
-                  { \"title\": \"Run\",     \"value\": \"${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\", \"short\": false }
-                ]
+                \"fields\": $FIELDS
               }]
               }"
