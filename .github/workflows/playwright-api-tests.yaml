@@ -237,3 +237,38 @@ jobs:
           github_token: ${{secrets.GITHUB_TOKEN}}
           publish_dir: ${{ env.ALLURE_HISTORY_DIR }}
           publish_branch: gh-pages
+
+      # Added Slack Notification
+      # Sends a Slack message every push on the repo. Fires from the publish report so it can
+      # include the Allure report URL. Requires SLACK_WEBHOOK_URL secret.
+      #
+      # To set up:
+      #  1. Go to https://api.slack.com/apps -> Create App -> Incoming Webhooks
+      #  2. Enable Incoming Webhooks -> Add to channel -> Copy webhook URL
+      #  3. Add to Github Repo: Settings -> Secrets -> New secret: SLACK_WEBHOOK_URL
+      - name: Notify via Slack
+        if: always ()
+        run: |
+          if [ "${{ needs.test.result }}" == "success" ]; then
+            COLOR="good"
+            STATUS="✅ *Playwright tests passed*"
+          else
+            COLOR="danger"
+            STATUS="❌ *Playwright tests failed*"
+          fi
+
+          curl -s -X POST "${{ secrets.SLACK_WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"text\": \"$STATUS\",
+              \"attachments\": [{
+                \"color\": \"$COLOR\",
+                \"fields\": [
+                  { \"title\": \"Branch\",  \"value\": \"${{ github.ref_name }}\",   \"short\": true },
+                  { \"title\": \"Author\",  \"value\": \"${{ github.actor }}\",      \"short\": true },
+                  { \"title\": \"Commit\",  \"value\": \"${{ github.sha }}\",        \"short\": false },
+                  { \"title\": \"Report\",  \"value\": \"https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/\", \"short\": false },
+                  { \"title\": \"Run\",     \"value\": \"${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\", \"short\": false }
+                ]
+              }]
+              }"
