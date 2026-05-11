@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-EMPLL",
+    "description": "Desc-EMPLL",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0193706fae05c001891347",
+    "_id": "6a0193716fae05c00189134a",
+    "createdAt": "2026-05-11T08:29:37.935Z",
+    "updatedAt": "2026-05-11T08:29:37.935Z",
+    "__v": 0
+  }
+}

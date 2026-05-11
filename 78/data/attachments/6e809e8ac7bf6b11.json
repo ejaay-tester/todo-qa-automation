@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-KZLA2",
+    "description": "Desc-KZLA2",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0193566fae05c0018912e8",
+    "_id": "6a0193586fae05c0018912eb",
+    "createdAt": "2026-05-11T08:29:12.262Z",
+    "updatedAt": "2026-05-11T08:29:12.262Z",
+    "__v": 0
+  }
+}

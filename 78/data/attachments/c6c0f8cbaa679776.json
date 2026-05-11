@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-VUMBQ",
+    "description": "Desc-VUMBQ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0193656fae05c001891318",
+    "_id": "6a0193666fae05c00189131b",
+    "createdAt": "2026-05-11T08:29:26.729Z",
+    "updatedAt": "2026-05-11T08:29:26.729Z",
+    "__v": 0
+  }
+}

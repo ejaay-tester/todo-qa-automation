@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-D4NYV",
+    "description": "Desc-D4NYV",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a01935a6fae05c0018912fa",
+    "_id": "6a01935b6fae05c0018912fd",
+    "createdAt": "2026-05-11T08:29:15.924Z",
+    "updatedAt": "2026-05-11T08:29:15.924Z",
+    "__v": 0
+  }
+}
