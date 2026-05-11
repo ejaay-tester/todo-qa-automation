@@ -133,10 +133,17 @@ jobs:
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: allure-results
-          path: |
-            ${{ env.ALLURE_RESULTS_DIR }}/
-            junit-results/
+          path: ${{ env.ALLURE_RESULTS_DIR }}/
           retention-days: 5 # Increased to avoid race condition
+
+      # Upload junit results as its OWN separate artifact
+      - name: Upload JUnit results
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: junit-results
+          path: junit-results/
+          retention-days: 5
 
       # Uploads the human-readable Playwright HTML report as a separate artifact.
       # Useful for quick inspection directly in the GitHub Actions UI.
@@ -183,13 +190,19 @@ jobs:
             echo "ℹ️  Test job result: ${{ needs.test.result }}"
           fi
 
-      # Downloads the raw allure-results artifact uploaded by the test job.
-      # This is the bridge between Job 1 and Job 2.
+      # Downloads allure-results - goes to allure-results/ folder
       - name: Download Allure results from test job
         uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c #v8.0.1
         with:
           name: allure-results
           path: ${{ env.ALLURE_RESULTS_DIR }}
+
+      # Downloads junit-results - goes to junit-results/ folder
+      - name: Download JUnit results from test job
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c #v8.0.1
+        with:
+          name: junit-results
+          path: junit-results
 
       # Checks out the gh-pages branch which contains all previous run folders
       # and the last-history directory used for trend data.
