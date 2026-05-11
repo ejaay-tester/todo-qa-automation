@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-XOHQP",
+    "description": "Desc-XOHQP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a018336f0841b8965bbc392",
+    "_id": "6a018337f0841b8965bbc395",
+    "createdAt": "2026-05-11T07:20:23.861Z",
+    "updatedAt": "2026-05-11T07:20:23.861Z",
+    "__v": 0
+  }
+}

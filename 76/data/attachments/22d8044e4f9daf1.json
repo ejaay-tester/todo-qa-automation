@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-RJS43",
+    "description": "Desc-RJS43",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a018332f0841b8965bbc389",
+    "_id": "6a018334f0841b8965bbc38c",
+    "createdAt": "2026-05-11T07:20:20.019Z",
+    "updatedAt": "2026-05-11T07:20:20.019Z",
+    "__v": 0
+  }
+}

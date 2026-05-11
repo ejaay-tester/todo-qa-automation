@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-J44XP",
+    "description": "Desc-J44XP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a018342f0841b8965bbc3c1",
+    "_id": "6a018343f0841b8965bbc3c4",
+    "createdAt": "2026-05-11T07:20:35.535Z",
+    "updatedAt": "2026-05-11T07:20:35.535Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-KHDKP",
+    "description": "Desc-KHDKP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a018328f0841b8965bbc362",
+    "_id": "6a01832af0841b8965bbc367",
+    "createdAt": "2026-05-11T07:20:10.144Z",
+    "updatedAt": "2026-05-11T07:20:10.144Z",
+    "__v": 0
+  }
+}

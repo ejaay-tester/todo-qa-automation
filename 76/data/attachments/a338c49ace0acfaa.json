@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-YDFLP",
+    "description": "Desc-YDFLP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a018352f0841b8965bbc3f6",
+    "_id": "6a018353f0841b8965bbc3f9",
+    "createdAt": "2026-05-11T07:20:51.412Z",
+    "updatedAt": "2026-05-11T07:20:51.412Z",
+    "__v": 0
+  }
+}

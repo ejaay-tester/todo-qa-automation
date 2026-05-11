@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-55GIX",
+    "description": "Desc-55GIX",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a018358f0841b8965bbc40b",
+    "_id": "6a018359f0841b8965bbc40e",
+    "createdAt": "2026-05-11T07:20:57.520Z",
+    "updatedAt": "2026-05-11T07:20:57.520Z",
+    "__v": 0
+  }
+}

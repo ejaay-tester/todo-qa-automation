@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-V28JN",
+    "description": "Desc-V28JN",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a01834df0841b8965bbc3dc",
+    "_id": "6a01834ef0841b8965bbc3df",
+    "createdAt": "2026-05-11T07:20:46.634Z",
+    "updatedAt": "2026-05-11T07:20:46.634Z",
+    "__v": 0
+  }
+}

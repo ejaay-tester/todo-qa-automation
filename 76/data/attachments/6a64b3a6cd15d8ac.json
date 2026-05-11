@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-TN55H",
+    "description": "Desc-TN55H",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a01833af0841b8965bbc39b",
+    "_id": "6a01833bf0841b8965bbc39e",
+    "createdAt": "2026-05-11T07:20:27.530Z",
+    "updatedAt": "2026-05-11T07:20:27.530Z",
+    "__v": 0
+  }
+}

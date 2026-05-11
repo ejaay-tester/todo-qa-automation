@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-PBLI5",
+    "description": "Desc-PBLI5",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a01833ff0841b8965bbc3b5",
+    "_id": "6a018340f0841b8965bbc3b8",
+    "createdAt": "2026-05-11T07:20:32.704Z",
+    "updatedAt": "2026-05-11T07:20:32.704Z",
+    "__v": 0
+  }
+}

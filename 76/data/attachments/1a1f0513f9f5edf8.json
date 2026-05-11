@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-15ONH",
+    "description": "Desc-15ONH",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a018349f0841b8965bbc3d3",
+    "_id": "6a01834af0841b8965bbc3d6",
+    "createdAt": "2026-05-11T07:20:42.908Z",
+    "updatedAt": "2026-05-11T07:20:42.908Z",
+    "__v": 0
+  }
+}
