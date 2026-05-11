@@ -133,7 +133,9 @@ jobs:
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: allure-results
-          path: ${{ env.ALLURE_RESULTS_DIR }}/
+          path: |
+            ${{ env.ALLURE_RESULTS_DIR }}/
+            junit-results/
           retention-days: 5 # Increased to avoid race condition
 
       # Uploads the human-readable Playwright HTML report as a separate artifact.
@@ -245,7 +247,7 @@ jobs:
         run: |
           FAILED_TESTS=""
 
-          if [ -f "allure-results/results.xml" ]; then
+          if [ -f "junit-results/results.xml" ]; then
             # Extract ONLY testcase names that have a <failure> child element.
             # Strategy: find lines with <testcase ...> immediately followed
             # by <failure> - using awk to match the pattern across lines.
@@ -264,7 +266,7 @@ jobs:
                 # Reset if testcase closed without failure
                 testname = ""
               }
-            ' allure-results/results.xml | sort -u | head -20)
+            ' junit-results/results.xml | sort -u | head -20)
             # sort -u removes duplicate test names across browsers
             # head -20 caps the list at 20 entries
 

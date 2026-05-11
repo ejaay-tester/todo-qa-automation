@@ -13,7 +13,7 @@ export default defineConfig({
     ["line"],
     ["html", { outputFolder: "playwright-report", open: "never" }],
     ["allure-playwright", { outputFolder: "allure-results" }],
-    ["junit", { outputFile: "allure-results/results.xml" }],
+    ["junit", { outputFile: "junit-results/results.xml" }],
   ],
 
   use: {
