@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-5GUVP",
+    "description": "Desc-5GUVP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0174ecad3f8a88d16398a8",
+    "_id": "6a0174eead3f8a88d16398af",
+    "createdAt": "2026-05-11T06:19:26.282Z",
+    "updatedAt": "2026-05-11T06:19:26.282Z",
+    "__v": 0
+  }
+}

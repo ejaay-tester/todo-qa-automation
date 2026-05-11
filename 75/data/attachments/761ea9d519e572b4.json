@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-TWMXZ",
+    "description": "Desc-TWMXZ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0174ecad3f8a88d16398a8",
+    "_id": "6a0174eead3f8a88d16398ad",
+    "createdAt": "2026-05-11T06:19:26.269Z",
+    "updatedAt": "2026-05-11T06:19:26.269Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-EBYZ4",
+    "description": "Desc-EBYZ4",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0174eaad3f8a88d16398a0",
+    "_id": "6a0174ecad3f8a88d16398a3",
+    "createdAt": "2026-05-11T06:19:24.061Z",
+    "updatedAt": "2026-05-11T06:19:24.061Z",
+    "__v": 0
+  }
+}

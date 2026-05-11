@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a0174eead3f8a88d16398af",
+      "title": "Todo-5GUVP",
+      "description": "Desc-5GUVP",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0174ecad3f8a88d16398a8",
+      "createdAt": "2026-05-11T06:19:26.282Z",
+      "updatedAt": "2026-05-11T06:19:26.282Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a0174eead3f8a88d16398ad",
+      "title": "Todo-TWMXZ",
+      "description": "Desc-TWMXZ",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0174ecad3f8a88d16398a8",
+      "createdAt": "2026-05-11T06:19:26.269Z",
+      "updatedAt": "2026-05-11T06:19:26.269Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a0174eead3f8a88d16398ab",
+      "title": "Todo-SZ9W6",
+      "description": "Desc-SZ9W6",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0174ecad3f8a88d16398a8",
+      "createdAt": "2026-05-11T06:19:26.246Z",
+      "updatedAt": "2026-05-11T06:19:26.246Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

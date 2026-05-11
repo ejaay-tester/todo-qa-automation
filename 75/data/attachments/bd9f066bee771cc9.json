@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-LV4V1",
+    "description": "Desc-LV4V1",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a017504ad3f8a88d1639907",
+    "_id": "6a017506ad3f8a88d163990a",
+    "createdAt": "2026-05-11T06:19:50.017Z",
+    "updatedAt": "2026-05-11T06:19:50.017Z",
+    "__v": 0
+  }
+}

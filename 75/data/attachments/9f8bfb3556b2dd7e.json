@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-VTBBE",
+    "description": "Desc-VTBBE",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0174fdad3f8a88d16398e1",
+    "_id": "6a0174fead3f8a88d16398e4",
+    "createdAt": "2026-05-11T06:19:42.831Z",
+    "updatedAt": "2026-05-11T06:19:42.831Z",
+    "__v": 0
+  }
+}

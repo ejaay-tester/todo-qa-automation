@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-HTFBB",
+    "description": "Desc-HTFBB",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a01751cad3f8a88d163995a",
+    "_id": "6a01751ead3f8a88d163995d",
+    "createdAt": "2026-05-11T06:20:14.144Z",
+    "updatedAt": "2026-05-11T06:20:14.144Z",
+    "__v": 0
+  }
+}

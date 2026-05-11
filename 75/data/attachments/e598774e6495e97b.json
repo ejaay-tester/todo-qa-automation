@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-Z9NOW",
+    "description": "Desc-Z9NOW",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0174f0ad3f8a88d16398ba",
+    "_id": "6a0174f1ad3f8a88d16398bd",
+    "createdAt": "2026-05-11T06:19:29.629Z",
+    "updatedAt": "2026-05-11T06:19:29.629Z",
+    "__v": 0
+  }
+}

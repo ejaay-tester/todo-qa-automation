@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-AGTJI",
+    "description": "Desc-AGTJI",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a017519ad3f8a88d1639951",
+    "_id": "6a01751aad3f8a88d1639954",
+    "createdAt": "2026-05-11T06:20:10.744Z",
+    "updatedAt": "2026-05-11T06:20:10.744Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-UEG52",
+    "description": "Desc-UEG52",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0174f6ad3f8a88d16398cf",
+    "_id": "6a0174f7ad3f8a88d16398d2",
+    "createdAt": "2026-05-11T06:19:35.845Z",
+    "updatedAt": "2026-05-11T06:19:35.845Z",
+    "__v": 0
+  }
+}

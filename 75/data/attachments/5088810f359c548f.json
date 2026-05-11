@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-GBOFJ",
+    "description": "Desc-GBOFJ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a017513ad3f8a88d163993c",
+    "_id": "6a017514ad3f8a88d163993f",
+    "createdAt": "2026-05-11T06:20:04.747Z",
+    "updatedAt": "2026-05-11T06:20:04.747Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-V4NJQ",
+    "description": "Desc-V4NJQ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a017511ad3f8a88d163992a",
+    "_id": "6a017512ad3f8a88d163992f",
+    "createdAt": "2026-05-11T06:20:02.337Z",
+    "updatedAt": "2026-05-11T06:20:02.337Z",
+    "__v": 0
+  }
+}

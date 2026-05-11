@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-SZ9W6",
+    "description": "Desc-SZ9W6",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0174ecad3f8a88d16398a8",
+    "_id": "6a0174eead3f8a88d16398ab",
+    "createdAt": "2026-05-11T06:19:26.246Z",
+    "updatedAt": "2026-05-11T06:19:26.246Z",
+    "__v": 0
+  }
+}
