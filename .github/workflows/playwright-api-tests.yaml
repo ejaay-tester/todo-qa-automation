@@ -245,17 +245,29 @@ jobs:
         run: |
           FAILED_TESTS=""
 
-          # Only parse if results.xml exists
           if [ -f "allure-results/results.xml" ]; then
-            # Extract all failed test names from JUnit XML
-            FAILED_TESTS=$(grep -oP '(?<=name=")[^"]*' allure-results/results.xml \
-              | head -20 \
-              | while read -r name; do
-                  echo "• $name"
-                done \
-              | tr '\n' '\n')
+            # Extract ONLY testcase names that have a <failure> child element.
+            # Strategy: find lines with <testcase ...> immediately followed
+            # by <failure> - using awk to match the pattern across lines.
+            FAILED_TESTS=$(awk '
+              /<testcase / {
+                # Capture the name attribute from the testcase line
+                match($0, /name="([^"]*)"/, arr)
+                testname = arr[1]
+              }
+              /<failure/ && testname != "" {
+                # Only print if the next tag after testcase is failure
+                print "• " testname
+                testname = ""
+              }
+              /<\/testcase>/ {
+                # Reset if testcase closed without failure
+                testname = ""
+              }
+            ' allure-results/results.xml | sort -u | head -20)
+            # sort -u removes duplicate test names across browsers
+            # head -20 caps the list at 20 entries
 
-            # Fallback if grep finds nothing
             if [ -z "$FAILED_TESTS" ]; then
               FAILED_TESTS="No failed test details found in results"
             fi
