@@ -124,7 +124,7 @@ test.describe("Todos API", () => {
         expect(
           fetchedAllTodos.length,
           "[REQUIREMENT] Total count must include all newly created items",
-        ).not.toBeGreaterThanOrEqual(createdTodos.length)
+        ).toBeGreaterThanOrEqual(createdTodos.length)
       })
     })
 
@@ -251,7 +251,7 @@ test.describe("Todos API", () => {
         expect(
           response,
           `[REQUIREMENT] Deleted todo should not persist in the collection/database`,
-        ).not.toBeNull()
+        ).toBeNull()
       })
     })
 
