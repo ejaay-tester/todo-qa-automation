@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a02ccc45b84a2a42122305c",
+      "title": "Todo-N5GTM",
+      "description": "Desc-N5GTM",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a02ccc35b84a2a421223055",
+      "createdAt": "2026-05-12T06:46:28.716Z",
+      "updatedAt": "2026-05-12T06:46:28.716Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a02ccc45b84a2a42122305a",
+      "title": "Todo-I2IXS",
+      "description": "Desc-I2IXS",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a02ccc35b84a2a421223055",
+      "createdAt": "2026-05-12T06:46:28.705Z",
+      "updatedAt": "2026-05-12T06:46:28.705Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a02ccc45b84a2a421223058",
+      "title": "Todo-QZ8C3",
+      "description": "Desc-QZ8C3",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a02ccc35b84a2a421223055",
+      "createdAt": "2026-05-12T06:46:28.701Z",
+      "updatedAt": "2026-05-12T06:46:28.701Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

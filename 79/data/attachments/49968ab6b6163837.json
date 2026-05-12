@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-PFA5C",
+    "description": "Desc-PFA5C",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02ccb75b84a2a421223029",
+    "_id": "6a02ccb95b84a2a42122302c",
+    "createdAt": "2026-05-12T06:46:17.406Z",
+    "updatedAt": "2026-05-12T06:46:17.406Z",
+    "__v": 0
+  }
+}

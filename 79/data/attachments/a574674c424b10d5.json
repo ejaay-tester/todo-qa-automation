@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-ZQHDM",
+    "description": "Desc-ZQHDM",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02cd075b84a2a42122314f",
+    "_id": "6a02cd085b84a2a421223152",
+    "createdAt": "2026-05-12T06:47:36.902Z",
+    "updatedAt": "2026-05-12T06:47:36.902Z",
+    "__v": 0
+  }
+}

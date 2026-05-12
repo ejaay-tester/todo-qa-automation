@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-C61ZX",
+    "description": "Desc-C61ZX",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02ccf55b84a2a42122310d",
+    "_id": "6a02ccf75b84a2a421223110",
+    "createdAt": "2026-05-12T06:47:19.316Z",
+    "updatedAt": "2026-05-12T06:47:19.316Z",
+    "__v": 0
+  }
+}

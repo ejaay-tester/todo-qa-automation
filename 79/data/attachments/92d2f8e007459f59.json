@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-CSRVX",
+    "description": "Desc-CSRVX",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02ccd15b84a2a421223085",
+    "_id": "6a02ccd25b84a2a421223088",
+    "createdAt": "2026-05-12T06:46:42.702Z",
+    "updatedAt": "2026-05-12T06:46:42.702Z",
+    "__v": 0
+  }
+}

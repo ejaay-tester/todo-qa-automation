@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-FJEYP",
+    "description": "Desc-FJEYP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02cd035b84a2a421223146",
+    "_id": "6a02cd055b84a2a421223149",
+    "createdAt": "2026-05-12T06:47:33.211Z",
+    "updatedAt": "2026-05-12T06:47:33.211Z",
+    "__v": 0
+  }
+}

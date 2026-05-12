@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-XHL67",
+    "description": "Desc-XHL67",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02ccbf5b84a2a421223043",
+    "_id": "6a02ccc05b84a2a421223048",
+    "createdAt": "2026-05-12T06:46:24.730Z",
+    "updatedAt": "2026-05-12T06:46:24.730Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-L68O3",
+    "description": "Desc-L68O3",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02ccda5b84a2a4212230a8",
+    "_id": "6a02ccdc5b84a2a4212230ad",
+    "createdAt": "2026-05-12T06:46:52.226Z",
+    "updatedAt": "2026-05-12T06:46:52.226Z",
+    "__v": 0
+  }
+}

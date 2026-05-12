@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a02ccf35b84a2a421223102",
+      "title": "Todo-V4RYO",
+      "description": "Desc-V4RYO",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a02ccf25b84a2a4212230fb",
+      "createdAt": "2026-05-12T06:47:15.736Z",
+      "updatedAt": "2026-05-12T06:47:15.736Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a02ccf35b84a2a421223100",
+      "title": "Todo-SIZCO",
+      "description": "Desc-SIZCO",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a02ccf25b84a2a4212230fb",
+      "createdAt": "2026-05-12T06:47:15.733Z",
+      "updatedAt": "2026-05-12T06:47:15.733Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a02ccf35b84a2a4212230fe",
+      "title": "Todo-I4BGK",
+      "description": "Desc-I4BGK",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a02ccf25b84a2a4212230fb",
+      "createdAt": "2026-05-12T06:47:15.715Z",
+      "updatedAt": "2026-05-12T06:47:15.715Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

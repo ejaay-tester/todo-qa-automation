@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-IQQPU",
+    "description": "Desc-IQQPU",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02cce85b84a2a4212230e1",
+    "_id": "6a02ccea5b84a2a4212230e4",
+    "createdAt": "2026-05-12T06:47:06.207Z",
+    "updatedAt": "2026-05-12T06:47:06.207Z",
+    "__v": 0
+  }
+}

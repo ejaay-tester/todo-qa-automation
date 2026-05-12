@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a02ccdc5b84a2a4212230af",
+      "title": "Todo-BTVMI",
+      "description": "Desc-BTVMI",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a02ccda5b84a2a4212230a8",
+      "createdAt": "2026-05-12T06:46:52.235Z",
+      "updatedAt": "2026-05-12T06:46:52.235Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a02ccdc5b84a2a4212230ad",
+      "title": "Todo-L68O3",
+      "description": "Desc-L68O3",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a02ccda5b84a2a4212230a8",
+      "createdAt": "2026-05-12T06:46:52.226Z",
+      "updatedAt": "2026-05-12T06:46:52.226Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a02ccdc5b84a2a4212230ab",
+      "title": "Todo-623NC",
+      "description": "Desc-623NC",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a02ccda5b84a2a4212230a8",
+      "createdAt": "2026-05-12T06:46:52.214Z",
+      "updatedAt": "2026-05-12T06:46:52.214Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

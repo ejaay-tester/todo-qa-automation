@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-EIL3N",
+    "description": "Desc-EIL3N",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02ccf95b84a2a42122311f",
+    "_id": "6a02ccfb5b84a2a421223126",
+    "createdAt": "2026-05-12T06:47:23.229Z",
+    "updatedAt": "2026-05-12T06:47:23.229Z",
+    "__v": 0
+  }
+}

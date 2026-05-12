@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-X91XC",
+    "description": "Desc-X91XC",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02ccc65b84a2a421223067",
+    "_id": "6a02ccc85b84a2a42122306a",
+    "createdAt": "2026-05-12T06:46:32.402Z",
+    "updatedAt": "2026-05-12T06:46:32.402Z",
+    "__v": 0
+  }
+}

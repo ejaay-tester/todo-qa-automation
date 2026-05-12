@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-A8N95",
+    "description": "Desc-A8N95",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02cce25b84a2a4212230cc",
+    "_id": "6a02cce35b84a2a4212230cf",
+    "createdAt": "2026-05-12T06:46:59.808Z",
+    "updatedAt": "2026-05-12T06:46:59.808Z",
+    "__v": 0
+  }
+}

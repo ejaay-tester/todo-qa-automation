@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-EP1NA",
+    "description": "Desc-EP1NA",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02ccf95b84a2a42122311f",
+    "_id": "6a02ccfb5b84a2a421223124",
+    "createdAt": "2026-05-12T06:47:23.223Z",
+    "updatedAt": "2026-05-12T06:47:23.223Z",
+    "__v": 0
+  }
+}

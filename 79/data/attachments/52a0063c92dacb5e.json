@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-SVNFQ",
+    "description": "Desc-SVNFQ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02ccd75b84a2a421223096",
+    "_id": "6a02ccd85b84a2a42122309d",
+    "createdAt": "2026-05-12T06:46:48.648Z",
+    "updatedAt": "2026-05-12T06:46:48.648Z",
+    "__v": 0
+  }
+}

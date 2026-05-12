@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-JXMAF",
+    "description": "Desc-JXMAF",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02ccec5b84a2a4212230ea",
+    "_id": "6a02cced5b84a2a4212230ed",
+    "createdAt": "2026-05-12T06:47:09.908Z",
+    "updatedAt": "2026-05-12T06:47:09.908Z",
+    "__v": 0
+  }
+}

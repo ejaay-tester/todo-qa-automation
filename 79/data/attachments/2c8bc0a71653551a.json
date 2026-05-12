@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-AQLKL",
+    "description": "Desc-AQLKL",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02ccd45b84a2a42122308e",
+    "_id": "6a02ccd65b84a2a421223091",
+    "createdAt": "2026-05-12T06:46:46.303Z",
+    "updatedAt": "2026-05-12T06:46:46.303Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-LVS8C",
+    "description": "Desc-LVS8C",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02ccfd5b84a2a421223131",
+    "_id": "6a02ccfe5b84a2a421223134",
+    "createdAt": "2026-05-12T06:47:26.796Z",
+    "updatedAt": "2026-05-12T06:47:26.796Z",
+    "__v": 0
+  }
+}

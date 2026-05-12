@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-TYV1Z",
+    "description": "Desc-TYV1Z",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02ccf95b84a2a42122311f",
+    "_id": "6a02ccfb5b84a2a421223122",
+    "createdAt": "2026-05-12T06:47:23.206Z",
+    "updatedAt": "2026-05-12T06:47:23.206Z",
+    "__v": 0
+  }
+}

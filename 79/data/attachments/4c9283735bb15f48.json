@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-I2IXS",
+    "description": "Desc-I2IXS",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02ccc35b84a2a421223055",
+    "_id": "6a02ccc45b84a2a42122305a",
+    "createdAt": "2026-05-12T06:46:28.705Z",
+    "updatedAt": "2026-05-12T06:46:28.705Z",
+    "__v": 0
+  }
+}

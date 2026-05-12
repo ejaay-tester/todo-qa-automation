@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-JYOI3",
+    "description": "Desc-JYOI3",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02ccde5b84a2a4212230ba",
+    "_id": "6a02cce05b84a2a4212230c1",
+    "createdAt": "2026-05-12T06:46:56.042Z",
+    "updatedAt": "2026-05-12T06:46:56.042Z",
+    "__v": 0
+  }
+}

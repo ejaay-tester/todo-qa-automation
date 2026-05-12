@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-CWP2K",
+    "description": "Desc-CWP2K",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02cd005b84a2a42122313d",
+    "_id": "6a02cd015b84a2a421223140",
+    "createdAt": "2026-05-12T06:47:29.604Z",
+    "updatedAt": "2026-05-12T06:47:29.604Z",
+    "__v": 0
+  }
+}
