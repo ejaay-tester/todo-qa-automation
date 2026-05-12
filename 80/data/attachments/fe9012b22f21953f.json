@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-WOCO4",
+    "description": "Desc-WOCO4",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02e67e0b8a617126b7b6f6",
+    "_id": "6a02e67f0b8a617126b7b6fb",
+    "createdAt": "2026-05-12T08:36:15.691Z",
+    "updatedAt": "2026-05-12T08:36:15.691Z",
+    "__v": 0
+  }
+}

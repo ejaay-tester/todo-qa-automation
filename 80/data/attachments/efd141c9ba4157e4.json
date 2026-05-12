@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-OMQIU",
+    "description": "Desc-OMQIU",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02e6830b8a617126b7b714",
+    "_id": "6a02e6840b8a617126b7b717",
+    "createdAt": "2026-05-12T08:36:20.842Z",
+    "updatedAt": "2026-05-12T08:36:20.842Z",
+    "__v": 0
+  }
+}

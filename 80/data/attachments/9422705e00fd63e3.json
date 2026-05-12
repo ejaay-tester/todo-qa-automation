@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-UZSUV",
+    "description": "Desc-UZSUV",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02e68d0b8a617126b7b743",
+    "_id": "6a02e68e0b8a617126b7b746",
+    "createdAt": "2026-05-12T08:36:30.931Z",
+    "updatedAt": "2026-05-12T08:36:30.931Z",
+    "__v": 0
+  }
+}

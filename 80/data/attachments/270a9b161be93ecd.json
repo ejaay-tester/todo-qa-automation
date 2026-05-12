@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a02e67f0b8a617126b7b6fd",
+      "title": "Todo-1YCCH",
+      "description": "Desc-1YCCH",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a02e67e0b8a617126b7b6f6",
+      "createdAt": "2026-05-12T08:36:15.723Z",
+      "updatedAt": "2026-05-12T08:36:15.723Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a02e67f0b8a617126b7b6fb",
+      "title": "Todo-WOCO4",
+      "description": "Desc-WOCO4",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a02e67e0b8a617126b7b6f6",
+      "createdAt": "2026-05-12T08:36:15.691Z",
+      "updatedAt": "2026-05-12T08:36:15.691Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a02e67f0b8a617126b7b6f9",
+      "title": "Todo-MZ86L",
+      "description": "Desc-MZ86L",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a02e67e0b8a617126b7b6f6",
+      "createdAt": "2026-05-12T08:36:15.649Z",
+      "updatedAt": "2026-05-12T08:36:15.649Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-TCWNP",
+    "description": "Desc-TCWNP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02e6780b8a617126b7b6e5",
+    "_id": "6a02e67a0b8a617126b7b6e8",
+    "createdAt": "2026-05-12T08:36:10.091Z",
+    "updatedAt": "2026-05-12T08:36:10.091Z",
+    "__v": 0
+  }
+}

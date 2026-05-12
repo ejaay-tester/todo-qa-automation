@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-2SBKX",
+    "description": "Desc-2SBKX",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02e6760b8a617126b7b6d9",
+    "_id": "6a02e6770b8a617126b7b6dc",
+    "createdAt": "2026-05-12T08:36:07.526Z",
+    "updatedAt": "2026-05-12T08:36:07.526Z",
+    "__v": 0
+  }
+}

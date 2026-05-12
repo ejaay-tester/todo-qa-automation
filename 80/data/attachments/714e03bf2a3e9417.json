@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-7Y1EF",
+    "description": "Desc-7Y1EF",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a02e6720b8a617126b7b6c7",
+    "_id": "6a02e6740b8a617126b7b6ce",
+    "createdAt": "2026-05-12T08:36:04.293Z",
+    "updatedAt": "2026-05-12T08:36:04.293Z",
+    "__v": 0
+  }
+}
