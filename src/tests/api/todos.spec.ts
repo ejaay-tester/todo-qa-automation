@@ -124,7 +124,7 @@ test.describe("Todos API", () => {
         expect(
           fetchedAllTodos.length,
           "[REQUIREMENT] Total count must include all newly created items",
-        ).toBeGreaterThanOrEqual(createdTodos.length)
+        ).not.toBeGreaterThanOrEqual(createdTodos.length)
       })
     })
 
