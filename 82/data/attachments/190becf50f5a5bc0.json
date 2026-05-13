@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-G4UK6",
+    "description": "Desc-G4UK6",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a042b06ee959fd9814a31c1",
+    "_id": "6a042b08ee959fd9814a31c4",
+    "createdAt": "2026-05-13T07:40:56.101Z",
+    "updatedAt": "2026-05-13T07:40:56.101Z",
+    "__v": 0
+  }
+}

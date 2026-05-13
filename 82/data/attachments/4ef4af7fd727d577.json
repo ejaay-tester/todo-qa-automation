@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-SGE6R",
+    "description": "Desc-SGE6R",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a042b11ee959fd9814a31f0",
+    "_id": "6a042b13ee959fd9814a31f3",
+    "createdAt": "2026-05-13T07:41:07.369Z",
+    "updatedAt": "2026-05-13T07:41:07.369Z",
+    "__v": 0
+  }
+}

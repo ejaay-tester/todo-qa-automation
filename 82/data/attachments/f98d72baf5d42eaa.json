@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-I57VK",
+    "description": "Desc-I57VK",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a042b19ee959fd9814a3216",
+    "_id": "6a042b1aee959fd9814a3219",
+    "createdAt": "2026-05-13T07:41:14.872Z",
+    "updatedAt": "2026-05-13T07:41:14.872Z",
+    "__v": 0
+  }
+}

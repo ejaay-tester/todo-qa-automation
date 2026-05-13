@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-DVHAW",
+    "description": "Desc-DVHAW",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a042afcee959fd9814a319a",
+    "_id": "6a042afdee959fd9814a319d",
+    "createdAt": "2026-05-13T07:40:45.565Z",
+    "updatedAt": "2026-05-13T07:40:45.565Z",
+    "__v": 0
+  }
+}

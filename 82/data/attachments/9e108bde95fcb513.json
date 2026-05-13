@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-W4G2Q",
+    "description": "Desc-W4G2Q",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a042afcee959fd9814a319a",
+    "_id": "6a042afdee959fd9814a31a1",
+    "createdAt": "2026-05-13T07:40:45.745Z",
+    "updatedAt": "2026-05-13T07:40:45.745Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-K5RFM",
+    "description": "Desc-K5RFM",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a042af9ee959fd9814a3192",
+    "_id": "6a042afbee959fd9814a3195",
+    "createdAt": "2026-05-13T07:40:43.419Z",
+    "updatedAt": "2026-05-13T07:40:43.419Z",
+    "__v": 0
+  }
+}

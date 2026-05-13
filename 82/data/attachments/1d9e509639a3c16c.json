@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-GDTZB",
+    "description": "Desc-GDTZB",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a042b14ee959fd9814a31f8",
+    "_id": "6a042b15ee959fd9814a31fb",
+    "createdAt": "2026-05-13T07:41:09.568Z",
+    "updatedAt": "2026-05-13T07:41:09.568Z",
+    "__v": 0
+  }
+}

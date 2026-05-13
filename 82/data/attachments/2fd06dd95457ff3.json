@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a042b0aee959fd9814a31d0",
+      "title": "Todo-YAXXR",
+      "description": "Desc-YAXXR",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a042b08ee959fd9814a31c9",
+      "createdAt": "2026-05-13T07:40:58.395Z",
+      "updatedAt": "2026-05-13T07:40:58.395Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a042b0aee959fd9814a31ce",
+      "title": "Todo-C51Y7",
+      "description": "Desc-C51Y7",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a042b08ee959fd9814a31c9",
+      "createdAt": "2026-05-13T07:40:58.382Z",
+      "updatedAt": "2026-05-13T07:40:58.382Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a042b0aee959fd9814a31cc",
+      "title": "Todo-4DA5A",
+      "description": "Desc-4DA5A",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a042b08ee959fd9814a31c9",
+      "createdAt": "2026-05-13T07:40:58.373Z",
+      "updatedAt": "2026-05-13T07:40:58.373Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

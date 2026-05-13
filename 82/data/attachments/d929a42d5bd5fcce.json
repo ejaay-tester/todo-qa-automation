@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-70FMS",
+    "description": "Desc-70FMS",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a042affee959fd9814a31ac",
+    "_id": "6a042b01ee959fd9814a31af",
+    "createdAt": "2026-05-13T07:40:49.087Z",
+    "updatedAt": "2026-05-13T07:40:49.087Z",
+    "__v": 0
+  }
+}

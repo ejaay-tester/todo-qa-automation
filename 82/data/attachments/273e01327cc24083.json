@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-83UEU",
+    "description": "Desc-83UEU",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a042b16ee959fd9814a320a",
+    "_id": "6a042b17ee959fd9814a320d",
+    "createdAt": "2026-05-13T07:41:11.973Z",
+    "updatedAt": "2026-05-13T07:41:11.973Z",
+    "__v": 0
+  }
+}
