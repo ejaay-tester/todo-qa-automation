@@ -7,12 +7,27 @@ name: Playwright API Tests
 # ─────────────────────────────────────────────────────────────────────────────
 on:
   push:
+    branches:
+      - main # full regression runs when merged to main
+      - develop # full regression runs when merged to develop
     paths:
       - "src/**" # Covers api, factories, fixtures, tests, types, etc.
       - ".github/workflows/playwright-api-tests.yaml" # Re-run if the workflow itself changes
       - "playwright.config.ts" # Catch global Playwright config changes
       - "package.json" # Catch new dependency additions/installs
       - "package-lock.json" # Catch lockfile changes
+
+  pull_request:
+    branches:
+      - main # gates PRs targeting main
+      - develop # gates PRs targeting develop
+    paths:
+      - "src/**" # Covers api, factories, fixtures, tests, types, etc.
+      - ".github/workflows/playwright-api-tests.yaml" # Re-run if the workflow itself changes
+      - "playwright.config.ts" # Catch global Playwright config changes
+      - "package.json" # Catch new dependency additions/installs
+      - "package-lock.json" # Catch lockfile changes
+
   workflow_dispatch: # Enables the manual "Run Workflow" button in GitHub Actions UI
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -124,7 +139,13 @@ jobs:
         env:
           # This maps your GitHub Secret to the variable Playwright uses
           RENDER_STAGING_URL: ${{ secrets.RENDER_STAGING_URL }}
-        run: npx playwright test
+        run: |
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+            echo "🔍 PR - running @smoke tests only"
+            npx playwright test --grep "@smoke"
+          else
+            echo "🚀 Push to main/develop - full regression"
+            npx playwright test
 
       # Uploads the raw Allure JSON results so the publish-report job can
       # consume them. Short retention since they're only needed temporarily.
