@@ -16,6 +16,9 @@ playwright/.cache/
 allure-results/
 allure-report/
 
+# JUnit results
+junit-results/
+
 # K6 artifacts
 *.out
 
