@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-2BAVB",
+    "description": "Desc-2BAVB",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a04320a3e5d84f2509e5b91",
+    "_id": "6a04320b3e5d84f2509e5b98",
+    "createdAt": "2026-05-13T08:10:51.765Z",
+    "updatedAt": "2026-05-13T08:10:51.765Z",
+    "__v": 0
+  }
+}

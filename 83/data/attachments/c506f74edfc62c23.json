@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-DDYR3",
+    "description": "Desc-DDYR3",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a04321a3e5d84f2509e5bde",
+    "_id": "6a04321b3e5d84f2509e5be1",
+    "createdAt": "2026-05-13T08:11:07.934Z",
+    "updatedAt": "2026-05-13T08:11:07.934Z",
+    "__v": 0
+  }
+}

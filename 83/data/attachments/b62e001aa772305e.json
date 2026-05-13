@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a0432163e5d84f2509e5bc7",
+      "title": "Todo-MS773",
+      "description": "Desc-MS773",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0432153e5d84f2509e5bc0",
+      "createdAt": "2026-05-13T08:11:02.770Z",
+      "updatedAt": "2026-05-13T08:11:02.770Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a0432163e5d84f2509e5bc5",
+      "title": "Todo-13TUB",
+      "description": "Desc-13TUB",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0432153e5d84f2509e5bc0",
+      "createdAt": "2026-05-13T08:11:02.768Z",
+      "updatedAt": "2026-05-13T08:11:02.768Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a0432163e5d84f2509e5bc3",
+      "title": "Todo-DOUVD",
+      "description": "Desc-DOUVD",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0432153e5d84f2509e5bc0",
+      "createdAt": "2026-05-13T08:11:02.766Z",
+      "updatedAt": "2026-05-13T08:11:02.766Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

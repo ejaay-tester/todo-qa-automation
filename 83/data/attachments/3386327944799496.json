@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-IQI3T",
+    "description": "Desc-IQI3T",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0432133e5d84f2509e5bb8",
+    "_id": "6a0432143e5d84f2509e5bbb",
+    "createdAt": "2026-05-13T08:11:00.571Z",
+    "updatedAt": "2026-05-13T08:11:00.571Z",
+    "__v": 0
+  }
+}

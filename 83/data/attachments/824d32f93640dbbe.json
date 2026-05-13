@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-SK3X0",
+    "description": "Desc-SK3X0",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0432173e5d84f2509e5bd2",
+    "_id": "6a0432193e5d84f2509e5bd5",
+    "createdAt": "2026-05-13T08:11:05.146Z",
+    "updatedAt": "2026-05-13T08:11:05.146Z",
+    "__v": 0
+  }
+}

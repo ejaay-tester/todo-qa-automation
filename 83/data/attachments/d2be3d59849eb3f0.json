@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-PU2ZB",
+    "description": "Desc-PU2ZB",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0432033e5d84f2509e5b80",
+    "_id": "6a0432053e5d84f2509e5b83",
+    "createdAt": "2026-05-13T08:10:45.657Z",
+    "updatedAt": "2026-05-13T08:10:45.657Z",
+    "__v": 0
+  }
+}

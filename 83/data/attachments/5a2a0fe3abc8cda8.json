@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-13TUB",
+    "description": "Desc-13TUB",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0432153e5d84f2509e5bc0",
+    "_id": "6a0432163e5d84f2509e5bc5",
+    "createdAt": "2026-05-13T08:11:02.768Z",
+    "updatedAt": "2026-05-13T08:11:02.768Z",
+    "__v": 0
+  }
+}

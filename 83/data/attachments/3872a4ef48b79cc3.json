@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-QW78M",
+    "description": "Desc-QW78M",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0431fd3e5d84f2509e5b62",
+    "_id": "6a0431fe3e5d84f2509e5b67",
+    "createdAt": "2026-05-13T08:10:38.573Z",
+    "updatedAt": "2026-05-13T08:10:38.573Z",
+    "__v": 0
+  }
+}
