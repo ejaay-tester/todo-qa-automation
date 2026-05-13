@@ -146,6 +146,7 @@ jobs:
           else
             echo "🚀 Push to main/develop - full regression"
             npx playwright test
+          fi
 
       # Uploads the raw Allure JSON results so the publish-report job can
       # consume them. Short retention since they're only needed temporarily.
