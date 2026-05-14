@@ -2,6 +2,11 @@ import { APIRequestContext, APIResponse, expect } from "@playwright/test"
 import * as allure from "allure-js-commons"
 import { Todo, TodoPayload } from "../types/todo.type"
 
+export type RawErrorResponse = {
+  status: number
+  body: any
+}
+
 export class TodoClient {
   private readonly endpoint = "/api/todos"
 
@@ -43,7 +48,8 @@ export class TodoClient {
     url: string,
     response: APIResponse,
     payload?: any,
-  ): Promise<T> {
+    throwOnError = true,
+  ): Promise<T | RawErrorResponse> {
     return await allure.step(`${method} ${url}`, async () => {
       // 1. Attach Request Payload if it exists
       if (payload) {
@@ -54,11 +60,26 @@ export class TodoClient {
         )
       }
 
+      // Early Return Path for negative tests
+      if (!throwOnError && !response.ok()) {
+        const body = await response.json().catch(() => null)
+
+        await allure.attachment(
+          "Response Body (Error)",
+          JSON.stringify(body, null, 2),
+          "application/json",
+        )
+
+        return {
+          status: response.status(),
+          body,
+        } as RawErrorResponse
+      }
+
       // Global Error Handler
       if (!response.ok()) {
         const status = response.status()
         const errorBody = await response.text() // Get raw text in case it's not JSON
-
         const errorMessage = `❌ API Error: ${method} ${url}
         Status: ${status}
         Response: ${errorBody.substring(0, 500)}`.trim()
@@ -137,13 +158,22 @@ export class TodoClient {
    */
 
   // CREATE
-  async create(payload: TodoPayload): Promise<Todo> {
+  async create(
+    payload: TodoPayload,
+    throwOnError = true,
+  ): Promise<Todo | RawErrorResponse> {
     // Wrap the request in safeCall
     const response = await this.executeRequest(() =>
       this.request.post(this.endpoint, { data: payload }),
     )
 
-    return this.handleRequest<Todo>("POST", this.endpoint, response, payload)
+    return this.handleRequest<Todo>(
+      "POST",
+      this.endpoint,
+      response,
+      payload,
+      throwOnError,
+    )
   }
 
   // READ
@@ -151,7 +181,11 @@ export class TodoClient {
     const response = await this.executeRequest(() =>
       this.request.get(this.endpoint),
     )
-    return this.handleRequest<Todo[]>("GET", this.endpoint, response)
+    return this.handleRequest<Todo[]>(
+      "GET",
+      this.endpoint,
+      response,
+    ) as Promise<Todo[]>
   }
 
   async get(id: string, failOnNotFound = true): Promise<Todo | null> {
@@ -161,22 +195,35 @@ export class TodoClient {
     // Additional logic for DELETE tests
     if (!failOnNotFound && response.status() === 404) return null
 
-    return this.handleRequest<Todo>("GET", url, response)
+    return this.handleRequest<Todo>("GET", url, response) as Promise<Todo>
   }
 
   // UPDATE
-  async update(id: string, payload: Partial<TodoPayload>): Promise<Todo> {
+  async update(
+    id: string,
+    payload: Partial<TodoPayload>,
+    throwOnError = true,
+  ): Promise<Todo | RawErrorResponse> {
     const url = `${this.endpoint}/${id}`
     const response = await this.executeRequest(() =>
       this.request.put(url, { data: payload }),
     )
-    return this.handleRequest<Todo>("PUT", url, response, payload)
+    return this.handleRequest<Todo>("PUT", url, response, payload, throwOnError)
   }
 
   // DELETE
-  async delete(id: string): Promise<void> {
+  async delete(
+    id: string,
+    throwOnError = true,
+  ): Promise<void | RawErrorResponse> {
     const url = `${this.endpoint}/${id}`
     const response = await this.executeRequest(() => this.request.delete(url))
-    await this.handleRequest<void>("DELETE", url, response)
+    await this.handleRequest<void>(
+      "DELETE",
+      url,
+      response,
+      undefined,
+      throwOnError,
+    )
   }
 }
