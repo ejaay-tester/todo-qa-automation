@@ -1,3 +1,4 @@
+import { TodoPayload } from "../types/todo.type"
 /**
  * UNIQUE DATA GENERATOR
  * Example Outputs:
@@ -5,7 +6,7 @@
  * Description: "Task details for AF82Q"
  */
 export const TodoFactory = {
-  createTodoPayload() {
+  createTodoPayload(overrides?: Partial<TodoPayload>): TodoPayload {
     // Math.random(): generates a random decimal (e.g., 0.123456...)
     // .toString(36): converts that number to Base-36(uses 0-9 and a-z), turning the decimal
     // into string of random letters/numbers
@@ -17,6 +18,7 @@ export const TodoFactory = {
       title: `Todo-${randomSuffix}`,
       description: `Desc-${randomSuffix}`,
       completed: false,
+      ...overrides,
     }
   },
 }
