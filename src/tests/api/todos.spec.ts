@@ -1,5 +1,8 @@
 import { test, expect } from "../../fixtures/base.fixture"
 import { TodoFactory } from "../../factories/TodoFactory"
+import { Todo, TodoPayload } from "../../types/todo.type"
+import { RawErrorResponse } from "../../api/TodoClient"
+import { create } from "node:domain"
 
 test.describe("Todos API", () => {
   /**
@@ -21,7 +24,7 @@ test.describe("Todos API", () => {
         await test.step("Act: Create todo via API", async () => {
           // The API Client should handle .json() and .status() checks internally
 
-          const todo = await todoClient.create(payload)
+          const todo = (await todoClient.create(payload)) as Todo
           cleanup.push(todo._id)
           return todo
         })
@@ -52,10 +55,56 @@ test.describe("Todos API", () => {
       })
     })
 
-    // Negative - Validation Cases
-    // Expect: 400, Validation error message
-    // test("fail todo creation when title is missing", async () => {})
-    // test("fail todo creation with empty payload", async () => {})
+    // Negative - Validation
+    // Expect 400, Validation error message
+    test("fails when title is missing", async ({ todoClient }) => {
+      // Payload object with undefined title
+      const payload = {
+        description: "desc testing",
+        completed: false,
+      } as TodoPayload
+
+      const createdTodo =
+        await test.step("Setup: Create todo with missing title", async () => {
+          const response = (await todoClient.create(
+            payload,
+            false,
+          )) as RawErrorResponse
+
+          return response
+        })
+
+      await test.step("Assert: Verify the created todo with missing title", async () => {
+        expect(
+          createdTodo.status,
+          "[REQUIREMENT] Missing title must return 400",
+        ).toBe(400)
+
+        expect(
+          createdTodo.body.message,
+          "[REQUIREMENT] Missing title must return error message",
+        ).toBeDefined()
+      })
+    })
+
+    test("fails with empty payload", async ({ todoClient }) => {
+      const createdTodo =
+        await test.step("Setup: Create todo without payload", async () => {
+          const response = (await todoClient.create(
+            {} as TodoPayload,
+            false,
+          )) as RawErrorResponse
+
+          return response
+        })
+
+      await test.step("Assert: Verify the created todo with no payload", async () => {
+        expect(
+          createdTodo.status,
+          "[REQUIREMENT] Empty payload must return 400",
+        ).toBe(400)
+      })
+    })
 
     // Negative - Auth Cases
     // Expect: 401 Unauthorized
@@ -86,7 +135,9 @@ test.describe("Todos API", () => {
           )
 
           // Map those payloads to API creation promises
-          const todos = payloads.map((payload) => todoClient.create(payload))
+          const todos = payloads.map(
+            (payload) => todoClient.create(payload) as Promise<Todo>,
+          )
 
           // Wait for all creations to finish
           const results = await Promise.all(todos)
@@ -158,7 +209,7 @@ test.describe("Todos API", () => {
         await test.step("Setup: Create todo/s", async () => {
           const initialPayload = TodoFactory.createTodoPayload()
 
-          const createdTodo = await todoClient.create(initialPayload)
+          const createdTodo = (await todoClient.create(initialPayload)) as Todo
           cleanup.push(createdTodo._id)
 
           const updatePayload = {
@@ -174,10 +225,10 @@ test.describe("Todos API", () => {
       const updatedTodo =
         await test.step("Act: Update specific todo", async () => {
           // Pass the update payload directly
-          const updatedTodo = await todoClient.update(
+          const updatedTodo = (await todoClient.update(
             createdTodo._id,
             updatePayload,
-          )
+          )) as Todo
 
           return updatedTodo
         })
@@ -236,7 +287,7 @@ test.describe("Todos API", () => {
       // ARRANGE: Setup the data
       const createdTodo = await test.step("Setup: Create todo", async () => {
         const payload = TodoFactory.createTodoPayload()
-        return await todoClient.create(payload)
+        return (await todoClient.create(payload)) as Todo
       })
 
       // ACT: Delete specific todo
