@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a05661b2da6f3e63de49a86",
+      "title": "Todo-I5W79",
+      "description": "Desc-I5W79",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0566192da6f3e63de49a7f",
+      "createdAt": "2026-05-14T06:05:15.122Z",
+      "updatedAt": "2026-05-14T06:05:15.122Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a05661b2da6f3e63de49a84",
+      "title": "Todo-8MM5S",
+      "description": "Desc-8MM5S",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0566192da6f3e63de49a7f",
+      "createdAt": "2026-05-14T06:05:15.108Z",
+      "updatedAt": "2026-05-14T06:05:15.108Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a05661b2da6f3e63de49a82",
+      "title": "Todo-1HB7W",
+      "description": "Desc-1HB7W",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0566192da6f3e63de49a7f",
+      "createdAt": "2026-05-14T06:05:15.066Z",
+      "updatedAt": "2026-05-14T06:05:15.066Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

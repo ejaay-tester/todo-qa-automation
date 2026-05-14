@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-1YCFH",
+    "description": "Desc-1YCFH",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0566262da6f3e63de49aae",
+    "_id": "6a0566272da6f3e63de49ab3",
+    "createdAt": "2026-05-14T06:05:27.926Z",
+    "updatedAt": "2026-05-14T06:05:27.926Z",
+    "__v": 0
+  }
+}
