@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-NX4C2",
+    "description": "Desc-NX4C2",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0561258cb3855c2fe7f001",
+    "_id": "6a0561268cb3855c2fe7f004",
+    "createdAt": "2026-05-14T05:44:06.332Z",
+    "updatedAt": "2026-05-14T05:44:06.332Z",
+    "__v": 0
+  }
+}

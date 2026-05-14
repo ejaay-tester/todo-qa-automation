@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-SS8SF",
+    "description": "Desc-SS8SF",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0561148cb3855c2fe7efb8",
+    "_id": "6a0561168cb3855c2fe7efbb",
+    "createdAt": "2026-05-14T05:43:50.157Z",
+    "updatedAt": "2026-05-14T05:43:50.157Z",
+    "__v": 0
+  }
+}

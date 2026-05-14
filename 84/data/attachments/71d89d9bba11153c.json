@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-OYJS6",
+    "description": "Desc-OYJS6",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0561228cb3855c2fe7efef",
+    "_id": "6a0561238cb3855c2fe7eff4",
+    "createdAt": "2026-05-14T05:44:03.954Z",
+    "updatedAt": "2026-05-14T05:44:03.954Z",
+    "__v": 0
+  }
+}

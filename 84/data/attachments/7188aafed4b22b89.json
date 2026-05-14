@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-X6091",
+    "description": "Desc-X6091",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0561178cb3855c2fe7efc0",
+    "_id": "6a0561188cb3855c2fe7efc3",
+    "createdAt": "2026-05-14T05:43:52.540Z",
+    "updatedAt": "2026-05-14T05:43:52.540Z",
+    "__v": 0
+  }
+}

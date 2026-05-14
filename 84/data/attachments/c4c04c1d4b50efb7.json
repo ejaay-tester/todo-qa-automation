@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-GPA5A",
+    "description": "Desc-GPA5A",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0561178cb3855c2fe7efc0",
+    "_id": "6a0561188cb3855c2fe7efc5",
+    "createdAt": "2026-05-14T05:43:52.562Z",
+    "updatedAt": "2026-05-14T05:43:52.562Z",
+    "__v": 0
+  }
+}

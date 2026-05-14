@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-K16MY",
+    "description": "Desc-K16MY",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0561228cb3855c2fe7efef",
+    "_id": "6a0561238cb3855c2fe7eff2",
+    "createdAt": "2026-05-14T05:44:03.931Z",
+    "updatedAt": "2026-05-14T05:44:03.931Z",
+    "__v": 0
+  }
+}

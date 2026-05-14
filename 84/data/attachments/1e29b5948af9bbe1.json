@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-7RPOB",
+    "description": "Desc-7RPOB",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a05611c8cb3855c2fe7efde",
+    "_id": "6a05611d8cb3855c2fe7efe1",
+    "createdAt": "2026-05-14T05:43:57.931Z",
+    "updatedAt": "2026-05-14T05:43:57.931Z",
+    "__v": 0
+  }
+}

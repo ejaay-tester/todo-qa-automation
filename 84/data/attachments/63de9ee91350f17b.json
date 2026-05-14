@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-BCIZ1",
+    "description": "Desc-BCIZ1",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0561198cb3855c2fe7efd2",
+    "_id": "6a05611a8cb3855c2fe7efd5",
+    "createdAt": "2026-05-14T05:43:54.945Z",
+    "updatedAt": "2026-05-14T05:43:54.945Z",
+    "__v": 0
+  }
+}

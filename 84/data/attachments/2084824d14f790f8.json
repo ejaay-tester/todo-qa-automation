@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-GG8WE",
+    "description": "Desc-GG8WE",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0561078cb3855c2fe7ef89",
+    "_id": "6a0561098cb3855c2fe7ef8c",
+    "createdAt": "2026-05-14T05:43:37.842Z",
+    "updatedAt": "2026-05-14T05:43:37.842Z",
+    "__v": 0
+  }
+}

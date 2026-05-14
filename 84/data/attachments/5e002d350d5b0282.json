@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-3RAKK",
+    "description": "Desc-3RAKK",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0561208cb3855c2fe7efe7",
+    "_id": "6a0561218cb3855c2fe7efea",
+    "createdAt": "2026-05-14T05:44:01.543Z",
+    "updatedAt": "2026-05-14T05:44:01.543Z",
+    "__v": 0
+  }
+}
