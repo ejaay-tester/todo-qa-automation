@@ -3,6 +3,7 @@ import { TodoFactory } from "../../factories/TodoFactory"
 import { Todo, TodoPayload } from "../../types/todo.type"
 import { RawErrorResponse } from "../../api/TodoClient"
 import { create } from "node:domain"
+import { todo } from "node:test"
 
 test.describe("Todos API", () => {
   /**
@@ -34,10 +35,9 @@ test.describe("Todos API", () => {
        * Focus on validating the BUSINESS logic, not the technical details
        */
       await test.step("Assert: Verify the created todo matches payload", async () => {
-        // Verify the unique identifier exists
         expect(
           createdTodo._id,
-          `[REQUIREMENT] API response must contain a valid unique identifier (_id)`,
+          `[REQUIREMENT] Response must contain a valid unique identifier (_id)`,
         ).toBeDefined()
 
         // Verify all sent data matches what was returned
@@ -47,74 +47,169 @@ test.describe("Todos API", () => {
           `[REQUIREMENT] Created todo (${createdTodo._id}) must match the sent payload`,
         ).toMatchObject(payload)
 
-        // Verify specific state
         expect(
           createdTodo.completed,
-          `[REQUIREMENT] New todo (${createdTodo._id}) must default to 'false' completed status`,
+          `[REQUIREMENT] New todo (${createdTodo._id}) must default completed to false`,
         ).toBe(false)
+
+        expect(
+          createdTodo.createdAt,
+          "[REQUIREMENT] Response must contain createdAt timestamp",
+        ).toBeDefined()
+
+        expect(
+          createdTodo.updatedAt,
+          "[REQUIREMENT] Response must contain updatedAt timestamp",
+        ).toBeDefined()
       })
     })
 
     // Negative - Validation
     // Expect 400, Validation error message
     test("fails when title is missing", async ({ todoClient }) => {
-      // Payload object with undefined title
-      const payload = {
-        description: "desc testing",
-        completed: false,
-      } as TodoPayload
-
-      const createdTodo =
-        await test.step("Setup: Create todo with missing title", async () => {
-          const response = (await todoClient.create(
-            payload,
+      const response =
+        await test.step("Act: Create todo with missing title", async () => {
+          return todoClient.create(
+            TodoFactory.invalidPayload.missingTitle(),
             false,
-          )) as RawErrorResponse
-
-          return response
+          ) as Promise<RawErrorResponse>
         })
 
-      await test.step("Assert: Verify the created todo with missing title", async () => {
+      await test.step("Assert: Verify 400 status and error message", async () => {
         expect(
-          createdTodo.status,
-          "[REQUIREMENT] Missing title must return 400",
+          response.status,
+          "[REQUIREMENT] Missing title must return 400 HTTP Status",
         ).toBe(400)
 
         expect(
-          createdTodo.body.message,
-          "[REQUIREMENT] Missing title must return error message",
+          response.body.message,
+          "[REQUIREMENT] Response must contain a validation error message",
         ).toBeDefined()
+
+        expect(
+          response.body.success,
+          "[REQUIREMENT] Success flag must be false",
+        ).toBe(false)
       })
     })
 
-    test("fails with empty payload", async ({ todoClient }) => {
-      const createdTodo =
-        await test.step("Setup: Create todo without payload", async () => {
-          const response = (await todoClient.create(
-            {} as TodoPayload,
+    test("fails when title is empty string", async ({ todoClient }) => {
+      const response =
+        await test.step("Act: Create todo with empty title", async () => {
+          return todoClient.create(
+            TodoFactory.invalidPayload.emptyTitle(),
             false,
-          )) as RawErrorResponse
-
-          return response
+          ) as Promise<RawErrorResponse>
         })
 
-      await test.step("Assert: Verify the created todo with no payload", async () => {
+      await test.step("Assert: Verify 400 status and error message", async () => {
         expect(
-          createdTodo.status,
-          "[REQUIREMENT] Empty payload must return 400",
+          response.status,
+          "[REQUIREMENT] Empty title must return 400 HTTP Status",
         ).toBe(400)
+
+        expect(
+          response.body.message,
+          "[REQUIREMENT] Response must contain a validation error message",
+        ).toBeDefined()
+
+        expect(
+          response.body.success,
+          "[REQUIREMENT] Success flag must be false",
+        ).toBe(false)
+      })
+    })
+
+    test("fails when title is null", async ({ todoClient }) => {
+      const response =
+        await test.step("Act: Create todo with null title ", async () => {
+          return todoClient.create(
+            TodoFactory.invalidPayload.nullTitle(),
+            false,
+          ) as Promise<RawErrorResponse>
+        })
+
+      await test.step("Assert: Verify 400 status and error message", async () => {
+        expect(
+          response.status,
+          "[REQUIREMENT] Null title must return 400 HTTP Status",
+        ).toBe(400)
+        expect(
+          response.body.message,
+          "[REQUIREMENT] Response must contain a validation error message",
+        ).toBeDefined()
+        expect(
+          response.body.success,
+          "[REQUIREMENT] Success flag must be false",
+        ).toBe(false)
+      })
+    })
+
+    test("fails when whitespace-only title is sent", async ({ todoClient }) => {
+      const response =
+        await test.step("Act: Create todo with whitespace-only title", async () => {
+          return todoClient.create(
+            TodoFactory.invalidPayload.whiteSpaceOnlyTitle(),
+            false,
+          ) as Promise<RawErrorResponse>
+        })
+
+      await test.step("Assert: Verify 400 status and error message", async () => {
+        expect(
+          response.status,
+          "[REQUIREMENT] Whitespace-only title must return 400 HTTP Status",
+        ).toBe(400)
+        expect(
+          response.body.message,
+          "[REQUIREMENT] Response must contain a validation error message",
+        ).toBeDefined()
+        expect(
+          response.body.success,
+          "[REQUIREMENT] Success flag must be false",
+        ).toBe(false)
+      })
+    })
+
+    test("fails when payload is empty", async ({ todoClient }) => {
+      const response =
+        await test.step("Act: Create todo without payload", async () => {
+          return todoClient.create(
+            {} as TodoPayload,
+            false,
+          ) as Promise<RawErrorResponse>
+        })
+
+      console.log(response.body.message)
+      console.log(response.body.success)
+      await test.step("Assert: Verify 400 status and error message", async () => {
+        expect(
+          response.status,
+          "[REQUIREMENT] Empty payload must return 400 HTTP Status",
+        ).toBe(400)
+
+        expect(
+          response.body.message,
+          "[REQUIREMENT] Response must contain a validation error message",
+        ).toBeDefined()
+
+        expect(
+          response.body.success,
+          "[REQUIREMENT] Success flag must be false",
+        ).toBe(false)
       })
     })
 
     // Negative - Auth Cases
     // Expect: 401 Unauthorized
-    // test("fail todo creation without token", async () => {})
+    // test("fails without auth token", async () => {})
+    // test("fails with invalid/expired token", async () => {})
 
     // Edge Cases
     // Large input, special characters, boolean logic
     // test("accepts very long title", async () => {})
-    // test("accepts special characters", async () => {})
-    // test("toggle completed status", async () => {})
+    // test("accepts special characters in title", async () => {})
+    // test("accepts unicode characters in title", async () => {})
+    // test("creates todo with completed status set to true", async () => {})
   })
 
   /**
