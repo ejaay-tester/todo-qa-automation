@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-ISUVR",
+    "description": "Desc-ISUVR",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a06f16a16028d32544425bf",
+    "_id": "6a06f16c16028d32544425c2",
+    "createdAt": "2026-05-15T10:11:56.248Z",
+    "updatedAt": "2026-05-15T10:11:56.248Z",
+    "__v": 0
+  }
+}

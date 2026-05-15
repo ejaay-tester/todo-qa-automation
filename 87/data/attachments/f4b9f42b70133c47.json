@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-4TUVR",
+    "description": "Desc-4TUVR",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a06f16016028d3254442598",
+    "_id": "6a06f16216028d325444259d",
+    "createdAt": "2026-05-15T10:11:46.292Z",
+    "updatedAt": "2026-05-15T10:11:46.292Z",
+    "__v": 0
+  }
+}

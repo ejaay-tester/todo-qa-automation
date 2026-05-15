@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-WYRST",
+    "description": "Desc-WYRST",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a06f17d16028d3254442614",
+    "_id": "6a06f17f16028d3254442617",
+    "createdAt": "2026-05-15T10:12:15.438Z",
+    "updatedAt": "2026-05-15T10:12:15.438Z",
+    "__v": 0
+  }
+}

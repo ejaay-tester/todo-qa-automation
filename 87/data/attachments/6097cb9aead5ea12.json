@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-SP5WG",
+    "description": "Desc-SP5WG",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a06f16d16028d32544425c7",
+    "_id": "6a06f16e16028d32544425ce",
+    "createdAt": "2026-05-15T10:11:58.811Z",
+    "updatedAt": "2026-05-15T10:11:58.811Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-VY0VF",
+    "description": "Desc-VY0VF",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a06f17a16028d3254442608",
+    "_id": "6a06f17c16028d325444260b",
+    "createdAt": "2026-05-15T10:12:12.327Z",
+    "updatedAt": "2026-05-15T10:12:12.327Z",
+    "__v": 0
+  }
+}

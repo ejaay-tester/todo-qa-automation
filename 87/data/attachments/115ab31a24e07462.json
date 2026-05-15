@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-O6IZG",
+    "description": "Desc-O6IZG",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a06f15d16028d3254442590",
+    "_id": "6a06f16016028d3254442593",
+    "createdAt": "2026-05-15T10:11:44.082Z",
+    "updatedAt": "2026-05-15T10:11:44.082Z",
+    "__v": 0
+  }
+}

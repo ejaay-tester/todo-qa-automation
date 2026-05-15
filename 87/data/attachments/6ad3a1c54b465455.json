@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-ABGJ6",
+    "description": "Desc-ABGJ6",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a06f17816028d32544425f6",
+    "_id": "6a06f17916028d32544425fd",
+    "createdAt": "2026-05-15T10:12:09.922Z",
+    "updatedAt": "2026-05-15T10:12:09.922Z",
+    "__v": 0
+  }
+}

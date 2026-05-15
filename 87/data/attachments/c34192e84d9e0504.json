@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-TR7VT",
+    "description": "Desc-TR7VT",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a06f17616028d32544425ee",
+    "_id": "6a06f17716028d32544425f1",
+    "createdAt": "2026-05-15T10:12:07.628Z",
+    "updatedAt": "2026-05-15T10:12:07.628Z",
+    "__v": 0
+  }
+}

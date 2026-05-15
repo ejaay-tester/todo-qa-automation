@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-CQ4TE",
+    "description": "Desc-CQ4TE",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a06f16716028d32544425b6",
+    "_id": "6a06f16816028d32544425b9",
+    "createdAt": "2026-05-15T10:11:52.655Z",
+    "updatedAt": "2026-05-15T10:11:52.655Z",
+    "__v": 0
+  }
+}

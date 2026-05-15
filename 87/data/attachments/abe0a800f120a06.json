@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-Q4894",
+    "description": "Desc-Q4894",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a06f16416028d32544425aa",
+    "_id": "6a06f16516028d32544425ad",
+    "createdAt": "2026-05-15T10:11:49.930Z",
+    "updatedAt": "2026-05-15T10:11:49.930Z",
+    "__v": 0
+  }
+}
