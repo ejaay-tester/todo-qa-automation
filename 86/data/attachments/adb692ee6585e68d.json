@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-A844M",
+    "description": "Desc-A844M",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a06ec96de3f20b87d794f87",
+    "_id": "6a06ec97de3f20b87d794f8a",
+    "createdAt": "2026-05-15T09:51:19.555Z",
+    "updatedAt": "2026-05-15T09:51:19.555Z",
+    "__v": 0
+  }
+}

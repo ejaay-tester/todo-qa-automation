@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-ODHDG",
+    "description": "Desc-ODHDG",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a06ec90de3f20b87d794f69",
+    "_id": "6a06ec92de3f20b87d794f70",
+    "createdAt": "2026-05-15T09:51:14.174Z",
+    "updatedAt": "2026-05-15T09:51:14.174Z",
+    "__v": 0
+  }
+}

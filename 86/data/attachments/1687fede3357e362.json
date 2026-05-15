@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-MKZRY",
+    "description": "Desc-MKZRY",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a06ec85de3f20b87d794f3a",
+    "_id": "6a06ec86de3f20b87d794f41",
+    "createdAt": "2026-05-15T09:51:02.612Z",
+    "updatedAt": "2026-05-15T09:51:02.612Z",
+    "__v": 0
+  }
+}

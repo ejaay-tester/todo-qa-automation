@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-FSEYM",
+    "description": "Desc-FSEYM",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a06ec82de3f20b87d794f32",
+    "_id": "6a06ec84de3f20b87d794f35",
+    "createdAt": "2026-05-15T09:51:00.269Z",
+    "updatedAt": "2026-05-15T09:51:00.269Z",
+    "__v": 0
+  }
+}

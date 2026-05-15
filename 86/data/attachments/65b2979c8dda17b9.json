@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-L2GKK",
+    "description": "Desc-L2GKK",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a06ec8ede3f20b87d794f61",
+    "_id": "6a06ec8fde3f20b87d794f64",
+    "createdAt": "2026-05-15T09:51:11.913Z",
+    "updatedAt": "2026-05-15T09:51:11.913Z",
+    "__v": 0
+  }
+}
