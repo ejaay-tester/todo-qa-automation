@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-314I8",
+    "description": "Desc-314I8",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0863128d23c488e0b9dbd9",
+    "_id": "6a0863138d23c488e0b9dbdc",
+    "createdAt": "2026-05-16T12:29:07.696Z",
+    "updatedAt": "2026-05-16T12:29:07.696Z",
+    "__v": 0
+  }
+}

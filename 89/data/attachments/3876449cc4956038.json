@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-57RA8",
+    "description": "Desc-57RA8",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0862fb8d23c488e0b9db7b",
+    "_id": "6a0862fd8d23c488e0b9db7e",
+    "createdAt": "2026-05-16T12:28:45.182Z",
+    "updatedAt": "2026-05-16T12:28:45.182Z",
+    "__v": 0
+  }
+}

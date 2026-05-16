@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-71K5G",
+    "description": "Desc-71K5G",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0863098d23c488e0b9dbb2",
+    "_id": "6a08630a8d23c488e0b9dbb7",
+    "createdAt": "2026-05-16T12:28:58.836Z",
+    "updatedAt": "2026-05-16T12:28:58.836Z",
+    "__v": 0
+  }
+}

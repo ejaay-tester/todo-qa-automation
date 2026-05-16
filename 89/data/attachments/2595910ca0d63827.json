@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-CJVGU",
+    "description": "Desc-CJVGU",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0863008d23c488e0b9db95",
+    "_id": "6a0863028d23c488e0b9db98",
+    "createdAt": "2026-05-16T12:28:50.074Z",
+    "updatedAt": "2026-05-16T12:28:50.074Z",
+    "__v": 0
+  }
+}

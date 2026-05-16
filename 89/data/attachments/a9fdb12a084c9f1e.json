@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-TZOBR",
+    "description": "Desc-TZOBR",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0863038d23c488e0b9dba1",
+    "_id": "6a0863048d23c488e0b9dba4",
+    "createdAt": "2026-05-16T12:28:52.902Z",
+    "updatedAt": "2026-05-16T12:28:52.902Z",
+    "__v": 0
+  }
+}

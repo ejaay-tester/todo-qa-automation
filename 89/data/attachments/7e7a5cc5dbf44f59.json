@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-DWY5V",
+    "description": "Desc-DWY5V",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0863148d23c488e0b9dbe1",
+    "_id": "6a0863168d23c488e0b9dbe6",
+    "createdAt": "2026-05-16T12:29:10.040Z",
+    "updatedAt": "2026-05-16T12:29:10.040Z",
+    "__v": 0
+  }
+}

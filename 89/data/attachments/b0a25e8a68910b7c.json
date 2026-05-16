@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-BI4HW",
+    "description": "Desc-BI4HW",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a08630c8d23c488e0b9dbc4",
+    "_id": "6a08630d8d23c488e0b9dbc7",
+    "createdAt": "2026-05-16T12:29:01.381Z",
+    "updatedAt": "2026-05-16T12:29:01.381Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a0862ff8d23c488e0b9db8a",
+      "title": "Todo-EB6JC",
+      "description": "Desc-EB6JC",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0862fe8d23c488e0b9db83",
+      "createdAt": "2026-05-16T12:28:47.442Z",
+      "updatedAt": "2026-05-16T12:28:47.442Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a0862ff8d23c488e0b9db88",
+      "title": "Todo-KZCVR",
+      "description": "Desc-KZCVR",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0862fe8d23c488e0b9db83",
+      "createdAt": "2026-05-16T12:28:47.415Z",
+      "updatedAt": "2026-05-16T12:28:47.415Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a0862ff8d23c488e0b9db86",
+      "title": "Todo-JV81C",
+      "description": "Desc-JV81C",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0862fe8d23c488e0b9db83",
+      "createdAt": "2026-05-16T12:28:47.387Z",
+      "updatedAt": "2026-05-16T12:28:47.387Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

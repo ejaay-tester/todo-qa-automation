@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-N6Y30",
+    "description": "Desc-N6Y30",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0863098d23c488e0b9dbb2",
+    "_id": "6a08630a8d23c488e0b9dbb9",
+    "createdAt": "2026-05-16T12:28:58.972Z",
+    "updatedAt": "2026-05-16T12:28:58.972Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-RRL4G",
+    "description": "Desc-RRL4G",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0863068d23c488e0b9dbaa",
+    "_id": "6a0863088d23c488e0b9dbad",
+    "createdAt": "2026-05-16T12:28:56.381Z",
+    "updatedAt": "2026-05-16T12:28:56.381Z",
+    "__v": 0
+  }
+}
