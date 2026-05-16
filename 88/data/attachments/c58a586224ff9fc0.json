@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-TCMF9",
+    "description": "Desc-TCMF9",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0862288d23c488e0b9db66",
+    "_id": "6a0862298d23c488e0b9db69",
+    "createdAt": "2026-05-16T12:25:13.779Z",
+    "updatedAt": "2026-05-16T12:25:13.779Z",
+    "__v": 0
+  }
+}

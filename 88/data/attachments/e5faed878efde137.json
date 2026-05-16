@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-2F11W",
+    "description": "Desc-2F11W",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0862188d23c488e0b9db1d",
+    "_id": "6a08621a8d23c488e0b9db20",
+    "createdAt": "2026-05-16T12:24:58.122Z",
+    "updatedAt": "2026-05-16T12:24:58.122Z",
+    "__v": 0
+  }
+}

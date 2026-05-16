@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-D7TPV",
+    "description": "Desc-D7TPV",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0862148d23c488e0b9db14",
+    "_id": "6a0862168d23c488e0b9db17",
+    "createdAt": "2026-05-16T12:24:54.286Z",
+    "updatedAt": "2026-05-16T12:24:54.286Z",
+    "__v": 0
+  }
+}

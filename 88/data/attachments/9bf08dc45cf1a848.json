@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-J4GVI",
+    "description": "Desc-J4GVI",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a08620e8d23c488e0b9daf6",
+    "_id": "6a08620f8d23c488e0b9dafd",
+    "createdAt": "2026-05-16T12:24:47.622Z",
+    "updatedAt": "2026-05-16T12:24:47.622Z",
+    "__v": 0
+  }
+}

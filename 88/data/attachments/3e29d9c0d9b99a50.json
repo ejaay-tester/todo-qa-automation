@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a08621c8d23c488e0b9db2c",
+      "title": "Todo-37Q64",
+      "description": "Desc-37Q64",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a08621a8d23c488e0b9db25",
+      "createdAt": "2026-05-16T12:25:00.303Z",
+      "updatedAt": "2026-05-16T12:25:00.303Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a08621c8d23c488e0b9db2a",
+      "title": "Todo-SRRCC",
+      "description": "Desc-SRRCC",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a08621a8d23c488e0b9db25",
+      "createdAt": "2026-05-16T12:25:00.301Z",
+      "updatedAt": "2026-05-16T12:25:00.301Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a08621c8d23c488e0b9db28",
+      "title": "Todo-FNUFP",
+      "description": "Desc-FNUFP",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a08621a8d23c488e0b9db25",
+      "createdAt": "2026-05-16T12:25:00.289Z",
+      "updatedAt": "2026-05-16T12:25:00.289Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

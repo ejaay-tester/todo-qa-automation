@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-SRRCC",
+    "description": "Desc-SRRCC",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a08621a8d23c488e0b9db25",
+    "_id": "6a08621c8d23c488e0b9db2a",
+    "createdAt": "2026-05-16T12:25:00.301Z",
+    "updatedAt": "2026-05-16T12:25:00.301Z",
+    "__v": 0
+  }
+}

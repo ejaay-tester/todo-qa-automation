@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-GQ9VM",
+    "description": "Desc-GQ9VM",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0862208d23c488e0b9db43",
+    "_id": "6a0862218d23c488e0b9db46",
+    "createdAt": "2026-05-16T12:25:05.376Z",
+    "updatedAt": "2026-05-16T12:25:05.376Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-76KXA",
+    "description": "Desc-76KXA",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a08620b8d23c488e0b9daee",
+    "_id": "6a08620d8d23c488e0b9daf1",
+    "createdAt": "2026-05-16T12:24:45.201Z",
+    "updatedAt": "2026-05-16T12:24:45.201Z",
+    "__v": 0
+  }
+}

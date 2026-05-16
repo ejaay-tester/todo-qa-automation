@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-21CS2",
+    "description": "Desc-21CS2",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0862258d23c488e0b9db54",
+    "_id": "6a0862278d23c488e0b9db57",
+    "createdAt": "2026-05-16T12:25:11.272Z",
+    "updatedAt": "2026-05-16T12:25:11.272Z",
+    "__v": 0
+  }
+}
