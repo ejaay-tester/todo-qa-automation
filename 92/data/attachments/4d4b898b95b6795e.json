@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-3NSSO",
+    "description": "Desc-3NSSO",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a09c5a4ea43b24ddbbf4021",
+    "_id": "6a09c5a6ea43b24ddbbf4026",
+    "createdAt": "2026-05-17T13:41:58.100Z",
+    "updatedAt": "2026-05-17T13:41:58.100Z",
+    "__v": 0
+  }
+}

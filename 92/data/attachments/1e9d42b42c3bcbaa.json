@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-XRGKQ",
+    "description": "Desc-XRGKQ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a09c5a4ea43b24ddbbf4021",
+    "_id": "6a09c5a6ea43b24ddbbf4028",
+    "createdAt": "2026-05-17T13:41:58.102Z",
+    "updatedAt": "2026-05-17T13:41:58.102Z",
+    "__v": 0
+  }
+}

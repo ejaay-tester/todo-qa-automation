@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a09c5a6ea43b24ddbbf4028",
+      "title": "Todo-XRGKQ",
+      "description": "Desc-XRGKQ",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a09c5a4ea43b24ddbbf4021",
+      "createdAt": "2026-05-17T13:41:58.102Z",
+      "updatedAt": "2026-05-17T13:41:58.102Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a09c5a6ea43b24ddbbf4026",
+      "title": "Todo-3NSSO",
+      "description": "Desc-3NSSO",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a09c5a4ea43b24ddbbf4021",
+      "createdAt": "2026-05-17T13:41:58.100Z",
+      "updatedAt": "2026-05-17T13:41:58.100Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a09c5a6ea43b24ddbbf4024",
+      "title": "Todo-P56M9",
+      "description": "Desc-P56M9",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a09c5a4ea43b24ddbbf4021",
+      "createdAt": "2026-05-17T13:41:58.027Z",
+      "updatedAt": "2026-05-17T13:41:58.027Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

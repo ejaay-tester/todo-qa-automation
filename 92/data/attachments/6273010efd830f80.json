@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a09c5b8ea43b24ddbbf406b",
+      "title": "Todo-K9494",
+      "description": "Desc-K9494",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a09c5b7ea43b24ddbbf4064",
+      "createdAt": "2026-05-17T13:42:16.484Z",
+      "updatedAt": "2026-05-17T13:42:16.484Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a09c5b8ea43b24ddbbf4069",
+      "title": "Todo-A1WGE",
+      "description": "Desc-A1WGE",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a09c5b7ea43b24ddbbf4064",
+      "createdAt": "2026-05-17T13:42:16.483Z",
+      "updatedAt": "2026-05-17T13:42:16.483Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a09c5b8ea43b24ddbbf4067",
+      "title": "Todo-UF2ME",
+      "description": "Desc-UF2ME",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a09c5b7ea43b24ddbbf4064",
+      "createdAt": "2026-05-17T13:42:16.438Z",
+      "updatedAt": "2026-05-17T13:42:16.438Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

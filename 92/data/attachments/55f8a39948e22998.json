@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-WT9HM",
+    "description": "Desc-WT9HM",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a09c5bcea43b24ddbbf4082",
+    "_id": "6a09c5bdea43b24ddbbf4085",
+    "createdAt": "2026-05-17T13:42:21.623Z",
+    "updatedAt": "2026-05-17T13:42:21.623Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-4ECOJ",
+    "description": "Desc-4ECOJ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a09c59aea43b24ddbbf4005",
+    "_id": "6a09c59bea43b24ddbbf4008",
+    "createdAt": "2026-05-17T13:41:47.749Z",
+    "updatedAt": "2026-05-17T13:41:47.749Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-P56M9",
+    "description": "Desc-P56M9",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a09c5a4ea43b24ddbbf4021",
+    "_id": "6a09c5a6ea43b24ddbbf4024",
+    "createdAt": "2026-05-17T13:41:58.027Z",
+    "updatedAt": "2026-05-17T13:41:58.027Z",
+    "__v": 0
+  }
+}

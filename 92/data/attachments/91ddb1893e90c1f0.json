@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-CWNI4",
+    "description": "Desc-CWNI4",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a09c587ea43b24ddbbf3fc2",
+    "_id": "6a09c588ea43b24ddbbf3fc5",
+    "createdAt": "2026-05-17T13:41:28.735Z",
+    "updatedAt": "2026-05-17T13:41:28.735Z",
+    "__v": 0
+  }
+}
