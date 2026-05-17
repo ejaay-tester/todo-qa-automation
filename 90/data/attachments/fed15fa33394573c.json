@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a09a285b4caae90e02ed098",
+      "title": "Todo-NUZTA",
+      "description": "Desc-NUZTA",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a09a283b4caae90e02ed091",
+      "createdAt": "2026-05-17T11:12:05.381Z",
+      "updatedAt": "2026-05-17T11:12:05.381Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a09a285b4caae90e02ed096",
+      "title": "Todo-S7FRV",
+      "description": "Desc-S7FRV",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a09a283b4caae90e02ed091",
+      "createdAt": "2026-05-17T11:12:05.364Z",
+      "updatedAt": "2026-05-17T11:12:05.364Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a09a285b4caae90e02ed094",
+      "title": "Todo-6ZTIT",
+      "description": "Desc-6ZTIT",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a09a283b4caae90e02ed091",
+      "createdAt": "2026-05-17T11:12:05.313Z",
+      "updatedAt": "2026-05-17T11:12:05.313Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

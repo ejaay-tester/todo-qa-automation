@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-Q5OTW",
+    "description": "Desc-Q5OTW",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a09a274b4caae90e02ed05a",
+    "_id": "6a09a276b4caae90e02ed05d",
+    "createdAt": "2026-05-17T11:11:50.348Z",
+    "updatedAt": "2026-05-17T11:11:50.348Z",
+    "__v": 0
+  }
+}

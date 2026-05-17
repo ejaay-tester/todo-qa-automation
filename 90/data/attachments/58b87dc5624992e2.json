@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-6ZTIT",
+    "description": "Desc-6ZTIT",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a09a283b4caae90e02ed091",
+    "_id": "6a09a285b4caae90e02ed094",
+    "createdAt": "2026-05-17T11:12:05.313Z",
+    "updatedAt": "2026-05-17T11:12:05.313Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-XOG7R",
+    "description": "Desc-XOG7R",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a09a27ab4caae90e02ed074",
+    "_id": "6a09a27cb4caae90e02ed077",
+    "createdAt": "2026-05-17T11:11:56.010Z",
+    "updatedAt": "2026-05-17T11:11:56.010Z",
+    "__v": 0
+  }
+}

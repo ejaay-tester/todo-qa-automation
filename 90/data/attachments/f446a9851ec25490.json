@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-662XC",
+    "description": "Desc-662XC",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a09a27db4caae90e02ed080",
+    "_id": "6a09a27fb4caae90e02ed083",
+    "createdAt": "2026-05-17T11:11:59.404Z",
+    "updatedAt": "2026-05-17T11:11:59.404Z",
+    "__v": 0
+  }
+}

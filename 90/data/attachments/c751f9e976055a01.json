@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-S7FRV",
+    "description": "Desc-S7FRV",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a09a283b4caae90e02ed091",
+    "_id": "6a09a285b4caae90e02ed096",
+    "createdAt": "2026-05-17T11:12:05.364Z",
+    "updatedAt": "2026-05-17T11:12:05.364Z",
+    "__v": 0
+  }
+}

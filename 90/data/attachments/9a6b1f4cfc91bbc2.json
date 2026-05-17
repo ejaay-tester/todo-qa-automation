@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-AN1GT",
+    "description": "Desc-AN1GT",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a09a28eb4caae90e02ed0c0",
+    "_id": "6a09a290b4caae90e02ed0c5",
+    "createdAt": "2026-05-17T11:12:16.063Z",
+    "updatedAt": "2026-05-17T11:12:16.063Z",
+    "__v": 0
+  }
+}

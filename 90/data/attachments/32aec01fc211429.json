@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-KSUSE",
+    "description": "Desc-KSUSE",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a09a289b4caae90e02ed0af",
+    "_id": "6a09a28ab4caae90e02ed0b2",
+    "createdAt": "2026-05-17T11:12:10.615Z",
+    "updatedAt": "2026-05-17T11:12:10.615Z",
+    "__v": 0
+  }
+}

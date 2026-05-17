@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a09a278b4caae90e02ed069",
+      "title": "Todo-D8P9S",
+      "description": "Desc-D8P9S",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a09a277b4caae90e02ed062",
+      "createdAt": "2026-05-17T11:11:52.670Z",
+      "updatedAt": "2026-05-17T11:11:52.670Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a09a278b4caae90e02ed067",
+      "title": "Todo-UPRO5",
+      "description": "Desc-UPRO5",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a09a277b4caae90e02ed062",
+      "createdAt": "2026-05-17T11:11:52.654Z",
+      "updatedAt": "2026-05-17T11:11:52.654Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a09a278b4caae90e02ed065",
+      "title": "Todo-DC287",
+      "description": "Desc-DC287",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a09a277b4caae90e02ed062",
+      "createdAt": "2026-05-17T11:11:52.605Z",
+      "updatedAt": "2026-05-17T11:11:52.605Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

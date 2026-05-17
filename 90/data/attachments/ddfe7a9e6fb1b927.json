@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-OROO1",
+    "description": "Desc-OROO1",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a09a291b4caae90e02ed0d2",
+    "_id": "6a09a292b4caae90e02ed0d5",
+    "createdAt": "2026-05-17T11:12:18.519Z",
+    "updatedAt": "2026-05-17T11:12:18.519Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-UPRO5",
+    "description": "Desc-UPRO5",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a09a277b4caae90e02ed062",
+    "_id": "6a09a278b4caae90e02ed067",
+    "createdAt": "2026-05-17T11:11:52.654Z",
+    "updatedAt": "2026-05-17T11:11:52.654Z",
+    "__v": 0
+  }
+}
