@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-TWQY3",
+    "description": "Desc-TWQY3",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a09c28bea43b24ddbbf3f64",
+    "_id": "6a09c28dea43b24ddbbf3f67",
+    "createdAt": "2026-05-17T13:28:45.037Z",
+    "updatedAt": "2026-05-17T13:28:45.037Z",
+    "__v": 0
+  }
+}

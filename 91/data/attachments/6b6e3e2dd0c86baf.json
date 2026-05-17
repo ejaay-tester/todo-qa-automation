@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a09c283ea43b24ddbbf3f44",
+      "title": "Todo-E344G",
+      "description": "Desc-E344G",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a09c281ea43b24ddbbf3f3d",
+      "createdAt": "2026-05-17T13:28:35.005Z",
+      "updatedAt": "2026-05-17T13:28:35.005Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a09c282ea43b24ddbbf3f42",
+      "title": "Todo-FGWGP",
+      "description": "Desc-FGWGP",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a09c281ea43b24ddbbf3f3d",
+      "createdAt": "2026-05-17T13:28:34.886Z",
+      "updatedAt": "2026-05-17T13:28:34.886Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a09c282ea43b24ddbbf3f40",
+      "title": "Todo-XU97E",
+      "description": "Desc-XU97E",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a09c281ea43b24ddbbf3f3d",
+      "createdAt": "2026-05-17T13:28:34.839Z",
+      "updatedAt": "2026-05-17T13:28:34.839Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

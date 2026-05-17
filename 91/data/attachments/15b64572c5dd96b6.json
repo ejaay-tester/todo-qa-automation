@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-XU97E",
+    "description": "Desc-XU97E",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a09c281ea43b24ddbbf3f3d",
+    "_id": "6a09c282ea43b24ddbbf3f40",
+    "createdAt": "2026-05-17T13:28:34.839Z",
+    "updatedAt": "2026-05-17T13:28:34.839Z",
+    "__v": 0
+  }
+}

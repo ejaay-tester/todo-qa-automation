@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-OC9I7",
+    "description": "Desc-OC9I7",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a09c294ea43b24ddbbf3f8a",
+    "_id": "6a09c295ea43b24ddbbf3f8d",
+    "createdAt": "2026-05-17T13:28:53.638Z",
+    "updatedAt": "2026-05-17T13:28:53.638Z",
+    "__v": 0
+  }
+}

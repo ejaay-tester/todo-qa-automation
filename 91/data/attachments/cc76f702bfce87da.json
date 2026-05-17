@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-CU2FC",
+    "description": "Desc-CU2FC",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a09c27eea43b24ddbbf3f35",
+    "_id": "6a09c280ea43b24ddbbf3f38",
+    "createdAt": "2026-05-17T13:28:32.259Z",
+    "updatedAt": "2026-05-17T13:28:32.259Z",
+    "__v": 0
+  }
+}

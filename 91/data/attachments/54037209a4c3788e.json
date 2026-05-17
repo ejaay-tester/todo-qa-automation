@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-TD3MB",
+    "description": "Desc-TD3MB",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a09c299ea43b24ddbbf3f9b",
+    "_id": "6a09c29bea43b24ddbbf3fa2",
+    "createdAt": "2026-05-17T13:28:59.409Z",
+    "updatedAt": "2026-05-17T13:28:59.409Z",
+    "__v": 0
+  }
+}

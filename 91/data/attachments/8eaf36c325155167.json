@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-PW75R",
+    "description": "Desc-PW75R",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a09c285ea43b24ddbbf3f4f",
+    "_id": "6a09c286ea43b24ddbbf3f52",
+    "createdAt": "2026-05-17T13:28:38.440Z",
+    "updatedAt": "2026-05-17T13:28:38.440Z",
+    "__v": 0
+  }
+}

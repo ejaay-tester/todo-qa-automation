@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-E344G",
+    "description": "Desc-E344G",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a09c281ea43b24ddbbf3f3d",
+    "_id": "6a09c283ea43b24ddbbf3f44",
+    "createdAt": "2026-05-17T13:28:35.005Z",
+    "updatedAt": "2026-05-17T13:28:35.005Z",
+    "__v": 0
+  }
+}

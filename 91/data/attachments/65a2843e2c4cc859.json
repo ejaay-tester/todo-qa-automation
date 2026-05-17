@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a09c28fea43b24ddbbf3f73",
+      "title": "Todo-W5GIR",
+      "description": "Desc-W5GIR",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a09c28dea43b24ddbbf3f6c",
+      "createdAt": "2026-05-17T13:28:47.713Z",
+      "updatedAt": "2026-05-17T13:28:47.713Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a09c28fea43b24ddbbf3f71",
+      "title": "Todo-HGLFG",
+      "description": "Desc-HGLFG",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a09c28dea43b24ddbbf3f6c",
+      "createdAt": "2026-05-17T13:28:47.601Z",
+      "updatedAt": "2026-05-17T13:28:47.601Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a09c28fea43b24ddbbf3f6f",
+      "title": "Todo-Z3EVP",
+      "description": "Desc-Z3EVP",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a09c28dea43b24ddbbf3f6c",
+      "createdAt": "2026-05-17T13:28:47.548Z",
+      "updatedAt": "2026-05-17T13:28:47.548Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-APT8G",
+    "description": "Desc-APT8G",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a09c287ea43b24ddbbf3f5b",
+    "_id": "6a09c289ea43b24ddbbf3f5e",
+    "createdAt": "2026-05-17T13:28:41.354Z",
+    "updatedAt": "2026-05-17T13:28:41.354Z",
+    "__v": 0
+  }
+}

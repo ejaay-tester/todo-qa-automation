@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a09c29bea43b24ddbbf3fa2",
+      "title": "Todo-TD3MB",
+      "description": "Desc-TD3MB",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a09c299ea43b24ddbbf3f9b",
+      "createdAt": "2026-05-17T13:28:59.409Z",
+      "updatedAt": "2026-05-17T13:28:59.409Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a09c29bea43b24ddbbf3fa0",
+      "title": "Todo-SSSQS",
+      "description": "Desc-SSSQS",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a09c299ea43b24ddbbf3f9b",
+      "createdAt": "2026-05-17T13:28:59.393Z",
+      "updatedAt": "2026-05-17T13:28:59.393Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a09c29bea43b24ddbbf3f9e",
+      "title": "Todo-B3P1Z",
+      "description": "Desc-B3P1Z",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a09c299ea43b24ddbbf3f9b",
+      "createdAt": "2026-05-17T13:28:59.341Z",
+      "updatedAt": "2026-05-17T13:28:59.341Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}
