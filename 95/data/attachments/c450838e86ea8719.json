@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-LFKTE",
+    "description": "Desc-LFKTE",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0b1736d44d819a75c800b8",
+    "_id": "6a0b1737d44d819a75c800bb",
+    "createdAt": "2026-05-18T13:42:15.955Z",
+    "updatedAt": "2026-05-18T13:42:15.955Z",
+    "__v": 0
+  }
+}

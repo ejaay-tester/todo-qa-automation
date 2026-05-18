@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-IATK5",
+    "description": "Desc-IATK5",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0b1742d44d819a75c800e7",
+    "_id": "6a0b1743d44d819a75c800ec",
+    "createdAt": "2026-05-18T13:42:27.654Z",
+    "updatedAt": "2026-05-18T13:42:27.654Z",
+    "__v": 0
+  }
+}

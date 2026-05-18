@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-JNM3F",
+    "description": "Desc-JNM3F",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0b1729d44d819a75c80089",
+    "_id": "6a0b172bd44d819a75c8008c",
+    "createdAt": "2026-05-18T13:42:03.160Z",
+    "updatedAt": "2026-05-18T13:42:03.160Z",
+    "__v": 0
+  }
+}

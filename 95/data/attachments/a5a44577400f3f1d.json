@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-HDBXZ",
+    "description": "Desc-HDBXZ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0b1747d44d819a75c80105",
+    "_id": "6a0b1749d44d819a75c80108",
+    "createdAt": "2026-05-18T13:42:33.044Z",
+    "updatedAt": "2026-05-18T13:42:33.044Z",
+    "__v": 0
+  }
+}

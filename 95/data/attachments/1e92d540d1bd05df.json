@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-VSUF8",
+    "description": "Desc-VSUF8",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0b172dd44d819a75c8009b",
+    "_id": "6a0b172ed44d819a75c8009e",
+    "createdAt": "2026-05-18T13:42:06.851Z",
+    "updatedAt": "2026-05-18T13:42:06.851Z",
+    "__v": 0
+  }
+}

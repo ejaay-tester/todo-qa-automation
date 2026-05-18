@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-NJKLM",
+    "description": "Desc-NJKLM",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0b1734d44d819a75c800b0",
+    "_id": "6a0b1735d44d819a75c800b3",
+    "createdAt": "2026-05-18T13:42:13.654Z",
+    "updatedAt": "2026-05-18T13:42:13.654Z",
+    "__v": 0
+  }
+}

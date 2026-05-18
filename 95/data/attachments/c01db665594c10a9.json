@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-5V4UI",
+    "description": "Desc-5V4UI",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0b1744d44d819a75c800f9",
+    "_id": "6a0b1746d44d819a75c800fc",
+    "createdAt": "2026-05-18T13:42:30.251Z",
+    "updatedAt": "2026-05-18T13:42:30.251Z",
+    "__v": 0
+  }
+}

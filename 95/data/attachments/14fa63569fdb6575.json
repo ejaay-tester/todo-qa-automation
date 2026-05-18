@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-85H7N",
+    "description": "Desc-85H7N",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0b1739d44d819a75c800ca",
+    "_id": "6a0b173ad44d819a75c800cd",
+    "createdAt": "2026-05-18T13:42:18.773Z",
+    "updatedAt": "2026-05-18T13:42:18.773Z",
+    "__v": 0
+  }
+}

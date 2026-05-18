@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-YRBG6",
+    "description": "Desc-YRBG6",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0b1736d44d819a75c800b8",
+    "_id": "6a0b1738d44d819a75c800bd",
+    "createdAt": "2026-05-18T13:42:16.134Z",
+    "updatedAt": "2026-05-18T13:42:16.134Z",
+    "__v": 0
+  }
+}

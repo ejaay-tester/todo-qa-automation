@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-VTP38",
+    "description": "Desc-VTP38",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0b173fd44d819a75c800df",
+    "_id": "6a0b1741d44d819a75c800e2",
+    "createdAt": "2026-05-18T13:42:25.247Z",
+    "updatedAt": "2026-05-18T13:42:25.247Z",
+    "__v": 0
+  }
+}

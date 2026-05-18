@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-VUX1M",
+    "description": "Desc-VUX1M",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0b1727d44d819a75c80081",
+    "_id": "6a0b1728d44d819a75c80084",
+    "createdAt": "2026-05-18T13:42:00.945Z",
+    "updatedAt": "2026-05-18T13:42:00.945Z",
+    "__v": 0
+  }
+}

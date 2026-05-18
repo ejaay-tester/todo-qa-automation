@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-IMYKC",
+    "description": "Desc-IMYKC",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0b1736d44d819a75c800b8",
+    "_id": "6a0b1738d44d819a75c800bf",
+    "createdAt": "2026-05-18T13:42:16.145Z",
+    "updatedAt": "2026-05-18T13:42:16.145Z",
+    "__v": 0
+  }
+}

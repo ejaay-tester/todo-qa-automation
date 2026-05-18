@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-HQ5X6",
+    "description": "Desc-HQ5X6",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0b173cd44d819a75c800d6",
+    "_id": "6a0b173dd44d819a75c800d9",
+    "createdAt": "2026-05-18T13:42:21.641Z",
+    "updatedAt": "2026-05-18T13:42:21.641Z",
+    "__v": 0
+  }
+}
