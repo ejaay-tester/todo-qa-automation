@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-5R7RW",
+    "description": "Desc-5R7RW",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0b00bd9fc25da0fc3d6df9",
+    "_id": "6a0b00bf9fc25da0fc3d6dfc",
+    "createdAt": "2026-05-18T12:06:23.809Z",
+    "updatedAt": "2026-05-18T12:06:23.809Z",
+    "__v": 0
+  }
+}

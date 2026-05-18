@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-AFOM0",
+    "description": "Desc-AFOM0",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0b00de9fc25da0fc3d6e6a",
+    "_id": "6a0b00df9fc25da0fc3d6e6d",
+    "createdAt": "2026-05-18T12:06:55.608Z",
+    "updatedAt": "2026-05-18T12:06:55.608Z",
+    "__v": 0
+  }
+}

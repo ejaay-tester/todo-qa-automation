@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a0b00ca9fc25da0fc3d6e1c",
+      "title": "Todo-308BV",
+      "description": "Desc-308BV",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0b00c89fc25da0fc3d6e15",
+      "createdAt": "2026-05-18T12:06:34.346Z",
+      "updatedAt": "2026-05-18T12:06:34.346Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a0b00ca9fc25da0fc3d6e1a",
+      "title": "Todo-9KDM3",
+      "description": "Desc-9KDM3",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0b00c89fc25da0fc3d6e15",
+      "createdAt": "2026-05-18T12:06:34.289Z",
+      "updatedAt": "2026-05-18T12:06:34.289Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a0b00ca9fc25da0fc3d6e18",
+      "title": "Todo-TL7LJ",
+      "description": "Desc-TL7LJ",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0b00c89fc25da0fc3d6e15",
+      "createdAt": "2026-05-18T12:06:34.200Z",
+      "updatedAt": "2026-05-18T12:06:34.200Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

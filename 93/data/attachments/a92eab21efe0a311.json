@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-LLTFG",
+    "description": "Desc-LLTFG",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0b00e49fc25da0fc3d6e7f",
+    "_id": "6a0b00e59fc25da0fc3d6e82",
+    "createdAt": "2026-05-18T12:07:01.811Z",
+    "updatedAt": "2026-05-18T12:07:01.811Z",
+    "__v": 0
+  }
+}

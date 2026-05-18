@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-YKTL7",
+    "description": "Desc-YKTL7",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0b00ee9fc25da0fc3d6e9b",
+    "_id": "6a0b00ef9fc25da0fc3d6e9e",
+    "createdAt": "2026-05-18T12:07:11.910Z",
+    "updatedAt": "2026-05-18T12:07:11.910Z",
+    "__v": 0
+  }
+}
