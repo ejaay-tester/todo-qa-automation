@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-LCFV6",
+    "description": "Desc-LCFV6",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0b02559fc25da0fc3d6ef9",
+    "_id": "6a0b02569fc25da0fc3d6f00",
+    "createdAt": "2026-05-18T12:13:10.340Z",
+    "updatedAt": "2026-05-18T12:13:10.340Z",
+    "__v": 0
+  }
+}

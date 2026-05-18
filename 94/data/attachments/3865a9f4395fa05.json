@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-FTP44",
+    "description": "Desc-FTP44",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0b024a9fc25da0fc3d6eca",
+    "_id": "6a0b024b9fc25da0fc3d6ecf",
+    "createdAt": "2026-05-18T12:12:59.649Z",
+    "updatedAt": "2026-05-18T12:12:59.649Z",
+    "__v": 0
+  }
+}

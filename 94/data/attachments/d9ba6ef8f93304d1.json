@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-GDDAX",
+    "description": "Desc-GDDAX",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0b02529fc25da0fc3d6ef1",
+    "_id": "6a0b02549fc25da0fc3d6ef4",
+    "createdAt": "2026-05-18T12:13:08.194Z",
+    "updatedAt": "2026-05-18T12:13:08.194Z",
+    "__v": 0
+  }
+}

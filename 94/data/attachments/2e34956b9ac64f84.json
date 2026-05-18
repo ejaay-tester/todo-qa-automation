@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-JIWDK",
+    "description": "Desc-JIWDK",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0b024c9fc25da0fc3d6edc",
+    "_id": "6a0b024e9fc25da0fc3d6edf",
+    "createdAt": "2026-05-18T12:13:02.034Z",
+    "updatedAt": "2026-05-18T12:13:02.034Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-XEGHM",
+    "description": "Desc-XEGHM",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0b02579fc25da0fc3d6f0b",
+    "_id": "6a0b02589fc25da0fc3d6f0e",
+    "createdAt": "2026-05-18T12:13:12.696Z",
+    "updatedAt": "2026-05-18T12:13:12.696Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-RNLJL",
+    "description": "Desc-RNLJL",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0b02619fc25da0fc3d6f3a",
+    "_id": "6a0b02629fc25da0fc3d6f3d",
+    "createdAt": "2026-05-18T12:13:22.792Z",
+    "updatedAt": "2026-05-18T12:13:22.792Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-JPYVA",
+    "description": "Desc-JPYVA",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0b02559fc25da0fc3d6ef9",
+    "_id": "6a0b02569fc25da0fc3d6efc",
+    "createdAt": "2026-05-18T12:13:10.296Z",
+    "updatedAt": "2026-05-18T12:13:10.296Z",
+    "__v": 0
+  }
+}

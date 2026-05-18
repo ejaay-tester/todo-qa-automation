@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a0b024b9fc25da0fc3d6ed1",
+      "title": "Todo-DSVKY",
+      "description": "Desc-DSVKY",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0b024a9fc25da0fc3d6eca",
+      "createdAt": "2026-05-18T12:12:59.650Z",
+      "updatedAt": "2026-05-18T12:12:59.650Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a0b024b9fc25da0fc3d6ecf",
+      "title": "Todo-FTP44",
+      "description": "Desc-FTP44",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0b024a9fc25da0fc3d6eca",
+      "createdAt": "2026-05-18T12:12:59.649Z",
+      "updatedAt": "2026-05-18T12:12:59.649Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a0b024b9fc25da0fc3d6ecd",
+      "title": "Todo-98ZR3",
+      "description": "Desc-98ZR3",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0b024a9fc25da0fc3d6eca",
+      "createdAt": "2026-05-18T12:12:59.617Z",
+      "updatedAt": "2026-05-18T12:12:59.617Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a0b02609fc25da0fc3d6f2f",
+      "title": "Todo-75XVK",
+      "description": "Desc-75XVK",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0b025f9fc25da0fc3d6f28",
+      "createdAt": "2026-05-18T12:13:20.538Z",
+      "updatedAt": "2026-05-18T12:13:20.538Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a0b02609fc25da0fc3d6f2d",
+      "title": "Todo-JE970",
+      "description": "Desc-JE970",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0b025f9fc25da0fc3d6f28",
+      "createdAt": "2026-05-18T12:13:20.534Z",
+      "updatedAt": "2026-05-18T12:13:20.534Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a0b02609fc25da0fc3d6f2b",
+      "title": "Todo-G2WT5",
+      "description": "Desc-G2WT5",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0b025f9fc25da0fc3d6f28",
+      "createdAt": "2026-05-18T12:13:20.503Z",
+      "updatedAt": "2026-05-18T12:13:20.503Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}
