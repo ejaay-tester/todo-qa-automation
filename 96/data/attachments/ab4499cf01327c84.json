@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-UPXQI",
+    "description": "Desc-UPXQI",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0c1afdc7f587bb8cd4c6e3",
+    "_id": "6a0c1afec7f587bb8cd4c6e6",
+    "createdAt": "2026-05-19T08:10:38.887Z",
+    "updatedAt": "2026-05-19T08:10:38.887Z",
+    "__v": 0
+  }
+}
