@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-G207H",
+    "description": "Desc-G207H",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0c36303bd73d1857218c5f",
+    "_id": "6a0c36313bd73d1857218c64",
+    "createdAt": "2026-05-19T10:06:41.910Z",
+    "updatedAt": "2026-05-19T10:06:41.910Z",
+    "__v": 0
+  }
+}

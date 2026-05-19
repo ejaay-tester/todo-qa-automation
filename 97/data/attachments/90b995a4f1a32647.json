@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-RN6W7",
+    "description": "Desc-RN6W7",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0c36013bd73d1857218bc0",
+    "_id": "6a0c36023bd73d1857218bc3",
+    "createdAt": "2026-05-19T10:05:54.698Z",
+    "updatedAt": "2026-05-19T10:05:54.698Z",
+    "__v": 0
+  }
+}
