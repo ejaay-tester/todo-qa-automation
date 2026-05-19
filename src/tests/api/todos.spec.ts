@@ -2,8 +2,6 @@ import { test, expect } from "../../fixtures/base.fixture"
 import { TodoFactory } from "../../factories/TodoFactory"
 import { Todo, TodoPayload } from "../../types/todo.type"
 import { RawErrorResponse } from "../../api/TodoClient"
-import { create } from "node:domain"
-import { todo } from "node:test"
 
 test.describe("Todos API", () => {
   /**
@@ -17,18 +15,12 @@ test.describe("Todos API", () => {
       // Generate payload once at the start of the test scope
       const payload = TodoFactory.createTodoPayload()
 
-      /**
-       * ARRANGE & ACT
-       * We combine these because in API testing, 'creating' is the action
-       */
-      const createdTodo =
-        await test.step("Act: Create todo via API", async () => {
-          // The API Client should handle .json() and .status() checks internally
-
-          const todo = (await todoClient.create(payload)) as Todo
-          cleanup.push(todo._id)
-          return todo
-        })
+      const todo = await test.step("Act: Create todo via API", async () => {
+        // The API Client should handle .json() and .status() checks internally
+        const created = (await todoClient.create(payload)) as Todo
+        cleanup.push(created._id)
+        return created
+      })
 
       /**
        * ASSERT
@@ -36,29 +28,29 @@ test.describe("Todos API", () => {
        */
       await test.step("Assert: Verify the created todo matches payload", async () => {
         expect(
-          createdTodo._id,
+          todo._id,
           `[REQUIREMENT] Response must contain a valid unique identifier (_id)`,
         ).toBeDefined()
 
         // Verify all sent data matches what was returned
         // MatchObject is pro-level: it ignores extra fields like 'createdAt
         expect(
-          createdTodo,
-          `[REQUIREMENT] Created todo (${createdTodo._id}) must match the sent payload`,
+          todo,
+          `[REQUIREMENT] Created todo (${todo._id}) must match the sent payload`,
         ).toMatchObject(payload)
 
         expect(
-          createdTodo.completed,
-          `[REQUIREMENT] New todo (${createdTodo._id}) must default completed to false`,
+          todo.completed,
+          `[REQUIREMENT] New todo (${todo._id}) must default completed to false`,
         ).toBe(false)
 
         expect(
-          createdTodo.createdAt,
+          todo.createdAt,
           "[REQUIREMENT] Response must contain createdAt timestamp",
         ).toBeDefined()
 
         expect(
-          createdTodo.updatedAt,
+          todo.updatedAt,
           "[REQUIREMENT] Response must contain updatedAt timestamp",
         ).toBeDefined()
       })
@@ -179,8 +171,6 @@ test.describe("Todos API", () => {
           ) as Promise<RawErrorResponse>
         })
 
-      console.log(response.body.message)
-      console.log(response.body.success)
       await test.step("Assert: Verify 400 status and error message", async () => {
         expect(
           response.status,
@@ -206,10 +196,122 @@ test.describe("Todos API", () => {
 
     // Edge Cases
     // Large input, special characters, boolean logic
-    // test("accepts very long title", async () => {})
-    // test("accepts special characters in title", async () => {})
-    // test("accepts unicode characters in title", async () => {})
-    // test("creates todo with completed status set to true", async () => {})
+    test("accepts very long title", async ({ todoClient, cleanup }) => {
+      // ARRANGE
+      const payload = TodoFactory.edgeCasePayload.veryLongTitle()
+
+      // ACT
+      const todo =
+        await test.step("Act: Create todo with very long title", async () => {
+          const created = (await todoClient.create(payload)) as Todo
+          cleanup.push(created._id)
+          return created
+        })
+
+      // ASSERT
+      await test.step("Assert: Verify todo was created and title persisted", async () => {
+        expect(
+          todo._id,
+          "[REQUIREMENT] Response must contain a valid _id",
+        ).toBeDefined()
+
+        expect(
+          todo.title,
+          "[REQUIREMENT] Very long title must be stored as is",
+        ).toBe(payload.title)
+
+        expect(
+          todo.title.length,
+          "[REQUIREMENT] Title length must match input length",
+        ).toBe(3000)
+      })
+    })
+
+    test("accepts special characters in title", async ({
+      todoClient,
+      cleanup,
+    }) => {
+      // ARRANGE
+      const payload = TodoFactory.edgeCasePayload.specialCharacters()
+
+      // ACT
+      const todo =
+        await test.step("Act: Create todo with special characters in title", async () => {
+          const created = (await todoClient.create(payload)) as Todo
+          cleanup.push(created._id)
+          return created
+        })
+
+      await test.step("Assert: Verify special characters are preserved", async () => {
+        expect(
+          todo._id,
+          "[REQUIREMENT] Response must contain a valid _id",
+        ).toBeDefined()
+
+        expect(
+          todo.title,
+          "[REQUIREMENT] Special characters must be stored and returned as is",
+        ).toBe(payload.title)
+      })
+    })
+
+    test("accepts unicode characters in title", async ({
+      todoClient,
+      cleanup,
+    }) => {
+      // ARRANGE
+      const payload = TodoFactory.edgeCasePayload.unicodeTitle()
+
+      // ACT
+      const todo =
+        await test.step("Act: Create todo with unicode characters in title", async () => {
+          const created = (await todoClient.create(payload)) as Todo
+          cleanup.push(created._id)
+          return created
+        })
+
+      // ASSERT
+      await test.step("Assert: Verify unicode characters are preserved", async () => {
+        expect(
+          todo._id,
+          "[REQUIREMENT] Response must contain a valid _id",
+        ).toBeDefined()
+
+        expect(
+          todo.title,
+          "[REQUIREMENT] Unicode characters must be stored and returned as is",
+        ).toBe(payload.title)
+      })
+    })
+
+    test("creates todo with completed status set to true", async ({
+      todoClient,
+      cleanup,
+    }) => {
+      // ARRANGE
+      const payload = TodoFactory.invalidPayload.completedTrue()
+
+      // ACT
+      const todo =
+        await test.step("Act: Create todo with completed set to true", async () => {
+          const created = (await todoClient.create(payload)) as Todo
+          cleanup.push(created._id)
+          return created
+        })
+
+      // ASSERT
+      await test.step("Assert: Verify completed true is accepted and persisted", async () => {
+        expect(
+          todo._id,
+          "[REQUIREMENT] Response must contain a valid _id",
+        ).toBeDefined()
+
+        expect(
+          todo.completed,
+          "[REQUIREMENT] Completed true must be stored and returned as true",
+        ).toBe(true)
+      })
+    })
   })
 
   /**
