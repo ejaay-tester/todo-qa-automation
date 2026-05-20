@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a0da62d3bcf9ca94e7e63f7",
+      "title": "Todo-DQ5Q8",
+      "description": "Desc-DQ5Q8",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0da62c3bcf9ca94e7e63f0",
+      "createdAt": "2026-05-20T12:16:45.439Z",
+      "updatedAt": "2026-05-20T12:16:45.439Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a0da62d3bcf9ca94e7e63f5",
+      "title": "Todo-42VR8",
+      "description": "Desc-42VR8",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0da62c3bcf9ca94e7e63f0",
+      "createdAt": "2026-05-20T12:16:45.435Z",
+      "updatedAt": "2026-05-20T12:16:45.435Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a0da62d3bcf9ca94e7e63f3",
+      "title": "Todo-SW0RM",
+      "description": "Desc-SW0RM",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0da62c3bcf9ca94e7e63f0",
+      "createdAt": "2026-05-20T12:16:45.382Z",
+      "updatedAt": "2026-05-20T12:16:45.382Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

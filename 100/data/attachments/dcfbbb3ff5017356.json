@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-MQR0N",
+    "description": "Desc-MQR0N",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0da6633bcf9ca94e7e64b6",
+    "_id": "6a0da6643bcf9ca94e7e64b9",
+    "createdAt": "2026-05-20T12:17:40.973Z",
+    "updatedAt": "2026-05-20T12:17:40.973Z",
+    "__v": 0
+  }
+}

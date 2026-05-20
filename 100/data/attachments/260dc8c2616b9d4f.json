@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a0da6653bcf9ca94e7e64bd",
+      "title": "Todo-0KOWN",
+      "description": "Desc-0KOWN",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0da6633bcf9ca94e7e64b6",
+      "createdAt": "2026-05-20T12:17:41.137Z",
+      "updatedAt": "2026-05-20T12:17:41.137Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a0da6653bcf9ca94e7e64bb",
+      "title": "Todo-ERMQG",
+      "description": "Desc-ERMQG",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0da6633bcf9ca94e7e64b6",
+      "createdAt": "2026-05-20T12:17:41.022Z",
+      "updatedAt": "2026-05-20T12:17:41.022Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a0da6643bcf9ca94e7e64b9",
+      "title": "Todo-MQR0N",
+      "description": "Desc-MQR0N",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0da6633bcf9ca94e7e64b6",
+      "createdAt": "2026-05-20T12:17:40.973Z",
+      "updatedAt": "2026-05-20T12:17:40.973Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

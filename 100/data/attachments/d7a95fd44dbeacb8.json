@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-TKQSP",
+    "description": "Desc-TKQSP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0da6663bcf9ca94e7e64c8",
+    "_id": "6a0da6673bcf9ca94e7e64cb",
+    "createdAt": "2026-05-20T12:17:43.485Z",
+    "updatedAt": "2026-05-20T12:17:43.485Z",
+    "__v": 0
+  }
+}

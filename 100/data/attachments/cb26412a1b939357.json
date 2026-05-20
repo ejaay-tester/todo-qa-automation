@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-IUJ16",
+    "description": "Desc-IUJ16",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0da64d3bcf9ca94e7e6471",
+    "_id": "6a0da64e3bcf9ca94e7e6474",
+    "createdAt": "2026-05-20T12:17:18.715Z",
+    "updatedAt": "2026-05-20T12:17:18.715Z",
+    "__v": 0
+  }
+}
