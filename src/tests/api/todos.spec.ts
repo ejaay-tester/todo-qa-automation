@@ -11,7 +11,10 @@ test.describe("Todos API", () => {
   test.describe("POST /api/todos", () => {
     // Happy Path
     // Assertions: 201, response contains _id, matches payload
-    test("creates todo with valid data", async ({ todoClient, cleanup }) => {
+    test("creates todo with valid data @smoke", async ({
+      todoClient,
+      cleanup,
+    }) => {
       // Generate payload once at the start of the test scope
       const payload = TodoFactory.createTodoPayload()
 
@@ -58,7 +61,7 @@ test.describe("Todos API", () => {
 
     // Negative - Validation
     // Expect 400, Validation error message
-    test("fails when title is missing", async ({ todoClient }) => {
+    test("fails when title is missing @smoke", async ({ todoClient }) => {
       const response =
         await test.step("Act: Create todo with missing title", async () => {
           return todoClient.create(
@@ -85,7 +88,7 @@ test.describe("Todos API", () => {
       })
     })
 
-    test("fails when title is empty string", async ({ todoClient }) => {
+    test("fails when title is empty string @smoke", async ({ todoClient }) => {
       const response =
         await test.step("Act: Create todo with empty title", async () => {
           return todoClient.create(
@@ -112,7 +115,7 @@ test.describe("Todos API", () => {
       })
     })
 
-    test("fails when title is null", async ({ todoClient }) => {
+    test("fails when title is null @smoke", async ({ todoClient }) => {
       const response =
         await test.step("Act: Create todo with null title ", async () => {
           return todoClient.create(
@@ -137,7 +140,9 @@ test.describe("Todos API", () => {
       })
     })
 
-    test("fails when whitespace-only title is sent", async ({ todoClient }) => {
+    test("fails when whitespace-only title is sent @smoke", async ({
+      todoClient,
+    }) => {
       const response =
         await test.step("Act: Create todo with whitespace-only title", async () => {
           return todoClient.create(
@@ -162,7 +167,7 @@ test.describe("Todos API", () => {
       })
     })
 
-    test("fails when payload is empty", async ({ todoClient }) => {
+    test("fails when payload is empty @smoke", async ({ todoClient }) => {
       const response =
         await test.step("Act: Create todo without payload", async () => {
           return todoClient.create(
@@ -196,7 +201,7 @@ test.describe("Todos API", () => {
 
     // Edge Cases
     // Large input, special characters, boolean logic
-    test("accepts very long title", async ({ todoClient, cleanup }) => {
+    test("accepts very long title @smoke", async ({ todoClient, cleanup }) => {
       // ARRANGE
       const payload = TodoFactory.edgeCasePayload.veryLongTitle()
 
@@ -227,7 +232,7 @@ test.describe("Todos API", () => {
       })
     })
 
-    test("accepts special characters in title", async ({
+    test("accepts special characters in title @smoke", async ({
       todoClient,
       cleanup,
     }) => {
@@ -255,7 +260,7 @@ test.describe("Todos API", () => {
       })
     })
 
-    test("accepts unicode characters in title", async ({
+    test("accepts unicode characters in title @smoke", async ({
       todoClient,
       cleanup,
     }) => {
@@ -284,7 +289,7 @@ test.describe("Todos API", () => {
       })
     })
 
-    test("creates todo with completed status set to true", async ({
+    test("creates todo with completed status set to true @smoke", async ({
       todoClient,
       cleanup,
     }) => {
@@ -322,7 +327,10 @@ test.describe("Todos API", () => {
   test.describe("GET /api/todos", () => {
     // Happy Path
     // Assertions: 200, array response, only user's todos
-    test("returns list of all user todos", async ({ todoClient, cleanup }) => {
+    test("returns list of all user todos @smoke", async ({
+      todoClient,
+      cleanup,
+    }) => {
       // Arrange: Create multiple todos and capture them in an array[]
       const createdTodos =
         await test.step("Setup: Seed 3 todos for user", async () => {
@@ -397,7 +405,7 @@ test.describe("Todos API", () => {
   test.describe("PUT /api/todos/:id", () => {
     // Happy Path
     // Flow: Create Todo -> Update -> Validate updated fields
-    test("updates todo and reflect changes in full list", async ({
+    test("updates todo and reflect changes in full list @smoke", async ({
       todoClient,
       cleanup,
     }) => {
@@ -480,7 +488,7 @@ test.describe("Todos API", () => {
   test.describe("DELETE /api/todos/:id", () => {
     // Happy Path
     // Flow: Create Todo -> Delete -> Verify deletion (HTTP 204)
-    test("removes specific todo of a user", async ({ todoClient }) => {
+    test("removes specific todo of a user @smoke", async ({ todoClient }) => {
       // ARRANGE: Setup the data
       const createdTodo = await test.step("Setup: Create todo", async () => {
         const payload = TodoFactory.createTodoPayload()
