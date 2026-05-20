@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a0d7d4d66146553d80dc0a4",
+      "title": "Todo-RMUNI",
+      "description": "Desc-RMUNI",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0d7d4c66146553d80dc09d",
+      "createdAt": "2026-05-20T09:22:21.805Z",
+      "updatedAt": "2026-05-20T09:22:21.805Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a0d7d4d66146553d80dc0a2",
+      "title": "Todo-ACGBJ",
+      "description": "Desc-ACGBJ",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0d7d4c66146553d80dc09d",
+      "createdAt": "2026-05-20T09:22:21.796Z",
+      "updatedAt": "2026-05-20T09:22:21.796Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a0d7d4d66146553d80dc0a0",
+      "title": "Todo-3J2CP",
+      "description": "Desc-3J2CP",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0d7d4c66146553d80dc09d",
+      "createdAt": "2026-05-20T09:22:21.783Z",
+      "updatedAt": "2026-05-20T09:22:21.783Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}
