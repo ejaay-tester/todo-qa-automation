@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a0f207a1897728c99c59633",
+      "title": "Todo-VU5SD",
+      "description": "Desc-VU5SD",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0f20791897728c99c5962c",
+      "createdAt": "2026-05-21T15:10:50.957Z",
+      "updatedAt": "2026-05-21T15:10:50.957Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a0f207a1897728c99c59631",
+      "title": "Todo-ZN94H",
+      "description": "Desc-ZN94H",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0f20791897728c99c5962c",
+      "createdAt": "2026-05-21T15:10:50.804Z",
+      "updatedAt": "2026-05-21T15:10:50.804Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a0f207a1897728c99c5962f",
+      "title": "Todo-KGORN",
+      "description": "Desc-KGORN",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a0f20791897728c99c5962c",
+      "createdAt": "2026-05-21T15:10:50.769Z",
+      "updatedAt": "2026-05-21T15:10:50.769Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}
