@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-PKEP2",
+    "description": "Desc-PKEP2",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0f1d701897728c99c59582",
+    "_id": "6a0f1d721897728c99c59585",
+    "createdAt": "2026-05-21T14:57:54.199Z",
+    "updatedAt": "2026-05-21T14:57:54.199Z",
+    "__v": 0
+  }
+}

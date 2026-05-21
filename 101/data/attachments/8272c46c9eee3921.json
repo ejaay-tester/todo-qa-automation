@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-XGCDU",
+    "description": "Desc-XGCDU",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0f1d6a1897728c99c59568",
+    "_id": "6a0f1d6c1897728c99c5956b",
+    "createdAt": "2026-05-21T14:57:48.201Z",
+    "updatedAt": "2026-05-21T14:57:48.201Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-YSJBG",
+    "description": "Desc-YSJBG",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a0f1d881897728c99c595e0",
+    "_id": "6a0f1d891897728c99c595e3",
+    "createdAt": "2026-05-21T14:58:17.887Z",
+    "updatedAt": "2026-05-21T14:58:17.887Z",
+    "__v": 0
+  }
+}
