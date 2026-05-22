@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-P5BK0",
+    "description": "Desc-P5BK0",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a107c84952adc09dfc1e2ed",
+    "_id": "6a107c85952adc09dfc1e2f4",
+    "createdAt": "2026-05-22T15:55:49.498Z",
+    "updatedAt": "2026-05-22T15:55:49.498Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-XXYLU",
+    "description": "Desc-XXYLU",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a107c89952adc09dfc1e30b",
+    "_id": "6a107c8a952adc09dfc1e30e",
+    "createdAt": "2026-05-22T15:55:54.854Z",
+    "updatedAt": "2026-05-22T15:55:54.854Z",
+    "__v": 0
+  }
+}
