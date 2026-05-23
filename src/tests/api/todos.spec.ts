@@ -1,5 +1,7 @@
 import { test, expect } from "../../fixtures/base.fixture"
 import { TodoFactory } from "../../factories/TodoFactory"
+import { Todo, TodoPayload } from "../../types/todo.type"
+import { RawErrorResponse } from "../../api/TodoClient"
 
 test.describe("Todos API", () => {
   /**
@@ -9,63 +11,312 @@ test.describe("Todos API", () => {
   test.describe("POST /api/todos", () => {
     // Happy Path
     // Assertions: 201, response contains _id, matches payload
-    test("creates todo with valid data", async ({ todoClient, cleanup }) => {
+    test("creates todo with valid data @smoke", async ({
+      todoClient,
+      cleanup,
+    }) => {
       // Generate payload once at the start of the test scope
       const payload = TodoFactory.createTodoPayload()
 
-      /**
-       * ARRANGE & ACT
-       * We combine these because in API testing, 'creating' is the action
-       */
-      const createdTodo =
-        await test.step("Act: Create todo via API", async () => {
-          // The API Client should handle .json() and .status() checks internally
-
-          const todo = await todoClient.create(payload)
-          cleanup.push(todo._id)
-          return todo
-        })
+      const todo = await test.step("Act: Create todo via API", async () => {
+        // The API Client should handle .json() and .status() checks internally
+        const created = (await todoClient.create(payload)) as Todo
+        cleanup.push(created._id)
+        return created
+      })
 
       /**
        * ASSERT
        * Focus on validating the BUSINESS logic, not the technical details
        */
       await test.step("Assert: Verify the created todo matches payload", async () => {
-        // Verify the unique identifier exists
         expect(
-          createdTodo._id,
-          `[REQUIREMENT] API response must contain a valid unique identifier (_id)`,
+          todo._id,
+          `[REQUIREMENT] Response must contain a valid unique identifier (_id)`,
         ).toBeDefined()
 
         // Verify all sent data matches what was returned
         // MatchObject is pro-level: it ignores extra fields like 'createdAt
         expect(
-          createdTodo,
-          `[REQUIREMENT] Created todo (${createdTodo._id}) must match the sent payload`,
+          todo,
+          `[REQUIREMENT] Created todo (${todo._id}) must match the sent payload`,
         ).toMatchObject(payload)
 
-        // Verify specific state
         expect(
-          createdTodo.completed,
-          `[REQUIREMENT] New todo (${createdTodo._id}) must default to 'false' completed status`,
+          todo.completed,
+          `[REQUIREMENT] New todo (${todo._id}) must default completed to false`,
+        ).toBe(false)
+
+        expect(
+          todo.createdAt,
+          "[REQUIREMENT] Response must contain createdAt timestamp",
+        ).toBeDefined()
+
+        expect(
+          todo.updatedAt,
+          "[REQUIREMENT] Response must contain updatedAt timestamp",
+        ).toBeDefined()
+      })
+    })
+
+    // Negative - Validation
+    // Expect 400, Validation error message
+    test("fails when title is missing @smoke", async ({ todoClient }) => {
+      const response =
+        await test.step("Act: Create todo with missing title", async () => {
+          return todoClient.create(
+            TodoFactory.invalidPayload.missingTitle(),
+            false,
+          ) as Promise<RawErrorResponse>
+        })
+
+      await test.step("Assert: Verify 400 status and error message", async () => {
+        expect(
+          response.status,
+          "[REQUIREMENT] Missing title must return 400 HTTP Status",
+        ).toBe(400)
+
+        expect(
+          response.body.message,
+          "[REQUIREMENT] Response must contain a validation error message",
+        ).toBeDefined()
+
+        expect(
+          response.body.success,
+          "[REQUIREMENT] Success flag must be false",
         ).toBe(false)
       })
     })
 
-    // Negative - Validation Cases
-    // Expect: 400, Validation error message
-    // test("fail todo creation when title is missing", async () => {})
-    // test("fail todo creation with empty payload", async () => {})
+    test("fails when title is empty string @smoke", async ({ todoClient }) => {
+      const response =
+        await test.step("Act: Create todo with empty title", async () => {
+          return todoClient.create(
+            TodoFactory.invalidPayload.emptyTitle(),
+            false,
+          ) as Promise<RawErrorResponse>
+        })
+
+      await test.step("Assert: Verify 400 status and error message", async () => {
+        expect(
+          response.status,
+          "[REQUIREMENT] Empty title must return 400 HTTP Status",
+        ).toBe(400)
+
+        expect(
+          response.body.message,
+          "[REQUIREMENT] Response must contain a validation error message",
+        ).toBeDefined()
+
+        expect(
+          response.body.success,
+          "[REQUIREMENT] Success flag must be false",
+        ).toBe(false)
+      })
+    })
+
+    test("fails when title is null @smoke", async ({ todoClient }) => {
+      const response =
+        await test.step("Act: Create todo with null title ", async () => {
+          return todoClient.create(
+            TodoFactory.invalidPayload.nullTitle(),
+            false,
+          ) as Promise<RawErrorResponse>
+        })
+
+      await test.step("Assert: Verify 400 status and error message", async () => {
+        expect(
+          response.status,
+          "[REQUIREMENT] Null title must return 400 HTTP Status",
+        ).toBe(400)
+        expect(
+          response.body.message,
+          "[REQUIREMENT] Response must contain a validation error message",
+        ).toBeDefined()
+        expect(
+          response.body.success,
+          "[REQUIREMENT] Success flag must be false",
+        ).toBe(false)
+      })
+    })
+
+    test("fails when whitespace-only title is sent @smoke", async ({
+      todoClient,
+    }) => {
+      const response =
+        await test.step("Act: Create todo with whitespace-only title", async () => {
+          return todoClient.create(
+            TodoFactory.invalidPayload.whiteSpaceOnlyTitle(),
+            false,
+          ) as Promise<RawErrorResponse>
+        })
+
+      await test.step("Assert: Verify 400 status and error message", async () => {
+        expect(
+          response.status,
+          "[REQUIREMENT] Whitespace-only title must return 400 HTTP Status",
+        ).toBe(400)
+        expect(
+          response.body.message,
+          "[REQUIREMENT] Response must contain a validation error message",
+        ).toBeDefined()
+        expect(
+          response.body.success,
+          "[REQUIREMENT] Success flag must be false",
+        ).toBe(false)
+      })
+    })
+
+    test("fails when payload is empty @smoke", async ({ todoClient }) => {
+      const response =
+        await test.step("Act: Create todo without payload", async () => {
+          return todoClient.create(
+            {} as TodoPayload,
+            false,
+          ) as Promise<RawErrorResponse>
+        })
+
+      await test.step("Assert: Verify 400 status and error message", async () => {
+        expect(
+          response.status,
+          "[REQUIREMENT] Empty payload must return 400 HTTP Status",
+        ).toBe(400)
+
+        expect(
+          response.body.message,
+          "[REQUIREMENT] Response must contain a validation error message",
+        ).toBeDefined()
+
+        expect(
+          response.body.success,
+          "[REQUIREMENT] Success flag must be false",
+        ).toBe(false)
+      })
+    })
 
     // Negative - Auth Cases
     // Expect: 401 Unauthorized
-    // test("fail todo creation without token", async () => {})
+    // test("fails without auth token", async () => {})
+    // test("fails with invalid/expired token", async () => {})
 
     // Edge Cases
     // Large input, special characters, boolean logic
-    // test("accepts very long title", async () => {})
-    // test("accepts special characters", async () => {})
-    // test("toggle completed status", async () => {})
+    test("accepts very long title @smoke", async ({ todoClient, cleanup }) => {
+      // ARRANGE
+      const payload = TodoFactory.edgeCasePayload.veryLongTitle()
+
+      // ACT
+      const todo =
+        await test.step("Act: Create todo with very long title", async () => {
+          const created = (await todoClient.create(payload)) as Todo
+          cleanup.push(created._id)
+          return created
+        })
+
+      // ASSERT
+      await test.step("Assert: Verify todo was created and title persisted", async () => {
+        expect(
+          todo._id,
+          "[REQUIREMENT] Response must contain a valid _id",
+        ).toBeDefined()
+
+        expect(
+          todo.title,
+          "[REQUIREMENT] Very long title must be stored as is",
+        ).toBe(payload.title)
+
+        expect(
+          todo.title.length,
+          "[REQUIREMENT] Title length must match input length",
+        ).toBe(3000)
+      })
+    })
+
+    test("accepts special characters in title @smoke", async ({
+      todoClient,
+      cleanup,
+    }) => {
+      // ARRANGE
+      const payload = TodoFactory.edgeCasePayload.specialCharacters()
+
+      // ACT
+      const todo =
+        await test.step("Act: Create todo with special characters in title", async () => {
+          const created = (await todoClient.create(payload)) as Todo
+          cleanup.push(created._id)
+          return created
+        })
+
+      await test.step("Assert: Verify special characters are preserved", async () => {
+        expect(
+          todo._id,
+          "[REQUIREMENT] Response must contain a valid _id",
+        ).toBeDefined()
+
+        expect(
+          todo.title,
+          "[REQUIREMENT] Special characters must be stored and returned as is",
+        ).toBe(payload.title)
+      })
+    })
+
+    test("accepts unicode characters in title @smoke", async ({
+      todoClient,
+      cleanup,
+    }) => {
+      // ARRANGE
+      const payload = TodoFactory.edgeCasePayload.unicodeTitle()
+
+      // ACT
+      const todo =
+        await test.step("Act: Create todo with unicode characters in title", async () => {
+          const created = (await todoClient.create(payload)) as Todo
+          cleanup.push(created._id)
+          return created
+        })
+
+      // ASSERT
+      await test.step("Assert: Verify unicode characters are preserved", async () => {
+        expect(
+          todo._id,
+          "[REQUIREMENT] Response must contain a valid _id",
+        ).toBeDefined()
+
+        expect(
+          todo.title,
+          "[REQUIREMENT] Unicode characters must be stored and returned as is",
+        ).toBe(payload.title)
+      })
+    })
+
+    test("creates todo with completed status set to true @smoke", async ({
+      todoClient,
+      cleanup,
+    }) => {
+      // ARRANGE
+      const payload = TodoFactory.invalidPayload.completedTrue()
+
+      // ACT
+      const todo =
+        await test.step("Act: Create todo with completed set to true", async () => {
+          const created = (await todoClient.create(payload)) as Todo
+          cleanup.push(created._id)
+          return created
+        })
+
+      // ASSERT
+      await test.step("Assert: Verify completed true is accepted and persisted", async () => {
+        expect(
+          todo._id,
+          "[REQUIREMENT] Response must contain a valid _id",
+        ).toBeDefined()
+
+        expect(
+          todo.completed,
+          "[REQUIREMENT] Completed true must be stored and returned as true",
+        ).toBe(true)
+      })
+    })
   })
 
   /**
@@ -76,7 +327,10 @@ test.describe("Todos API", () => {
   test.describe("GET /api/todos", () => {
     // Happy Path
     // Assertions: 200, array response, only user's todos
-    test("returns list of all user todos", async ({ todoClient, cleanup }) => {
+    test("returns list of all user todos @smoke", async ({
+      todoClient,
+      cleanup,
+    }) => {
       // Arrange: Create multiple todos and capture them in an array[]
       const createdTodos =
         await test.step("Setup: Seed 3 todos for user", async () => {
@@ -86,7 +340,9 @@ test.describe("Todos API", () => {
           )
 
           // Map those payloads to API creation promises
-          const todos = payloads.map((payload) => todoClient.create(payload))
+          const todos = payloads.map(
+            (payload) => todoClient.create(payload) as Promise<Todo>,
+          )
 
           // Wait for all creations to finish
           const results = await Promise.all(todos)
@@ -149,7 +405,7 @@ test.describe("Todos API", () => {
   test.describe("PUT /api/todos/:id", () => {
     // Happy Path
     // Flow: Create Todo -> Update -> Validate updated fields
-    test("updates todo and reflect changes in full list", async ({
+    test("updates todo and reflect changes in full list @smoke", async ({
       todoClient,
       cleanup,
     }) => {
@@ -158,7 +414,7 @@ test.describe("Todos API", () => {
         await test.step("Setup: Create todo/s", async () => {
           const initialPayload = TodoFactory.createTodoPayload()
 
-          const createdTodo = await todoClient.create(initialPayload)
+          const createdTodo = (await todoClient.create(initialPayload)) as Todo
           cleanup.push(createdTodo._id)
 
           const updatePayload = {
@@ -174,10 +430,10 @@ test.describe("Todos API", () => {
       const updatedTodo =
         await test.step("Act: Update specific todo", async () => {
           // Pass the update payload directly
-          const updatedTodo = await todoClient.update(
+          const updatedTodo = (await todoClient.update(
             createdTodo._id,
             updatePayload,
-          )
+          )) as Todo
 
           return updatedTodo
         })
@@ -232,11 +488,11 @@ test.describe("Todos API", () => {
   test.describe("DELETE /api/todos/:id", () => {
     // Happy Path
     // Flow: Create Todo -> Delete -> Verify deletion (HTTP 204)
-    test("removes specific todo of a user", async ({ todoClient }) => {
+    test("removes specific todo of a user @smoke", async ({ todoClient }) => {
       // ARRANGE: Setup the data
       const createdTodo = await test.step("Setup: Create todo", async () => {
         const payload = TodoFactory.createTodoPayload()
-        return await todoClient.create(payload)
+        return (await todoClient.create(payload)) as Todo
       })
 
       // ACT: Delete specific todo
