@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-HN0BD",
+    "description": "Desc-HN0BD",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a12c539a15a755d9f1ab663",
+    "_id": "6a12c53ba15a755d9f1ab666",
+    "createdAt": "2026-05-24T09:30:35.401Z",
+    "updatedAt": "2026-05-24T09:30:35.401Z",
+    "__v": 0
+  }
+}

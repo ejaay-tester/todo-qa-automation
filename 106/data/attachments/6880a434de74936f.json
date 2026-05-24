@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a12c578a15a755d9f1ab73e",
+      "title": "Updated Title 123",
+      "description": "Updated Description 456",
+      "completed": true,
+      "priority": "medium",
+      "userId": "6a12c577a15a755d9f1ab73b",
+      "createdAt": "2026-05-24T09:31:36.788Z",
+      "updatedAt": "2026-05-24T09:31:37.184Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 1,
+    "totalItems": 1,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

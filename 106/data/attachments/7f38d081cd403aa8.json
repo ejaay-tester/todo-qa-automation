@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a12c53ba15a755d9f1ab66a",
+      "title": "Todo-ECHCM",
+      "description": "Desc-ECHCM",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a12c539a15a755d9f1ab663",
+      "createdAt": "2026-05-24T09:30:35.586Z",
+      "updatedAt": "2026-05-24T09:30:35.586Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a12c53ba15a755d9f1ab668",
+      "title": "Todo-GXT2U",
+      "description": "Desc-GXT2U",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a12c539a15a755d9f1ab663",
+      "createdAt": "2026-05-24T09:30:35.443Z",
+      "updatedAt": "2026-05-24T09:30:35.443Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a12c53ba15a755d9f1ab666",
+      "title": "Todo-HN0BD",
+      "description": "Desc-HN0BD",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a12c539a15a755d9f1ab663",
+      "createdAt": "2026-05-24T09:30:35.401Z",
+      "updatedAt": "2026-05-24T09:30:35.401Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-3TPWP",
+    "description": "Desc-3TPWP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a12c53da15a755d9f1ab675",
+    "_id": "6a12c53fa15a755d9f1ab678",
+    "createdAt": "2026-05-24T09:30:39.296Z",
+    "updatedAt": "2026-05-24T09:30:39.296Z",
+    "__v": 0
+  }
+}

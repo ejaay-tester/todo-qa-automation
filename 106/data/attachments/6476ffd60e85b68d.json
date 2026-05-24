@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-PFN8W",
+    "description": "Desc-PFN8W",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a12c577a15a755d9f1ab73b",
+    "_id": "6a12c578a15a755d9f1ab73e",
+    "createdAt": "2026-05-24T09:31:36.788Z",
+    "updatedAt": "2026-05-24T09:31:36.788Z",
+    "__v": 0
+  }
+}

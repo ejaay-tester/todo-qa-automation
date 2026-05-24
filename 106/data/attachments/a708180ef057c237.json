@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-ECHCM",
+    "description": "Desc-ECHCM",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a12c539a15a755d9f1ab663",
+    "_id": "6a12c53ba15a755d9f1ab66a",
+    "createdAt": "2026-05-24T09:30:35.586Z",
+    "updatedAt": "2026-05-24T09:30:35.586Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-TU8NG",
+    "description": "Desc-TU8NG",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a12c558a15a755d9f1ab6c6",
+    "_id": "6a12c559a15a755d9f1ab6cb",
+    "createdAt": "2026-05-24T09:31:05.828Z",
+    "updatedAt": "2026-05-24T09:31:05.828Z",
+    "__v": 0
+  }
+}
