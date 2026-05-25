@@ -62,7 +62,7 @@ const test = base.extend<AuthFixture>({
       })
     } catch (error) {
       throw new Error(
-        `[Connection Failure] - API is unreachable. Check if the server is running. \n${error}`,
+        `[CONNECTION FAILURE] POST /api/auth/register - API is unreachable, check if the server is running. \n${error}`,
       )
     }
 
@@ -97,7 +97,7 @@ const test = base.extend<AuthFixture>({
    * - Injects token into request context
    */
   authenticatedRequest: async ({ registeredUser, request: apiClient }, use) => {
-    console.log("User logging in...")
+    console.log("Logging in...")
 
     let response
     try {
@@ -109,24 +109,23 @@ const test = base.extend<AuthFixture>({
       })
     } catch (error) {
       throw new Error(
-        `[Connection Failure] - Login failed because server is down. \n${error}`,
+        `[CONNECTION FAILURE] POST /api/auth/login - API is unreachable, check if the server is running. \n${error}`,
       )
     }
 
     await assertResponse(response, "POST /api/auth/login")
-    console.log(`✅ Successful user login (${response.status()})`)
 
     const body = await response.json()
+    const token: string | undefined = body.data?.token
 
-    console.log(`Logged-in user: ${body.data.user.email}`)
-
-    const token = body.data.token
-
+    // Token check moved before success log - a missing token is a failure
     if (!token) {
       throw new Error(
         `[AUTHENTICATION ERROR] (${response.status()}): Session expired or token missing.`,
       )
     }
+
+    console.log(`✅ Logged-in user: ${body.data.user.email}`)
 
     const authenticatedRequestContext = await request.newContext({
       extraHTTPHeaders: {
