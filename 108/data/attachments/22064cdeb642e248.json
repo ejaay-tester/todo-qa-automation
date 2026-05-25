@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-FPU0V",
+    "description": "Desc-FPU0V",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a141906c9b8cb19bfc5c964",
+    "_id": "6a141907c9b8cb19bfc5c967",
+    "createdAt": "2026-05-25T09:40:23.907Z",
+    "updatedAt": "2026-05-25T09:40:23.907Z",
+    "__v": 0
+  }
+}

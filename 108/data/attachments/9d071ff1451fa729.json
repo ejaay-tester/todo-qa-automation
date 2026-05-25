@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a141922c9b8cb19bfc5c9ce",
+      "title": "Todo-VLFG6",
+      "description": "Desc-VLFG6",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a141921c9b8cb19bfc5c9c7",
+      "createdAt": "2026-05-25T09:40:50.923Z",
+      "updatedAt": "2026-05-25T09:40:50.923Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a141922c9b8cb19bfc5c9cc",
+      "title": "Todo-4ZJZQ",
+      "description": "Desc-4ZJZQ",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a141921c9b8cb19bfc5c9c7",
+      "createdAt": "2026-05-25T09:40:50.914Z",
+      "updatedAt": "2026-05-25T09:40:50.914Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a141922c9b8cb19bfc5c9ca",
+      "title": "Todo-4X3CJ",
+      "description": "Desc-4X3CJ",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a141921c9b8cb19bfc5c9c7",
+      "createdAt": "2026-05-25T09:40:50.904Z",
+      "updatedAt": "2026-05-25T09:40:50.904Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

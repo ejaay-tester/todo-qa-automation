@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-WMBMO",
+    "description": "Desc-WMBMO",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a141926c9b8cb19bfc5c9e5",
+    "_id": "6a141927c9b8cb19bfc5c9e8",
+    "createdAt": "2026-05-25T09:40:55.998Z",
+    "updatedAt": "2026-05-25T09:40:55.998Z",
+    "__v": 0
+  }
+}

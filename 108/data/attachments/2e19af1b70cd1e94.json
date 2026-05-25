@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-K04AC",
+    "description": "Desc-K04AC",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a141908c9b8cb19bfc5c976",
+    "_id": "6a14190ac9b8cb19bfc5c979",
+    "createdAt": "2026-05-25T09:40:26.208Z",
+    "updatedAt": "2026-05-25T09:40:26.208Z",
+    "__v": 0
+  }
+}
