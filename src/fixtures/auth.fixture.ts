@@ -68,13 +68,11 @@ const test = base.extend<AuthFixture>({
 
     await assertResponse(response, "POST /api/auth/register")
 
-    console.log(`✅ Success user registration (${response.status()})`)
-
     // Get the data once
     const body = await response.json()
 
     // Log the actual data
-    console.log(`Registered user: ${body.data.user.email}`)
+    console.log(`✅ Registered user: ${body.data.user.email}`)
 
     const id = body.data.user.id
     const email = userData.email
@@ -87,6 +85,14 @@ const test = base.extend<AuthFixture>({
       email,
       password,
     })
+
+    // Teardown - runs after the test finishes (pass or fail)
+    console.log(`🧹 Deleting test user: ${email}`)
+    await request
+      .delete(`api/users/${id}`)
+      .catch(
+        (err) => console.warn`⚠️ Could not delete test user ${email}: ${err}`,
+      )
   },
 
   // ==========  ==========
