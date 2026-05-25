@@ -3,8 +3,12 @@
 import { test as base, request, APIRequestContext } from "@playwright/test"
 import { generateUser } from "../test-data/users"
 
-// Define the type/shape of auth fixture
-// so TS knows what authenticatedRequest is
+// ========== TYPES ==========
+/**
+ * Define the type/shape of auth fixture
+ * so TypeScript knows what are the
+ * registeredUser, authenticatedRequest,
+ */
 type AuthFixture = {
   registeredUser: {
     id: string
@@ -15,6 +19,29 @@ type AuthFixture = {
   authenticatedRequest: APIRequestContext
 }
 
+// ========== SHARED HELPER ==========
+/**
+ * Centralized response guard.
+ * Throws a descriptive error for any non-ok response
+ * so fixtures fail-fast instead of crashing later
+ * with confusing stack traces.
+ */
+async function assertResponse(
+  response: Awaited<ReturnType<APIRequestContext["post"]>>,
+  endpoint: string,
+): Promise<void> {
+  if (response.ok()) return
+  const status = response.status()
+  const body = await response.text()
+  const excerpt = body.substring(0, 500)
+  const base = `❌ API Error: ${endpoint}\nStatus: ${status}\nResponse: ${excerpt}`
+
+  if (status >= 500) throw new Error(`[SERVER ERROR 5xx] ${base}`)
+  if (status === 429) throw new Error(`[RATE LIMITED 429] ${base}`)
+  throw new Error(`[CLIENT ERROR ${status}] ${base}`) // catch-all - no silent fall-through
+}
+
+// ========== FIXTURES ==========
 // Extend the base test to include the custom 'authenticatedRequest' fixture
 const test = base.extend<AuthFixture>({
   /**
