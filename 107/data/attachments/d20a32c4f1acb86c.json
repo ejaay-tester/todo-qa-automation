@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-IEFGY",
+    "description": "Desc-IEFGY",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a14132ab8977a57a40fa69b",
+    "_id": "6a14132bb8977a57a40fa69e",
+    "createdAt": "2026-05-25T09:15:23.675Z",
+    "updatedAt": "2026-05-25T09:15:23.675Z",
+    "__v": 0
+  }
+}

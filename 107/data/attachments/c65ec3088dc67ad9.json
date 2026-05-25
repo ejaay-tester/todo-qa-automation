@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-UXYGG",
+    "description": "Desc-UXYGG",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a141318b8977a57a40fa65b",
+    "_id": "6a14131ab8977a57a40fa65e",
+    "createdAt": "2026-05-25T09:15:06.389Z",
+    "updatedAt": "2026-05-25T09:15:06.389Z",
+    "__v": 0
+  }
+}

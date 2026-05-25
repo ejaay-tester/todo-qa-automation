@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-Z08HQ",
+    "description": "Desc-Z08HQ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a141327b8977a57a40fa693",
+    "_id": "6a141329b8977a57a40fa696",
+    "createdAt": "2026-05-25T09:15:21.379Z",
+    "updatedAt": "2026-05-25T09:15:21.379Z",
+    "__v": 0
+  }
+}
