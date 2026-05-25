@@ -66,23 +66,7 @@ const test = base.extend<AuthFixture>({
       )
     }
 
-    if (!response.ok()) {
-      const status = response.status()
-      const errorBody = await response.text()
-      const errorMessage = `❌ API Error: POST /api/auth/register
-      Status: ${status}
-      Response: ${errorBody.substring(0, 500)}`.trim()
-
-      if (status >= 500) {
-        throw new Error(
-          `[SERVER ERROR] (5xx): The API is likely down or crashing.\n${errorMessage}`,
-        )
-      } else if (status === 429) {
-        throw new Error(
-          `[ERROR] (4xx): Too many request. Try again in a few minutes.\n${errorMessage}`,
-        )
-      }
-    }
+    await assertResponse(response, "POST /api/auth/register")
 
     console.log(`✅ Success user registration (${response.status()})`)
 
@@ -129,23 +113,7 @@ const test = base.extend<AuthFixture>({
       )
     }
 
-    if (!response.ok()) {
-      const status = response.status()
-      const errorBody = await response.text()
-      const errorMessage = `❌ API Error: POST /api/auth/login
-      Status: ${status}
-      Response: ${errorBody.substring(0, 500)}`.trim()
-
-      if (status >= 500) {
-        throw new Error(
-          `[SERVER ERROR] (5xx): The API is likely down or crashing.\n${errorMessage}`,
-        )
-      } else if (status === 429) {
-        throw new Error(
-          `[ERROR] (4xx): Too many request. Try again in a few minutes.\n${errorMessage}`,
-        )
-      }
-    }
+    await assertResponse(response, "POST /api/auth/login")
     console.log(`✅ Successful user login (${response.status()})`)
 
     const body = await response.json()
