@@ -29,9 +29,6 @@ const test = base.extend<AuthFixture>({
       name: `testuser_${Date.now()}`,
     }
 
-    // Call the function to get the actual user object
-    // const userData = generateUser()
-
     console.log("Registering user...")
 
     let response
