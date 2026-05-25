@@ -1,6 +1,7 @@
 // Import Playwright's base test engine
 //  and the request utility for API calls
 import { test as base, request, APIRequestContext } from "@playwright/test"
+import { generateUser } from "../test-data/users"
 
 // Define the type/shape of auth fixture
 // so TS knows what authenticatedRequest is
@@ -23,11 +24,7 @@ const test = base.extend<AuthFixture>({
    * - DOES NOT return token
    */
   registeredUser: async ({ request }, use) => {
-    const userData = {
-      email: `testuser_${Date.now()}@yopmail.com`,
-      password: "TestP@ssword123",
-      name: `testuser_${Date.now()}`,
-    }
+    const userData = generateUser()
 
     console.log("Registering user...")
 
