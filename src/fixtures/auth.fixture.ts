@@ -101,8 +101,6 @@ const test = base.extend<AuthFixture>({
       )
   },
 
-  // ==========  ==========
-
   /**
    * FIXTURE 2: AUTHENTICATED REQUEST
    * Logs in using registeredUser
@@ -153,8 +151,6 @@ const test = base.extend<AuthFixture>({
     await authenticatedRequestContext.dispose()
   },
 
-  // ==========  ==========
-
   /**
    * FIXTURE 3: UNAUTHENTICATED REQUEST
    * No token - used to assert 401 on protected endpoints.
@@ -172,7 +168,6 @@ const test = base.extend<AuthFixture>({
     await unauthenticatedRequestContext.dispose()
   },
 
-  // ==========  ==========
   /**
    * FIXTURE 4: EXPIRED TOKEN REQUEST
    * Injects a hardcoded invalid/expired JWT.
