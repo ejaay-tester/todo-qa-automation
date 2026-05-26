@@ -1,6 +1,10 @@
 // Import Playwright's base test engine
 //  and the request utility for API calls
-import { test as base, request, APIRequestContext } from "@playwright/test"
+import {
+  test as base,
+  request as apiRequest,
+  APIRequestContext,
+} from "@playwright/test"
 import { generateUser } from "../test-data/users"
 
 // ========== TYPES ==========
@@ -15,8 +19,9 @@ type AuthFixture = {
     email: string
     password: string
   }
-
   authenticatedRequest: APIRequestContext
+  unauthenticatedRequest: APIRequestContext
+  expiredTokenRequest: APIRequestContext
 }
 
 // ========== SHARED HELPER ==========
@@ -46,9 +51,9 @@ async function assertResponse(
 const test = base.extend<AuthFixture>({
   /**
    * FIXTURE 1: USER REGISTRATION
-   * - Handles user registration
-   * - Creates a fresh user every time
-   * - DOES NOT return token
+   * Handles user registration
+   * Creates a fresh user every time
+   * DOES NOT return token
    */
   registeredUser: async ({ request }, use) => {
     const userData = generateUser()
@@ -99,15 +104,15 @@ const test = base.extend<AuthFixture>({
 
   /**
    * FIXTURE 2: AUTHENTICATED REQUEST
-   * - Logs in using registeredUser
-   * - Injects token into request context
+   * Logs in using registeredUser
+   * Injects token into request context
    */
-  authenticatedRequest: async ({ registeredUser, request: apiClient }, use) => {
+  authenticatedRequest: async ({ registeredUser, request }, use) => {
     console.log("Logging in...")
 
     let response
     try {
-      response = await apiClient.post("/api/auth/login", {
+      response = await request.post("/api/auth/login", {
         data: {
           email: registeredUser.email,
           password: registeredUser.password,
@@ -133,7 +138,7 @@ const test = base.extend<AuthFixture>({
 
     console.log(`✅ Logged-in user: ${body.data.user.email}`)
 
-    const authenticatedRequestContext = await request.newContext({
+    const authenticatedRequestContext = await apiRequest.newContext({
       extraHTTPHeaders: {
         Authorization: `Bearer ${token}`,
       },
