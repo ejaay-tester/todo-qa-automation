@@ -6,6 +6,7 @@ import {
   APIRequestContext,
 } from "@playwright/test"
 import { generateUser } from "../test-data/users"
+import { EXPIRED_JWT } from "../test-data/constants"
 
 // ========== TYPES ==========
 /**
@@ -150,6 +151,43 @@ const test = base.extend<AuthFixture>({
 
     // After the test finishes (Pass or Fail), close the context to free up memory
     await authenticatedRequestContext.dispose()
+  },
+
+  // ==========  ==========
+
+  /**
+   * FIXTURE 3: UNAUTHENTICATED REQUEST
+   * No token - used to assert 401 on protected endpoints.
+   * Scoped to worker: stateless, safe to reuse across tests.
+   */
+  unauthenticatedRequest: async ({}, use) => {
+    console.log("Setting up unauthenticated request context...")
+
+    const unauthenticatedRequestContext = await apiRequest.newContext({
+      // Intentionally empty - no Authorization headers
+      extraHTTPHeaders: {},
+    })
+
+    await use(unauthenticatedRequestContext)
+    await unauthenticatedRequestContext.dispose()
+  },
+
+  // ==========  ==========
+  /**
+   * FIXTURE 4: EXPIRED TOKEN REQUEST
+   * Injects a hardcoded invalid/expired JWT.
+   * Used for testing 401 token validation scenarios
+   */
+
+  expiredTokenRequest: async ({}, use) => {
+    console.log("Setting up expired/invalid token request context...")
+
+    const expiredTokenRequestContext = await apiRequest.newContext({
+      extraHTTPHeaders: { Authorization: `Bearer ${EXPIRED_JWT}` },
+    })
+
+    await use(expiredTokenRequestContext)
+    await expiredTokenRequestContext.dispose()
   },
 })
 
