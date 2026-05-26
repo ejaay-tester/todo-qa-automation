@@ -95,7 +95,7 @@ const test = base.extend<AuthFixture>({
     // Teardown - runs after the test finishes (pass or fail)
     console.log(`🧹 Deleting test user: ${email}`)
     await request
-      .delete(`api/users/${id}`)
+      .delete(`/api/users/${id}`)
       .catch((err) =>
         console.warn(`⚠️ Could not delete test user ${email}: ${err}`),
       )
