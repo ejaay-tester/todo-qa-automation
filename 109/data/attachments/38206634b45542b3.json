@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-C2IWF",
+    "description": "Desc-C2IWF",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a15585d424df81b218a7cc5",
+    "_id": "6a15585e424df81b218a7cca",
+    "createdAt": "2026-05-26T08:22:54.624Z",
+    "updatedAt": "2026-05-26T08:22:54.624Z",
+    "__v": 0
+  }
+}

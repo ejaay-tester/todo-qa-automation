@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-9K52U",
+    "description": "Desc-9K52U",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a155866424df81b218a7cec",
+    "_id": "6a155868424df81b218a7cef",
+    "createdAt": "2026-05-26T08:23:04.209Z",
+    "updatedAt": "2026-05-26T08:23:04.209Z",
+    "__v": 0
+  }
+}

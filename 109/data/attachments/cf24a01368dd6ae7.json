@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-DAWZ1",
+    "description": "Desc-DAWZ1",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a15586e424df81b218a7d12",
+    "_id": "6a15586f424df81b218a7d15",
+    "createdAt": "2026-05-26T08:23:11.797Z",
+    "updatedAt": "2026-05-26T08:23:11.797Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-GCUB5",
+    "description": "Desc-GCUB5",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a155874424df81b218a7d23",
+    "_id": "6a155875424df81b218a7d26",
+    "createdAt": "2026-05-26T08:23:17.904Z",
+    "updatedAt": "2026-05-26T08:23:17.904Z",
+    "__v": 0
+  }
+}

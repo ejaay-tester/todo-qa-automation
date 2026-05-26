@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-DHPDD",
+    "description": "Desc-DHPDD",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a155860424df81b218a7cd7",
+    "_id": "6a155861424df81b218a7cda",
+    "createdAt": "2026-05-26T08:22:57.905Z",
+    "updatedAt": "2026-05-26T08:22:57.905Z",
+    "__v": 0
+  }
+}
