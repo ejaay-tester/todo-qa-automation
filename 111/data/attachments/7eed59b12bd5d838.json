@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-RML6N",
+    "description": "Desc-RML6N",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a16a6ba85f018963e450cef",
+    "_id": "6a16a6bb85f018963e450cf2",
+    "createdAt": "2026-05-27T08:09:31.482Z",
+    "updatedAt": "2026-05-27T08:09:31.482Z",
+    "__v": 0
+  }
+}

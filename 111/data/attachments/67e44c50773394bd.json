@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-ACTF9",
+    "description": "Desc-ACTF9",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a16a6a085f018963e450c95",
+    "_id": "6a16a6a285f018963e450c98",
+    "createdAt": "2026-05-27T08:09:06.071Z",
+    "updatedAt": "2026-05-27T08:09:06.071Z",
+    "__v": 0
+  }
+}

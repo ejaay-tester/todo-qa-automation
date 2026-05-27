@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a16a6d285f018963e450d3b",
+      "title": "Todo-T8IEW",
+      "description": "Desc-T8IEW",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a16a6d085f018963e450d34",
+      "createdAt": "2026-05-27T08:09:54.445Z",
+      "updatedAt": "2026-05-27T08:09:54.445Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a16a6d285f018963e450d39",
+      "title": "Todo-1EVXO",
+      "description": "Desc-1EVXO",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a16a6d085f018963e450d34",
+      "createdAt": "2026-05-27T08:09:54.332Z",
+      "updatedAt": "2026-05-27T08:09:54.332Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a16a6d285f018963e450d37",
+      "title": "Todo-NUOK9",
+      "description": "Desc-NUOK9",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a16a6d085f018963e450d34",
+      "createdAt": "2026-05-27T08:09:54.271Z",
+      "updatedAt": "2026-05-27T08:09:54.271Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

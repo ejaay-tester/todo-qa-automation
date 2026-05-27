@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-EGBSP",
+    "description": "Desc-EGBSP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a16a6d385f018963e450d46",
+    "_id": "6a16a6d585f018963e450d49",
+    "createdAt": "2026-05-27T08:09:57.068Z",
+    "updatedAt": "2026-05-27T08:09:57.068Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-Z50QG",
+    "description": "Desc-Z50QG",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a16a6da85f018963e450d5b",
+    "_id": "6a16a6db85f018963e450d5e",
+    "createdAt": "2026-05-27T08:10:03.490Z",
+    "updatedAt": "2026-05-27T08:10:03.490Z",
+    "__v": 0
+  }
+}
