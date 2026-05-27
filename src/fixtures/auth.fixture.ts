@@ -10,9 +10,9 @@ import { EXPIRED_JWT } from "../test-data/constants"
 
 // ========== TYPES ==========
 /**
- * Define the type/shape of auth fixture
- * so TypeScript knows what are the
- * registeredUser, authenticatedRequest,
+ * Test-scoped fixtures - created and disposed per test.
+ * registeredUser: fresh user account credentials for each test.
+ * authenticatedRequest: HTTP session with a valid bearer token.
  */
 type AuthTestFixtures = {
   registeredUser: {
@@ -23,6 +23,12 @@ type AuthTestFixtures = {
   authenticatedRequest: APIRequestContext
 }
 
+/**
+ * Worker-scoped fixtures - created once per worker, shared across all tests.
+ * Both are stateless (no dynamic token or user data), so sharing is safe.
+ * unauthenticatedRequest: HTTP session with no Authorization header.
+ * expiredTokenRequest: HTTP session with a hardcoded invalid JTW.
+ */
 type AuthWorkerFixtures = {
   unauthenticatedRequest: APIRequestContext
   expiredTokenRequest: APIRequestContext
@@ -53,8 +59,8 @@ async function assertResponse(
 // ========== FIXTURES ==========
 // Extend the base test to include the custom 'authenticatedRequest' fixture
 const test = base.extend<AuthTestFixtures, AuthWorkerFixtures>({
+  // ── Fixture 1: Registered user ──────────────────────────────────────────────
   /**
-   * FIXTURE 1: USER REGISTRATION
    * Handles user registration
    * Creates a fresh user every time
    * DOES NOT return token
@@ -104,8 +110,8 @@ const test = base.extend<AuthTestFixtures, AuthWorkerFixtures>({
       )
   },
 
+  // ── Fixture 2: Authenticated request ──────────────────────────────────────────────
   /**
-   * FIXTURE 2: AUTHENTICATED REQUEST
    * Logs in using registeredUser
    * Injects token into request context
    */
@@ -154,8 +160,8 @@ const test = base.extend<AuthTestFixtures, AuthWorkerFixtures>({
     await authenticatedRequestContext.dispose()
   },
 
+  // ── Fixture 3: Unauthenticated request ──────────────────────────────────────────────
   /**
-   * FIXTURE 3: UNAUTHENTICATED REQUEST
    * No token - used to assert 401 on protected endpoints.
    * Scoped to worker: stateless, safe to reuse across tests.
    */
@@ -171,8 +177,8 @@ const test = base.extend<AuthTestFixtures, AuthWorkerFixtures>({
     await unauthenticatedRequestContext.dispose()
   },
 
+  // ── Fixture 4: Expired token request ──────────────────────────────────────────────
   /**
-   * FIXTURE 4: EXPIRED TOKEN REQUEST
    * Injects a hardcoded invalid/expired JWT.
    * Used for testing 401 token validation scenarios
    */
