@@ -40,11 +40,11 @@ async function assertResponse(
   const status = response.status()
   const body = await response.text()
   const excerpt = body.substring(0, 500)
-  const base = `❌ API Error: ${endpoint}\nStatus: ${status}\nResponse: ${excerpt}`
+  const errorMessage = `❌ API Error: ${endpoint}\nStatus: ${status}\nResponse: ${excerpt}`
 
-  if (status >= 500) throw new Error(`[SERVER ERROR 5xx] ${base}`)
-  if (status === 429) throw new Error(`[RATE LIMITED 429] ${base}`)
-  throw new Error(`[CLIENT ERROR ${status}] ${base}`) // catch-all - no silent fall-through
+  if (status >= 500) throw new Error(`[SERVER ERROR 5xx] ${errorMessage}`)
+  if (status === 429) throw new Error(`[RATE LIMITED 429] ${errorMessage}`)
+  throw new Error(`[CLIENT ERROR ${status}] ${errorMessage}`) // catch-all - no silent fall-through
 }
 
 // ========== FIXTURES ==========
