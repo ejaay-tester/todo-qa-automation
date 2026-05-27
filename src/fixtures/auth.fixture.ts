@@ -165,34 +165,37 @@ const test = base.extend<AuthTestFixtures, AuthWorkerFixtures>({
    * No token - used to assert 401 on protected endpoints.
    * Scoped to worker: stateless, safe to reuse across tests.
    */
-  unauthenticatedRequest: async ({}, use) => {
-    console.log("Setting up unauthenticated request context...")
+  unauthenticatedRequest: [
+    async ({}, use) => {
+      console.log("Setting up unauthenticated request context...")
+      const unauthenticatedRequestContext = await apiRequest.newContext({
+        // Intentionally empty - no Authorization headers
+        extraHTTPHeaders: {},
+      })
 
-    const unauthenticatedRequestContext = await apiRequest.newContext({
-      // Intentionally empty - no Authorization headers
-      extraHTTPHeaders: {},
-    })
-
-    await use(unauthenticatedRequestContext)
-    await unauthenticatedRequestContext.dispose()
-  },
+      await use(unauthenticatedRequestContext)
+      await unauthenticatedRequestContext.dispose()
+    },
+    { scope: "worker" },
+  ],
 
   // ── Fixture 4: Expired token request ──────────────────────────────────────────────
   /**
    * Injects a hardcoded invalid/expired JWT.
    * Used for testing 401 token validation scenarios
    */
+  expiredTokenRequest: [
+    async ({}, use) => {
+      console.log("Setting up expired/invalid token request context...")
+      const expiredTokenRequestContext = await apiRequest.newContext({
+        extraHTTPHeaders: { Authorization: `Bearer ${EXPIRED_JWT}` },
+      })
 
-  expiredTokenRequest: async ({}, use) => {
-    console.log("Setting up expired/invalid token request context...")
-
-    const expiredTokenRequestContext = await apiRequest.newContext({
-      extraHTTPHeaders: { Authorization: `Bearer ${EXPIRED_JWT}` },
-    })
-
-    await use(expiredTokenRequestContext)
-    await expiredTokenRequestContext.dispose()
-  },
+      await use(expiredTokenRequestContext)
+      await expiredTokenRequestContext.dispose()
+    },
+    { scope: "worker" },
+  ],
 })
 
 export const authTest = test
