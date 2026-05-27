@@ -14,13 +14,16 @@ import { EXPIRED_JWT } from "../test-data/constants"
  * so TypeScript knows what are the
  * registeredUser, authenticatedRequest,
  */
-type AuthFixture = {
+type AuthTestFixtures = {
   registeredUser: {
     id: string
     email: string
     password: string
   }
   authenticatedRequest: APIRequestContext
+}
+
+type AuthWorkerFixtures = {
   unauthenticatedRequest: APIRequestContext
   expiredTokenRequest: APIRequestContext
 }
@@ -49,7 +52,7 @@ async function assertResponse(
 
 // ========== FIXTURES ==========
 // Extend the base test to include the custom 'authenticatedRequest' fixture
-const test = base.extend<AuthFixture>({
+const test = base.extend<AuthTestFixtures, AuthWorkerFixtures>({
   /**
    * FIXTURE 1: USER REGISTRATION
    * Handles user registration
