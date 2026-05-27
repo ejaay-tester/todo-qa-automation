@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-JWDTH",
+    "description": "Desc-JWDTH",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a16a38685f018963e450c0b",
+    "_id": "6a16a38785f018963e450c10",
+    "createdAt": "2026-05-27T07:55:51.644Z",
+    "updatedAt": "2026-05-27T07:55:51.644Z",
+    "__v": 0
+  }
+}

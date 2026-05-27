@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-9JJRS",
+    "description": "Desc-9JJRS",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a16a37385f018963e450bcf",
+    "_id": "6a16a37485f018963e450bd2",
+    "createdAt": "2026-05-27T07:55:32.798Z",
+    "updatedAt": "2026-05-27T07:55:32.798Z",
+    "__v": 0
+  }
+}

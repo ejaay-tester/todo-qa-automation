@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-JT3AC",
+    "description": "Desc-JT3AC",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a16a36f85f018963e450bc6",
+    "_id": "6a16a37185f018963e450bc9",
+    "createdAt": "2026-05-27T07:55:29.192Z",
+    "updatedAt": "2026-05-27T07:55:29.192Z",
+    "__v": 0
+  }
+}
