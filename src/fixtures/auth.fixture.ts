@@ -56,14 +56,14 @@ const test = base.extend<AuthFixture>({
    * Creates a fresh user every time
    * DOES NOT return token
    */
-  registeredUser: async ({ request }, use) => {
+  registeredUser: async ({ request: apiClient }, use) => {
     const userData = generateUser()
 
     console.log("Registering user...")
 
     let response
     try {
-      response = await request.post("/api/auth/register", {
+      response = await apiClient.post("/api/auth/register", {
         data: userData,
       })
     } catch (error) {
@@ -94,7 +94,7 @@ const test = base.extend<AuthFixture>({
 
     // Teardown - runs after the test finishes (pass or fail)
     console.log(`🧹 Deleting test user: ${email}`)
-    await request
+    await apiClient
       .delete(`/api/users/${id}`)
       .catch((err) =>
         console.warn(`⚠️ Could not delete test user ${email}: ${err}`),
@@ -106,12 +106,12 @@ const test = base.extend<AuthFixture>({
    * Logs in using registeredUser
    * Injects token into request context
    */
-  authenticatedRequest: async ({ registeredUser, request }, use) => {
+  authenticatedRequest: async ({ registeredUser, request: apiClient }, use) => {
     console.log("Logging in...")
 
     let response
     try {
-      response = await request.post("/api/auth/login", {
+      response = await apiClient.post("/api/auth/login", {
         data: {
           email: registeredUser.email,
           password: registeredUser.password,
