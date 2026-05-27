@@ -198,6 +198,6 @@ const test = base.extend<AuthTestFixtures, AuthWorkerFixtures>({
   ],
 })
 
-export const authTest = test
+export { test }
 // Re-export 'expect' so we can import everything from this one file in the test
 export { expect } from "@playwright/test"
