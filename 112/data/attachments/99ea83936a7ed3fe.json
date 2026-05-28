@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a1816710a5c50775c8c710a",
+      "title": "Todo-FRVFS",
+      "description": "Desc-FRVFS",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a18166f0a5c50775c8c7103",
+      "createdAt": "2026-05-28T10:18:25.595Z",
+      "updatedAt": "2026-05-28T10:18:25.595Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a1816710a5c50775c8c7108",
+      "title": "Todo-VXWIG",
+      "description": "Desc-VXWIG",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a18166f0a5c50775c8c7103",
+      "createdAt": "2026-05-28T10:18:25.455Z",
+      "updatedAt": "2026-05-28T10:18:25.455Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a1816710a5c50775c8c7106",
+      "title": "Todo-LMLG7",
+      "description": "Desc-LMLG7",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a18166f0a5c50775c8c7103",
+      "createdAt": "2026-05-28T10:18:25.386Z",
+      "updatedAt": "2026-05-28T10:18:25.386Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

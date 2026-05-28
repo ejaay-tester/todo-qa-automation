@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-ADWQ1",
+    "description": "Desc-ADWQ1",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1816540a5c50775c8c709d",
+    "_id": "6a1816560a5c50775c8c70a0",
+    "createdAt": "2026-05-28T10:17:58.588Z",
+    "updatedAt": "2026-05-28T10:17:58.588Z",
+    "__v": 0
+  }
+}

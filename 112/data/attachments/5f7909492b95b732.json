@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-1WL9G",
+    "description": "Desc-1WL9G",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a18165b0a5c50775c8c70b7",
+    "_id": "6a18165c0a5c50775c8c70ba",
+    "createdAt": "2026-05-28T10:18:04.771Z",
+    "updatedAt": "2026-05-28T10:18:04.771Z",
+    "__v": 0
+  }
+}

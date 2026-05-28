@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a1816590a5c50775c8c70ac",
+      "title": "Todo-72U47",
+      "description": "Desc-72U47",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a1816570a5c50775c8c70a5",
+      "createdAt": "2026-05-28T10:18:01.090Z",
+      "updatedAt": "2026-05-28T10:18:01.090Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a1816590a5c50775c8c70aa",
+      "title": "Todo-RQ36H",
+      "description": "Desc-RQ36H",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a1816570a5c50775c8c70a5",
+      "createdAt": "2026-05-28T10:18:01.086Z",
+      "updatedAt": "2026-05-28T10:18:01.086Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a1816580a5c50775c8c70a8",
+      "title": "Todo-DKORN",
+      "description": "Desc-DKORN",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a1816570a5c50775c8c70a5",
+      "createdAt": "2026-05-28T10:18:00.990Z",
+      "updatedAt": "2026-05-28T10:18:00.990Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

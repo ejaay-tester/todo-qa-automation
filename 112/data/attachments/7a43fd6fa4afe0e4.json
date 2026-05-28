@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-DKORN",
+    "description": "Desc-DKORN",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1816570a5c50775c8c70a5",
+    "_id": "6a1816580a5c50775c8c70a8",
+    "createdAt": "2026-05-28T10:18:00.990Z",
+    "updatedAt": "2026-05-28T10:18:00.990Z",
+    "__v": 0
+  }
+}

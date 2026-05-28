@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-ZP1VS",
+    "description": "Desc-ZP1VS",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a18166a0a5c50775c8c70f2",
+    "_id": "6a18166b0a5c50775c8c70f5",
+    "createdAt": "2026-05-28T10:18:19.580Z",
+    "updatedAt": "2026-05-28T10:18:19.580Z",
+    "__v": 0
+  }
+}
