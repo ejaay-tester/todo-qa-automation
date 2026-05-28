@@ -1,5 +1,4 @@
-import { expect } from "@playwright/test"
-import { test as authTest } from "../fixtures/auth.fixture"
+import { test as authTest, expect } from "../fixtures/auth.fixture"
 import { TodoClient } from "../api/TodoClient"
 
 // Define the type for the new fixture you are adding
@@ -9,7 +8,7 @@ type TodoFixtures = {
 }
 
 // Extend the base test to include the custom classes
-export const test = authTest.extend<TodoFixtures>({
+const test = authTest.extend<TodoFixtures>({
   todoClient: async ({ authenticatedRequest }, use) => {
     // authenticatedRequest comes from the AuthFixture
     const client = new TodoClient(authenticatedRequest)
@@ -49,4 +48,4 @@ export const test = authTest.extend<TodoFixtures>({
   },
 })
 
-export { expect } from "@playwright/test"
+export { test, expect }
