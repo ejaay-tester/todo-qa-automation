@@ -1,5 +1,6 @@
 import { test as authTest, expect } from "../fixtures/auth.fixture"
 import { TodoClient } from "../api/TodoClient"
+import { fail } from "node:assert"
 
 /**
  * TodoFixtures extends AuthTestFixtures with two additional fixtures:
@@ -33,26 +34,36 @@ const test = authTest.extend<TodoFixtures>({
   // Define the cleanup fixture
   cleanup: async ({ todoClient }, use) => {
     const ids: string[] = []
+
     await use(ids)
 
-    if (ids.length > 0) {
-      // Fire all deletions at once
-      const results = await Promise.allSettled(
-        ids.map((id) => todoClient.delete(id)),
+    // Teardown - only runs if the test actually created todos
+    if (ids.length === 0) return
+
+    const results = await Promise.allSettled(
+      ids.map((id) => todoClient.delete(id)),
+    )
+
+    // Track which deletions failed - warn only, never throw
+    const failed: string[] = []
+
+    results.forEach((result, index) => {
+      if (result.status === "rejected") {
+        failed.push(ids[index])
+        console.error(
+          `[CLEANUP ERROR] Failed to delete todo ID ${ids[index]}: `,
+          result.reason,
+        )
+      }
+    })
+
+    if (failed.length > 0) {
+      console.warn(
+        `[CLEANUP WARNING] ${failed.length}/${ids.length} todo(s) could not be deleted: ${failed.join(", ")}`,
       )
-
-      // Log if any specific deletion failed
-      results.forEach((result, index) => {
-        if (result.status === "rejected") {
-          console.error(
-            `[CLEANUP ERROR] ID ${ids[index]} failed: `,
-            result.reason,
-          )
-        }
-      })
-
+    } else {
       console.log(
-        `[CLEANUP COMPLETED] Attempted parallel deletion of ${ids.length} items.`,
+        `[CLEANUP COMPLETED] Deleted ${ids.length} todo(s) in parallel.`,
       )
     }
   },
