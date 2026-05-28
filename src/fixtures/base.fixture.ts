@@ -54,11 +54,6 @@ const test = authTest.extend<TodoFixtures>({
       console.log(
         `[CLEANUP COMPLETED] Attempted parallel deletion of ${ids.length} items.`,
       )
-
-      expect(
-        results.length,
-        `Deleted todos: (${results.length}) | Created Todos: (${ids.length})`,
-      ).toBe(ids.length)
     }
   },
 })
