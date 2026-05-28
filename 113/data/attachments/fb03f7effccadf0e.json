@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-30LKW",
+    "description": "Desc-30LKW",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a184fc392902a90862f7b13",
+    "_id": "6a184fc592902a90862f7b16",
+    "createdAt": "2026-05-28T14:23:01.184Z",
+    "updatedAt": "2026-05-28T14:23:01.184Z",
+    "__v": 0
+  }
+}

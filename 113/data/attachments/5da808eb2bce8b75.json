@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a184fda92902a90862f7b5f",
+      "title": "Todo-KW70O",
+      "description": "Desc-KW70O",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a184fd992902a90862f7b58",
+      "createdAt": "2026-05-28T14:23:22.893Z",
+      "updatedAt": "2026-05-28T14:23:22.893Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a184fda92902a90862f7b5d",
+      "title": "Todo-V76N0",
+      "description": "Desc-V76N0",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a184fd992902a90862f7b58",
+      "createdAt": "2026-05-28T14:23:22.890Z",
+      "updatedAt": "2026-05-28T14:23:22.890Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a184fda92902a90862f7b5b",
+      "title": "Todo-LWIUR",
+      "description": "Desc-LWIUR",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a184fd992902a90862f7b58",
+      "createdAt": "2026-05-28T14:23:22.877Z",
+      "updatedAt": "2026-05-28T14:23:22.877Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

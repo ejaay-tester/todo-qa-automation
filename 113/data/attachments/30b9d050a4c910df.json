@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-1L1PG",
+    "description": "Desc-1L1PG",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a184fa992902a90862f7ab0",
+    "_id": "6a184faa92902a90862f7ab3",
+    "createdAt": "2026-05-28T14:22:34.776Z",
+    "updatedAt": "2026-05-28T14:22:34.776Z",
+    "__v": 0
+  }
+}

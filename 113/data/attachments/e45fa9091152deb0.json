@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-NL79Z",
+    "description": "Desc-NL79Z",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a184fbe92902a90862f7af5",
+    "_id": "6a184fc092902a90862f7af8",
+    "createdAt": "2026-05-28T14:22:56.181Z",
+    "updatedAt": "2026-05-28T14:22:56.181Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-BEXIF",
+    "description": "Desc-BEXIF",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a184fac92902a90862f7ab9",
+    "_id": "6a184fae92902a90862f7abc",
+    "createdAt": "2026-05-28T14:22:38.082Z",
+    "updatedAt": "2026-05-28T14:22:38.082Z",
+    "__v": 0
+  }
+}

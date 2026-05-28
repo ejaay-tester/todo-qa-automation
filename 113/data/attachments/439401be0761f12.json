@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-L6JM1",
+    "description": "Desc-L6JM1",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a184fde92902a90862f7b76",
+    "_id": "6a184fdf92902a90862f7b79",
+    "createdAt": "2026-05-28T14:23:27.786Z",
+    "updatedAt": "2026-05-28T14:23:27.786Z",
+    "__v": 0
+  }
+}
