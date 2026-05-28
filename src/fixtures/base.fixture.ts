@@ -1,6 +1,5 @@
 import { test as authTest, expect } from "../fixtures/auth.fixture"
 import { TodoClient } from "../api/TodoClient"
-import { fail } from "node:assert"
 
 /**
  * TodoFixtures extends AuthTestFixtures with two additional fixtures:
