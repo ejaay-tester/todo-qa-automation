@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-GJ448",
+    "description": "Desc-GJ448",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1947293fbae8746392d5bc",
+    "_id": "6a19472b3fbae8746392d5bf",
+    "createdAt": "2026-05-29T07:58:35.006Z",
+    "updatedAt": "2026-05-29T07:58:35.006Z",
+    "__v": 0
+  }
+}
