@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-AN2TJ",
+    "description": "Desc-AN2TJ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a19351384b68eb029892bd4",
+    "_id": "6a19351484b68eb029892bd7",
+    "createdAt": "2026-05-29T06:41:24.912Z",
+    "updatedAt": "2026-05-29T06:41:24.912Z",
+    "__v": 0
+  }
+}

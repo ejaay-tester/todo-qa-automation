@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-SYW1L",
+    "description": "Desc-SYW1L",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1934c784b68eb029892ab4",
+    "_id": "6a1934c884b68eb029892ab7",
+    "createdAt": "2026-05-29T06:40:08.922Z",
+    "updatedAt": "2026-05-29T06:40:08.922Z",
+    "__v": 0
+  }
+}
