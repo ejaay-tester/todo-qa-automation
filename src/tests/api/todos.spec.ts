@@ -196,8 +196,67 @@ test.describe("Todos API", () => {
 
     // Negative - Auth Cases
     // Expect: 401 Unauthorized
-    // test("fails without auth token", async () => {})
-    // test("fails with invalid/expired token", async () => {})
+    test("fails without auth token @smoke", async ({
+      unauthenticatedRequest,
+    }) => {
+      const payload = TodoFactory.createTodoPayload()
+
+      const response =
+        await test.step("Act: Create todo without a token", async () => {
+          return unauthenticatedRequest.post("/api/todos", {
+            data: payload as TodoPayload,
+          })
+        })
+
+      await test.step("Assert: Verify 401 status and error message", async () => {
+        const body = await response.json()
+
+        expect(
+          response.status(),
+          "[REQUIREMENT] No authorization token must return 401 HTTP Status",
+        ).toBe(401)
+
+        expect(
+          body.message,
+          "[REQUIREMENT] Response must contain a validation error message",
+        ).toBeDefined()
+
+        expect(body.success, "[REQUIREMENT] Success flag must be false").toBe(
+          false,
+        )
+      })
+    })
+
+    test("fails with invalid/expired token @smoke", async ({
+      expiredTokenRequest,
+    }) => {
+      const payload = TodoFactory.createTodoPayload()
+
+      const response =
+        await test.step("Act: Create todo with invalid/expired token", async () => {
+          return expiredTokenRequest.post("/api/todos", {
+            data: payload as TodoPayload,
+          })
+        })
+
+      await test.step("Assert: Verify 401 status and error message", async () => {
+        const body = await response.json()
+
+        expect(
+          response.status(),
+          "[REQUIREMENT] Invalid/expired token must return 401 HTTP Status",
+        ).toBe(401)
+
+        expect(
+          body.message,
+          "[REQUIREMENT] Response must contain a validation error message",
+        ).toBeDefined()
+
+        expect(body.success, "[REQUIREMENT] Success flag must be false").toBe(
+          false,
+        )
+      })
+    })
 
     // Edge Cases
     // Large input, special characters, boolean logic
