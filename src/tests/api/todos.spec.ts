@@ -11,7 +11,7 @@ test.describe("Todos API", () => {
   test.describe("POST /api/todos", () => {
     // Happy Path
     // Assertions: 201, response contains _id, matches payload
-    test("creates todo with valid data @smoke", async ({
+    test("should create a todo and return all required fields @smoke", async ({
       todoClient,
       cleanup,
     }) => {
@@ -61,7 +61,9 @@ test.describe("Todos API", () => {
 
     // Negative - Validation
     // Expect 400, Validation error message
-    test("fails when title is missing @smoke", async ({ todoClient }) => {
+    test("should return 400 when title is missing @smoke", async ({
+      todoClient,
+    }) => {
       const response =
         await test.step("Act: Create todo with missing title", async () => {
           return todoClient.create(
@@ -88,7 +90,9 @@ test.describe("Todos API", () => {
       })
     })
 
-    test("fails when title is empty string @smoke", async ({ todoClient }) => {
+    test("should return 400 when title is an empty string @smoke", async ({
+      todoClient,
+    }) => {
       const response =
         await test.step("Act: Create todo with empty title", async () => {
           return todoClient.create(
@@ -115,7 +119,9 @@ test.describe("Todos API", () => {
       })
     })
 
-    test("fails when title is null @smoke", async ({ todoClient }) => {
+    test("should return 400 when title is null @smoke", async ({
+      todoClient,
+    }) => {
       const response =
         await test.step("Act: Create todo with null title ", async () => {
           return todoClient.create(
@@ -140,7 +146,7 @@ test.describe("Todos API", () => {
       })
     })
 
-    test("fails when whitespace-only title is sent @smoke", async ({
+    test("should return 400 when title contains only whitespace @smoke", async ({
       todoClient,
     }) => {
       const response =
@@ -167,7 +173,9 @@ test.describe("Todos API", () => {
       })
     })
 
-    test("fails when payload is empty @smoke", async ({ todoClient }) => {
+    test("should return 400 when payload is empty @smoke", async ({
+      todoClient,
+    }) => {
       const response =
         await test.step("Act: Create todo without payload", async () => {
           return todoClient.create(
@@ -196,7 +204,7 @@ test.describe("Todos API", () => {
 
     // Negative - Auth Cases
     // Expect: 401 Unauthorized
-    test("fails without auth token @smoke", async ({
+    test("should return 401 when Authorization header is missing @smoke", async ({
       unauthenticatedRequest,
     }) => {
       const payload = TodoFactory.createTodoPayload()
@@ -227,7 +235,7 @@ test.describe("Todos API", () => {
       })
     })
 
-    test("fails with invalid/expired token @smoke", async ({
+    test("should return 401 when token is invalid or expired @smoke", async ({
       expiredTokenRequest,
     }) => {
       const payload = TodoFactory.createTodoPayload()
@@ -260,7 +268,10 @@ test.describe("Todos API", () => {
 
     // Edge Cases
     // Large input, special characters, boolean logic
-    test("accepts very long title @smoke", async ({ todoClient, cleanup }) => {
+    test("should persist a title at maximum length without truncation @smoke", async ({
+      todoClient,
+      cleanup,
+    }) => {
       // ARRANGE
       const payload = TodoFactory.edgeCasePayload.veryLongTitle()
 
@@ -291,7 +302,7 @@ test.describe("Todos API", () => {
       })
     })
 
-    test("accepts special characters in title @smoke", async ({
+    test("should store and return special characters exactly as sent @smoke", async ({
       todoClient,
       cleanup,
     }) => {
@@ -319,7 +330,7 @@ test.describe("Todos API", () => {
       })
     })
 
-    test("accepts unicode characters in title @smoke", async ({
+    test("should store and return unicode characters exactly as sent @smoke", async ({
       todoClient,
       cleanup,
     }) => {
@@ -348,7 +359,7 @@ test.describe("Todos API", () => {
       })
     })
 
-    test("creates todo with completed status set to true @smoke", async ({
+    test("should accept and persist completed: true on creation @smoke", async ({
       todoClient,
       cleanup,
     }) => {
@@ -386,7 +397,7 @@ test.describe("Todos API", () => {
   test.describe("GET /api/todos", () => {
     // Happy Path
     // Assertions: 200, array response, only user's todos
-    test("returns list of all user todos @smoke", async ({
+    test("should return only the authenticated user's todos @smoke", async ({
       todoClient,
       cleanup,
     }) => {
@@ -464,7 +475,7 @@ test.describe("Todos API", () => {
   test.describe("PUT /api/todos/:id", () => {
     // Happy Path
     // Flow: Create Todo -> Update -> Validate updated fields
-    test("updates todo and reflect changes in full list @smoke", async ({
+    test("should persist updated fields in both response and full list @smoke", async ({
       todoClient,
       cleanup,
     }) => {
@@ -547,7 +558,9 @@ test.describe("Todos API", () => {
   test.describe("DELETE /api/todos/:id", () => {
     // Happy Path
     // Flow: Create Todo -> Delete -> Verify deletion (HTTP 204)
-    test("removes specific todo of a user @smoke", async ({ todoClient }) => {
+    test("should delete the todo and return 404 on subsequent fetch @smoke", async ({
+      todoClient,
+    }) => {
       // ARRANGE: Setup the data
       const createdTodo = await test.step("Setup: Create todo", async () => {
         const payload = TodoFactory.createTodoPayload()
