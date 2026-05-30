@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-NUYAU",
+    "description": "Desc-NUYAU",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1a8706b6bd54a4831ae910",
+    "_id": "6a1a8707b6bd54a4831ae913",
+    "createdAt": "2026-05-30T06:43:19.743Z",
+    "updatedAt": "2026-05-30T06:43:19.743Z",
+    "__v": 0
+  }
+}

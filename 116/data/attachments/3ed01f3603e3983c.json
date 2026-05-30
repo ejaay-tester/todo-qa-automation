@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-TZDMW",
+    "description": "Desc-TZDMW",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1a8721b6bd54a4831ae967",
+    "_id": "6a1a8722b6bd54a4831ae96a",
+    "createdAt": "2026-05-30T06:43:46.534Z",
+    "updatedAt": "2026-05-30T06:43:46.534Z",
+    "__v": 0
+  }
+}

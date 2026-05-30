@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a1a86e3b6bd54a4831ae896",
+      "title": "Todo-USVIN",
+      "description": "Desc-USVIN",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a1a86e1b6bd54a4831ae88f",
+      "createdAt": "2026-05-30T06:42:43.407Z",
+      "updatedAt": "2026-05-30T06:42:43.407Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a1a86e3b6bd54a4831ae894",
+      "title": "Todo-ICPMG",
+      "description": "Desc-ICPMG",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a1a86e1b6bd54a4831ae88f",
+      "createdAt": "2026-05-30T06:42:43.393Z",
+      "updatedAt": "2026-05-30T06:42:43.393Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a1a86e3b6bd54a4831ae892",
+      "title": "Todo-QENKT",
+      "description": "Desc-QENKT",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a1a86e1b6bd54a4831ae88f",
+      "createdAt": "2026-05-30T06:42:43.317Z",
+      "updatedAt": "2026-05-30T06:42:43.317Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

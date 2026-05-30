@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-CW85O",
+    "description": "Desc-CW85O",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1a8709b6bd54a4831ae919",
+    "_id": "6a1a870bb6bd54a4831ae91c",
+    "createdAt": "2026-05-30T06:43:23.537Z",
+    "updatedAt": "2026-05-30T06:43:23.537Z",
+    "__v": 0
+  }
+}

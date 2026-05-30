@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-Z08DL",
+    "description": "Desc-Z08DL",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1a871eb6bd54a4831ae955",
+    "_id": "6a1a871fb6bd54a4831ae95c",
+    "createdAt": "2026-05-30T06:43:43.892Z",
+    "updatedAt": "2026-05-30T06:43:43.892Z",
+    "__v": 0
+  }
+}

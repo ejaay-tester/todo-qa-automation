@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-FCGDU",
+    "description": "Desc-FCGDU",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1a86ecb6bd54a4831ae8b6",
+    "_id": "6a1a86edb6bd54a4831ae8b9",
+    "createdAt": "2026-05-30T06:42:53.551Z",
+    "updatedAt": "2026-05-30T06:42:53.551Z",
+    "__v": 0
+  }
+}

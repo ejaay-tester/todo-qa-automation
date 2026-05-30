@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-XGR28",
+    "description": "Desc-XGR28",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1a86cdb6bd54a4831ae853",
+    "_id": "6a1a86cfb6bd54a4831ae856",
+    "createdAt": "2026-05-30T06:42:23.122Z",
+    "updatedAt": "2026-05-30T06:42:23.122Z",
+    "__v": 0
+  }
+}

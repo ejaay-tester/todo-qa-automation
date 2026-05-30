@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-FXSG0",
+    "description": "Desc-FXSG0",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1a8700b6bd54a4831ae8f2",
+    "_id": "6a1a8702b6bd54a4831ae8f5",
+    "createdAt": "2026-05-30T06:43:14.227Z",
+    "updatedAt": "2026-05-30T06:43:14.227Z",
+    "__v": 0
+  }
+}

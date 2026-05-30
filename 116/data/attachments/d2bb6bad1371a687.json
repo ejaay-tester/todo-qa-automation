@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-X44V7",
+    "description": "Desc-X44V7",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1a871eb6bd54a4831ae955",
+    "_id": "6a1a871fb6bd54a4831ae95a",
+    "createdAt": "2026-05-30T06:43:43.869Z",
+    "updatedAt": "2026-05-30T06:43:43.869Z",
+    "__v": 0
+  }
+}

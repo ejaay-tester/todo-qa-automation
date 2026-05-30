@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-SMD5X",
+    "description": "Desc-SMD5X",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1a86e8b6bd54a4831ae8ad",
+    "_id": "6a1a86e9b6bd54a4831ae8b0",
+    "createdAt": "2026-05-30T06:42:49.820Z",
+    "updatedAt": "2026-05-30T06:42:49.820Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-WSPV2",
+    "description": "Desc-WSPV2",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1a8700b6bd54a4831ae8f2",
+    "_id": "6a1a8702b6bd54a4831ae8f9",
+    "createdAt": "2026-05-30T06:43:14.276Z",
+    "updatedAt": "2026-05-30T06:43:14.276Z",
+    "__v": 0
+  }
+}
