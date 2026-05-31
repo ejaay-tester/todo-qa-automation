@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-MKD3C",
+    "description": "Desc-MKD3C",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1c41ebcb40d02b55d7e8f0",
+    "_id": "6a1c41eccb40d02b55d7e8f5",
+    "createdAt": "2026-05-31T14:13:00.539Z",
+    "updatedAt": "2026-05-31T14:13:00.539Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-W2PI1",
+    "description": "Desc-W2PI1",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1c41e5cb40d02b55d7e8df",
+    "_id": "6a1c41e6cb40d02b55d7e8e2",
+    "createdAt": "2026-05-31T14:12:54.698Z",
+    "updatedAt": "2026-05-31T14:12:54.698Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-CGGEE",
+    "description": "Desc-CGGEE",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1c41fccb40d02b55d7e93d",
+    "_id": "6a1c41fdcb40d02b55d7e940",
+    "createdAt": "2026-05-31T14:13:17.630Z",
+    "updatedAt": "2026-05-31T14:13:17.630Z",
+    "__v": 0
+  }
+}
