@@ -58,17 +58,16 @@ export const TodoFactory = {
         title: "Missing completed title",
         description: "Missing completed description",
       }) as unknown as TodoPayload,
-
-    completedTrue: (): TodoPayload =>
-      ({
-        title: "Completed true title",
-        description: "Completed true description",
-        completed: true,
-      }) as TodoPayload,
   },
 
   // Edge-cases payloads
   edgeCasePayload: {
+    completedTrue: (): TodoPayload => ({
+      title: "Completed true title",
+      description: "Completed true descripition",
+      completed: true,
+    }),
+
     veryLongTitle: (): TodoPayload => ({
       title: "A".repeat(3000),
       description: "Very long title description",
