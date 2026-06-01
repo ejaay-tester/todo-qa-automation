@@ -364,7 +364,7 @@ test.describe("Todos API", () => {
       cleanup,
     }) => {
       // ARRANGE
-      const payload = TodoFactory.invalidPayload.completedTrue()
+      const payload = TodoFactory.edgeCasePayload.completedTrue()
 
       // ACT
       const todo =
