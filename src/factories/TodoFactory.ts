@@ -31,12 +31,11 @@ export const TodoFactory = {
         completed: false,
       }) as unknown as TodoPayload,
 
-    emptyTitle: (): TodoPayload =>
-      ({
-        title: "",
-        description: "Empty title description",
-        completed: false,
-      }) as TodoPayload,
+    emptyTitle: (): TodoPayload => ({
+      title: "",
+      description: "Empty title description",
+      completed: false,
+    }),
 
     nullTitle: (): TodoPayload =>
       ({
