@@ -29,7 +29,7 @@ export const TodoFactory = {
       ({
         description: "Missing title description",
         completed: false,
-      }) as TodoPayload,
+      }) as unknown as TodoPayload,
 
     emptyTitle: (): TodoPayload =>
       ({
