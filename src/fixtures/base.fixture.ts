@@ -40,7 +40,7 @@ const test = authTest.extend<TodoFixtures>({
     if (ids.length === 0) return
 
     const results = await Promise.allSettled(
-      ids.map((id) => todoClient.delete(id)),
+      ids.map(async (id) => todoClient.delete(id, false)),
     )
 
     // Track which deletions failed - warn only, never throw
