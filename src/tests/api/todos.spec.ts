@@ -560,11 +560,18 @@ test.describe("Todos API", () => {
     // Flow: Create Todo -> Delete -> Verify deletion (HTTP 204)
     test("should delete the todo and return 404 on subsequent fetch @smoke", async ({
       todoClient,
+      cleanup,
     }) => {
       // ARRANGE: Setup the data
       const createdTodo = await test.step("Setup: Create todo", async () => {
         const payload = TodoFactory.createTodoPayload()
-        return (await todoClient.create(payload)) as Todo
+
+        const created = await todoClient.create(payload)
+        const todo = created as Todo
+
+        cleanup.push(todo._id) // Safety net, registered todo_id to the cleanup fixture before delete attempt
+
+        return todo
       })
 
       // ACT: Delete specific todo
