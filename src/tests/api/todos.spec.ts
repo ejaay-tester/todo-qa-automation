@@ -523,11 +523,14 @@ test.describe("Todos API", () => {
           return updatedTodo
         })
 
+      // ACT: Fetch gets its own Act step
+      const allTodos =
+        await test.step("Act: Fetch full todo list to verify persistence", async () => {
+          return await todoClient.getAll()
+        })
+
       //ASSERT: Verify the updated todo list
       await test.step("Assert: Verify update in response and full list", async () => {
-        // Get data and log first - always ensures you see the state before it crash
-        const allTodos = await todoClient.getAll()
-
         // Extra Safety: Check that the ID returned in the update response
         // matches the ID that was originally created
         expect(
