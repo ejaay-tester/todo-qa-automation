@@ -401,34 +401,49 @@ test.describe("Todos API", () => {
       todoClient,
       cleanup,
     }) => {
-      // Arrange: Create multiple todos and capture them in an array[]
+      // ARRANGE
       const createdTodos =
-        await test.step("Setup: Seed 3 todos for user", async () => {
+        await test.step("Arrange: Seed 3 todos for user", async () => {
           // Generate an array of 3 payload objects
           const payloads = Array.from({ length: 3 }, () =>
             TodoFactory.createTodoPayload(),
           )
 
-          // Map those payloads to API creation promises
-          const todos = payloads.map(
-            (payload) => todoClient.create(payload) as Promise<Todo>,
+          // Push IDs inside the map so cleanup has them regardless of which creation fails
+          const results = await Promise.allSettled(
+            payloads.map(async (payload) => {
+              const created = (await todoClient.create(payload)) as Todo
+              cleanup.push(created._id) // ID captured immediately
+              return created // return the todo so results has the right type
+            }),
           )
 
-          // Wait for all creations to finish
-          const results = await Promise.all(todos)
+          // Guard - fail loudly if any seeding failed rather than testing nothing
+          const failed = results.filter(
+            (result) => result.status === "rejected",
+          )
+          if (failed.length > 0) {
+            throw new Error(
+              `[SETUP FAILURE] ${failed.length}/${payloads.length} todos failed to seed. Aborting test.`,
+            )
+          }
 
-          // Track IDs for cleanup
-          results.forEach((todo) => cleanup.push(todo._id))
-
+          // Extract fulfilled Todo values - this is what the assert step needs
           return results
+            .filter(
+              (result): result is PromiseFulfilledResult<Todo> =>
+                result.status === "fulfilled",
+            )
+            .map((result) => result.value)
         })
-      // Act: Fetch todos of the user
+
+      // ACT
       const fetchedAllTodos =
         await test.step("Act: Fetch todos of the user", async () => {
           return await todoClient.getAll()
         })
 
-      // Assert: Verify integrity
+      // ASSERT
       await test.step("Assert: Verify data integrity", async () => {
         // Place logs at the start of assertion
 
