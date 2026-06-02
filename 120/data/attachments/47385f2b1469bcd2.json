@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-PQ2OT",
+    "description": "Desc-PQ2OT",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1ea63304350482fc7f849e",
+    "_id": "6a1ea63404350482fc7f84a1",
+    "createdAt": "2026-06-02T09:45:24.481Z",
+    "updatedAt": "2026-06-02T09:45:24.481Z",
+    "__v": 0
+  }
+}

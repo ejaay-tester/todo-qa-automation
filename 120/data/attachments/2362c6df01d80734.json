@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-RM9WU",
+    "description": "Desc-RM9WU",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1ea60c04350482fc7f8412",
+    "_id": "6a1ea60e04350482fc7f8415",
+    "createdAt": "2026-06-02T09:44:46.261Z",
+    "updatedAt": "2026-06-02T09:44:46.261Z",
+    "__v": 0
+  }
+}

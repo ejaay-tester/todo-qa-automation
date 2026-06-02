@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-BHK33",
+    "description": "Desc-BHK33",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1ea64604350482fc7f84da",
+    "_id": "6a1ea64804350482fc7f84dd",
+    "createdAt": "2026-06-02T09:45:44.356Z",
+    "updatedAt": "2026-06-02T09:45:44.356Z",
+    "__v": 0
+  }
+}

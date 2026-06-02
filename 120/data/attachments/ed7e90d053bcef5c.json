@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-PIILS",
+    "description": "Desc-PIILS",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1ea61304350482fc7f8430",
+    "_id": "6a1ea61404350482fc7f8433",
+    "createdAt": "2026-06-02T09:44:52.561Z",
+    "updatedAt": "2026-06-02T09:44:52.561Z",
+    "__v": 0
+  }
+}

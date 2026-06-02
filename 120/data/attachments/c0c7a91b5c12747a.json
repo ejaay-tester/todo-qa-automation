@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-YON3P",
+    "description": "Desc-YON3P",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1ea61004350482fc7f8424",
+    "_id": "6a1ea61104350482fc7f8427",
+    "createdAt": "2026-06-02T09:44:49.681Z",
+    "updatedAt": "2026-06-02T09:44:49.681Z",
+    "__v": 0
+  }
+}
