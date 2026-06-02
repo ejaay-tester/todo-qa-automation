@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-BMW2D",
+    "description": "Desc-BMW2D",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1e8ff2057833b1f3128847",
+    "_id": "6a1e8ff3057833b1f312884a",
+    "createdAt": "2026-06-02T08:10:27.606Z",
+    "updatedAt": "2026-06-02T08:10:27.606Z",
+    "__v": 0
+  }
+}

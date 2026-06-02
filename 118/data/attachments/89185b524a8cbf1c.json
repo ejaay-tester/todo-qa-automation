@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a1e902a057833b1f31288f8",
+      "title": "Todo-VPFE2",
+      "description": "Desc-VPFE2",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a1e9028057833b1f31288f1",
+      "createdAt": "2026-06-02T08:11:22.063Z",
+      "updatedAt": "2026-06-02T08:11:22.063Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a1e9029057833b1f31288f6",
+      "title": "Todo-29DT3",
+      "description": "Desc-29DT3",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a1e9028057833b1f31288f1",
+      "createdAt": "2026-06-02T08:11:21.879Z",
+      "updatedAt": "2026-06-02T08:11:21.879Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a1e9029057833b1f31288f4",
+      "title": "Todo-TI674",
+      "description": "Desc-TI674",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a1e9028057833b1f31288f1",
+      "createdAt": "2026-06-02T08:11:21.814Z",
+      "updatedAt": "2026-06-02T08:11:21.814Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

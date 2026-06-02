@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-LYGYR",
+    "description": "Desc-LYGYR",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1e900b057833b1f312888d",
+    "_id": "6a1e900c057833b1f3128894",
+    "createdAt": "2026-06-02T08:10:52.361Z",
+    "updatedAt": "2026-06-02T08:10:52.361Z",
+    "__v": 0
+  }
+}
