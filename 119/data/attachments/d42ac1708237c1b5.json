@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-JQIWW",
+    "description": "Desc-JQIWW",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1e919b057833b1f312897f",
+    "_id": "6a1e919d057833b1f3128984",
+    "createdAt": "2026-06-02T08:17:33.019Z",
+    "updatedAt": "2026-06-02T08:17:33.019Z",
+    "__v": 0
+  }
+}

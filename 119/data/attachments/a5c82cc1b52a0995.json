@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-OKXA5",
+    "description": "Desc-OKXA5",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1e9187057833b1f3128921",
+    "_id": "6a1e9189057833b1f3128926",
+    "createdAt": "2026-06-02T08:17:13.187Z",
+    "updatedAt": "2026-06-02T08:17:13.187Z",
+    "__v": 0
+  }
+}

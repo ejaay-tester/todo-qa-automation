@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-4VUAS",
+    "description": "Desc-4VUAS",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1e918c057833b1f312893f",
+    "_id": "6a1e918d057833b1f3128942",
+    "createdAt": "2026-06-02T08:17:17.958Z",
+    "updatedAt": "2026-06-02T08:17:17.958Z",
+    "__v": 0
+  }
+}

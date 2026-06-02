@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-MHQ7H",
+    "description": "Desc-MHQ7H",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1e919b057833b1f312897f",
+    "_id": "6a1e919c057833b1f3128982",
+    "createdAt": "2026-06-02T08:17:32.979Z",
+    "updatedAt": "2026-06-02T08:17:32.979Z",
+    "__v": 0
+  }
+}
