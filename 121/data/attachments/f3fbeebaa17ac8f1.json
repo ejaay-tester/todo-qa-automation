@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-9KI4N",
+    "description": "Desc-9KI4N",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1fe4af798a7b9381ecb840",
+    "_id": "6a1fe4b0798a7b9381ecb843",
+    "createdAt": "2026-06-03T08:24:16.907Z",
+    "updatedAt": "2026-06-03T08:24:16.907Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-9PQJI",
+    "description": "Desc-9PQJI",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1fe472798a7b9381ecb75c",
+    "_id": "6a1fe474798a7b9381ecb761",
+    "createdAt": "2026-06-03T08:23:16.123Z",
+    "updatedAt": "2026-06-03T08:23:16.123Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-SOKJB",
+    "description": "Desc-SOKJB",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1fe48f798a7b9381ecb7bf",
+    "_id": "6a1fe490798a7b9381ecb7c6",
+    "createdAt": "2026-06-03T08:23:44.444Z",
+    "updatedAt": "2026-06-03T08:23:44.444Z",
+    "__v": 0
+  }
+}

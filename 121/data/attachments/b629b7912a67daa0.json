@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-M6406",
+    "description": "Desc-M6406",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1fe45e798a7b9381ecb720",
+    "_id": "6a1fe460798a7b9381ecb723",
+    "createdAt": "2026-06-03T08:22:56.692Z",
+    "updatedAt": "2026-06-03T08:22:56.692Z",
+    "__v": 0
+  }
+}

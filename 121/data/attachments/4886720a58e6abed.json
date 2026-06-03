@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-6IMPZ",
+    "description": "Desc-6IMPZ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1fe476798a7b9381ecb76e",
+    "_id": "6a1fe477798a7b9381ecb771",
+    "createdAt": "2026-06-03T08:23:19.579Z",
+    "updatedAt": "2026-06-03T08:23:19.579Z",
+    "__v": 0
+  }
+}
