@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-ABG3K",
+    "description": "Desc-ABG3K",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1feded46c88b7d9dcaa47f",
+    "_id": "6a1fedef46c88b7d9dcaa482",
+    "createdAt": "2026-06-03T09:03:43.533Z",
+    "updatedAt": "2026-06-03T09:03:43.533Z",
+    "__v": 0
+  }
+}

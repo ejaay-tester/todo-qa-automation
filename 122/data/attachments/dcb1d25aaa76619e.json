@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-B28RM",
+    "description": "Desc-B28RM",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1fee2b46c88b7d9dcaa547",
+    "_id": "6a1fee2d46c88b7d9dcaa54a",
+    "createdAt": "2026-06-03T09:04:45.075Z",
+    "updatedAt": "2026-06-03T09:04:45.075Z",
+    "__v": 0
+  }
+}

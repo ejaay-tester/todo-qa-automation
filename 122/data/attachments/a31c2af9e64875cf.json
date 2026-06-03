@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-DGKQP",
+    "description": "Desc-DGKQP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1fee0d46c88b7d9dcaa4e3",
+    "_id": "6a1fee0f46c88b7d9dcaa4e8",
+    "createdAt": "2026-06-03T09:04:15.010Z",
+    "updatedAt": "2026-06-03T09:04:15.010Z",
+    "__v": 0
+  }
+}

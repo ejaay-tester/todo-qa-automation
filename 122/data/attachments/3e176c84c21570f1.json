@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a1fedef46c88b7d9dcaa486",
+      "title": "Todo-OH0MQ",
+      "description": "Desc-OH0MQ",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a1feded46c88b7d9dcaa47f",
+      "createdAt": "2026-06-03T09:03:43.766Z",
+      "updatedAt": "2026-06-03T09:03:43.766Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a1fedef46c88b7d9dcaa484",
+      "title": "Todo-70S2G",
+      "description": "Desc-70S2G",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a1feded46c88b7d9dcaa47f",
+      "createdAt": "2026-06-03T09:03:43.622Z",
+      "updatedAt": "2026-06-03T09:03:43.622Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a1fedef46c88b7d9dcaa482",
+      "title": "Todo-ABG3K",
+      "description": "Desc-ABG3K",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a1feded46c88b7d9dcaa47f",
+      "createdAt": "2026-06-03T09:03:43.533Z",
+      "updatedAt": "2026-06-03T09:03:43.533Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

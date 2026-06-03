@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-70S2G",
+    "description": "Desc-70S2G",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1feded46c88b7d9dcaa47f",
+    "_id": "6a1fedef46c88b7d9dcaa484",
+    "createdAt": "2026-06-03T09:03:43.622Z",
+    "updatedAt": "2026-06-03T09:03:43.622Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-BNTCD",
+    "description": "Desc-BNTCD",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a1fee2e46c88b7d9dcaa559",
+    "_id": "6a1fee2f46c88b7d9dcaa55c",
+    "createdAt": "2026-06-03T09:04:47.776Z",
+    "updatedAt": "2026-06-03T09:04:47.776Z",
+    "__v": 0
+  }
+}
