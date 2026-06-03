@@ -29,14 +29,13 @@ export const TodoFactory = {
       ({
         description: "Missing title description",
         completed: false,
-      }) as TodoPayload,
+      }) as unknown as TodoPayload,
 
-    emptyTitle: (): TodoPayload =>
-      ({
-        title: "",
-        description: "Empty title description",
-        completed: false,
-      }) as TodoPayload,
+    emptyTitle: (): TodoPayload => ({
+      title: "",
+      description: "Empty title description",
+      completed: false,
+    }),
 
     nullTitle: (): TodoPayload =>
       ({
@@ -58,17 +57,16 @@ export const TodoFactory = {
         title: "Missing completed title",
         description: "Missing completed description",
       }) as unknown as TodoPayload,
-
-    completedTrue: (): TodoPayload =>
-      ({
-        title: "Completed true title",
-        description: "Completed true description",
-        completed: true,
-      }) as TodoPayload,
   },
 
   // Edge-cases payloads
   edgeCasePayload: {
+    completedTrue: (): TodoPayload => ({
+      title: "Completed true title",
+      description: "Completed true descripition",
+      completed: true,
+    }),
+
     veryLongTitle: (): TodoPayload => ({
       title: "A".repeat(3000),
       description: "Very long title description",

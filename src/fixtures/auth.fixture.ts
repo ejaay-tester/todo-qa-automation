@@ -1,75 +1,93 @@
 // Import Playwright's base test engine
 //  and the request utility for API calls
-import { test as base, request, APIRequestContext } from "@playwright/test"
+import {
+  test as base,
+  request as apiRequest,
+  APIRequestContext,
+} from "@playwright/test"
+import { generateUser } from "../test-data/users"
+import { EXPIRED_JWT } from "../test-data/constants"
 
-// Define the type/shape of auth fixture
-// so TS knows what authenticatedRequest is
-type AuthFixture = {
+// ========== TYPES ==========
+/**
+ * Test-scoped fixtures - created and disposed per test.
+ * registeredUser: fresh user account credentials for each test.
+ * authenticatedRequest: HTTP session with a valid bearer token.
+ */
+type AuthTestFixtures = {
   registeredUser: {
     id: string
     email: string
     password: string
   }
-
   authenticatedRequest: APIRequestContext
 }
 
-// Extend the base test to include the custom 'authenticatedRequest' fixture
-const test = base.extend<AuthFixture>({
-  /**
-   * FIXTURE 1: USER REGISTRATION
-   * - Handles user registration
-   * - Creates a fresh user every time
-   * - DOES NOT return token
-   */
-  registeredUser: async ({ request }, use) => {
-    const userData = {
-      email: `testuser_${Date.now()}@yopmail.com`,
-      password: "TestP@ssword123",
-      name: `testuser_${Date.now()}`,
-    }
+/**
+ * Worker-scoped fixtures - created once per worker, shared across all tests.
+ * Both are stateless (no dynamic token or user data), so sharing is safe.
+ * unauthenticatedRequest: HTTP session with no Authorization header.
+ * expiredTokenRequest: HTTP session with a hardcoded invalid JTW.
+ */
+type AuthWorkerFixtures = {
+  unauthenticatedRequest: APIRequestContext
+  expiredTokenRequest: APIRequestContext
+}
 
-    // Call the function to get the actual user object
-    // const userData = generateUser()
+// ========== SHARED HELPER ==========
+/**
+ * Centralized response guard.
+ * Throws a descriptive error for any non-ok response
+ * so fixtures fail-fast instead of crashing later
+ * with confusing stack traces.
+ */
+async function assertResponse(
+  response: Awaited<ReturnType<APIRequestContext["post"]>>,
+  endpoint: string,
+): Promise<void> {
+  if (response.ok()) return
+  const status = response.status()
+  const body = await response.text()
+  const excerpt = body.substring(0, 500)
+  const errorMessage = `❌ API Error: ${endpoint}\nStatus: ${status}\nResponse: ${excerpt}`
+
+  if (status >= 500) throw new Error(`[SERVER ERROR 5xx] ${errorMessage}`)
+  if (status === 429) throw new Error(`[RATE LIMITED 429] ${errorMessage}`)
+  throw new Error(`[CLIENT ERROR ${status}] ${errorMessage}`) // catch-all - no silent fall-through
+}
+
+// ========== FIXTURES ==========
+// Extend the base test to include the custom 'authenticatedRequest' fixture
+const test = base.extend<AuthTestFixtures, AuthWorkerFixtures>({
+  // ── Fixture 1: Registered user ──────────────────────────────────────────────
+  /**
+   * Handles user registration
+   * Creates a fresh user every time
+   * DOES NOT return token
+   */
+  registeredUser: async ({ request: apiClient }, use) => {
+    const userData = generateUser()
 
     console.log("Registering user...")
 
     let response
     try {
-      response = await request.post("/api/auth/register", {
+      response = await apiClient.post("/api/auth/register", {
         data: userData,
       })
     } catch (error) {
       throw new Error(
-        `[Connection Failure] - API is unreachable. Check if the server is running. \n${error}`,
+        `[CONNECTION FAILURE] POST /api/auth/register - API is unreachable, check if the server is running. \n${error}`,
       )
     }
 
-    if (!response.ok()) {
-      const status = response.status()
-      const errorBody = await response.text()
-      const errorMessage = `❌ API Error: POST /api/auth/register
-      Status: ${status}
-      Response: ${errorBody.substring(0, 500)}`.trim()
-
-      if (status >= 500) {
-        throw new Error(
-          `[SERVER ERROR] (5xx): The API is likely down or crashing.\n${errorMessage}`,
-        )
-      } else if (status === 429) {
-        throw new Error(
-          `[ERROR] (4xx): Too many request. Try again in a few minutes.\n${errorMessage}`,
-        )
-      }
-    }
-
-    console.log(`✅ Success user registration (${response.status()})`)
+    await assertResponse(response, "POST /api/auth/register")
 
     // Get the data once
     const body = await response.json()
 
     // Log the actual data
-    console.log(`Registered user: ${body.data.user.email}`)
+    console.log(`✅ Registered user: ${body.data.user.email}`)
 
     const id = body.data.user.id
     const email = userData.email
@@ -82,17 +100,23 @@ const test = base.extend<AuthFixture>({
       email,
       password,
     })
+
+    // Teardown - runs after the test finishes (pass or fail)
+    console.log(`🧹 Deleting test user: ${email}`)
+    await apiClient
+      .delete(`/api/users/${id}`)
+      .catch((err) =>
+        console.warn(`⚠️ Could not delete test user ${email}: ${err}`),
+      )
   },
 
-  // ==========  ==========
-
+  // ── Fixture 2: Authenticated request ──────────────────────────────────────────────
   /**
-   * FIXTURE 2: AUTHENTICATED REQUEST
-   * - Logs in using registeredUser
-   * - Injects token into request context
+   * Logs in using registeredUser
+   * Injects token into request context
    */
   authenticatedRequest: async ({ registeredUser, request: apiClient }, use) => {
-    console.log("User logging in...")
+    console.log("Logging in...")
 
     let response
     try {
@@ -104,42 +128,25 @@ const test = base.extend<AuthFixture>({
       })
     } catch (error) {
       throw new Error(
-        `[Connection Failure] - Login failed because server is down. \n${error}`,
+        `[CONNECTION FAILURE] POST /api/auth/login - API is unreachable, check if the server is running. \n${error}`,
       )
     }
 
-    if (!response.ok()) {
-      const status = response.status()
-      const errorBody = await response.text()
-      const errorMessage = `❌ API Error: POST /api/auth/login
-      Status: ${status}
-      Response: ${errorBody.substring(0, 500)}`.trim()
-
-      if (status >= 500) {
-        throw new Error(
-          `[SERVER ERROR] (5xx): The API is likely down or crashing.\n${errorMessage}`,
-        )
-      } else if (status === 429) {
-        throw new Error(
-          `[ERROR] (4xx): Too many request. Try again in a few minutes.\n${errorMessage}`,
-        )
-      }
-    }
-    console.log(`✅ Successful user login (${response.status()})`)
+    await assertResponse(response, "POST /api/auth/login")
 
     const body = await response.json()
+    const token: string | undefined = body.data?.token
 
-    console.log(`Logged-in user: ${body.data.user.email}`)
-
-    const token = body.data.token
-
+    // Token check moved before success log - a missing token is a failure
     if (!token) {
       throw new Error(
         `[AUTHENTICATION ERROR] (${response.status()}): Session expired or token missing.`,
       )
     }
 
-    const authenticatedRequestContext = await request.newContext({
+    console.log(`✅ Logged-in user: ${body.data.user.email}`)
+
+    const authenticatedRequestContext = await apiRequest.newContext({
       extraHTTPHeaders: {
         Authorization: `Bearer ${token}`,
       },
@@ -152,8 +159,45 @@ const test = base.extend<AuthFixture>({
     // After the test finishes (Pass or Fail), close the context to free up memory
     await authenticatedRequestContext.dispose()
   },
+
+  // ── Fixture 3: Unauthenticated request ──────────────────────────────────────────────
+  /**
+   * No token - used to assert 401 on protected endpoints.
+   * Scoped to worker: stateless, safe to reuse across tests.
+   */
+  unauthenticatedRequest: [
+    async ({}, use) => {
+      console.log("Setting up unauthenticated request context...")
+      const unauthenticatedRequestContext = await apiRequest.newContext({
+        // Intentionally empty - no Authorization headers
+        extraHTTPHeaders: {},
+      })
+
+      await use(unauthenticatedRequestContext)
+      await unauthenticatedRequestContext.dispose()
+    },
+    { scope: "worker" },
+  ],
+
+  // ── Fixture 4: Expired token request ──────────────────────────────────────────────
+  /**
+   * Injects a hardcoded invalid/expired JWT.
+   * Used for testing 401 token validation scenarios
+   */
+  expiredTokenRequest: [
+    async ({}, use) => {
+      console.log("Setting up expired/invalid token request context...")
+      const expiredTokenRequestContext = await apiRequest.newContext({
+        extraHTTPHeaders: { Authorization: `Bearer ${EXPIRED_JWT}` },
+      })
+
+      await use(expiredTokenRequestContext)
+      await expiredTokenRequestContext.dispose()
+    },
+    { scope: "worker" },
+  ],
 })
 
-export const authTest = test
+export { test }
 // Re-export 'expect' so we can import everything from this one file in the test
 export { expect } from "@playwright/test"

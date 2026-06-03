@@ -11,7 +11,7 @@ test.describe("Todos API", () => {
   test.describe("POST /api/todos", () => {
     // Happy Path
     // Assertions: 201, response contains _id, matches payload
-    test("creates todo with valid data @smoke", async ({
+    test("should create a todo and return all required fields @smoke", async ({
       todoClient,
       cleanup,
     }) => {
@@ -61,7 +61,9 @@ test.describe("Todos API", () => {
 
     // Negative - Validation
     // Expect 400, Validation error message
-    test("fails when title is missing @smoke", async ({ todoClient }) => {
+    test("should return 400 when title is missing @smoke", async ({
+      todoClient,
+    }) => {
       const response =
         await test.step("Act: Create todo with missing title", async () => {
           return todoClient.create(
@@ -88,7 +90,9 @@ test.describe("Todos API", () => {
       })
     })
 
-    test("fails when title is empty string @smoke", async ({ todoClient }) => {
+    test("should return 400 when title is an empty string @smoke", async ({
+      todoClient,
+    }) => {
       const response =
         await test.step("Act: Create todo with empty title", async () => {
           return todoClient.create(
@@ -115,7 +119,9 @@ test.describe("Todos API", () => {
       })
     })
 
-    test("fails when title is null @smoke", async ({ todoClient }) => {
+    test("should return 400 when title is null @smoke", async ({
+      todoClient,
+    }) => {
       const response =
         await test.step("Act: Create todo with null title ", async () => {
           return todoClient.create(
@@ -140,7 +146,7 @@ test.describe("Todos API", () => {
       })
     })
 
-    test("fails when whitespace-only title is sent @smoke", async ({
+    test("should return 400 when title contains only whitespace @smoke", async ({
       todoClient,
     }) => {
       const response =
@@ -167,7 +173,9 @@ test.describe("Todos API", () => {
       })
     })
 
-    test("fails when payload is empty @smoke", async ({ todoClient }) => {
+    test("should return 400 when payload is empty @smoke", async ({
+      todoClient,
+    }) => {
       const response =
         await test.step("Act: Create todo without payload", async () => {
           return todoClient.create(
@@ -196,12 +204,74 @@ test.describe("Todos API", () => {
 
     // Negative - Auth Cases
     // Expect: 401 Unauthorized
-    // test("fails without auth token", async () => {})
-    // test("fails with invalid/expired token", async () => {})
+    test("should return 401 when Authorization header is missing @smoke", async ({
+      unauthenticatedRequest,
+    }) => {
+      const payload = TodoFactory.createTodoPayload()
+
+      const response =
+        await test.step("Act: Create todo without a token", async () => {
+          return unauthenticatedRequest.post("/api/todos", {
+            data: payload as TodoPayload,
+          })
+        })
+
+      await test.step("Assert: Verify 401 status and error message", async () => {
+        const body = await response.json()
+
+        expect(
+          response.status(),
+          "[REQUIREMENT] No authorization token must return 401 HTTP Status",
+        ).toBe(401)
+
+        expect(
+          body.message,
+          "[REQUIREMENT] Response must contain a validation error message",
+        ).toBeDefined()
+
+        expect(body.success, "[REQUIREMENT] Success flag must be false").toBe(
+          false,
+        )
+      })
+    })
+
+    test("should return 401 when token is invalid or expired @smoke", async ({
+      expiredTokenRequest,
+    }) => {
+      const payload = TodoFactory.createTodoPayload()
+
+      const response =
+        await test.step("Act: Create todo with invalid/expired token", async () => {
+          return expiredTokenRequest.post("/api/todos", {
+            data: payload as TodoPayload,
+          })
+        })
+
+      await test.step("Assert: Verify 401 status and error message", async () => {
+        const body = await response.json()
+
+        expect(
+          response.status(),
+          "[REQUIREMENT] Invalid/expired token must return 401 HTTP Status",
+        ).toBe(401)
+
+        expect(
+          body.message,
+          "[REQUIREMENT] Response must contain a validation error message",
+        ).toBeDefined()
+
+        expect(body.success, "[REQUIREMENT] Success flag must be false").toBe(
+          false,
+        )
+      })
+    })
 
     // Edge Cases
     // Large input, special characters, boolean logic
-    test("accepts very long title @smoke", async ({ todoClient, cleanup }) => {
+    test("should persist a title at maximum length without truncation @smoke", async ({
+      todoClient,
+      cleanup,
+    }) => {
       // ARRANGE
       const payload = TodoFactory.edgeCasePayload.veryLongTitle()
 
@@ -232,7 +302,7 @@ test.describe("Todos API", () => {
       })
     })
 
-    test("accepts special characters in title @smoke", async ({
+    test("should store and return special characters exactly as sent @smoke", async ({
       todoClient,
       cleanup,
     }) => {
@@ -260,7 +330,7 @@ test.describe("Todos API", () => {
       })
     })
 
-    test("accepts unicode characters in title @smoke", async ({
+    test("should store and return unicode characters exactly as sent @smoke", async ({
       todoClient,
       cleanup,
     }) => {
@@ -289,12 +359,12 @@ test.describe("Todos API", () => {
       })
     })
 
-    test("creates todo with completed status set to true @smoke", async ({
+    test("should accept and persist completed: true on creation @smoke", async ({
       todoClient,
       cleanup,
     }) => {
       // ARRANGE
-      const payload = TodoFactory.invalidPayload.completedTrue()
+      const payload = TodoFactory.edgeCasePayload.completedTrue()
 
       // ACT
       const todo =
@@ -327,38 +397,53 @@ test.describe("Todos API", () => {
   test.describe("GET /api/todos", () => {
     // Happy Path
     // Assertions: 200, array response, only user's todos
-    test("returns list of all user todos @smoke", async ({
+    test("should return only the authenticated user's todos @smoke", async ({
       todoClient,
       cleanup,
     }) => {
-      // Arrange: Create multiple todos and capture them in an array[]
+      // ARRANGE
       const createdTodos =
-        await test.step("Setup: Seed 3 todos for user", async () => {
+        await test.step("Arrange: Seed 3 todos for user", async () => {
           // Generate an array of 3 payload objects
           const payloads = Array.from({ length: 3 }, () =>
             TodoFactory.createTodoPayload(),
           )
 
-          // Map those payloads to API creation promises
-          const todos = payloads.map(
-            (payload) => todoClient.create(payload) as Promise<Todo>,
+          // Push IDs inside the map so cleanup has them regardless of which creation fails
+          const results = await Promise.allSettled(
+            payloads.map(async (payload) => {
+              const created = (await todoClient.create(payload)) as Todo
+              cleanup.push(created._id) // ID captured immediately
+              return created // return the todo so results has the right type
+            }),
           )
 
-          // Wait for all creations to finish
-          const results = await Promise.all(todos)
+          // Guard - fail loudly if any seeding failed rather than testing nothing
+          const failed = results.filter(
+            (result) => result.status === "rejected",
+          )
+          if (failed.length > 0) {
+            throw new Error(
+              `[SETUP FAILURE] ${failed.length}/${payloads.length} todos failed to seed. Aborting test.`,
+            )
+          }
 
-          // Track IDs for cleanup
-          results.forEach((todo) => cleanup.push(todo._id))
-
+          // Extract fulfilled Todo values - this is what the assert step needs
           return results
+            .filter(
+              (result): result is PromiseFulfilledResult<Todo> =>
+                result.status === "fulfilled",
+            )
+            .map((result) => result.value)
         })
-      // Act: Fetch todos of the user
+
+      // ACT
       const fetchedAllTodos =
         await test.step("Act: Fetch todos of the user", async () => {
           return await todoClient.getAll()
         })
 
-      // Assert: Verify integrity
+      // ASSERT
       await test.step("Assert: Verify data integrity", async () => {
         // Place logs at the start of assertion
 
@@ -405,7 +490,7 @@ test.describe("Todos API", () => {
   test.describe("PUT /api/todos/:id", () => {
     // Happy Path
     // Flow: Create Todo -> Update -> Validate updated fields
-    test("updates todo and reflect changes in full list @smoke", async ({
+    test("should persist updated fields in both response and full list @smoke", async ({
       todoClient,
       cleanup,
     }) => {
@@ -438,11 +523,14 @@ test.describe("Todos API", () => {
           return updatedTodo
         })
 
+      // ACT: Fetch gets its own Act step
+      const allTodos =
+        await test.step("Act: Fetch full todo list to verify persistence", async () => {
+          return await todoClient.getAll()
+        })
+
       //ASSERT: Verify the updated todo list
       await test.step("Assert: Verify update in response and full list", async () => {
-        // Get data and log first - always ensures you see the state before it crash
-        const allTodos = await todoClient.getAll()
-
         // Extra Safety: Check that the ID returned in the update response
         // matches the ID that was originally created
         expect(
@@ -488,11 +576,20 @@ test.describe("Todos API", () => {
   test.describe("DELETE /api/todos/:id", () => {
     // Happy Path
     // Flow: Create Todo -> Delete -> Verify deletion (HTTP 204)
-    test("removes specific todo of a user @smoke", async ({ todoClient }) => {
+    test("should delete the todo and return 404 on subsequent fetch @smoke", async ({
+      todoClient,
+      cleanup,
+    }) => {
       // ARRANGE: Setup the data
       const createdTodo = await test.step("Setup: Create todo", async () => {
         const payload = TodoFactory.createTodoPayload()
-        return (await todoClient.create(payload)) as Todo
+
+        const created = await todoClient.create(payload)
+        const todo = created as Todo
+
+        cleanup.push(todo._id) // Safety net, registered todo_id to the cleanup fixture before delete attempt
+
+        return todo
       })
 
       // ACT: Delete specific todo
