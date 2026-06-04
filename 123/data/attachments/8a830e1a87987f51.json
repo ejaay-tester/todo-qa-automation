@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-G22I9",
+    "description": "Desc-G22I9",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a212dddd5fa5c1aa3ed6c4a",
+    "_id": "6a212ddfd5fa5c1aa3ed6c4d",
+    "createdAt": "2026-06-04T07:48:47.249Z",
+    "updatedAt": "2026-06-04T07:48:47.249Z",
+    "__v": 0
+  }
+}

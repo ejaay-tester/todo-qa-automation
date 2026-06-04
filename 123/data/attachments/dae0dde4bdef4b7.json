@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-H3HAS",
+    "description": "Desc-H3HAS",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a212dd7d5fa5c1aa3ed6c2c",
+    "_id": "6a212dd9d5fa5c1aa3ed6c31",
+    "createdAt": "2026-06-04T07:48:41.396Z",
+    "updatedAt": "2026-06-04T07:48:41.396Z",
+    "__v": 0
+  }
+}

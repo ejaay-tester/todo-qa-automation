@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-5OFFI",
+    "description": "Desc-5OFFI",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a212dedd5fa5c1aa3ed6c8a",
+    "_id": "6a212defd5fa5c1aa3ed6c8d",
+    "createdAt": "2026-06-04T07:49:03.148Z",
+    "updatedAt": "2026-06-04T07:49:03.148Z",
+    "__v": 0
+  }
+}

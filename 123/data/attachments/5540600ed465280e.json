@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-P5A2L",
+    "description": "Desc-P5A2L",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a212df2d5fa5c1aa3ed6ca8",
+    "_id": "6a212df3d5fa5c1aa3ed6cab",
+    "createdAt": "2026-06-04T07:49:07.948Z",
+    "updatedAt": "2026-06-04T07:49:07.948Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-EJ9LA",
+    "description": "Desc-EJ9LA",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a212de3d5fa5c1aa3ed6c5b",
+    "_id": "6a212de4d5fa5c1aa3ed6c62",
+    "createdAt": "2026-06-04T07:48:52.625Z",
+    "updatedAt": "2026-06-04T07:48:52.625Z",
+    "__v": 0
+  }
+}

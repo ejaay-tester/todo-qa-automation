@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-G0BGC",
+    "description": "Desc-G0BGC",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a212ddbd5fa5c1aa3ed6c3e",
+    "_id": "6a212ddcd5fa5c1aa3ed6c41",
+    "createdAt": "2026-06-04T07:48:44.653Z",
+    "updatedAt": "2026-06-04T07:48:44.653Z",
+    "__v": 0
+  }
+}
