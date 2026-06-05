@@ -21,8 +21,13 @@ junit-results/
 
 # K6 artifacts
 *.out
+k6-results/
 k6-results/*.json
 k6-results/*.csv
+
+# Performance Reports
+performance/reports/output/
+
 
 # IDE
 .vscode/
