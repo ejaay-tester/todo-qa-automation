@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-IMA4V",
+    "description": "Desc-IMA4V",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a22909868b55b665deca7f2",
+    "_id": "6a22909a68b55b665deca7f5",
+    "createdAt": "2026-06-05T09:02:18.427Z",
+    "updatedAt": "2026-06-05T09:02:18.427Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-TF249",
+    "description": "Desc-TF249",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a2290e968b55b665deca8f6",
+    "_id": "6a2290ea68b55b665deca8fb",
+    "createdAt": "2026-06-05T09:03:38.974Z",
+    "updatedAt": "2026-06-05T09:03:38.974Z",
+    "__v": 0
+  }
+}

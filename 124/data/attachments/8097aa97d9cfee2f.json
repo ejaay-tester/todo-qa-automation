@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-8OGWV",
+    "description": "Desc-8OGWV",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a2290b168b55b665deca840",
+    "_id": "6a2290b268b55b665deca843",
+    "createdAt": "2026-06-05T09:02:42.443Z",
+    "updatedAt": "2026-06-05T09:02:42.443Z",
+    "__v": 0
+  }
+}
