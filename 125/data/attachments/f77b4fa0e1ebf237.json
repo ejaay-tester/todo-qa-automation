@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-RJQIV",
+    "description": "Desc-RJQIV",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a23f0307a842355d4994e69",
+    "_id": "6a23f0327a842355d4994e6c",
+    "createdAt": "2026-06-06T10:02:26.123Z",
+    "updatedAt": "2026-06-06T10:02:26.123Z",
+    "__v": 0
+  }
+}
