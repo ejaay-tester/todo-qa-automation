@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a254dbfa7bb4eeb078bfcd4",
+      "title": "Todo-P77E3",
+      "description": "Desc-P77E3",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a254dbda7bb4eeb078bfccd",
+      "createdAt": "2026-06-07T10:53:51.500Z",
+      "updatedAt": "2026-06-07T10:53:51.500Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a254dbfa7bb4eeb078bfcd2",
+      "title": "Todo-ESEU6",
+      "description": "Desc-ESEU6",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a254dbda7bb4eeb078bfccd",
+      "createdAt": "2026-06-07T10:53:51.475Z",
+      "updatedAt": "2026-06-07T10:53:51.475Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a254dbfa7bb4eeb078bfcd0",
+      "title": "Todo-DLYTC",
+      "description": "Desc-DLYTC",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a254dbda7bb4eeb078bfccd",
+      "createdAt": "2026-06-07T10:53:51.441Z",
+      "updatedAt": "2026-06-07T10:53:51.441Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

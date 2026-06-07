@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-8PKG3",
+    "description": "Desc-8PKG3",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a254dc3a7bb4eeb078bfceb",
+    "_id": "6a254dc5a7bb4eeb078bfcee",
+    "createdAt": "2026-06-07T10:53:57.049Z",
+    "updatedAt": "2026-06-07T10:53:57.049Z",
+    "__v": 0
+  }
+}

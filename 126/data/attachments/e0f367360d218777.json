@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-VPSU1",
+    "description": "Desc-VPSU1",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a254dc0a7bb4eeb078bfcdf",
+    "_id": "6a254dc1a7bb4eeb078bfce2",
+    "createdAt": "2026-06-07T10:53:53.958Z",
+    "updatedAt": "2026-06-07T10:53:53.958Z",
+    "__v": 0
+  }
+}

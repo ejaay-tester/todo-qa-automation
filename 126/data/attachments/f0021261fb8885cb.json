@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-PT5TB",
+    "description": "Desc-PT5TB",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a254dcea7bb4eeb078bfd1a",
+    "_id": "6a254dcfa7bb4eeb078bfd1d",
+    "createdAt": "2026-06-07T10:54:07.961Z",
+    "updatedAt": "2026-06-07T10:54:07.961Z",
+    "__v": 0
+  }
+}
