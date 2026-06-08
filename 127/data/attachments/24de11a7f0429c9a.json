@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-BV9NW",
+    "description": "Desc-BV9NW",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a26bacf532f01f8b652d273",
+    "_id": "6a26bad0532f01f8b652d276",
+    "createdAt": "2026-06-08T12:51:28.744Z",
+    "updatedAt": "2026-06-08T12:51:28.744Z",
+    "__v": 0
+  }
+}

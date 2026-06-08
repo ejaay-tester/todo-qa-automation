@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-1ZPDY",
+    "description": "Desc-1ZPDY",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a26bad5532f01f8b652d289",
+    "_id": "6a26bad7532f01f8b652d28c",
+    "createdAt": "2026-06-08T12:51:35.055Z",
+    "updatedAt": "2026-06-08T12:51:35.055Z",
+    "__v": 0
+  }
+}

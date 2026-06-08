@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-S99OG",
+    "description": "Desc-S99OG",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a26baed532f01f8b652d2e3",
+    "_id": "6a26baef532f01f8b652d2e6",
+    "createdAt": "2026-06-08T12:51:59.083Z",
+    "updatedAt": "2026-06-08T12:51:59.083Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-SVWF4",
+    "description": "Desc-SVWF4",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a26bae8532f01f8b652d2c5",
+    "_id": "6a26bae9532f01f8b652d2cc",
+    "createdAt": "2026-06-08T12:51:53.961Z",
+    "updatedAt": "2026-06-08T12:51:53.961Z",
+    "__v": 0
+  }
+}

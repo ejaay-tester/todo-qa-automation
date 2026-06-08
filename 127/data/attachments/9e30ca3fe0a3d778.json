@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "!@#$%^&*()<>?/|{}[]~`",
+    "description": "Special characters title description",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a26bafd532f01f8b652d311",
+    "_id": "6a26bafe532f01f8b652d314",
+    "createdAt": "2026-06-08T12:52:14.843Z",
+    "updatedAt": "2026-06-08T12:52:14.843Z",
+    "__v": 0
+  }
+}
