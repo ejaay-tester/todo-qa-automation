@@ -1,4 +1,4 @@
-import http, { RefinedResponse, ResponseType } from "k6/http"
+import http from "k6/http"
 import { check } from "k6"
 
 const BASE_URL: string = __ENV.BASE_URL || "http://localhost:3000"
