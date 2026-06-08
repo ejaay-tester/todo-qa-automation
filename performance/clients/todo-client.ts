@@ -1,5 +1,11 @@
 import http, { RefinedResponse, ResponseType, Params } from "k6/http"
-import { TodoPayload } from "../../src/types/todo.type"
+
+// Own performance-layer type - decoupled from src/
+export interface TodoPayload {
+  title: string
+  description?: string
+  completed: boolean
+}
 
 const BASE_URL: string = __ENV.BASE_URL || "http://localhost:3000"
 
