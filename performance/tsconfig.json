@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "commonjs",
+    "lib": ["ES2015"],
+    "strict": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
+    "types": ["k6"]
+  },
+  "include": [
+    "scenarios/**/*.ts",
+    "clients/**/*.ts",
+    "helpers/**/*.ts",
+    "options/**/*.ts"
+  ],
+  "exclude": ["reports/**/*.ts"] // report generator runs in Node, not k6 - separate config
+}
