@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-G4GLF",
+    "description": "Desc-G4GLF",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a27cc8cbfdca18939c7b05c",
+    "_id": "6a27cc8ebfdca18939c7b05f",
+    "createdAt": "2026-06-09T08:19:26.251Z",
+    "updatedAt": "2026-06-09T08:19:26.251Z",
+    "__v": 0
+  }
+}

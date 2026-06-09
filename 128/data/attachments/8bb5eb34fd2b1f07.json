@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-AXXLF",
+    "description": "Desc-AXXLF",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a27ccabbfdca18939c7b0c0",
+    "_id": "6a27ccacbfdca18939c7b0c5",
+    "createdAt": "2026-06-09T08:19:56.545Z",
+    "updatedAt": "2026-06-09T08:19:56.545Z",
+    "__v": 0
+  }
+}

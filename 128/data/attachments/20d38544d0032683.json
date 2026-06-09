@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-ETPYC",
+    "description": "Desc-ETPYC",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a27ccc8bfdca18939c7b124",
+    "_id": "6a27ccc9bfdca18939c7b129",
+    "createdAt": "2026-06-09T08:20:25.930Z",
+    "updatedAt": "2026-06-09T08:20:25.930Z",
+    "__v": 0
+  }
+}
