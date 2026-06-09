@@ -9,7 +9,15 @@
     "posttest": "npm run preallure:generate && npm run report:generate && npm run report:open",
     "preallure:generate": "shx mkdir -p allure-results/history && shx cp -r allure-report/history/* allure-results/history || true",
     "report:generate": "allure generate allure-results --clean -o allure-report",
-    "report:open": "allure open allure-report"
+    "report:open": "allure open allure-report",
+    "perf:bundle:smoke": "shx mkdir -p k6-dist k6-results && esbuild performance/scenarios/todos.smoke.ts --bundle --outfile=k6-dist/smoke.js --platform=neutral --format=esm --external:k6*",
+    "perf:bundle:load": "shx mkdir -p k6-dist k6-results && esbuild performance/scenarios/todos.load.ts --bundle --outfile=k6-dist/load.js --platform=neutral --format=esm --external:k6*",
+    "perf:bundle:stress": "shx mkdir -p k6-dist k6-results && esbuild performance/scenarios/todos.stress.ts --bundle --outfile=k6-dist/stress.js --platform=neutral --format=esm --external:k6*",
+    "perf:bundle:spike": "shx mkdir -p k6-dist k6-results && esbuild performance/scenarios/todos.spike.ts --bundle --outfile=k6-dist/spike.js --platform=neutral --format=esm --external:k6*",
+    "perf:smoke": "npm run perf:bundle:smoke && k6 run --out json=k6-results/smoke.json k6-dist/smoke.js",
+    "perf:load": "npm run perf:bundle:load && k6 run --out json=k6-results/load.json k6-dist/load.js",
+    "perf:stress": "npm run perf:bundle:stress && k6 run --out json=k6-results/stress.json k6-dist/stress.js",
+    "perf:spike": "npm run perf:bundle:spike && k6 run --out json=k6-results/spike.json k6-dist/spike.js"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +32,7 @@
     "ajv-formats": "^3.0.1",
     "allure-commandline": "^2.38.1",
     "allure-playwright": "^3.7.1",
+    "esbuild": "^0.28.0",
     "shx": "^0.4.0"
   }
 }
