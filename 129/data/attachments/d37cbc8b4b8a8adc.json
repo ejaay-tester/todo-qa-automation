@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-5HTGV",
+    "description": "Desc-5HTGV",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a292c2792d7fccca4f26a01",
+    "_id": "6a292c2892d7fccca4f26a04",
+    "createdAt": "2026-06-10T09:19:36.879Z",
+    "updatedAt": "2026-06-10T09:19:36.879Z",
+    "__v": 0
+  }
+}

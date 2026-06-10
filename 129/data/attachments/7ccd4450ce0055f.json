@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-A9LWP",
+    "description": "Desc-A9LWP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a292c1a92d7fccca4f269d2",
+    "_id": "6a292c1c92d7fccca4f269d5",
+    "createdAt": "2026-06-10T09:19:24.277Z",
+    "updatedAt": "2026-06-10T09:19:24.277Z",
+    "__v": 0
+  }
+}

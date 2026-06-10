@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a292c2992d7fccca4f26a08",
+      "title": "Todo-VOLUF",
+      "description": "Desc-VOLUF",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a292c2792d7fccca4f26a01",
+      "createdAt": "2026-06-10T09:19:37.022Z",
+      "updatedAt": "2026-06-10T09:19:37.022Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a292c2892d7fccca4f26a06",
+      "title": "Todo-BCUQY",
+      "description": "Desc-BCUQY",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a292c2792d7fccca4f26a01",
+      "createdAt": "2026-06-10T09:19:36.887Z",
+      "updatedAt": "2026-06-10T09:19:36.887Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a292c2892d7fccca4f26a04",
+      "title": "Todo-5HTGV",
+      "description": "Desc-5HTGV",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a292c2792d7fccca4f26a01",
+      "createdAt": "2026-06-10T09:19:36.879Z",
+      "updatedAt": "2026-06-10T09:19:36.879Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

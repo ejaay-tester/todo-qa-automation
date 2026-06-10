@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-BCUQY",
+    "description": "Desc-BCUQY",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a292c2792d7fccca4f26a01",
+    "_id": "6a292c2892d7fccca4f26a06",
+    "createdAt": "2026-06-10T09:19:36.887Z",
+    "updatedAt": "2026-06-10T09:19:36.887Z",
+    "__v": 0
+  }
+}
