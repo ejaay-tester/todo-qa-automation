@@ -12,11 +12,12 @@ export interface UserCredentials {
 // REGISTER USER
 export function registerUser(): UserCredentials {
   const timeStamp = Date.now()
+  const randomSuffix = Math.random().toString(36).substring(2, 8)
 
   const user: UserCredentials = {
-    email: `perf_${timeStamp}@yopmail.com`,
-    password: `TestP@ssword123`,
-    name: `perfuse_${timeStamp}`,
+    email: `perf${timeStamp}_${randomSuffix}@yopmail.com`,
+    password: `TestP@ssword_${randomSuffix}123!`,
+    name: `perfuse${timeStamp}`,
   }
 
   const response = http.post(
