@@ -54,6 +54,11 @@ export function login(email: string, password: string): string {
 
   check(response, {
     "setup | login: status 200": (res) => res.status === 200,
+    // Validate token shape, not just existence
+    "setup | login: token is string": (res) => {
+      const body = res.json() as { data: { token: string } }
+      return typeof body?.data?.token === "string" && body.data.token.length > 0
+    },
   })
 
   const body = response.json() as { data: { token: string } }
