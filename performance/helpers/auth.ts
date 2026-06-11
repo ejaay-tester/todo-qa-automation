@@ -30,8 +30,10 @@ export function registerUser(): UserCredentials {
     "setup | register: status 201": (res) => res.status === 201,
     "setup | register: has user data": (res) => {
       if (res.status !== 201) return false // guard before parsing
-      const body = response.json() as { data: { _id: string; email: string } }
-      return body?.data?._id !== undefined
+      const body = response.json() as {
+        data: { user: { id: string; email: string } }
+      }
+      return body?.data?.user?.id !== undefined
     },
   })
 
