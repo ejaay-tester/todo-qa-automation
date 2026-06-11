@@ -15,9 +15,9 @@ export function registerUser(): UserCredentials {
   const randomSuffix = Math.random().toString(36).substring(2, 8)
 
   const user: UserCredentials = {
-    email: `perf${timeStamp}_${randomSuffix}@yopmail.com`,
+    email: `perf_user_${timeStamp}_${randomSuffix}@yopmail.com`,
     password: `TestP@ssword_${randomSuffix}123!`,
-    name: `perfuse${timeStamp}`,
+    name: `perf_user_${timeStamp}`,
   }
 
   const response = http.post(
@@ -26,9 +26,18 @@ export function registerUser(): UserCredentials {
     { headers: { "Content-Type": "application/json" } },
   )
 
-  check(response, {
+  const passed = check(response, {
     "setup | register: status 201": (res) => res.status === 201,
+    "setup | register: has user data": (res) => {
+      if (res.status !== 201) return false // guard before parsing
+      const body = response.json() as { data: { _id: string; email: string } }
+      return body?.data?._id !== undefined
+    },
   })
+
+  if (!passed) {
+    throw new Error(`[REGISTER ERROR] (${response.status}): ${response.body}`)
+  }
 
   return user
 }
