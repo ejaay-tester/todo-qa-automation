@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-0NOG8",
+    "description": "Desc-0NOG8",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a2a83acf568f1f850f4e16b",
+    "_id": "6a2a83aef568f1f850f4e16e",
+    "createdAt": "2026-06-11T09:45:18.156Z",
+    "updatedAt": "2026-06-11T09:45:18.156Z",
+    "__v": 0
+  }
+}

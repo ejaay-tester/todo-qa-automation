@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-XOMT6",
+    "description": "Desc-XOMT6",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a2a83e5f568f1f850f4e227",
+    "_id": "6a2a83e7f568f1f850f4e22a",
+    "createdAt": "2026-06-11T09:46:15.445Z",
+    "updatedAt": "2026-06-11T09:46:15.445Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-PUD24",
+    "description": "Desc-PUD24",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a2a83c5f568f1f850f4e1b1",
+    "_id": "6a2a83c6f568f1f850f4e1b6",
+    "createdAt": "2026-06-11T09:45:42.523Z",
+    "updatedAt": "2026-06-11T09:45:42.523Z",
+    "__v": 0
+  }
+}

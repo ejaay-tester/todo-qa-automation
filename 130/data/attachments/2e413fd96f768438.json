@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-NL4DE",
+    "description": "Desc-NL4DE",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a2a83e2f568f1f850f4e215",
+    "_id": "6a2a83e4f568f1f850f4e21c",
+    "createdAt": "2026-06-11T09:46:12.716Z",
+    "updatedAt": "2026-06-11T09:46:12.716Z",
+    "__v": 0
+  }
+}

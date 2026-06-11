@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-XG6LS",
+    "description": "Desc-XG6LS",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a2a83b0f568f1f850f4e175",
+    "_id": "6a2a83b2f568f1f850f4e178",
+    "createdAt": "2026-06-11T09:45:22.254Z",
+    "updatedAt": "2026-06-11T09:45:22.254Z",
+    "__v": 0
+  }
+}
