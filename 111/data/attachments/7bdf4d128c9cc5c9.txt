@@ -1,6 +1,0 @@
-Registering user...
-✅ Registered user: testuser_1779869367193@yopmail.com
-Logging in...
-✅ Logged-in user: testuser_1779869367193@yopmail.com
-[CLEANUP COMPLETED] Attempted parallel deletion of 1 items.
-🧹 Deleting test user: testuser_1779869367193@yopmail.com

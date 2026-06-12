@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-IWLAC",
+    "description": "Desc-IWLAC",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a2bc92621f39479b8a86998",
+    "_id": "6a2bc92821f39479b8a8699b",
+    "createdAt": "2026-06-12T08:54:00.372Z",
+    "updatedAt": "2026-06-12T08:54:00.372Z",
+    "__v": 0
+  }
+}
