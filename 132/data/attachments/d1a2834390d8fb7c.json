@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-1CBFI",
+    "description": "Desc-1CBFI",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a2d0b7d16f2c6421eddb8e8",
+    "_id": "6a2d0b7e16f2c6421eddb8ed",
+    "createdAt": "2026-06-13T07:49:18.707Z",
+    "updatedAt": "2026-06-13T07:49:18.707Z",
+    "__v": 0
+  }
+}

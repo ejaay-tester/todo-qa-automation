@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-H5G5F",
+    "description": "Desc-H5G5F",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a2d0b7216f2c6421eddb8b9",
+    "_id": "6a2d0b7316f2c6421eddb8c0",
+    "createdAt": "2026-06-13T07:49:07.826Z",
+    "updatedAt": "2026-06-13T07:49:07.826Z",
+    "__v": 0
+  }
+}

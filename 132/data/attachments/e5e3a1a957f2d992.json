@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-PKNBH",
+    "description": "Desc-PKNBH",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a2d0b7f16f2c6421eddb8fa",
+    "_id": "6a2d0b8116f2c6421eddb8fd",
+    "createdAt": "2026-06-13T07:49:21.272Z",
+    "updatedAt": "2026-06-13T07:49:21.272Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-XK5EX",
+    "description": "Desc-XK5EX",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a2d0b7b16f2c6421eddb8e0",
+    "_id": "6a2d0b7c16f2c6421eddb8e3",
+    "createdAt": "2026-06-13T07:49:16.559Z",
+    "updatedAt": "2026-06-13T07:49:16.559Z",
+    "__v": 0
+  }
+}

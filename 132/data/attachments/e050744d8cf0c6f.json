@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-473QO",
+    "description": "Desc-473QO",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a2d0b6516f2c6421eddb88a",
+    "_id": "6a2d0b6716f2c6421eddb891",
+    "createdAt": "2026-06-13T07:48:55.427Z",
+    "updatedAt": "2026-06-13T07:48:55.427Z",
+    "__v": 0
+  }
+}
