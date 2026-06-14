@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-ZDK5X",
+    "description": "Desc-ZDK5X",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a2e8294da3aaa1ee74bdd56",
+    "_id": "6a2e8295da3aaa1ee74bdd59",
+    "createdAt": "2026-06-14T10:29:41.723Z",
+    "updatedAt": "2026-06-14T10:29:41.723Z",
+    "__v": 0
+  }
+}

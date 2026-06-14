@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-Q1SZV",
+    "description": "Desc-Q1SZV",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a2e828dda3aaa1ee74bdd40",
+    "_id": "6a2e828eda3aaa1ee74bdd43",
+    "createdAt": "2026-06-14T10:29:34.885Z",
+    "updatedAt": "2026-06-14T10:29:34.885Z",
+    "__v": 0
+  }
+}

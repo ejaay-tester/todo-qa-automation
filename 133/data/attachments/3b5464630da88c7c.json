@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-XV774",
+    "description": "Desc-XV774",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a2e82aada3aaa1ee74bdda4",
+    "_id": "6a2e82acda3aaa1ee74bdda7",
+    "createdAt": "2026-06-14T10:30:04.369Z",
+    "updatedAt": "2026-06-14T10:30:04.369Z",
+    "__v": 0
+  }
+}

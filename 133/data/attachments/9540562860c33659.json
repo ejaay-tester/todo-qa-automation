@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-P503E",
+    "description": "Desc-P503E",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a2e828ada3aaa1ee74bdd2e",
+    "_id": "6a2e828bda3aaa1ee74bdd33",
+    "createdAt": "2026-06-14T10:29:31.998Z",
+    "updatedAt": "2026-06-14T10:29:31.998Z",
+    "__v": 0
+  }
+}
