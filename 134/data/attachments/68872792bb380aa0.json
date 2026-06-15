@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-LJDNK",
+    "description": "Desc-LJDNK",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a2f7ffcd91ac448145a690e",
+    "_id": "6a2f7ffed91ac448145a6915",
+    "createdAt": "2026-06-15T04:30:54.121Z",
+    "updatedAt": "2026-06-15T04:30:54.121Z",
+    "__v": 0
+  }
+}

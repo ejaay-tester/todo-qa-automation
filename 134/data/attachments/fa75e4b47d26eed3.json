@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-KDTSI",
+    "description": "Desc-KDTSI",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a2f803ad91ac448145a69d6",
+    "_id": "6a2f803bd91ac448145a69db",
+    "createdAt": "2026-06-15T04:31:55.475Z",
+    "updatedAt": "2026-06-15T04:31:55.475Z",
+    "__v": 0
+  }
+}

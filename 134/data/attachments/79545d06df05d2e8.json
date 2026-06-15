@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-OBHOE",
+    "description": "Desc-OBHOE",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a2f803fd91ac448145a69f4",
+    "_id": "6a2f8041d91ac448145a69f7",
+    "createdAt": "2026-06-15T04:32:01.144Z",
+    "updatedAt": "2026-06-15T04:32:01.144Z",
+    "__v": 0
+  }
+}

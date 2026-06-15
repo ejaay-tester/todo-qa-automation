@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-VQBP6",
+    "description": "Desc-VQBP6",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a2f801ed91ac448145a6984",
+    "_id": "6a2f801fd91ac448145a6987",
+    "createdAt": "2026-06-15T04:31:27.859Z",
+    "updatedAt": "2026-06-15T04:31:27.859Z",
+    "__v": 0
+  }
+}
