@@ -8,6 +8,8 @@ import { defaultThresholds } from "../options/thresholds"
 // CUSTOM METRICS
 const createDuration = new Trend("todo_create_duration", true)
 const getAllDuration = new Trend("todo_get_all_duration", true)
+const getByIdDuration = new Trend("todo_get_by_id_duration", true)
+const updateDuration = new Trend("todo_update_duration", true)
 const deleteDuration = new Trend("todo_delete_duration", true)
 const errorRate = new Rate("todo_error_rate")
 
@@ -24,6 +26,8 @@ export const options: Options = {
     ...defaultThresholds,
     todo_create_duration: ["p(95)<400"],
     todo_get_all_duration: ["p(95)<300"],
+    todo_get_by_id_duration: ["p(95)<300"],
+    todo_update_duration: ["p(95)<400"],
     todo_delete_duration: ["p(95)<300"],
     todo_error_rate: ["rate<0.01"],
   },
@@ -83,6 +87,49 @@ export default function ({ token }: UserData): void {
     "GET /api/todos: returns array": () => Array.isArray(getAllBody?.data),
   })
   errorRate.add(!getAllTodoPassed)
+
+  // GET BY ID
+  const getByIdResponse = client.getById(todoId)
+  getByIdDuration.add(getByIdResponse.timings.duration)
+
+  const getByIdBody = getByIdResponse.json() as {
+    data: { _id: string; title: string }
+  }
+
+  const getByIdPassed = check(getByIdResponse, {
+    "GET /api/todos/:id: status 200": (res) => res.status === 200,
+    "GET /api/todos/:id: correct _id": () => getByIdBody?.data?._id === todoId,
+  })
+  errorRate.add(!getByIdPassed)
+
+  // UPDATE TODO
+  const updateResponse = client.update(todoId, {
+    title: `Updated todo title VU-${virtualUserId} | Iteration-${iteration}`,
+    description: `Updated todo description`,
+    completed: true,
+  })
+  updateDuration.add(updateResponse.timings.duration)
+
+  const updateBody = updateResponse.json() as {
+    data: {
+      _id: string
+      title: string
+      description: string
+      completed: boolean
+    }
+  }
+
+  const updatePassed = check(updateResponse, {
+    "PUT /api/todos/:id: status 200": (res) => res.status === 200,
+    "PUT /api/todos/:id: title updated": () =>
+      updateBody?.data?.title ===
+      `Updated todo title VU-${virtualUserId} | Iteration-${iteration}`,
+    "PUT /api/todos/:id: description updated": () =>
+      updateBody?.data?.description === `Updated todo description`,
+    "PUT /api/todos/:id: completed true": () =>
+      updateBody?.data?.completed === true,
+  })
+  errorRate.add(!updatePassed)
 
   // DELETE TODO
   const deleteResponse = client.delete(todoId)
