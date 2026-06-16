@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-LVOV5",
+    "description": "Desc-LVOV5",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a31293d4fdf6bc73a01fb72",
+    "_id": "6a31293f4fdf6bc73a01fb75",
+    "createdAt": "2026-06-16T10:45:19.132Z",
+    "updatedAt": "2026-06-16T10:45:19.132Z",
+    "__v": 0
+  }
+}

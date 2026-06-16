@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-WG9DB",
+    "description": "Desc-WG9DB",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a31293a4fdf6bc73a01fb60",
+    "_id": "6a31293b4fdf6bc73a01fb65",
+    "createdAt": "2026-06-16T10:45:15.774Z",
+    "updatedAt": "2026-06-16T10:45:15.774Z",
+    "__v": 0
+  }
+}

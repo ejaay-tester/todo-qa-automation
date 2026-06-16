@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-PHUVT",
+    "description": "Desc-PHUVT",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a3129444fdf6bc73a01fb87",
+    "_id": "6a3129454fdf6bc73a01fb8a",
+    "createdAt": "2026-06-16T10:45:25.844Z",
+    "updatedAt": "2026-06-16T10:45:25.844Z",
+    "__v": 0
+  }
+}
