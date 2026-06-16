@@ -22,33 +22,40 @@ export class TodoClient {
   }
 
   create(payload: TodoPayload): RefinedResponse<ResponseType> {
-    return http.post(
-      `${BASE_URL}/api/todos`,
-      JSON.stringify(payload),
-      this.params, // pass the whole params object
-    )
+    return http.post(`${BASE_URL}/api/todos`, JSON.stringify(payload), {
+      ...this.params, // pass the whole params object
+      tags: { name: "POST /api/todos" }, // tag for grouped metrics
+    })
   }
 
   getAll(): RefinedResponse<ResponseType> {
-    return http.get(`${BASE_URL}/api/todos`, this.params)
+    return http.get(`${BASE_URL}/api/todos`, {
+      ...this.params,
+      tags: { name: "GET /api/todos" },
+    })
   }
 
   getById(id: string): RefinedResponse<ResponseType> {
-    return http.get(`${BASE_URL}/api/todos/${id}`, this.params)
+    return http.get(`${BASE_URL}/api/todos/${id}`, {
+      ...this.params,
+      tags: { name: "GET /api/todos/:id" },
+    })
   }
 
   update(
     id: string,
     payload: Partial<TodoPayload>,
   ): RefinedResponse<ResponseType> {
-    return http.put(
-      `${BASE_URL}/api/todos/${id}`,
-      JSON.stringify(payload),
-      this.params,
-    )
+    return http.put(`${BASE_URL}/api/todos/${id}`, JSON.stringify(payload), {
+      ...this.params,
+      tags: { name: "PUT /api/todos/:id" },
+    })
   }
 
   delete(id: string): RefinedResponse<ResponseType> {
-    return http.del(`${BASE_URL}/api/todos/${id}`, null, this.params)
+    return http.del(`${BASE_URL}/api/todos/${id}`, null, {
+      ...this.params,
+      tags: { name: "DELETE /api/todos/:id" },
+    })
   }
 }
