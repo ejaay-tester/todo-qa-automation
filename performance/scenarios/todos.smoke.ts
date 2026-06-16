@@ -43,20 +43,29 @@ export function setup(): UserData {
 // DEFAULT - EACH VU RUNS THIS IN A LOOP
 export default function ({ token }: UserData): void {
   const client = new TodoClient(token)
+  const virtualUserId = __VU
+  const iteration = __ITER
 
   // CREATE TODO
   const createResponse = client.create({
-    title: `Smoke todo ${Date.now()}`,
+    title: `Smoke todo VU-${virtualUserId} | Iteration-${iteration}`,
     description: `k6 Smoke Test`,
     completed: false,
   })
-
   createDuration.add(createResponse.timings.duration)
-  const createBody = createResponse.json() as { data: { _id: string } }
+
+  const createBody = createResponse.json() as {
+    data: { _id: string; title: string; completed: boolean }
+  }
 
   const createTodoPassed = check(createResponse, {
     "POST /api/todos: status 201": (res) => res.status === 201,
     "POST /api/todos: has_id": () => createBody?.data?._id !== undefined,
+    "POST /api/todos: title matches": () =>
+      createBody?.data?.title ===
+      `Smoke todo VU-${virtualUserId} | Iteration-${iteration}`,
+    "POST /api/todos: completed false": () =>
+      createBody?.data?.completed === false,
   })
   errorRate.add(!createTodoPassed)
 
@@ -66,6 +75,7 @@ export default function ({ token }: UserData): void {
   // GET ALL TODO
   const getAllResponse = client.getAll()
   getAllDuration.add(getAllResponse.timings.duration)
+
   const getAllBody = getAllResponse.json() as { data: unknown[] }
 
   const getAllTodoPassed = check(getAllResponse, {
