@@ -27,8 +27,8 @@ export function registerUser(): UserCredentials {
   )
 
   const passed = check(response, {
-    "setup | register: status 201": (res) => res.status === 201,
-    "setup | register: has user data": (res) => {
+    "SETUP /api/auth/register: status 201": (res) => res.status === 201,
+    "SETUP /api/auth/register: has user data": (res) => {
       if (res.status !== 201) return false // guard before parsing
       const body = response.json() as {
         data: { user: { id: string; email: string } }
@@ -53,9 +53,9 @@ export function login(email: string, password: string): string {
   )
 
   check(response, {
-    "setup | login: status 200": (res) => res.status === 200,
+    "SETUP /api/auth/login: status 200": (res) => res.status === 200,
     // Validate token shape, not just existence
-    "setup | login: token is string": (res) => {
+    "SETUP /api/auth/login: token is string": (res) => {
       const body = res.json() as { data: { token: string } }
       return typeof body?.data?.token === "string" && body.data.token.length > 0
     },
