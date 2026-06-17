@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-2FS34",
+    "description": "Desc-2FS34",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a324b4380fecd27ca3d344a",
+    "_id": "6a324b4480fecd27ca3d344d",
+    "createdAt": "2026-06-17T07:22:44.607Z",
+    "updatedAt": "2026-06-17T07:22:44.607Z",
+    "__v": 0
+  }
+}

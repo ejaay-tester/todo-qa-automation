@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-UDT18",
+    "description": "Desc-UDT18",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a324b3c80fecd27ca3d342c",
+    "_id": "6a324b3e80fecd27ca3d342f",
+    "createdAt": "2026-06-17T07:22:38.198Z",
+    "updatedAt": "2026-06-17T07:22:38.198Z",
+    "__v": 0
+  }
+}

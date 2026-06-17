@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-9DXTT",
+    "description": "Desc-9DXTT",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a324b7d80fecd27ca3d3512",
+    "_id": "6a324b7e80fecd27ca3d3515",
+    "createdAt": "2026-06-17T07:23:42.388Z",
+    "updatedAt": "2026-06-17T07:23:42.388Z",
+    "__v": 0
+  }
+}

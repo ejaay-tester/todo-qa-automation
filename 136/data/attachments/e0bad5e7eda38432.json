@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a324b5c80fecd27ca3d3497",
+      "title": "Todo-MEBXT",
+      "description": "Desc-MEBXT",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a324b5a80fecd27ca3d3490",
+      "createdAt": "2026-06-17T07:23:08.291Z",
+      "updatedAt": "2026-06-17T07:23:08.291Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a324b5c80fecd27ca3d3495",
+      "title": "Todo-RQCVO",
+      "description": "Desc-RQCVO",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a324b5a80fecd27ca3d3490",
+      "createdAt": "2026-06-17T07:23:08.140Z",
+      "updatedAt": "2026-06-17T07:23:08.140Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a324b5c80fecd27ca3d3493",
+      "title": "Todo-P4TFT",
+      "description": "Desc-P4TFT",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a324b5a80fecd27ca3d3490",
+      "createdAt": "2026-06-17T07:23:08.105Z",
+      "updatedAt": "2026-06-17T07:23:08.105Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-HXPQX",
+    "description": "Desc-HXPQX",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a324b7780fecd27ca3d34f4",
+    "_id": "6a324b7880fecd27ca3d34f9",
+    "createdAt": "2026-06-17T07:23:36.834Z",
+    "updatedAt": "2026-06-17T07:23:36.834Z",
+    "__v": 0
+  }
+}
