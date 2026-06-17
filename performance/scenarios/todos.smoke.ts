@@ -140,5 +140,11 @@ export default function ({ token }: UserData): void {
   })
   errorRate.add(!deleteTodoPassed)
 
+  // VERIFY DELETION
+  const verifyDeleteResponse = client.getById(todoId)
+  check(verifyDeleteResponse, {
+    "GET /api/todos/:id after delete: status 404": (res) => res.status === 404,
+  })
+
   sleep(1)
 }
