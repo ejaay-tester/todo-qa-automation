@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-TNEVZ",
+    "description": "Desc-TNEVZ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a339d0ee3628803cc52243b",
+    "_id": "6a339d10e3628803cc52243e",
+    "createdAt": "2026-06-18T07:24:00.294Z",
+    "updatedAt": "2026-06-18T07:24:00.294Z",
+    "__v": 0
+  }
+}

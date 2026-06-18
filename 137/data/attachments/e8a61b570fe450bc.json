@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-JWC8F",
+    "description": "Desc-JWC8F",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a339d2ae3628803cc52248d",
+    "_id": "6a339d2be3628803cc522492",
+    "createdAt": "2026-06-18T07:24:27.803Z",
+    "updatedAt": "2026-06-18T07:24:27.803Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-CSEKA",
+    "description": "Desc-CSEKA",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a339d2fe3628803cc5224ab",
+    "_id": "6a339d31e3628803cc5224ae",
+    "createdAt": "2026-06-18T07:24:33.370Z",
+    "updatedAt": "2026-06-18T07:24:33.370Z",
+    "__v": 0
+  }
+}

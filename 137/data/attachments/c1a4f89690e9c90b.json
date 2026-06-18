@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-5XEIJ",
+    "description": "Desc-5XEIJ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a339d2ae3628803cc52248d",
+    "_id": "6a339d2be3628803cc522490",
+    "createdAt": "2026-06-18T07:24:27.768Z",
+    "updatedAt": "2026-06-18T07:24:27.768Z",
+    "__v": 0
+  }
+}
