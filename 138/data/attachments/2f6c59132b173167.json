@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-DHC79",
+    "description": "Desc-DHC79",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a352ef094d42ad03800b258",
+    "_id": "6a352ef294d42ad03800b25b",
+    "createdAt": "2026-06-19T11:58:42.128Z",
+    "updatedAt": "2026-06-19T11:58:42.128Z",
+    "__v": 0
+  }
+}

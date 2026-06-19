@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-6MZPS",
+    "description": "Desc-6MZPS",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a352ed594d42ad03800b1e8",
+    "_id": "6a352ed794d42ad03800b1eb",
+    "createdAt": "2026-06-19T11:58:15.131Z",
+    "updatedAt": "2026-06-19T11:58:15.131Z",
+    "__v": 0
+  }
+}

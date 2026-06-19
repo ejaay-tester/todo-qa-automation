@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-WIMEN",
+    "description": "Desc-WIMEN",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a352ee294d42ad03800b217",
+    "_id": "6a352ee394d42ad03800b21a",
+    "createdAt": "2026-06-19T11:58:27.837Z",
+    "updatedAt": "2026-06-19T11:58:27.837Z",
+    "__v": 0
+  }
+}

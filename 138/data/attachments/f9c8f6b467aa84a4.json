@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-P53GR",
+    "description": "Desc-P53GR",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a352eed94d42ad03800b246",
+    "_id": "6a352eef94d42ad03800b24b",
+    "createdAt": "2026-06-19T11:58:39.350Z",
+    "updatedAt": "2026-06-19T11:58:39.350Z",
+    "__v": 0
+  }
+}
