@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-X9WTH",
+    "description": "Desc-X9WTH",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a38ea448a2e600d8f892363",
+    "_id": "6a38ea458a2e600d8f892366",
+    "createdAt": "2026-06-22T07:54:45.869Z",
+    "updatedAt": "2026-06-22T07:54:45.869Z",
+    "__v": 0
+  }
+}

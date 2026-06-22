@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-FDKRM",
+    "description": "Desc-FDKRM",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a38ea4b8a2e600d8f892379",
+    "_id": "6a38ea4c8a2e600d8f89237c",
+    "createdAt": "2026-06-22T07:54:52.611Z",
+    "updatedAt": "2026-06-22T07:54:52.611Z",
+    "__v": 0
+  }
+}

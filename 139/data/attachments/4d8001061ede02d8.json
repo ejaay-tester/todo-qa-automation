@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-CIVD8",
+    "description": "Desc-CIVD8",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a38ea658a2e600d8f8923d3",
+    "_id": "6a38ea678a2e600d8f8923d6",
+    "createdAt": "2026-06-22T07:55:19.016Z",
+    "updatedAt": "2026-06-22T07:55:19.016Z",
+    "__v": 0
+  }
+}

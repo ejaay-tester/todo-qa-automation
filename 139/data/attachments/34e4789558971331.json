@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-TKS0P",
+    "description": "Desc-TKS0P",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a38ea478a2e600d8f89236f",
+    "_id": "6a38ea488a2e600d8f892372",
+    "createdAt": "2026-06-22T07:54:48.717Z",
+    "updatedAt": "2026-06-22T07:54:48.717Z",
+    "__v": 0
+  }
+}

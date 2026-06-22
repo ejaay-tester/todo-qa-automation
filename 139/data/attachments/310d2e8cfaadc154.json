@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-H1KRB",
+    "description": "Desc-H1KRB",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a38ea7e8a2e600d8f892419",
+    "_id": "6a38ea7f8a2e600d8f89241e",
+    "createdAt": "2026-06-22T07:55:43.447Z",
+    "updatedAt": "2026-06-22T07:55:43.447Z",
+    "__v": 0
+  }
+}

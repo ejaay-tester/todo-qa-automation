@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-RADAK",
+    "description": "Desc-RADAK",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a38ea698a2e600d8f8923dd",
+    "_id": "6a38ea6a8a2e600d8f8923e0",
+    "createdAt": "2026-06-22T07:55:22.925Z",
+    "updatedAt": "2026-06-22T07:55:22.925Z",
+    "__v": 0
+  }
+}
