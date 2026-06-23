@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-96MBX",
+    "description": "Desc-96MBX",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a3a25446f523543a590b42a",
+    "_id": "6a3a25466f523543a590b42d",
+    "createdAt": "2026-06-23T06:18:46.437Z",
+    "updatedAt": "2026-06-23T06:18:46.437Z",
+    "__v": 0
+  }
+}

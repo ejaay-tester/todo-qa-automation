@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-HOA2K",
+    "description": "Desc-HOA2K",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a3a258f6f523543a590b540",
+    "_id": "6a3a25916f523543a590b543",
+    "createdAt": "2026-06-23T06:20:01.286Z",
+    "updatedAt": "2026-06-23T06:20:01.286Z",
+    "__v": 0
+  }
+}

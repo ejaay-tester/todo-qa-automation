@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-W6LFA",
+    "description": "Desc-W6LFA",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a3a258d6f523543a590b52e",
+    "_id": "6a3a258f6f523543a590b533",
+    "createdAt": "2026-06-23T06:19:59.040Z",
+    "updatedAt": "2026-06-23T06:19:59.040Z",
+    "__v": 0
+  }
+}

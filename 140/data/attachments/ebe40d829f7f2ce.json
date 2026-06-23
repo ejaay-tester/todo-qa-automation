@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-EIZX4",
+    "description": "Desc-EIZX4",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a3a25576f523543a590b466",
+    "_id": "6a3a25596f523543a590b469",
+    "createdAt": "2026-06-23T06:19:05.206Z",
+    "updatedAt": "2026-06-23T06:19:05.206Z",
+    "__v": 0
+  }
+}

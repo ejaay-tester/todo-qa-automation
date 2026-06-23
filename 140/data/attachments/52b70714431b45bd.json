@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Completed true title",
+    "description": "Completed true descripition",
+    "completed": true,
+    "priority": "medium",
+    "userId": "6a3a258b6f523543a590b526",
+    "_id": "6a3a258c6f523543a590b529",
+    "createdAt": "2026-06-23T06:19:56.977Z",
+    "updatedAt": "2026-06-23T06:19:56.977Z",
+    "__v": 0
+  }
+}

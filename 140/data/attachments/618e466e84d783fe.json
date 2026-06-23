@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-WXFTM",
+    "description": "Desc-WXFTM",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a3a258d6f523543a590b52e",
+    "_id": "6a3a258f6f523543a590b535",
+    "createdAt": "2026-06-23T06:19:59.044Z",
+    "updatedAt": "2026-06-23T06:19:59.044Z",
+    "__v": 0
+  }
+}
