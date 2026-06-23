@@ -22,8 +22,20 @@ export const options: Options = {
       duration: "30s",
     },
   },
+
+  // This controls which percentiles appear in the terminal summary
+  summaryTrendStats: ["avg", "min", "med", "max", "p(90)", "p(95)", "p(99)"],
+
   thresholds: {
     ...defaultThresholds,
+
+    // Use the tag name to create per-endpoint metrics in the terminal
+    "http_req_duration{name: POST /api/todos}": ["p(95)<400"],
+    "http_req_duration{name: GET /api/todos}": ["p(95)<300"],
+    "http_req_duration{name: GET /api/todos/:id}": ["p(95)<300"],
+    "http_req_duration{name: PUT /api/todos/:id}": ["p(95)<400"],
+    "http_req_duration{name: DELETE /api/todos/:id}": ["p(95)<300"],
+
     todo_create_duration: ["p(95)<400"],
     todo_get_all_duration: ["p(95)<300"],
     todo_get_by_id_duration: ["p(95)<300"],
