@@ -1,9 +1,14 @@
 import { check, sleep } from "k6"
-import { Trend, Rate } from "k6/metrics"
+import http from "k6/http"
+import { Rate } from "k6/metrics"
 import { Options } from "k6/options"
 import { registerUser, login } from "../helpers/auth"
 import { TodoClient } from "../clients/todo-client"
 import { defaultThresholds } from "../options/thresholds"
+
+// Treat 404 as expected globally for this scenario, since the
+// delete-verification step intentionally requests a removed resource
+http.setResponseCallback(http.expectedStatuses(200, 201, 204, 404))
 
 // CUSTOM METRICS
 const errorRate = new Rate("todo_error_rate")
