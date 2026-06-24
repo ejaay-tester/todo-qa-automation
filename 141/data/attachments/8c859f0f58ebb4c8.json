@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-XBTZP",
+    "description": "Desc-XBTZP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a3b9b66bc20b3cb6e8fa6d7",
+    "_id": "6a3b9b68bc20b3cb6e8fa6da",
+    "createdAt": "2026-06-24T08:55:04.143Z",
+    "updatedAt": "2026-06-24T08:55:04.143Z",
+    "__v": 0
+  }
+}

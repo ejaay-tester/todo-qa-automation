@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-SEQWX",
+    "description": "Desc-SEQWX",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a3b9b54bc20b3cb6e8fa693",
+    "_id": "6a3b9b55bc20b3cb6e8fa696",
+    "createdAt": "2026-06-24T08:54:45.847Z",
+    "updatedAt": "2026-06-24T08:54:45.847Z",
+    "__v": 0
+  }
+}

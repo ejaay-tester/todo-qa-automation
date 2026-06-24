@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-JWXZU",
+    "description": "Desc-JWXZU",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a3b9b5dbc20b3cb6e8fa6b0",
+    "_id": "6a3b9b5fbc20b3cb6e8fa6b5",
+    "createdAt": "2026-06-24T08:54:55.214Z",
+    "updatedAt": "2026-06-24T08:54:55.214Z",
+    "__v": 0
+  }
+}
