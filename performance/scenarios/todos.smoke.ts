@@ -6,11 +6,6 @@ import { TodoClient } from "../clients/todo-client"
 import { defaultThresholds } from "../options/thresholds"
 
 // CUSTOM METRICS
-const createDuration = new Trend("todo_create_duration", true)
-const getAllDuration = new Trend("todo_get_all_duration", true)
-const getByIdDuration = new Trend("todo_get_by_id_duration", true)
-const updateDuration = new Trend("todo_update_duration", true)
-const deleteDuration = new Trend("todo_delete_duration", true)
 const errorRate = new Rate("todo_error_rate")
 
 // SCENARIO OPTIONS
@@ -36,11 +31,6 @@ export const options: Options = {
     "http_req_duration{name: PUT /api/todos/:id}": ["p(95)<400"],
     "http_req_duration{name: DELETE /api/todos/:id}": ["p(95)<300"],
 
-    todo_create_duration: ["p(95)<400"],
-    todo_get_all_duration: ["p(95)<300"],
-    todo_get_by_id_duration: ["p(95)<300"],
-    todo_update_duration: ["p(95)<400"],
-    todo_delete_duration: ["p(95)<300"],
     todo_error_rate: ["rate<0.01"],
   },
 }
@@ -68,7 +58,6 @@ export default function ({ token }: UserData): void {
     description: `k6 Smoke Test`,
     completed: false,
   })
-  createDuration.add(createResponse.timings.duration)
 
   const createBody = createResponse.json() as {
     data: { _id: string; title: string; completed: boolean }
@@ -90,7 +79,6 @@ export default function ({ token }: UserData): void {
 
   // GET ALL TODO
   const getAllResponse = client.getAll()
-  getAllDuration.add(getAllResponse.timings.duration)
 
   const getAllBody = getAllResponse.json() as { data: unknown[] }
 
@@ -102,7 +90,6 @@ export default function ({ token }: UserData): void {
 
   // GET BY ID
   const getByIdResponse = client.getById(todoId)
-  getByIdDuration.add(getByIdResponse.timings.duration)
 
   const getByIdBody = getByIdResponse.json() as {
     data: { _id: string; title: string }
@@ -120,7 +107,6 @@ export default function ({ token }: UserData): void {
     description: `Updated todo description`,
     completed: true,
   })
-  updateDuration.add(updateResponse.timings.duration)
 
   const updateBody = updateResponse.json() as {
     data: {
@@ -145,7 +131,6 @@ export default function ({ token }: UserData): void {
 
   // DELETE TODO
   const deleteResponse = client.delete(todoId)
-  deleteDuration.add(deleteResponse.timings.duration)
 
   const deleteTodoPassed = check(deleteResponse, {
     "DELETE /api/todos/:id: status 204": (res) => res.status === 204,
