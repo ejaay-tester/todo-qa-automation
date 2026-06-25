@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-JN4UX",
+    "description": "Desc-JN4UX",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a3cdcc924ab728d83b1e4e4",
+    "_id": "6a3cdccb24ab728d83b1e4e7",
+    "createdAt": "2026-06-25T07:46:19.148Z",
+    "updatedAt": "2026-06-25T07:46:19.148Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-UCUEN",
+    "description": "Desc-UCUEN",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a3cdce724ab728d83b1e548",
+    "_id": "6a3cdce824ab728d83b1e54b",
+    "createdAt": "2026-06-25T07:46:48.557Z",
+    "updatedAt": "2026-06-25T07:46:48.557Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-01V1W",
+    "description": "Desc-01V1W",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a3cdcab24ab728d83b1e480",
+    "_id": "6a3cdcac24ab728d83b1e485",
+    "createdAt": "2026-06-25T07:45:48.819Z",
+    "updatedAt": "2026-06-25T07:45:48.819Z",
+    "__v": 0
+  }
+}

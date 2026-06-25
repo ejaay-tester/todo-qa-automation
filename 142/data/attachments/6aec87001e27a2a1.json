@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-WI7YO",
+    "description": "Desc-WI7YO",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a3cdce924ab728d83b1e55a",
+    "_id": "6a3cdceb24ab728d83b1e55d",
+    "createdAt": "2026-06-25T07:46:51.177Z",
+    "updatedAt": "2026-06-25T07:46:51.177Z",
+    "__v": 0
+  }
+}

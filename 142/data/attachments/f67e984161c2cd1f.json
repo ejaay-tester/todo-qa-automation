@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-LGBDZ",
+    "description": "Desc-LGBDZ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a3cdcb124ab728d83b1e49e",
+    "_id": "6a3cdcb324ab728d83b1e4a1",
+    "createdAt": "2026-06-25T07:45:55.164Z",
+    "updatedAt": "2026-06-25T07:45:55.164Z",
+    "__v": 0
+  }
+}

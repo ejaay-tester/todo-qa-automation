@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-1PPAP",
+    "description": "Desc-1PPAP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a3cdccf24ab728d83b1e502",
+    "_id": "6a3cdcd024ab728d83b1e505",
+    "createdAt": "2026-06-25T07:46:24.671Z",
+    "updatedAt": "2026-06-25T07:46:24.671Z",
+    "__v": 0
+  }
+}

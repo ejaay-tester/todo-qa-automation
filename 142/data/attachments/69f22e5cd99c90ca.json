@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-VNZRK",
+    "description": "Desc-VNZRK",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a3cdcab24ab728d83b1e480",
+    "_id": "6a3cdcac24ab728d83b1e483",
+    "createdAt": "2026-06-25T07:45:48.759Z",
+    "updatedAt": "2026-06-25T07:45:48.759Z",
+    "__v": 0
+  }
+}
