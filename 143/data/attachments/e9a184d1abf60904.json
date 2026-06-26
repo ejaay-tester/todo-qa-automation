@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-PDBGE",
+    "description": "Desc-PDBGE",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a3e27d905a1ea56b4795162",
+    "_id": "6a3e27db05a1ea56b4795167",
+    "createdAt": "2026-06-26T07:18:51.444Z",
+    "updatedAt": "2026-06-26T07:18:51.444Z",
+    "__v": 0
+  }
+}

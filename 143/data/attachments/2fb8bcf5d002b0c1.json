@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-1JERB",
+    "description": "Desc-1JERB",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a3e27bf05a1ea56b4795110",
+    "_id": "6a3e27c005a1ea56b4795113",
+    "createdAt": "2026-06-26T07:18:24.708Z",
+    "updatedAt": "2026-06-26T07:18:24.708Z",
+    "__v": 0
+  }
+}

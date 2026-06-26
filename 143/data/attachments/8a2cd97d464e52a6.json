@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-7VDH8",
+    "description": "Desc-7VDH8",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a3e279d05a1ea56b479509a",
+    "_id": "6a3e279f05a1ea56b47950a1",
+    "createdAt": "2026-06-26T07:17:51.440Z",
+    "updatedAt": "2026-06-26T07:17:51.440Z",
+    "__v": 0
+  }
+}

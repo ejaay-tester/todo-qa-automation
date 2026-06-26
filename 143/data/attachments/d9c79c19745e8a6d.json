@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a3e27db05a1ea56b4795169",
+      "title": "Todo-8NKFH",
+      "description": "Desc-8NKFH",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a3e27d905a1ea56b4795162",
+      "createdAt": "2026-06-26T07:18:51.456Z",
+      "updatedAt": "2026-06-26T07:18:51.456Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a3e27db05a1ea56b4795167",
+      "title": "Todo-PDBGE",
+      "description": "Desc-PDBGE",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a3e27d905a1ea56b4795162",
+      "createdAt": "2026-06-26T07:18:51.444Z",
+      "updatedAt": "2026-06-26T07:18:51.444Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a3e27db05a1ea56b4795165",
+      "title": "Todo-C3XGW",
+      "description": "Desc-C3XGW",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a3e27d905a1ea56b4795162",
+      "createdAt": "2026-06-26T07:18:51.416Z",
+      "updatedAt": "2026-06-26T07:18:51.416Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}
