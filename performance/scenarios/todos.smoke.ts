@@ -74,6 +74,8 @@ export default function ({ token }: UserData): void {
 
   const createTodoPassed = check(createResponse, {
     "POST /api/todos: status 201": (res) => res.status === 201,
+    "POST /api/todos: content-type is json": (res) =>
+      res.headers["Content-Type"]?.includes("application/json") ?? false,
     "POST /api/todos: has_id": () => createBody?.data?._id !== undefined,
     "POST /api/todos: title matches": () =>
       createBody?.data?.title === todoTitle,
@@ -92,6 +94,8 @@ export default function ({ token }: UserData): void {
 
   const getAllTodoPassed = check(getAllResponse, {
     "GET /api/todos: status 200": (res) => res.status === 200,
+    "GET /api/todos: content-type is json": (res) =>
+      res.headers["Content-Type"]?.includes("application/json") ?? false,
     "GET /api/todos: returns array": () => Array.isArray(getAllBody?.data),
   })
   errorRate.add(!getAllTodoPassed)
@@ -105,6 +109,8 @@ export default function ({ token }: UserData): void {
 
   const getByIdPassed = check(getByIdResponse, {
     "GET /api/todos/:id: status 200": (res) => res.status === 200,
+    "GET /api/todos/:id: content-type is json": (res) =>
+      res.headers["Content-Type"]?.includes("application/json") ?? false,
     "GET /api/todos/:id: correct _id": () => getByIdBody?.data?._id === todoId,
   })
   errorRate.add(!getByIdPassed)
@@ -127,6 +133,8 @@ export default function ({ token }: UserData): void {
 
   const updatePassed = check(updateResponse, {
     "PUT /api/todos/:id: status 200": (res) => res.status === 200,
+    "PUT /api/todos/id: content-type is json": (res) =>
+      res.headers["Content-Type"]?.includes("application/json") ?? false,
     "PUT /api/todos/:id: title updated": () =>
       updateBody?.data?.title === updatedTodoTitle,
     "PUT /api/todos/:id: description updated": () =>
