@@ -128,10 +128,9 @@ export default function ({ token }: UserData): void {
   const updatePassed = check(updateResponse, {
     "PUT /api/todos/:id: status 200": (res) => res.status === 200,
     "PUT /api/todos/:id: title updated": () =>
-      updateBody?.data?.title ===
-      `Updated todo title VU-${virtualUserId} | Iteration-${iteration}`,
+      updateBody?.data?.title === updatedTodoTitle,
     "PUT /api/todos/:id: description updated": () =>
-      updateBody?.data?.description === `Updated todo description`,
+      updateBody?.data?.description === updatedTodoDescription,
     "PUT /api/todos/:id: completed true": () =>
       updateBody?.data?.completed === true,
   })
