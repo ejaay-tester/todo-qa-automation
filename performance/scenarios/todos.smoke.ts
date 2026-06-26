@@ -56,11 +56,15 @@ export default function ({ token }: UserData): void {
   const client = new TodoClient(token)
   const virtualUserId = __VU
   const iteration = __ITER
+  const todoTitle = `Smoke todo title VU-${virtualUserId} | Iteration-${iteration}`
+  const todoDescription = `Smoke todo description`
+  const updatedTodoTitle = `Updated todo title VU-${virtualUserId} | Iteration-${iteration}`
+  const updatedTodoDescription = `Updated todo description`
 
   // CREATE TODO
   const createResponse = client.create({
-    title: `Smoke todo VU-${virtualUserId} | Iteration-${iteration}`,
-    description: `k6 Smoke Test`,
+    title: todoTitle,
+    description: todoDescription,
     completed: false,
   })
 
@@ -72,8 +76,7 @@ export default function ({ token }: UserData): void {
     "POST /api/todos: status 201": (res) => res.status === 201,
     "POST /api/todos: has_id": () => createBody?.data?._id !== undefined,
     "POST /api/todos: title matches": () =>
-      createBody?.data?.title ===
-      `Smoke todo VU-${virtualUserId} | Iteration-${iteration}`,
+      createBody?.data?.title === todoTitle,
     "POST /api/todos: completed false": () =>
       createBody?.data?.completed === false,
   })
@@ -108,8 +111,8 @@ export default function ({ token }: UserData): void {
 
   // UPDATE TODO
   const updateResponse = client.update(todoId, {
-    title: `Updated todo title VU-${virtualUserId} | Iteration-${iteration}`,
-    description: `Updated todo description`,
+    title: updatedTodoTitle,
+    description: updatedTodoDescription,
     completed: true,
   })
 
