@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-7ISX4",
+    "description": "Desc-7ISX4",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a3fb69ea5e039a1463a02dc",
+    "_id": "6a3fb6a0a5e039a1463a02e3",
+    "createdAt": "2026-06-27T11:40:16.039Z",
+    "updatedAt": "2026-06-27T11:40:16.039Z",
+    "__v": 0
+  }
+}

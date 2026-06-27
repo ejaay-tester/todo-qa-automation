@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-EK0BC",
+    "description": "Desc-EK0BC",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a3fb6ada5e039a1463a031d",
+    "_id": "6a3fb6aea5e039a1463a0320",
+    "createdAt": "2026-06-27T11:40:30.922Z",
+    "updatedAt": "2026-06-27T11:40:30.922Z",
+    "__v": 0
+  }
+}
