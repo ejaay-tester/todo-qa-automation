@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-SWXRK",
+    "description": "Desc-SWXRK",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a40b59a14da7931d87154dd",
+    "_id": "6a40b59b14da7931d87154e0",
+    "createdAt": "2026-06-28T05:48:11.733Z",
+    "updatedAt": "2026-06-28T05:48:11.733Z",
+    "__v": 0
+  }
+}

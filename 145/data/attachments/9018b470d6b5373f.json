@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-AJ1KI",
+    "description": "Desc-AJ1KI",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a40b5b814da7931d8715541",
+    "_id": "6a40b5b914da7931d8715548",
+    "createdAt": "2026-06-28T05:48:41.851Z",
+    "updatedAt": "2026-06-28T05:48:41.851Z",
+    "__v": 0
+  }
+}

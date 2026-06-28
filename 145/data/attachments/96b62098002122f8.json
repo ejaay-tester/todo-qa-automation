@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-KV781",
+    "description": "Desc-KV781",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a40b59d14da7931d87154ef",
+    "_id": "6a40b59f14da7931d87154f2",
+    "createdAt": "2026-06-28T05:48:15.237Z",
+    "updatedAt": "2026-06-28T05:48:15.237Z",
+    "__v": 0
+  }
+}

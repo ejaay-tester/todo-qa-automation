@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-S1ESA",
+    "description": "Desc-S1ESA",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a40b5bd14da7931d871555f",
+    "_id": "6a40b5bf14da7931d8715562",
+    "createdAt": "2026-06-28T05:48:47.120Z",
+    "updatedAt": "2026-06-28T05:48:47.120Z",
+    "__v": 0
+  }
+}

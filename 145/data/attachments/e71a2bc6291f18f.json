@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a40b59b14da7931d87154e4",
+      "title": "Todo-P4LOR",
+      "description": "Desc-P4LOR",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a40b59a14da7931d87154dd",
+      "createdAt": "2026-06-28T05:48:11.915Z",
+      "updatedAt": "2026-06-28T05:48:11.915Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a40b59b14da7931d87154e2",
+      "title": "Todo-5BM91",
+      "description": "Desc-5BM91",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a40b59a14da7931d87154dd",
+      "createdAt": "2026-06-28T05:48:11.760Z",
+      "updatedAt": "2026-06-28T05:48:11.760Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a40b59b14da7931d87154e0",
+      "title": "Todo-SWXRK",
+      "description": "Desc-SWXRK",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a40b59a14da7931d87154dd",
+      "createdAt": "2026-06-28T05:48:11.733Z",
+      "updatedAt": "2026-06-28T05:48:11.733Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

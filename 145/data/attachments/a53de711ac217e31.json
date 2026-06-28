@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-NP9UM",
+    "description": "Desc-NP9UM",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a40b5d814da7931d87155b7",
+    "_id": "6a40b5d914da7931d87155ba",
+    "createdAt": "2026-06-28T05:49:13.740Z",
+    "updatedAt": "2026-06-28T05:49:13.740Z",
+    "__v": 0
+  }
+}
