@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-26QHF",
+    "description": "Desc-26QHF",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4216a9d9443a9f374fb67d",
+    "_id": "6a4216abd9443a9f374fb680",
+    "createdAt": "2026-06-29T06:54:35.740Z",
+    "updatedAt": "2026-06-29T06:54:35.740Z",
+    "__v": 0
+  }
+}

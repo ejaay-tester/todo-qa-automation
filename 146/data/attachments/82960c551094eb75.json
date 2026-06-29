@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-FRD5Z",
+    "description": "Desc-FRD5Z",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4216c5d9443a9f374fb6d7",
+    "_id": "6a4216c6d9443a9f374fb6da",
+    "createdAt": "2026-06-29T06:55:02.780Z",
+    "updatedAt": "2026-06-29T06:55:02.780Z",
+    "__v": 0
+  }
+}

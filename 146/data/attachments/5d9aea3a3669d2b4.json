@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-GU8T9",
+    "description": "Desc-GU8T9",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a421701d9443a9f374fb79f",
+    "_id": "6a421703d9443a9f374fb7a2",
+    "createdAt": "2026-06-29T06:56:03.371Z",
+    "updatedAt": "2026-06-29T06:56:03.371Z",
+    "__v": 0
+  }
+}

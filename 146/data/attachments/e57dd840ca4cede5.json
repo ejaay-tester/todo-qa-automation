@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-58VOJ",
+    "description": "Desc-58VOJ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4216ded9443a9f374fb71d",
+    "_id": "6a4216e0d9443a9f374fb720",
+    "createdAt": "2026-06-29T06:55:28.191Z",
+    "updatedAt": "2026-06-29T06:55:28.191Z",
+    "__v": 0
+  }
+}
