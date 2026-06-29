@@ -1,10 +1,19 @@
 import http, { RefinedResponse, ResponseType, Params } from "k6/http"
 
 // Own performance-layer type - decoupled from src/
-export interface TodoPayload {
+export interface Todo {
+  _id: string
   title: string
   description?: string
   completed: boolean
+}
+
+export interface TodoResponseBody {
+  data: Todo
+}
+
+export interface TodoListResponseBody {
+  data: Todo[]
 }
 
 const BASE_URL: string = __ENV.BASE_URL || "http://localhost:3000"
@@ -21,7 +30,7 @@ export class TodoClient {
     }
   }
 
-  create(payload: TodoPayload): RefinedResponse<ResponseType> {
+  create(payload: Todo): RefinedResponse<ResponseType> {
     return http.post(`${BASE_URL}/api/todos`, JSON.stringify(payload), {
       ...this.params, // pass the whole params object
       tags: { name: "POST /api/todos" }, // tag for grouped metrics
@@ -42,10 +51,7 @@ export class TodoClient {
     })
   }
 
-  update(
-    id: string,
-    payload: Partial<TodoPayload>,
-  ): RefinedResponse<ResponseType> {
+  update(id: string, payload: Partial<Todo>): RefinedResponse<ResponseType> {
     return http.put(`${BASE_URL}/api/todos/${id}`, JSON.stringify(payload), {
       ...this.params,
       tags: { name: "PUT /api/todos/:id" },
