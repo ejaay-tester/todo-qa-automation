@@ -14,7 +14,12 @@ import http from "k6/http"
 import { Rate } from "k6/metrics"
 import { Options } from "k6/options"
 import { registerUser, login } from "../helpers/auth"
-import { TodoClient } from "../clients/todo-client"
+import {
+  Todo,
+  TodoResponseBody,
+  TodoListResponseBody,
+  TodoClient,
+} from "../clients/todo-client"
 import { defaultThresholds } from "../options/thresholds"
 
 // Treat 404 as expected globally for this scenario, since the
@@ -77,11 +82,9 @@ export default function ({ token }: UserData): void {
     title: todoTitle,
     description: todoDescription,
     completed: false,
-  })
+  } as Todo)
 
-  const createBody = createResponse.json() as {
-    data: { _id: string; title: string; completed: boolean }
-  }
+  const createBody = createResponse.json() as unknown as TodoResponseBody
 
   const createTodoPassed = check(createResponse, {
     "POST /api/todos: status 201": (res) => res.status === 201,
@@ -101,7 +104,7 @@ export default function ({ token }: UserData): void {
   // GET ALL TODO
   const getAllResponse = client.getAll()
 
-  const getAllBody = getAllResponse.json() as { data: { _id: string }[] }
+  const getAllBody = getAllResponse.json() as unknown as TodoListResponseBody
 
   const getAllTodoPassed = check(getAllResponse, {
     "GET /api/todos: status 200": (res) => res.status === 200,
@@ -116,9 +119,7 @@ export default function ({ token }: UserData): void {
   // GET BY ID
   const getByIdResponse = client.getById(todoId)
 
-  const getByIdBody = getByIdResponse.json() as {
-    data: { _id: string; title: string }
-  }
+  const getByIdBody = getByIdResponse.json() as unknown as TodoResponseBody
 
   const getByIdPassed = check(getByIdResponse, {
     "GET /api/todos/:id: status 200": (res) => res.status === 200,
@@ -135,14 +136,7 @@ export default function ({ token }: UserData): void {
     completed: true,
   })
 
-  const updateBody = updateResponse.json() as {
-    data: {
-      _id: string
-      title: string
-      description: string
-      completed: boolean
-    }
-  }
+  const updateBody = updateResponse.json() as unknown as TodoResponseBody
 
   const updatePassed = check(updateResponse, {
     "PUT /api/todos/:id: status 200": (res) => res.status === 200,
