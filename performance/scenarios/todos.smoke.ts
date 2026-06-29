@@ -90,13 +90,15 @@ export default function ({ token }: UserData): void {
   // GET ALL TODO
   const getAllResponse = client.getAll()
 
-  const getAllBody = getAllResponse.json() as { data: unknown[] }
+  const getAllBody = getAllResponse.json() as { data: { _id: string }[] }
 
   const getAllTodoPassed = check(getAllResponse, {
     "GET /api/todos: status 200": (res) => res.status === 200,
     "GET /api/todos: content-type is json": (res) =>
       res.headers["Content-Type"]?.includes("application/json") ?? false,
     "GET /api/todos: returns array": () => Array.isArray(getAllBody?.data),
+    "GET /api/todos: contains created todo": () =>
+      getAllBody?.data?.some((todo) => todo._id === todoId) ?? false,
   })
   errorRate.add(!getAllTodoPassed)
 
