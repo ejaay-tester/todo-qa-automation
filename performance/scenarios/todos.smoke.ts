@@ -171,5 +171,6 @@ export default function ({ token }: UserData): void {
     "GET /api/todos/:id after delete: status 404": (res) => res.status === 404,
   })
 
+  // simulate user think-time between actions, prevents unrealistic back-to-back hammering
   sleep(1)
 }
