@@ -1,3 +1,14 @@
+/**
+ * Smoke Test - Todos API
+ *
+ * Validates the full CRUD lifecycle (create, read, update, delete) for a
+ * single user under minimal load (1 VU, 30s). This is the fastest signal
+ * that the API is fundamentally working and meeting baseline latency
+ * thresholds before running heavier load/stress scenarios.
+ *
+ * Run with: npm run perf:smoke
+ */
+
 import { check, sleep } from "k6"
 import http from "k6/http"
 import { Rate } from "k6/metrics"
