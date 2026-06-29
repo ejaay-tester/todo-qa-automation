@@ -54,8 +54,8 @@ export function setup(): UserData {
 // DEFAULT - EACH VU RUNS THIS IN A LOOP
 export default function ({ token }: UserData): void {
   const client = new TodoClient(token)
-  const virtualUserId = __VU
-  const iteration = __ITER
+  const virtualUserId: number = __VU
+  const iteration: number = __ITER
   const todoTitle = `Smoke todo title VU-${virtualUserId} | Iteration-${iteration}`
   const todoDescription = `Smoke todo description`
   const updatedTodoTitle = `Updated todo title VU-${virtualUserId} | Iteration-${iteration}`
