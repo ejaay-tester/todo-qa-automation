@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-WM2LP",
+    "description": "Desc-WM2LP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a43a264f9dfd89f13c05a8c",
+    "_id": "6a43a266f9dfd89f13c05a8f",
+    "createdAt": "2026-06-30T11:03:02.120Z",
+    "updatedAt": "2026-06-30T11:03:02.120Z",
+    "__v": 0
+  }
+}

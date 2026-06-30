@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-OEDFA",
+    "description": "Desc-OEDFA",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a43a245f9dfd89f13c05a08",
+    "_id": "6a43a247f9dfd89f13c05a0b",
+    "createdAt": "2026-06-30T11:02:31.541Z",
+    "updatedAt": "2026-06-30T11:02:31.541Z",
+    "__v": 0
+  }
+}

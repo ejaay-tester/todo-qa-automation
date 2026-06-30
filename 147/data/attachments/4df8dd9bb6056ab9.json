@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-1MIBE",
+    "description": "Desc-1MIBE",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a43a25ff9dfd89f13c05a6e",
+    "_id": "6a43a260f9dfd89f13c05a73",
+    "createdAt": "2026-06-30T11:02:56.935Z",
+    "updatedAt": "2026-06-30T11:02:56.935Z",
+    "__v": 0
+  }
+}

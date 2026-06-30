@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-SFDQP",
+    "description": "Desc-SFDQP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a43a252f9dfd89f13c05a37",
+    "_id": "6a43a253f9dfd89f13c05a3a",
+    "createdAt": "2026-06-30T11:02:43.818Z",
+    "updatedAt": "2026-06-30T11:02:43.818Z",
+    "__v": 0
+  }
+}

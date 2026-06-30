@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-3MZTF",
+    "description": "Desc-3MZTF",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a43a254f9dfd89f13c05a3f",
+    "_id": "6a43a256f9dfd89f13c05a46",
+    "createdAt": "2026-06-30T11:02:46.040Z",
+    "updatedAt": "2026-06-30T11:02:46.040Z",
+    "__v": 0
+  }
+}

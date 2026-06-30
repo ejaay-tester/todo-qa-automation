@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-EGT7K",
+    "description": "Desc-EGT7K",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a43a259f9dfd89f13c05a5d",
+    "_id": "6a43a25bf9dfd89f13c05a60",
+    "createdAt": "2026-06-30T11:02:51.120Z",
+    "updatedAt": "2026-06-30T11:02:51.120Z",
+    "__v": 0
+  }
+}
