@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-H2IVX",
+    "description": "Desc-H2IVX",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a44e11ab41d21be25584d94",
+    "_id": "6a44e11cb41d21be25584d99",
+    "createdAt": "2026-07-01T09:42:52.101Z",
+    "updatedAt": "2026-07-01T09:42:52.101Z",
+    "__v": 0
+  }
+}

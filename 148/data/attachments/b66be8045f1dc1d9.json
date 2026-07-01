@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-FYU9S",
+    "description": "Desc-FYU9S",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a44e103b41d21be25584d4e",
+    "_id": "6a44e104b41d21be25584d51",
+    "createdAt": "2026-07-01T09:42:28.532Z",
+    "updatedAt": "2026-07-01T09:42:28.532Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-KDCU6",
+    "description": "Desc-KDCU6",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a44e0dfb41d21be25584ccc",
+    "_id": "6a44e0e0b41d21be25584ccf",
+    "createdAt": "2026-07-01T09:41:52.823Z",
+    "updatedAt": "2026-07-01T09:41:52.823Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-GMHT3",
+    "description": "Desc-GMHT3",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a44e100b41d21be25584d42",
+    "_id": "6a44e101b41d21be25584d45",
+    "createdAt": "2026-07-01T09:42:25.728Z",
+    "updatedAt": "2026-07-01T09:42:25.728Z",
+    "__v": 0
+  }
+}

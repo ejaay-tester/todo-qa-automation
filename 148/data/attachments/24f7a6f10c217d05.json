@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-HX7LC",
+    "description": "Desc-HX7LC",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a44e107b41d21be25584d58",
+    "_id": "6a44e108b41d21be25584d5b",
+    "createdAt": "2026-07-01T09:42:32.339Z",
+    "updatedAt": "2026-07-01T09:42:32.339Z",
+    "__v": 0
+  }
+}

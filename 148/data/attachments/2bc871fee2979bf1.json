@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-3HKDP",
+    "description": "Desc-3HKDP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a44e0e9b41d21be25584cf4",
+    "_id": "6a44e0ebb41d21be25584cf7",
+    "createdAt": "2026-07-01T09:42:03.033Z",
+    "updatedAt": "2026-07-01T09:42:03.033Z",
+    "__v": 0
+  }
+}
