@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-DCK9G",
+    "description": "Desc-DCK9G",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a46283795ddf61b90648ee7",
+    "_id": "6a46283995ddf61b90648eec",
+    "createdAt": "2026-07-02T08:58:33.203Z",
+    "updatedAt": "2026-07-02T08:58:33.203Z",
+    "__v": 0
+  }
+}

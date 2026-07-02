@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-NVOXW",
+    "description": "Desc-NVOXW",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a46282095ddf61b90648ea1",
+    "_id": "6a46282195ddf61b90648ea4",
+    "createdAt": "2026-07-02T08:58:09.540Z",
+    "updatedAt": "2026-07-02T08:58:09.540Z",
+    "__v": 0
+  }
+}

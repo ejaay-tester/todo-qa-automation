@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-J3MXI",
+    "description": "Desc-J3MXI",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a46280195ddf61b90648e3d",
+    "_id": "6a46280395ddf61b90648e40",
+    "createdAt": "2026-07-02T08:57:39.038Z",
+    "updatedAt": "2026-07-02T08:57:39.038Z",
+    "__v": 0
+  }
+}

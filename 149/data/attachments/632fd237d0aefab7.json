@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-H3TAZ",
+    "description": "Desc-H3TAZ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4627fb95ddf61b90648e1f",
+    "_id": "6a4627fc95ddf61b90648e24",
+    "createdAt": "2026-07-02T08:57:32.697Z",
+    "updatedAt": "2026-07-02T08:57:32.697Z",
+    "__v": 0
+  }
+}

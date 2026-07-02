@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-5QKPZ",
+    "description": "Desc-5QKPZ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a46281a95ddf61b90648e83",
+    "_id": "6a46281c95ddf61b90648e8a",
+    "createdAt": "2026-07-02T08:58:04.087Z",
+    "updatedAt": "2026-07-02T08:58:04.087Z",
+    "__v": 0
+  }
+}

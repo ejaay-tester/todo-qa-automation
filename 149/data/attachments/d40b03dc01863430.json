@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a46283995ddf61b90648eee",
+      "title": "Todo-1YRA6",
+      "description": "Desc-1YRA6",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a46283795ddf61b90648ee7",
+      "createdAt": "2026-07-02T08:58:33.207Z",
+      "updatedAt": "2026-07-02T08:58:33.207Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a46283995ddf61b90648eec",
+      "title": "Todo-DCK9G",
+      "description": "Desc-DCK9G",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a46283795ddf61b90648ee7",
+      "createdAt": "2026-07-02T08:58:33.203Z",
+      "updatedAt": "2026-07-02T08:58:33.203Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a46283995ddf61b90648eea",
+      "title": "Todo-LWIAA",
+      "description": "Desc-LWIAA",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a46283795ddf61b90648ee7",
+      "createdAt": "2026-07-02T08:58:33.141Z",
+      "updatedAt": "2026-07-02T08:58:33.141Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

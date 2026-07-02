@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-307HI",
+    "description": "Desc-307HI",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a46281a95ddf61b90648e83",
+    "_id": "6a46281c95ddf61b90648e86",
+    "createdAt": "2026-07-02T08:58:04.027Z",
+    "updatedAt": "2026-07-02T08:58:04.027Z",
+    "__v": 0
+  }
+}
