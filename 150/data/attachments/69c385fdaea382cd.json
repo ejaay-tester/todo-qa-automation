@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-32EL4",
+    "description": "Desc-32EL4",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a475c960da5af8f208eccc0",
+    "_id": "6a475c980da5af8f208eccc3",
+    "createdAt": "2026-07-03T06:54:16.182Z",
+    "updatedAt": "2026-07-03T06:54:16.182Z",
+    "__v": 0
+  }
+}

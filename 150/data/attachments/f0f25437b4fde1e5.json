@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-PA7OV",
+    "description": "Desc-PA7OV",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a475ca80da5af8f208ecd04",
+    "_id": "6a475ca90da5af8f208ecd07",
+    "createdAt": "2026-07-03T06:54:33.296Z",
+    "updatedAt": "2026-07-03T06:54:33.296Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-RWW7V",
+    "description": "Desc-RWW7V",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a475ca40da5af8f208eccfb",
+    "_id": "6a475ca50da5af8f208eccfe",
+    "createdAt": "2026-07-03T06:54:29.978Z",
+    "updatedAt": "2026-07-03T06:54:29.978Z",
+    "__v": 0
+  }
+}

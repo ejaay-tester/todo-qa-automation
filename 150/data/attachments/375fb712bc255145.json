@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-HYOQG",
+    "description": "Desc-HYOQG",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a475c9f0da5af8f208eccdd",
+    "_id": "6a475ca00da5af8f208ecce2",
+    "createdAt": "2026-07-03T06:54:24.929Z",
+    "updatedAt": "2026-07-03T06:54:24.929Z",
+    "__v": 0
+  }
+}

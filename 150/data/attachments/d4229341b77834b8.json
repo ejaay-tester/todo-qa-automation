@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-CE4DM",
+    "description": "Desc-CE4DM",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a475c9d0da5af8f208eccd5",
+    "_id": "6a475c9e0da5af8f208eccd8",
+    "createdAt": "2026-07-03T06:54:22.689Z",
+    "updatedAt": "2026-07-03T06:54:22.689Z",
+    "__v": 0
+  }
+}

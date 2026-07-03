@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-VKWSQ",
+    "description": "Desc-VKWSQ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a475c9f0da5af8f208eccdd",
+    "_id": "6a475ca00da5af8f208ecce0",
+    "createdAt": "2026-07-03T06:54:24.881Z",
+    "updatedAt": "2026-07-03T06:54:24.881Z",
+    "__v": 0
+  }
+}

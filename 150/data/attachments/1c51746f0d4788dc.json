@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-C9LBA",
+    "description": "Desc-C9LBA",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a475c930da5af8f208eccae",
+    "_id": "6a475c940da5af8f208eccb5",
+    "createdAt": "2026-07-03T06:54:12.957Z",
+    "updatedAt": "2026-07-03T06:54:12.957Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-6067C",
+    "description": "Desc-6067C",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a475c910da5af8f208ecca6",
+    "_id": "6a475c920da5af8f208ecca9",
+    "createdAt": "2026-07-03T06:54:10.815Z",
+    "updatedAt": "2026-07-03T06:54:10.815Z",
+    "__v": 0
+  }
+}
