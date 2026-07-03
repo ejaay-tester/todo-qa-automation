@@ -147,7 +147,7 @@ export default function ({ token }: UserData): void {
 
   const updatePassed = check(updateResponse, {
     "PUT /api/todos/:id: status 200": (res) => res.status === 200,
-    "PUT /api/todos/id: content-type is json": (res) =>
+    "PUT /api/todos/:id: content-type is json": (res) =>
       res.headers["Content-Type"]?.includes("application/json") ?? false,
     "PUT /api/todos/:id: title updated": () =>
       updateBody?.data?.title === updatedTodoTitle,
