@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a48d701f494b82382c14da2",
+      "title": "Todo-XL3P5",
+      "description": "Desc-XL3P5",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a48d6fff494b82382c14d9b",
+      "createdAt": "2026-07-04T09:48:49.124Z",
+      "updatedAt": "2026-07-04T09:48:49.124Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a48d701f494b82382c14da0",
+      "title": "Todo-BCTF3",
+      "description": "Desc-BCTF3",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a48d6fff494b82382c14d9b",
+      "createdAt": "2026-07-04T09:48:49.111Z",
+      "updatedAt": "2026-07-04T09:48:49.111Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a48d701f494b82382c14d9e",
+      "title": "Todo-BS140",
+      "description": "Desc-BS140",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a48d6fff494b82382c14d9b",
+      "createdAt": "2026-07-04T09:48:49.088Z",
+      "updatedAt": "2026-07-04T09:48:49.088Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

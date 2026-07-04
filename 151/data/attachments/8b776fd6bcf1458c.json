@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a48d6e2f494b82382c14d3e",
+      "title": "Todo-NM82I",
+      "description": "Desc-NM82I",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a48d6e0f494b82382c14d37",
+      "createdAt": "2026-07-04T09:48:18.458Z",
+      "updatedAt": "2026-07-04T09:48:18.458Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a48d6e2f494b82382c14d3c",
+      "title": "Todo-7BZ18",
+      "description": "Desc-7BZ18",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a48d6e0f494b82382c14d37",
+      "createdAt": "2026-07-04T09:48:18.351Z",
+      "updatedAt": "2026-07-04T09:48:18.351Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a48d6e2f494b82382c14d3a",
+      "title": "Todo-X4GOY",
+      "description": "Desc-X4GOY",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a48d6e0f494b82382c14d37",
+      "createdAt": "2026-07-04T09:48:18.312Z",
+      "updatedAt": "2026-07-04T09:48:18.312Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

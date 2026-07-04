@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-DG5FI",
+    "description": "Desc-DG5FI",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a48d6e4f494b82382c14d49",
+    "_id": "6a48d6e6f494b82382c14d4c",
+    "createdAt": "2026-07-04T09:48:22.189Z",
+    "updatedAt": "2026-07-04T09:48:22.189Z",
+    "__v": 0
+  }
+}

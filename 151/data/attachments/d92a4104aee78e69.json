@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-2IUQO",
+    "description": "Desc-2IUQO",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a48d6cbf494b82382c14cfb",
+    "_id": "6a48d6cdf494b82382c14cfe",
+    "createdAt": "2026-07-04T09:47:57.795Z",
+    "updatedAt": "2026-07-04T09:47:57.795Z",
+    "__v": 0
+  }
+}
