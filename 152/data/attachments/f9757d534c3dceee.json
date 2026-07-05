@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-AYEAJ",
+    "description": "Desc-AYEAJ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4a63bd8277d5fdfbd832a7",
+    "_id": "6a4a63bf8277d5fdfbd832ae",
+    "createdAt": "2026-07-05T14:01:35.087Z",
+    "updatedAt": "2026-07-05T14:01:35.087Z",
+    "__v": 0
+  }
+}

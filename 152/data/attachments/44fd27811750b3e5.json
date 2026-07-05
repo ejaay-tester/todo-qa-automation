@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-EYIQB",
+    "description": "Desc-EYIQB",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4a63da8277d5fdfbd8330b",
+    "_id": "6a4a63db8277d5fdfbd83312",
+    "createdAt": "2026-07-05T14:02:03.582Z",
+    "updatedAt": "2026-07-05T14:02:03.582Z",
+    "__v": 0
+  }
+}

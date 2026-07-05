@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-XE2N9",
+    "description": "Desc-XE2N9",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4a63dc8277d5fdfbd8331d",
+    "_id": "6a4a63dd8277d5fdfbd83320",
+    "createdAt": "2026-07-05T14:02:05.966Z",
+    "updatedAt": "2026-07-05T14:02:05.966Z",
+    "__v": 0
+  }
+}

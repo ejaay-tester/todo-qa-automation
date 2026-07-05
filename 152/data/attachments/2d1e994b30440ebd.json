@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-35WS3",
+    "description": "Desc-35WS3",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4a638c8277d5fdfbd83207",
+    "_id": "6a4a638e8277d5fdfbd8320a",
+    "createdAt": "2026-07-05T14:00:46.398Z",
+    "updatedAt": "2026-07-05T14:00:46.398Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-XTWZR",
+    "description": "Desc-XTWZR",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4a63aa8277d5fdfbd8326b",
+    "_id": "6a4a63ac8277d5fdfbd8326e",
+    "createdAt": "2026-07-05T14:01:16.275Z",
+    "updatedAt": "2026-07-05T14:01:16.275Z",
+    "__v": 0
+  }
+}
