@@ -59,13 +59,14 @@ export const options: Options = {
 // SETUP - RUNS ONCE BEFORE ALL VUS
 interface UserData {
   token: string
+  userId: string // retained for teardown() once DELETE /api/users/:id endpoint exists
 }
 
 export function setup(): UserData {
   try {
     const user = registerUser()
-    const { token } = login(user.email, user.password)
-    return { token }
+    const { token, userId } = login(user.email, user.password)
+    return { token, userId }
   } catch (err) {
     throw new Error(
       `[SETUP FAILED] Could not register/login test user before smoke test: ${err}`,
