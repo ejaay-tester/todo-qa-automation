@@ -15,7 +15,6 @@ import { Rate } from "k6/metrics"
 import { Options } from "k6/options"
 import { registerUser, login } from "../helpers/auth"
 import {
-  Todo,
   TodoResponseBody,
   TodoListResponseBody,
   TodoClient,
@@ -89,7 +88,7 @@ export default function ({ token }: UserData): void {
     title: todoTitle,
     description: todoDescription,
     completed: false,
-  } as Todo)
+  })
 
   const createBody = createResponse.json() as unknown as TodoResponseBody
 
