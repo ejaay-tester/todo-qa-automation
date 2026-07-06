@@ -90,7 +90,7 @@ export default function ({ token }: UserData): void {
     completed: false,
   })
 
-  const createBody = createResponse.json() as unknown as TodoResponseBody
+  const createBody = createResponse.json() as TodoResponseBody
 
   const createTodoPassed = check(createResponse, {
     "POST /api/todos: status 201": (res) => res.status === 201,
@@ -110,7 +110,7 @@ export default function ({ token }: UserData): void {
   // GET ALL TODO
   const getAllResponse = client.getAll()
 
-  const getAllBody = getAllResponse.json() as unknown as TodoListResponseBody
+  const getAllBody = getAllResponse.json() as TodoListResponseBody
 
   const getAllTodoPassed = check(getAllResponse, {
     "GET /api/todos: status 200": (res) => res.status === 200,
@@ -125,7 +125,7 @@ export default function ({ token }: UserData): void {
   // GET BY ID
   const getByIdResponse = client.getById(todoId)
 
-  const getByIdBody = getByIdResponse.json() as unknown as TodoResponseBody
+  const getByIdBody = getByIdResponse.json() as TodoResponseBody
 
   const getByIdPassed = check(getByIdResponse, {
     "GET /api/todos/:id: status 200": (res) => res.status === 200,
@@ -142,7 +142,7 @@ export default function ({ token }: UserData): void {
     completed: true,
   })
 
-  const updateBody = updateResponse.json() as unknown as TodoResponseBody
+  const updateBody = updateResponse.json() as TodoResponseBody
 
   const updatePassed = check(updateResponse, {
     "PUT /api/todos/:id: status 200": (res) => res.status === 200,
