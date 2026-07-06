@@ -67,18 +67,17 @@ export function login(email: string, password: string): LoginResult {
     { headers: { "Content-Type": "application/json" } },
   )
 
-  check(response, {
-    "SETUP /api/auth/login: status 200": (res) => res.status === 200,
-    // Validate token shape, not just existence
-    "SETUP /api/auth/login: token is string": (res) => {
-      const body = res.json() as unknown as { data: { token: string } }
-      return typeof body?.data?.token === "string" && body.data.token.length > 0
-    },
-  })
-
   const body = response.json() as unknown as {
     data: { userId: string; token: string }
   }
+
+  check(response, {
+    "SETUP /api/auth/login: status 200": (res) => res.status === 200,
+    // Validate token shape, not just existence
+    "SETUP /api/auth/login: token is string": () =>
+      typeof body?.data?.token === "string" && body.data.token.length > 0,
+  })
+
   const token = body?.data?.token
   const userId = body?.data?.userId
 
