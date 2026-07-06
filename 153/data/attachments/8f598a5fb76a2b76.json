@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-GI3T5",
+    "description": "Desc-GI3T5",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4b39bee7b71fd9e4bc1a4c",
+    "_id": "6a4b39bfe7b71fd9e4bc1a4f",
+    "createdAt": "2026-07-06T05:14:39.625Z",
+    "updatedAt": "2026-07-06T05:14:39.625Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-FQYCL",
+    "description": "Desc-FQYCL",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4b39a2e7b71fd9e4bc19dc",
+    "_id": "6a4b39a4e7b71fd9e4bc19e1",
+    "createdAt": "2026-07-06T05:14:12.382Z",
+    "updatedAt": "2026-07-06T05:14:12.382Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a4b39bde7b71fd9e4bc1a41",
+      "title": "Todo-MECB7",
+      "description": "Desc-MECB7",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a4b39bbe7b71fd9e4bc1a3a",
+      "createdAt": "2026-07-06T05:14:37.191Z",
+      "updatedAt": "2026-07-06T05:14:37.191Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a4b39bde7b71fd9e4bc1a3f",
+      "title": "Todo-BPOT1",
+      "description": "Desc-BPOT1",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a4b39bbe7b71fd9e4bc1a3a",
+      "createdAt": "2026-07-06T05:14:37.039Z",
+      "updatedAt": "2026-07-06T05:14:37.039Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a4b39bde7b71fd9e4bc1a3d",
+      "title": "Todo-G4QMO",
+      "description": "Desc-G4QMO",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a4b39bbe7b71fd9e4bc1a3a",
+      "createdAt": "2026-07-06T05:14:37.026Z",
+      "updatedAt": "2026-07-06T05:14:37.026Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

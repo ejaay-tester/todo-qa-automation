@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-B3THA",
+    "description": "Desc-B3THA",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4b39ade7b71fd9e4bc1a03",
+    "_id": "6a4b39aee7b71fd9e4bc1a06",
+    "createdAt": "2026-07-06T05:14:22.825Z",
+    "updatedAt": "2026-07-06T05:14:22.825Z",
+    "__v": 0
+  }
+}

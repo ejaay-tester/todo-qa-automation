@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-NZDY5",
+    "description": "Desc-NZDY5",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4b39a0e7b71fd9e4bc19d4",
+    "_id": "6a4b39a1e7b71fd9e4bc19d7",
+    "createdAt": "2026-07-06T05:14:09.941Z",
+    "updatedAt": "2026-07-06T05:14:09.941Z",
+    "__v": 0
+  }
+}

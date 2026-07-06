@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-BPOT1",
+    "description": "Desc-BPOT1",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4b39bbe7b71fd9e4bc1a3a",
+    "_id": "6a4b39bde7b71fd9e4bc1a3f",
+    "createdAt": "2026-07-06T05:14:37.039Z",
+    "updatedAt": "2026-07-06T05:14:37.039Z",
+    "__v": 0
+  }
+}

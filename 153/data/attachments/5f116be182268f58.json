@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-GF7ZR",
+    "description": "Desc-GF7ZR",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4b39b9e7b71fd9e4bc1a32",
+    "_id": "6a4b39bae7b71fd9e4bc1a35",
+    "createdAt": "2026-07-06T05:14:34.622Z",
+    "updatedAt": "2026-07-06T05:14:34.622Z",
+    "__v": 0
+  }
+}

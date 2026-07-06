@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-LI726",
+    "description": "Desc-LI726",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4b39b5e7b71fd9e4bc1a29",
+    "_id": "6a4b39b6e7b71fd9e4bc1a2c",
+    "createdAt": "2026-07-06T05:14:30.914Z",
+    "updatedAt": "2026-07-06T05:14:30.914Z",
+    "__v": 0
+  }
+}

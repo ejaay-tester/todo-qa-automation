@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-MECB7",
+    "description": "Desc-MECB7",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4b39bbe7b71fd9e4bc1a3a",
+    "_id": "6a4b39bde7b71fd9e4bc1a41",
+    "createdAt": "2026-07-06T05:14:37.191Z",
+    "updatedAt": "2026-07-06T05:14:37.191Z",
+    "__v": 0
+  }
+}

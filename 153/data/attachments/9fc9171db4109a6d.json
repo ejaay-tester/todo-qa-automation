@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-OHWWZ",
+    "description": "Desc-OHWWZ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4b39afe7b71fd9e4bc1a0b",
+    "_id": "6a4b39b1e7b71fd9e4bc1a10",
+    "createdAt": "2026-07-06T05:14:25.538Z",
+    "updatedAt": "2026-07-06T05:14:25.538Z",
+    "__v": 0
+  }
+}
