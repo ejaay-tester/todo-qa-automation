@@ -15,14 +15,17 @@ export interface Todo {
   title: string
   description?: string
   completed: boolean
+  [key: string]: unknown // JSONObject compatibility
 }
 
 export interface TodoResponseBody {
   data: Todo
+  [key: string]: unknown // JSONObject compatibility
 }
 
 export interface TodoListResponseBody {
   data: Todo[]
+  [key: string]: unknown // JSONObject compatibility
 }
 
 // --- CLIENT ---
