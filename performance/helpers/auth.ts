@@ -12,7 +12,6 @@ export interface UserCredentials {
 
 export interface LoginResult {
   token: string
-  userId: string
 }
 
 // REGISTER USER
@@ -68,7 +67,7 @@ export function login(email: string, password: string): LoginResult {
   )
 
   const body = response.json() as unknown as {
-    data: { userId: string; token: string }
+    data: { user: { id: string; email: string }; token: string }
   }
 
   check(response, {
@@ -79,7 +78,6 @@ export function login(email: string, password: string): LoginResult {
   })
 
   const token = body?.data?.token
-  const userId = body?.data?.userId
 
   if (!token) {
     throw new Error(
@@ -87,5 +85,5 @@ export function login(email: string, password: string): LoginResult {
     )
   }
 
-  return { token, userId }
+  return { token }
 }
