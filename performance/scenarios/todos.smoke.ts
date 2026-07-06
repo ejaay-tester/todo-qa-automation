@@ -65,8 +65,8 @@ interface UserData {
 export function setup(): UserData {
   try {
     const user = registerUser()
-    const { token, userId } = login(user.email, user.password)
-    return { token, userId }
+    const { token } = login(user.email, user.password)
+    return { token, userId: user.id }
   } catch (err) {
     throw new Error(
       `[SETUP FAILED] Could not register/login test user before smoke test: ${err}`,
