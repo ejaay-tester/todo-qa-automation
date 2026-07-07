@@ -168,9 +168,10 @@ export default function ({ token }: UserData): void {
 
   // VERIFY DELETION
   const verifyDeleteResponse = client.getById(todoId)
-  check(verifyDeleteResponse, {
+  const verifyDeletePassed = check(verifyDeleteResponse, {
     "GET /api/todos/:id after delete: status 404": (res) => res.status === 404,
   })
+  errorRate.add(!verifyDeletePassed)
 
   // simulate user think-time between actions, prevents unrealistic back-to-back hammering
   sleep(1)
