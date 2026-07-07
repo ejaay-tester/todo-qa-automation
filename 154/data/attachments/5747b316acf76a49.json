@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-UGJ13",
+    "description": "Desc-UGJ13",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4ca4c8dc339e08bdcd8b60",
+    "_id": "6a4ca4c9dc339e08bdcd8b63",
+    "createdAt": "2026-07-07T07:03:37.800Z",
+    "updatedAt": "2026-07-07T07:03:37.800Z",
+    "__v": 0
+  }
+}

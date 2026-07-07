@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-4V7M4",
+    "description": "Desc-4V7M4",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4ca4afdc339e08bdcd8b06",
+    "_id": "6a4ca4b0dc339e08bdcd8b09",
+    "createdAt": "2026-07-07T07:03:12.933Z",
+    "updatedAt": "2026-07-07T07:03:12.933Z",
+    "__v": 0
+  }
+}

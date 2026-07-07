@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-Q853S",
+    "description": "Desc-Q853S",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4ca490dc339e08bdcd8aa2",
+    "_id": "6a4ca492dc339e08bdcd8aa5",
+    "createdAt": "2026-07-07T07:02:42.613Z",
+    "updatedAt": "2026-07-07T07:02:42.613Z",
+    "__v": 0
+  }
+}

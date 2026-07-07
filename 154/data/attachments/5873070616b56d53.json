@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a4ca4c4dc339e08bdcd8b49",
+      "title": "Todo-5VWPA",
+      "description": "Desc-5VWPA",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a4ca4c3dc339e08bdcd8b42",
+      "createdAt": "2026-07-07T07:03:32.665Z",
+      "updatedAt": "2026-07-07T07:03:32.665Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a4ca4c4dc339e08bdcd8b47",
+      "title": "Todo-NYYRM",
+      "description": "Desc-NYYRM",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a4ca4c3dc339e08bdcd8b42",
+      "createdAt": "2026-07-07T07:03:32.659Z",
+      "updatedAt": "2026-07-07T07:03:32.659Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a4ca4c4dc339e08bdcd8b45",
+      "title": "Todo-J74X2",
+      "description": "Desc-J74X2",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a4ca4c3dc339e08bdcd8b42",
+      "createdAt": "2026-07-07T07:03:32.597Z",
+      "updatedAt": "2026-07-07T07:03:32.597Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

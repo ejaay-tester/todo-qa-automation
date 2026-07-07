@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-BJ9PS",
+    "description": "Desc-BJ9PS",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4ca4e6dc339e08bdcd8bc4",
+    "_id": "6a4ca4e7dc339e08bdcd8bc7",
+    "createdAt": "2026-07-07T07:04:07.699Z",
+    "updatedAt": "2026-07-07T07:04:07.699Z",
+    "__v": 0
+  }
+}

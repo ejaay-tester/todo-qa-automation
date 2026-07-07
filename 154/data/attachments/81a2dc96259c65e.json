@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-FTDTE",
+    "description": "Desc-FTDTE",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4ca4e0dc339e08bdcd8ba6",
+    "_id": "6a4ca4e1dc339e08bdcd8ba9",
+    "createdAt": "2026-07-07T07:04:01.809Z",
+    "updatedAt": "2026-07-07T07:04:01.809Z",
+    "__v": 0
+  }
+}

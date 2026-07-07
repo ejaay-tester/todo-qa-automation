@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-KAUUX",
+    "description": "Desc-KAUUX",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4ca4a4dc339e08bdcd8ade",
+    "_id": "6a4ca4a6dc339e08bdcd8ae1",
+    "createdAt": "2026-07-07T07:03:02.311Z",
+    "updatedAt": "2026-07-07T07:03:02.311Z",
+    "__v": 0
+  }
+}

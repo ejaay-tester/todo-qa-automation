@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-RY2KZ",
+    "description": "Desc-RY2KZ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4ca4abdc339e08bdcd8afc",
+    "_id": "6a4ca4acdc339e08bdcd8aff",
+    "createdAt": "2026-07-07T07:03:08.906Z",
+    "updatedAt": "2026-07-07T07:03:08.906Z",
+    "__v": 0
+  }
+}

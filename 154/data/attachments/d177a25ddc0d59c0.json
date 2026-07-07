@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-5VWPA",
+    "description": "Desc-5VWPA",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4ca4c3dc339e08bdcd8b42",
+    "_id": "6a4ca4c4dc339e08bdcd8b49",
+    "createdAt": "2026-07-07T07:03:32.665Z",
+    "updatedAt": "2026-07-07T07:03:32.665Z",
+    "__v": 0
+  }
+}

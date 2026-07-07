@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a4ca4a6dc339e08bdcd8ae5",
+      "title": "Todo-0QATN",
+      "description": "Desc-0QATN",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a4ca4a4dc339e08bdcd8ade",
+      "createdAt": "2026-07-07T07:03:02.454Z",
+      "updatedAt": "2026-07-07T07:03:02.454Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a4ca4a6dc339e08bdcd8ae3",
+      "title": "Todo-657DO",
+      "description": "Desc-657DO",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a4ca4a4dc339e08bdcd8ade",
+      "createdAt": "2026-07-07T07:03:02.380Z",
+      "updatedAt": "2026-07-07T07:03:02.380Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a4ca4a6dc339e08bdcd8ae1",
+      "title": "Todo-KAUUX",
+      "description": "Desc-KAUUX",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a4ca4a4dc339e08bdcd8ade",
+      "createdAt": "2026-07-07T07:03:02.311Z",
+      "updatedAt": "2026-07-07T07:03:02.311Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}
