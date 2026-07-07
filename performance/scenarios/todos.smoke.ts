@@ -117,6 +117,8 @@ export default function ({ token }: UserData): void {
     "GET /api/todos: content-type is json": (res) =>
       res.headers["Content-Type"]?.includes("application/json") ?? false,
     "GET /api/todos: returns array": () => Array.isArray(getAllBody?.data),
+    "GET /api/todos: non-empty array": () =>
+      (getAllBody?.data?.length ?? 0) > 0,
     "GET /api/todos: contains created todo": () =>
       Array.isArray(getAllBody?.data) &&
       getAllBody.data.some((todo) => todo._id === todoId),
