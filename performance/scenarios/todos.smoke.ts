@@ -79,14 +79,13 @@ export default function ({ token }: UserData): void {
   const virtualUserId: number = __VU
   const iteration: number = __ITER
   const todoTitle = `Smoke todo title VU-${virtualUserId} | Iteration-${iteration}`
-  const todoDescription = `Smoke todo description`
   const updatedTodoTitle = `Updated todo title VU-${virtualUserId} | Iteration-${iteration}`
   const updatedTodoDescription = `Updated todo description`
 
   // CREATE TODO
   const createResponse = client.create({
     title: todoTitle,
-    description: todoDescription,
+    description: "Smoke todo description",
     completed: false,
   })
 
