@@ -105,6 +105,7 @@ export default function ({ token }: UserData): void {
   errorRate.add(!createTodoPassed)
 
   const todoId = createBody?.data?._id
+
   if (!todoId) return // guard - skip remaining step if create todo fails
 
   // GET ALL TODO
@@ -118,7 +119,8 @@ export default function ({ token }: UserData): void {
       res.headers["Content-Type"]?.includes("application/json") ?? false,
     "GET /api/todos: returns array": () => Array.isArray(getAllBody?.data),
     "GET /api/todos: contains created todo": () =>
-      getAllBody?.data?.some((todo) => todo._id === todoId) ?? false,
+      Array.isArray(getAllBody?.data) &&
+      getAllBody.data.some((todo) => todo._id === todoId),
   })
   errorRate.add(!getAllTodoPassed)
 
