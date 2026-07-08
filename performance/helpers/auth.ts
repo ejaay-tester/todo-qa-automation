@@ -87,12 +87,16 @@ export function login(email: string, password: string): LoginResult {
 
   const body = response.json() as LoginResponseBody
 
-  check(response, {
+  const passed = check(response, {
     "SETUP /api/auth/login: status 200": (res) => res.status === 200,
     // Validate token shape, not just existence
     "SETUP /api/auth/login: token is string": () =>
       typeof body?.data?.token === "string" && body.data.token.length > 0,
   })
+
+  if (!passed) {
+    throw new Error(`[LOGIN ERROR] (${response.status}): ${response.body}`)
+  }
 
   const token = body?.data?.token
 
