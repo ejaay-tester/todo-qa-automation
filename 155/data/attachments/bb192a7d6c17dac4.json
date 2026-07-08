@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-BAFUC",
+    "description": "Desc-BAFUC",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4de99297afb51831c9a693",
+    "_id": "6a4de99497afb51831c9a696",
+    "createdAt": "2026-07-08T06:09:24.118Z",
+    "updatedAt": "2026-07-08T06:09:24.118Z",
+    "__v": 0
+  }
+}

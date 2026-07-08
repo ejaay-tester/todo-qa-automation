@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a4de9c797afb51831c9a73a",
+      "title": "Todo-6O71F",
+      "description": "Desc-6O71F",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a4de9c597afb51831c9a733",
+      "createdAt": "2026-07-08T06:10:15.235Z",
+      "updatedAt": "2026-07-08T06:10:15.235Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a4de9c797afb51831c9a738",
+      "title": "Todo-0ROUA",
+      "description": "Desc-0ROUA",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a4de9c597afb51831c9a733",
+      "createdAt": "2026-07-08T06:10:15.233Z",
+      "updatedAt": "2026-07-08T06:10:15.233Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a4de9c797afb51831c9a736",
+      "title": "Todo-JLIQA",
+      "description": "Desc-JLIQA",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a4de9c597afb51831c9a733",
+      "createdAt": "2026-07-08T06:10:15.205Z",
+      "updatedAt": "2026-07-08T06:10:15.205Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

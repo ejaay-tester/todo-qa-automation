@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-Z8HZL",
+    "description": "Desc-Z8HZL",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4de9a797afb51831c9a6cf",
+    "_id": "6a4de9a997afb51831c9a6d4",
+    "createdAt": "2026-07-08T06:09:45.245Z",
+    "updatedAt": "2026-07-08T06:09:45.245Z",
+    "__v": 0
+  }
+}

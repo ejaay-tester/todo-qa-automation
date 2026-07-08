@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-AHIXU",
+    "description": "Desc-AHIXU",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4de97197afb51831c9a62f",
+    "_id": "6a4de97397afb51831c9a632",
+    "createdAt": "2026-07-08T06:08:51.745Z",
+    "updatedAt": "2026-07-08T06:08:51.745Z",
+    "__v": 0
+  }
+}

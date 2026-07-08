@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-ENVFP",
+    "description": "Desc-ENVFP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4de9aa97afb51831c9a6e1",
+    "_id": "6a4de9ab97afb51831c9a6e4",
+    "createdAt": "2026-07-08T06:09:47.799Z",
+    "updatedAt": "2026-07-08T06:09:47.799Z",
+    "__v": 0
+  }
+}

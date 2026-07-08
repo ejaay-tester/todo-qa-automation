@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-4ULNT",
+    "description": "Desc-4ULNT",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4de98e97afb51831c9a689",
+    "_id": "6a4de99097afb51831c9a68c",
+    "createdAt": "2026-07-08T06:09:20.206Z",
+    "updatedAt": "2026-07-08T06:09:20.206Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-ZCKL3",
+    "description": "Desc-ZCKL3",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4de9b197afb51831c9a6f7",
+    "_id": "6a4de9b297afb51831c9a6fa",
+    "createdAt": "2026-07-08T06:09:54.615Z",
+    "updatedAt": "2026-07-08T06:09:54.615Z",
+    "__v": 0
+  }
+}

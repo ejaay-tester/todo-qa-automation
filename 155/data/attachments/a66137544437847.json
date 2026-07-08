@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-0ROUA",
+    "description": "Desc-0ROUA",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4de9c597afb51831c9a733",
+    "_id": "6a4de9c797afb51831c9a738",
+    "createdAt": "2026-07-08T06:10:15.233Z",
+    "updatedAt": "2026-07-08T06:10:15.233Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-NXINI",
+    "description": "Desc-NXINI",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4de98b97afb51831c9a67d",
+    "_id": "6a4de98d97afb51831c9a680",
+    "createdAt": "2026-07-08T06:09:17.322Z",
+    "updatedAt": "2026-07-08T06:09:17.322Z",
+    "__v": 0
+  }
+}
