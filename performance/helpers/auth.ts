@@ -3,6 +3,8 @@ import { check } from "k6"
 
 const BASE_URL: string = __ENV.BASE_URL || "http://localhost:3000"
 
+// ----- PUBLIC TYPES -----
+// Exported - consumed by callers (todos.smoke.ts setup())
 export interface UserCredentials {
   id: string
   email: string
@@ -12,6 +14,25 @@ export interface UserCredentials {
 
 export interface LoginResult {
   token: string
+}
+
+// ----- PRIVATE TYPES -----
+// Not exported - internal HTTP response parsing only, never leave this file
+interface RegisterResponseBody {
+  data: {
+    user: { id: string; email: string }
+    [key: string]: unknown
+  }
+  [key: string]: unknown
+}
+
+interface LoginResponseBody {
+  data: {
+    user: { id: string; email: string }
+    token: string
+    [key: string]: unknown
+  }
+  [key: string]: unknown
 }
 
 // REGISTER USER
@@ -31,9 +52,7 @@ export function registerUser(): UserCredentials {
     { headers: { "Content-Type": "application/json" } },
   )
 
-  const body = response.json() as unknown as {
-    data: { user: { id: string; email: string } }
-  }
+  const body = response.json() as RegisterResponseBody
 
   const passed = check(response, {
     "SETUP /api/auth/register: status 201": (res) => res.status === 201,
@@ -66,9 +85,7 @@ export function login(email: string, password: string): LoginResult {
     { headers: { "Content-Type": "application/json" } },
   )
 
-  const body = response.json() as unknown as {
-    data: { user: { id: string; email: string }; token: string }
-  }
+  const body = response.json() as LoginResponseBody
 
   check(response, {
     "SETUP /api/auth/login: status 200": (res) => res.status === 200,
