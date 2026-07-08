@@ -135,6 +135,8 @@ export default function ({ token }: UserData): void {
     "GET /api/todos/:id: content-type is json": (res) =>
       res.headers["Content-Type"]?.includes("application/json") ?? false,
     "GET /api/todos/:id: correct _id": () => getByIdBody?.data?._id === todoId,
+    "GET /api/todos/:id: title matches": () =>
+      getByIdBody?.data?.title === todoTitle,
   })
   errorRate.add(!getByIdPassed)
 
