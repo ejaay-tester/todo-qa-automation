@@ -162,6 +162,8 @@ export default function ({ token }: UserData): void {
   })
   errorRate.add(!updatePassed)
 
+  if (!updatePassed) return // guard - skip delete if UPDATE failed
+
   // DELETE TODO
   const deleteResponse = client.delete(todoId)
 
