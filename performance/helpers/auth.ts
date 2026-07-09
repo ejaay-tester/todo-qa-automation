@@ -3,7 +3,7 @@ import { check } from "k6"
 
 const BASE_URL: string = __ENV.BASE_URL || "http://localhost:3000"
 
-// ----- PUBLIC TYPES -----
+// --- PUBLIC TYPES ---
 // Exported - consumed by callers (todos.smoke.ts setup())
 export interface UserCredentials {
   id: string
@@ -16,7 +16,7 @@ export interface LoginResult {
   token: string
 }
 
-// ----- PRIVATE TYPES -----
+// --- PRIVATE TYPES ---
 // Not exported - internal HTTP response parsing only, never leave this file
 interface RegisterResponseBody {
   data: {
