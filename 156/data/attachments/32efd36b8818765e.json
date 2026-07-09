@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-OQFE2",
+    "description": "Desc-OQFE2",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4f67cb09c49728214994ad",
+    "_id": "6a4f67cc09c49728214994b2",
+    "createdAt": "2026-07-09T09:20:12.666Z",
+    "updatedAt": "2026-07-09T09:20:12.666Z",
+    "__v": 0
+  }
+}

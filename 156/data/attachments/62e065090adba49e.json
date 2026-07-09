@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-6EYEC",
+    "description": "Desc-6EYEC",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4f67c509c497282149949c",
+    "_id": "6a4f67c709c497282149949f",
+    "createdAt": "2026-07-09T09:20:07.365Z",
+    "updatedAt": "2026-07-09T09:20:07.365Z",
+    "__v": 0
+  }
+}

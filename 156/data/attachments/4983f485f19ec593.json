@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-YWFBA",
+    "description": "Desc-YWFBA",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4f67c909c49728214994a5",
+    "_id": "6a4f67ca09c49728214994a8",
+    "createdAt": "2026-07-09T09:20:10.556Z",
+    "updatedAt": "2026-07-09T09:20:10.556Z",
+    "__v": 0
+  }
+}

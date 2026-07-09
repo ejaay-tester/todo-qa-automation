@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-1DKHL",
+    "description": "Desc-1DKHL",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4f67cb09c49728214994ad",
+    "_id": "6a4f67cc09c49728214994b0",
+    "createdAt": "2026-07-09T09:20:12.645Z",
+    "updatedAt": "2026-07-09T09:20:12.645Z",
+    "__v": 0
+  }
+}

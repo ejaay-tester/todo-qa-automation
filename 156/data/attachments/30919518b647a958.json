@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-LPKSN",
+    "description": "Desc-LPKSN",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4f67b509c497282149944f",
+    "_id": "6a4f67b609c4972821499454",
+    "createdAt": "2026-07-09T09:19:50.482Z",
+    "updatedAt": "2026-07-09T09:19:50.482Z",
+    "__v": 0
+  }
+}

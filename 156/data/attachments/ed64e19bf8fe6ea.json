@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-0QBVT",
+    "description": "Desc-0QBVT",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4f67cd09c49728214994bf",
+    "_id": "6a4f67cf09c49728214994c2",
+    "createdAt": "2026-07-09T09:20:15.135Z",
+    "updatedAt": "2026-07-09T09:20:15.135Z",
+    "__v": 0
+  }
+}

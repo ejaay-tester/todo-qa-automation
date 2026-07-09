@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-AD20N",
+    "description": "Desc-AD20N",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4f67c009c497282149947e",
+    "_id": "6a4f67c109c4972821499481",
+    "createdAt": "2026-07-09T09:20:01.979Z",
+    "updatedAt": "2026-07-09T09:20:01.979Z",
+    "__v": 0
+  }
+}

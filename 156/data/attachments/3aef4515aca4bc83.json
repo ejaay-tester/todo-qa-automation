@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-2UO93",
+    "description": "Desc-2UO93",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a4f67c309c4972821499490",
+    "_id": "6a4f67c409c4972821499493",
+    "createdAt": "2026-07-09T09:20:04.437Z",
+    "updatedAt": "2026-07-09T09:20:04.437Z",
+    "__v": 0
+  }
+}
