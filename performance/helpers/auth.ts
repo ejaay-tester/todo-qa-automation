@@ -100,6 +100,8 @@ export function login(email: string, password: string): LoginResult {
 
   const token = body?.data?.token
 
+  // Safety net - should never reach here if checks passed,
+  // but guards against unexpected token omission in a valid 200 response
   if (!token) {
     throw new Error(
       `[AUTHENTICATION ERROR] (${response.status}): Session expired or token missing.`,
