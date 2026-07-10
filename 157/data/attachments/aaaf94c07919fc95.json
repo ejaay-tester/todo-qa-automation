@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-JBF1V",
+    "description": "Desc-JBF1V",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a50bd0a7928794779e74a8a",
+    "_id": "6a50bd0b7928794779e74a8f",
+    "createdAt": "2026-07-10T09:36:11.340Z",
+    "updatedAt": "2026-07-10T09:36:11.340Z",
+    "__v": 0
+  }
+}

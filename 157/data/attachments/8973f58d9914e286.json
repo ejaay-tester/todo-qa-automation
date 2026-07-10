@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-MF422",
+    "description": "Desc-MF422",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a50bcd07928794779e749c2",
+    "_id": "6a50bcd17928794779e749c9",
+    "createdAt": "2026-07-10T09:35:13.960Z",
+    "updatedAt": "2026-07-10T09:35:13.960Z",
+    "__v": 0
+  }
+}
