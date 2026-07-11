@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "日本語タイトル 한국어العربية",
+    "description": "Unicode title description",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a51ec589e32a4ff78b58db1",
+    "_id": "6a51ec5a9e32a4ff78b58db4",
+    "createdAt": "2026-07-11T07:10:18.115Z",
+    "updatedAt": "2026-07-11T07:10:18.115Z",
+    "__v": 0
+  }
+}

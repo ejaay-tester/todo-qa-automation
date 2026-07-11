@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-EEG6Z",
+    "description": "Desc-EEG6Z",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a51ec629e32a4ff78b58ddf",
+    "_id": "6a51ec639e32a4ff78b58de2",
+    "createdAt": "2026-07-11T07:10:27.717Z",
+    "updatedAt": "2026-07-11T07:10:27.717Z",
+    "__v": 0
+  }
+}

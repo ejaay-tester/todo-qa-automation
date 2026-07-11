@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-NE5IK",
+    "description": "Desc-NE5IK",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a51ec5d9e32a4ff78b58dc1",
+    "_id": "6a51ec5e9e32a4ff78b58dc4",
+    "createdAt": "2026-07-11T07:10:22.420Z",
+    "updatedAt": "2026-07-11T07:10:22.420Z",
+    "__v": 0
+  }
+}

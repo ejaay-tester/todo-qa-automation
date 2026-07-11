@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-AH79S",
+    "description": "Desc-AH79S",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a51ec0f9e32a4ff78b58cbd",
+    "_id": "6a51ec119e32a4ff78b58cc0",
+    "createdAt": "2026-07-11T07:09:05.830Z",
+    "updatedAt": "2026-07-11T07:09:05.830Z",
+    "__v": 0
+  }
+}

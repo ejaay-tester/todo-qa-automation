@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a51ec5e9e32a4ff78b58dc8",
+      "title": "Todo-8KINM",
+      "description": "Desc-8KINM",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a51ec5d9e32a4ff78b58dc1",
+      "createdAt": "2026-07-11T07:10:22.452Z",
+      "updatedAt": "2026-07-11T07:10:22.452Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a51ec5e9e32a4ff78b58dc6",
+      "title": "Todo-366N7",
+      "description": "Desc-366N7",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a51ec5d9e32a4ff78b58dc1",
+      "createdAt": "2026-07-11T07:10:22.450Z",
+      "updatedAt": "2026-07-11T07:10:22.450Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a51ec5e9e32a4ff78b58dc4",
+      "title": "Todo-NE5IK",
+      "description": "Desc-NE5IK",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a51ec5d9e32a4ff78b58dc1",
+      "createdAt": "2026-07-11T07:10:22.420Z",
+      "updatedAt": "2026-07-11T07:10:22.420Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

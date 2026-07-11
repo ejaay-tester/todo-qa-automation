@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a51ec259e32a4ff78b58d00",
+      "title": "Todo-SAIVA",
+      "description": "Desc-SAIVA",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a51ec249e32a4ff78b58cf9",
+      "createdAt": "2026-07-11T07:09:25.467Z",
+      "updatedAt": "2026-07-11T07:09:25.467Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a51ec259e32a4ff78b58cfe",
+      "title": "Todo-X2S1D",
+      "description": "Desc-X2S1D",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a51ec249e32a4ff78b58cf9",
+      "createdAt": "2026-07-11T07:09:25.448Z",
+      "updatedAt": "2026-07-11T07:09:25.448Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a51ec259e32a4ff78b58cfc",
+      "title": "Todo-UBSOY",
+      "description": "Desc-UBSOY",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a51ec249e32a4ff78b58cf9",
+      "createdAt": "2026-07-11T07:09:25.426Z",
+      "updatedAt": "2026-07-11T07:09:25.426Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

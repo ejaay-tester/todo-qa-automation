@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-8KINM",
+    "description": "Desc-8KINM",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a51ec5d9e32a4ff78b58dc1",
+    "_id": "6a51ec5e9e32a4ff78b58dc8",
+    "createdAt": "2026-07-11T07:10:22.452Z",
+    "updatedAt": "2026-07-11T07:10:22.452Z",
+    "__v": 0
+  }
+}

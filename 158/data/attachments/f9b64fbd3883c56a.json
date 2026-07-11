@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a51ec429e32a4ff78b58d64",
+      "title": "Todo-XIBY9",
+      "description": "Desc-XIBY9",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a51ec419e32a4ff78b58d5d",
+      "createdAt": "2026-07-11T07:09:54.565Z",
+      "updatedAt": "2026-07-11T07:09:54.565Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a51ec429e32a4ff78b58d62",
+      "title": "Todo-OIA69",
+      "description": "Desc-OIA69",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a51ec419e32a4ff78b58d5d",
+      "createdAt": "2026-07-11T07:09:54.563Z",
+      "updatedAt": "2026-07-11T07:09:54.563Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a51ec429e32a4ff78b58d60",
+      "title": "Todo-X79K2",
+      "description": "Desc-X79K2",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a51ec419e32a4ff78b58d5d",
+      "createdAt": "2026-07-11T07:09:54.516Z",
+      "updatedAt": "2026-07-11T07:09:54.516Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-MJUZM",
+    "description": "Desc-MJUZM",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a51ec5f9e32a4ff78b58dd3",
+    "_id": "6a51ec619e32a4ff78b58dd6",
+    "createdAt": "2026-07-11T07:10:25.017Z",
+    "updatedAt": "2026-07-11T07:10:25.017Z",
+    "__v": 0
+  }
+}

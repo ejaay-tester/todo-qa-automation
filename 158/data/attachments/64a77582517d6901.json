@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-TZ1OP",
+    "description": "Desc-TZ1OP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a51ec2e9e32a4ff78b58d21",
+    "_id": "6a51ec2f9e32a4ff78b58d24",
+    "createdAt": "2026-07-11T07:09:35.461Z",
+    "updatedAt": "2026-07-11T07:09:35.461Z",
+    "__v": 0
+  }
+}
