@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-BWR9X",
+    "description": "Desc-BWR9X",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a535217e0c2fd3c8b6ec5f8",
+    "_id": "6a535219e0c2fd3c8b6ec5fd",
+    "createdAt": "2026-07-12T08:36:41.340Z",
+    "updatedAt": "2026-07-12T08:36:41.340Z",
+    "__v": 0
+  }
+}

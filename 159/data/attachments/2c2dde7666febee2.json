@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-2G4SA",
+    "description": "Desc-2G4SA",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a53520be0c2fd3c8b6ec5c9",
+    "_id": "6a53520de0c2fd3c8b6ec5ce",
+    "createdAt": "2026-07-12T08:36:29.077Z",
+    "updatedAt": "2026-07-12T08:36:29.077Z",
+    "__v": 0
+  }
+}

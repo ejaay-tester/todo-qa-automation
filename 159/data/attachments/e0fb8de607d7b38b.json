@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-TPI8M",
+    "description": "Desc-TPI8M",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a535217e0c2fd3c8b6ec5f8",
+    "_id": "6a535219e0c2fd3c8b6ec5fb",
+    "createdAt": "2026-07-12T08:36:41.332Z",
+    "updatedAt": "2026-07-12T08:36:41.332Z",
+    "__v": 0
+  }
+}

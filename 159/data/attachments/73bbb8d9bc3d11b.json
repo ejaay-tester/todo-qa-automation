@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-HJ0PV",
+    "description": "Desc-HJ0PV",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a535217e0c2fd3c8b6ec5f8",
+    "_id": "6a535219e0c2fd3c8b6ec5ff",
+    "createdAt": "2026-07-12T08:36:41.345Z",
+    "updatedAt": "2026-07-12T08:36:41.345Z",
+    "__v": 0
+  }
+}

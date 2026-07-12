@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-ISU74",
+    "description": "Desc-ISU74",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a53521de0c2fd3c8b6ec616",
+    "_id": "6a53521ee0c2fd3c8b6ec619",
+    "createdAt": "2026-07-12T08:36:46.817Z",
+    "updatedAt": "2026-07-12T08:36:46.817Z",
+    "__v": 0
+  }
+}

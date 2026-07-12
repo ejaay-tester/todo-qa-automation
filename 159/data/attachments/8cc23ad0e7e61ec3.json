@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-5PQQB",
+    "description": "Desc-5PQQB",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a535228e0c2fd3c8b6ec645",
+    "_id": "6a535229e0c2fd3c8b6ec648",
+    "createdAt": "2026-07-12T08:36:57.727Z",
+    "updatedAt": "2026-07-12T08:36:57.727Z",
+    "__v": 0
+  }
+}

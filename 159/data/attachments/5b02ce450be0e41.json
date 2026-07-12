@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a53520de0c2fd3c8b6ec5d0",
+      "title": "Todo-CRYR6",
+      "description": "Desc-CRYR6",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a53520be0c2fd3c8b6ec5c9",
+      "createdAt": "2026-07-12T08:36:29.081Z",
+      "updatedAt": "2026-07-12T08:36:29.081Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a53520de0c2fd3c8b6ec5ce",
+      "title": "Todo-2G4SA",
+      "description": "Desc-2G4SA",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a53520be0c2fd3c8b6ec5c9",
+      "createdAt": "2026-07-12T08:36:29.077Z",
+      "updatedAt": "2026-07-12T08:36:29.077Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a53520de0c2fd3c8b6ec5cc",
+      "title": "Todo-C01UD",
+      "description": "Desc-C01UD",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a53520be0c2fd3c8b6ec5c9",
+      "createdAt": "2026-07-12T08:36:29.050Z",
+      "updatedAt": "2026-07-12T08:36:29.050Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

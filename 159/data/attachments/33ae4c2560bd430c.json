@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a535224e0c2fd3c8b6ec62e",
+      "title": "Todo-J0V6S",
+      "description": "Desc-J0V6S",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a535222e0c2fd3c8b6ec627",
+      "createdAt": "2026-07-12T08:36:52.463Z",
+      "updatedAt": "2026-07-12T08:36:52.463Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a535224e0c2fd3c8b6ec62c",
+      "title": "Todo-5QJ12",
+      "description": "Desc-5QJ12",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a535222e0c2fd3c8b6ec627",
+      "createdAt": "2026-07-12T08:36:52.405Z",
+      "updatedAt": "2026-07-12T08:36:52.405Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a535224e0c2fd3c8b6ec62a",
+      "title": "Todo-D0QD8",
+      "description": "Desc-D0QD8",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a535222e0c2fd3c8b6ec627",
+      "createdAt": "2026-07-12T08:36:52.347Z",
+      "updatedAt": "2026-07-12T08:36:52.347Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}
