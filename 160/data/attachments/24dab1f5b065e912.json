@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-CP99W",
+    "description": "Desc-CP99W",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a54957bd91cc8e420ff966c",
+    "_id": "6a54957dd91cc8e420ff966f",
+    "createdAt": "2026-07-13T07:36:29.148Z",
+    "updatedAt": "2026-07-13T07:36:29.148Z",
+    "__v": 0
+  }
+}

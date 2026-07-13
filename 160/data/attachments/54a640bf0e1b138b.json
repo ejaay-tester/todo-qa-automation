@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-PARAD",
+    "description": "Desc-PARAD",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a54955fd91cc8e420ff9608",
+    "_id": "6a549561d91cc8e420ff960b",
+    "createdAt": "2026-07-13T07:36:01.397Z",
+    "updatedAt": "2026-07-13T07:36:01.397Z",
+    "__v": 0
+  }
+}

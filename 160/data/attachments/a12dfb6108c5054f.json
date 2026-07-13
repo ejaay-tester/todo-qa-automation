@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-N40KY",
+    "description": "Desc-N40KY",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a54958dd91cc8e420ff96a8",
+    "_id": "6a54958fd91cc8e420ff96ad",
+    "createdAt": "2026-07-13T07:36:47.080Z",
+    "updatedAt": "2026-07-13T07:36:47.080Z",
+    "__v": 0
+  }
+}

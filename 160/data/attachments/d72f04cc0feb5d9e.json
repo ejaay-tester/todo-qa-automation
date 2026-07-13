@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-K3SOW",
+    "description": "Desc-K3SOW",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a54958fd91cc8e420ff96ba",
+    "_id": "6a549591d91cc8e420ff96bd",
+    "createdAt": "2026-07-13T07:36:49.338Z",
+    "updatedAt": "2026-07-13T07:36:49.338Z",
+    "__v": 0
+  }
+}
