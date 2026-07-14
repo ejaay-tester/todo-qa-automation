@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-RD8HP",
+    "description": "Desc-RD8HP",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a55d995a3562d1c8f92609e",
+    "_id": "6a55d997a3562d1c8f9260a1",
+    "createdAt": "2026-07-14T06:39:19.266Z",
+    "updatedAt": "2026-07-14T06:39:19.266Z",
+    "__v": 0
+  }
+}

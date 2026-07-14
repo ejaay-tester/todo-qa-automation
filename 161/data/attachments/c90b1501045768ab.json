@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-8I2CI",
+    "description": "Desc-8I2CI",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a55d965a3562d1c8f925fec",
+    "_id": "6a55d966a3562d1c8f925fef",
+    "createdAt": "2026-07-14T06:38:30.987Z",
+    "updatedAt": "2026-07-14T06:38:30.987Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-7GPCX",
+    "description": "Desc-7GPCX",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a55d948a3562d1c8f925f88",
+    "_id": "6a55d94aa3562d1c8f925f8b",
+    "createdAt": "2026-07-14T06:38:02.108Z",
+    "updatedAt": "2026-07-14T06:38:02.108Z",
+    "__v": 0
+  }
+}

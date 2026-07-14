@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-6PTXD",
+    "description": "Desc-6PTXD",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a55d998a3562d1c8f9260aa",
+    "_id": "6a55d999a3562d1c8f9260ad",
+    "createdAt": "2026-07-14T06:39:21.805Z",
+    "updatedAt": "2026-07-14T06:39:21.805Z",
+    "__v": 0
+  }
+}

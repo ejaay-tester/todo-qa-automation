@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-IA0LZ",
+    "description": "Desc-IA0LZ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a55d993a3562d1c8f92608c",
+    "_id": "6a55d994a3562d1c8f926093",
+    "createdAt": "2026-07-14T06:39:16.942Z",
+    "updatedAt": "2026-07-14T06:39:16.942Z",
+    "__v": 0
+  }
+}

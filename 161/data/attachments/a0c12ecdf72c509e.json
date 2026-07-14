@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-PTAC4",
+    "description": "Desc-PTAC4",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a55d981a3562d1c8f926050",
+    "_id": "6a55d982a3562d1c8f926053",
+    "createdAt": "2026-07-14T06:38:58.552Z",
+    "updatedAt": "2026-07-14T06:38:58.552Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-EU8B6",
+    "description": "Desc-EU8B6",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a55d962a3562d1c8f925fe2",
+    "_id": "6a55d963a3562d1c8f925fe5",
+    "createdAt": "2026-07-14T06:38:27.405Z",
+    "updatedAt": "2026-07-14T06:38:27.405Z",
+    "__v": 0
+  }
+}

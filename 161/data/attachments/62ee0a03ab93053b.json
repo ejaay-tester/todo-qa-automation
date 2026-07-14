@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-NEEG6",
+    "description": "Desc-NEEG6",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a55d97da3562d1c8f926046",
+    "_id": "6a55d97fa3562d1c8f926049",
+    "createdAt": "2026-07-14T06:38:55.073Z",
+    "updatedAt": "2026-07-14T06:38:55.073Z",
+    "__v": 0
+  }
+}
