@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-AOTEQ",
+    "description": "Desc-AOTEQ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a57297e647ed85339f0ec92",
+    "_id": "6a57297f647ed85339f0ec97",
+    "createdAt": "2026-07-15T06:32:31.912Z",
+    "updatedAt": "2026-07-15T06:32:31.912Z",
+    "__v": 0
+  }
+}

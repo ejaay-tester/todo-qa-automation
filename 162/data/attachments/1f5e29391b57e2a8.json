@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-ZGRC8",
+    "description": "Desc-ZGRC8",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a572979647ed85339f0ec81",
+    "_id": "6a57297a647ed85339f0ec84",
+    "createdAt": "2026-07-15T06:32:26.477Z",
+    "updatedAt": "2026-07-15T06:32:26.477Z",
+    "__v": 0
+  }
+}

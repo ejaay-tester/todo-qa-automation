@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-KXHCV",
+    "description": "Desc-KXHCV",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a572968647ed85339f0ec34",
+    "_id": "6a572969647ed85339f0ec3b",
+    "createdAt": "2026-07-15T06:32:09.960Z",
+    "updatedAt": "2026-07-15T06:32:09.960Z",
+    "__v": 0
+  }
+}

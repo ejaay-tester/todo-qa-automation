@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-WPXR2",
+    "description": "Desc-WPXR2",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a57297c647ed85339f0ec8a",
+    "_id": "6a57297d647ed85339f0ec8d",
+    "createdAt": "2026-07-15T06:32:29.773Z",
+    "updatedAt": "2026-07-15T06:32:29.773Z",
+    "__v": 0
+  }
+}

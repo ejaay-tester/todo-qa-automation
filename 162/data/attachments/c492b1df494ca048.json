@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-SNUT1",
+    "description": "Desc-SNUT1",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a572973647ed85339f0ec63",
+    "_id": "6a572975647ed85339f0ec68",
+    "createdAt": "2026-07-15T06:32:21.441Z",
+    "updatedAt": "2026-07-15T06:32:21.441Z",
+    "__v": 0
+  }
+}
