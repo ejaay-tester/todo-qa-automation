@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-KB39M",
+    "description": "Desc-KB39M",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5882de2ab7c55717d54ef1",
+    "_id": "6a5882df2ab7c55717d54ef4",
+    "createdAt": "2026-07-16T07:06:07.569Z",
+    "updatedAt": "2026-07-16T07:06:07.569Z",
+    "__v": 0
+  }
+}

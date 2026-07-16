@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-LU9VB",
+    "description": "Desc-LU9VB",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5882c52ab7c55717d54ea3",
+    "_id": "6a5882c72ab7c55717d54ea6",
+    "createdAt": "2026-07-16T07:05:43.296Z",
+    "updatedAt": "2026-07-16T07:05:43.296Z",
+    "__v": 0
+  }
+}

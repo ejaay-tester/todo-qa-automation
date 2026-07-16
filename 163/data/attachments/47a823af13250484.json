@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-XRCQI",
+    "description": "Desc-XRCQI",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5882e42ab7c55717d54f07",
+    "_id": "6a5882e62ab7c55717d54f0a",
+    "createdAt": "2026-07-16T07:06:14.293Z",
+    "updatedAt": "2026-07-16T07:06:14.293Z",
+    "__v": 0
+  }
+}

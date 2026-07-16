@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-3MBS6",
+    "description": "Desc-3MBS6",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5882f82ab7c55717d54f43",
+    "_id": "6a5882fa2ab7c55717d54f4a",
+    "createdAt": "2026-07-16T07:06:34.258Z",
+    "updatedAt": "2026-07-16T07:06:34.258Z",
+    "__v": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-KACJ6",
+    "description": "Desc-KACJ6",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5882fe2ab7c55717d54f61",
+    "_id": "6a5882ff2ab7c55717d54f64",
+    "createdAt": "2026-07-16T07:06:39.670Z",
+    "updatedAt": "2026-07-16T07:06:39.670Z",
+    "__v": 0
+  }
+}

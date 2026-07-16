@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-0PJA5",
+    "description": "Desc-0PJA5",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5882da2ab7c55717d54edf",
+    "_id": "6a5882db2ab7c55717d54ee2",
+    "createdAt": "2026-07-16T07:06:03.580Z",
+    "updatedAt": "2026-07-16T07:06:03.580Z",
+    "__v": 0
+  }
+}

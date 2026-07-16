@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-RMFOF",
+    "description": "Desc-RMFOF",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5883022ab7c55717d54f6b",
+    "_id": "6a5883032ab7c55717d54f6e",
+    "createdAt": "2026-07-16T07:06:43.489Z",
+    "updatedAt": "2026-07-16T07:06:43.489Z",
+    "__v": 0
+  }
+}
