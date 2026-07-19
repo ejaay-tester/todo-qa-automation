@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-ZKCM0",
+    "description": "Desc-ZKCM0",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5cb3e35c0198beecac572f",
+    "_id": "6a5cb3e45c0198beecac5732",
+    "createdAt": "2026-07-19T11:24:20.563Z",
+    "updatedAt": "2026-07-19T11:24:20.563Z",
+    "__v": 0
+  }
+}

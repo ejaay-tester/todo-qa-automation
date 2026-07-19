@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-XASPR",
+    "description": "Desc-XASPR",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5cb3fd5c0198beecac5793",
+    "_id": "6a5cb3ff5c0198beecac5796",
+    "createdAt": "2026-07-19T11:24:47.075Z",
+    "updatedAt": "2026-07-19T11:24:47.075Z",
+    "__v": 0
+  }
+}

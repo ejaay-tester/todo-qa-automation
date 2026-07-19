@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-SJMRQ",
+    "description": "Desc-SJMRQ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5cb3f55c0198beecac576b",
+    "_id": "6a5cb3f65c0198beecac5770",
+    "createdAt": "2026-07-19T11:24:38.674Z",
+    "updatedAt": "2026-07-19T11:24:38.674Z",
+    "__v": 0
+  }
+}

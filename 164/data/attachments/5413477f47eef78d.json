@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-ACR2O",
+    "description": "Desc-ACR2O",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5cb3dc5c0198beecac5719",
+    "_id": "6a5cb3de5c0198beecac571c",
+    "createdAt": "2026-07-19T11:24:14.206Z",
+    "updatedAt": "2026-07-19T11:24:14.206Z",
+    "__v": 0
+  }
+}

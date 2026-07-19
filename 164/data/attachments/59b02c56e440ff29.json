@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-JTMCF",
+    "description": "Desc-JTMCF",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5cb3f55c0198beecac576b",
+    "_id": "6a5cb3f65c0198beecac5772",
+    "createdAt": "2026-07-19T11:24:38.676Z",
+    "updatedAt": "2026-07-19T11:24:38.676Z",
+    "__v": 0
+  }
+}

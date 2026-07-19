@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-HNY4L",
+    "description": "Desc-HNY4L",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5cb3c65c0198beecac56cb",
+    "_id": "6a5cb3c85c0198beecac56ce",
+    "createdAt": "2026-07-19T11:23:52.056Z",
+    "updatedAt": "2026-07-19T11:23:52.056Z",
+    "__v": 0
+  }
+}

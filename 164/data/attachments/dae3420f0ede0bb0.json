@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-P6DCZ",
+    "description": "Desc-P6DCZ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5cb3d95c0198beecac5707",
+    "_id": "6a5cb3da5c0198beecac570e",
+    "createdAt": "2026-07-19T11:24:10.927Z",
+    "updatedAt": "2026-07-19T11:24:10.927Z",
+    "__v": 0
+  }
+}
