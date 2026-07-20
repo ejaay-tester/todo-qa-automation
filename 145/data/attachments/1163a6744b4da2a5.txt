@@ -1,6 +1,0 @@
-Registering user...
-✅ Registered user: testuser_1782625687913@yopmail.com
-Logging in...
-✅ Logged-in user: testuser_1782625687913@yopmail.com
-[CLEANUP COMPLETED] Deleted 1 todo(s) in parallel.
-🧹 Deleting test user: testuser_1782625687913@yopmail.com

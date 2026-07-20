@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-VWZMB",
+    "description": "Desc-VWZMB",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5dd6c51ec5e9ea352dbc45",
+    "_id": "6a5dd6c71ec5e9ea352dbc48",
+    "createdAt": "2026-07-20T08:05:27.254Z",
+    "updatedAt": "2026-07-20T08:05:27.254Z",
+    "__v": 0
+  }
+}

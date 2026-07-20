@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-VJ7RO",
+    "description": "Desc-VJ7RO",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5dd6c21ec5e9ea352dbc33",
+    "_id": "6a5dd6c31ec5e9ea352dbc36",
+    "createdAt": "2026-07-20T08:05:23.537Z",
+    "updatedAt": "2026-07-20T08:05:23.537Z",
+    "__v": 0
+  }
+}

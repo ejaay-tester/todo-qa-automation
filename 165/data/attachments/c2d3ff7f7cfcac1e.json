@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-XPZ1H",
+    "description": "Desc-XPZ1H",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5dd6e01ec5e9ea352dbcaf",
+    "_id": "6a5dd6e11ec5e9ea352dbcb2",
+    "createdAt": "2026-07-20T08:05:53.625Z",
+    "updatedAt": "2026-07-20T08:05:53.625Z",
+    "__v": 0
+  }
+}

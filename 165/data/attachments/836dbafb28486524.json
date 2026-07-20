@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-FQEE2",
+    "description": "Desc-FQEE2",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5dd6d41ec5e9ea352dbc80",
+    "_id": "6a5dd6d61ec5e9ea352dbc83",
+    "createdAt": "2026-07-20T08:05:42.329Z",
+    "updatedAt": "2026-07-20T08:05:42.329Z",
+    "__v": 0
+  }
+}

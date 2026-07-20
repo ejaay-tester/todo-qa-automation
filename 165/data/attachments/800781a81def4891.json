@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-X8SWW",
+    "description": "Desc-X8SWW",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5dd6d21ec5e9ea352dbc74",
+    "_id": "6a5dd6d31ec5e9ea352dbc77",
+    "createdAt": "2026-07-20T08:05:39.457Z",
+    "updatedAt": "2026-07-20T08:05:39.457Z",
+    "__v": 0
+  }
+}

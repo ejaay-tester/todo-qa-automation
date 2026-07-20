@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-IA648",
+    "description": "Desc-IA648",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5dd6bf1ec5e9ea352dbc2b",
+    "_id": "6a5dd6c11ec5e9ea352dbc2e",
+    "createdAt": "2026-07-20T08:05:21.281Z",
+    "updatedAt": "2026-07-20T08:05:21.281Z",
+    "__v": 0
+  }
+}

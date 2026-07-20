@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-JQYUN",
+    "description": "Desc-JQYUN",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5dd6cc1ec5e9ea352dbc5a",
+    "_id": "6a5dd6ce1ec5e9ea352dbc5d",
+    "createdAt": "2026-07-20T08:05:34.137Z",
+    "updatedAt": "2026-07-20T08:05:34.137Z",
+    "__v": 0
+  }
+}
