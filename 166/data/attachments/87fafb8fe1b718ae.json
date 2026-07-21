@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-GGAUO",
+    "description": "Desc-GGAUO",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5eeaa2ed25672df7c281b9",
+    "_id": "6a5eeaa4ed25672df7c281bc",
+    "createdAt": "2026-07-21T03:42:28.172Z",
+    "updatedAt": "2026-07-21T03:42:28.172Z",
+    "__v": 0
+  }
+}

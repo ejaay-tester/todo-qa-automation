@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-PC7OW",
+    "description": "Desc-PC7OW",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5eea88ed25672df7c28155",
+    "_id": "6a5eea89ed25672df7c28158",
+    "createdAt": "2026-07-21T03:42:01.880Z",
+    "updatedAt": "2026-07-21T03:42:01.880Z",
+    "__v": 0
+  }
+}

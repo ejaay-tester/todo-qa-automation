@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-QNWMS",
+    "description": "Desc-QNWMS",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5eeab5ed25672df7c281f5",
+    "_id": "6a5eeab6ed25672df7c281fc",
+    "createdAt": "2026-07-21T03:42:46.394Z",
+    "updatedAt": "2026-07-21T03:42:46.394Z",
+    "__v": 0
+  }
+}

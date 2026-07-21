@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a5eeab6ed25672df7c281fc",
+      "title": "Todo-QNWMS",
+      "description": "Desc-QNWMS",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a5eeab5ed25672df7c281f5",
+      "createdAt": "2026-07-21T03:42:46.394Z",
+      "updatedAt": "2026-07-21T03:42:46.394Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a5eeab6ed25672df7c281fa",
+      "title": "Todo-E89DW",
+      "description": "Desc-E89DW",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a5eeab5ed25672df7c281f5",
+      "createdAt": "2026-07-21T03:42:46.391Z",
+      "updatedAt": "2026-07-21T03:42:46.391Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a5eeab6ed25672df7c281f8",
+      "title": "Todo-BVBVO",
+      "description": "Desc-BVBVO",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a5eeab5ed25672df7c281f5",
+      "createdAt": "2026-07-21T03:42:46.370Z",
+      "updatedAt": "2026-07-21T03:42:46.370Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

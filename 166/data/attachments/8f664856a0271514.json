@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-4REPU",
+    "description": "Desc-4REPU",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5eeab9ed25672df7c28213",
+    "_id": "6a5eeabbed25672df7c28216",
+    "createdAt": "2026-07-21T03:42:51.162Z",
+    "updatedAt": "2026-07-21T03:42:51.162Z",
+    "__v": 0
+  }
+}

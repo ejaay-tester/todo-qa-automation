@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-16TCI",
+    "description": "Desc-16TCI",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a5eea9aed25672df7c28191",
+    "_id": "6a5eea9bed25672df7c28194",
+    "createdAt": "2026-07-21T03:42:19.963Z",
+    "updatedAt": "2026-07-21T03:42:19.963Z",
+    "__v": 0
+  }
+}
