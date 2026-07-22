@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a60908810804b77fd3f85ad",
+      "title": "Todo-R56RT",
+      "description": "Desc-R56RT",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a60908710804b77fd3f85a6",
+      "createdAt": "2026-07-22T09:42:32.629Z",
+      "updatedAt": "2026-07-22T09:42:32.629Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a60908810804b77fd3f85ab",
+      "title": "Todo-0Z8MT",
+      "description": "Desc-0Z8MT",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a60908710804b77fd3f85a6",
+      "createdAt": "2026-07-22T09:42:32.531Z",
+      "updatedAt": "2026-07-22T09:42:32.531Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a60908810804b77fd3f85a9",
+      "title": "Todo-B1XLO",
+      "description": "Desc-B1XLO",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a60908710804b77fd3f85a6",
+      "createdAt": "2026-07-22T09:42:32.486Z",
+      "updatedAt": "2026-07-22T09:42:32.486Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

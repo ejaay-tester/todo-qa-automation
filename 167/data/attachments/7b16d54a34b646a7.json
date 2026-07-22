@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-PXG9Q",
+    "description": "Desc-PXG9Q",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a60906810804b77fd3f8542",
+    "_id": "6a60906910804b77fd3f8547",
+    "createdAt": "2026-07-22T09:42:01.556Z",
+    "updatedAt": "2026-07-22T09:42:01.556Z",
+    "__v": 0
+  }
+}

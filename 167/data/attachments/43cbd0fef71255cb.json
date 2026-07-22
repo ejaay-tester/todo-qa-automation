@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-FVXC1",
+    "description": "Desc-FVXC1",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a60908c10804b77fd3f85c4",
+    "_id": "6a60908d10804b77fd3f85c7",
+    "createdAt": "2026-07-22T09:42:37.875Z",
+    "updatedAt": "2026-07-22T09:42:37.875Z",
+    "__v": 0
+  }
+}

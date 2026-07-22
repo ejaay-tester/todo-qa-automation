@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-XIVQG",
+    "description": "Desc-XIVQG",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a6090a910804b77fd3f8628",
+    "_id": "6a6090ab10804b77fd3f862b",
+    "createdAt": "2026-07-22T09:43:07.283Z",
+    "updatedAt": "2026-07-22T09:43:07.283Z",
+    "__v": 0
+  }
+}

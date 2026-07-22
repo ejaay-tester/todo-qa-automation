@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-E49KZ",
+    "description": "Desc-E49KZ",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a6090a410804b77fd3f860a",
+    "_id": "6a6090a510804b77fd3f8611",
+    "createdAt": "2026-07-22T09:43:01.857Z",
+    "updatedAt": "2026-07-22T09:43:01.857Z",
+    "__v": 0
+  }
+}

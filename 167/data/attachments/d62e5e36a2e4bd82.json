@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-B1XLO",
+    "description": "Desc-B1XLO",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a60908710804b77fd3f85a6",
+    "_id": "6a60908810804b77fd3f85a9",
+    "createdAt": "2026-07-22T09:42:32.486Z",
+    "updatedAt": "2026-07-22T09:42:32.486Z",
+    "__v": 0
+  }
+}

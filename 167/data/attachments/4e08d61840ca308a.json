@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-WFGU6",
+    "description": "Desc-WFGU6",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a60906e10804b77fd3f8560",
+    "_id": "6a60907010804b77fd3f8563",
+    "createdAt": "2026-07-22T09:42:08.094Z",
+    "updatedAt": "2026-07-22T09:42:08.094Z",
+    "__v": 0
+  }
+}

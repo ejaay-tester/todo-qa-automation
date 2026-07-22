@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-ZHS04",
+    "description": "Desc-ZHS04",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a60909010804b77fd3f85ce",
+    "_id": "6a60909110804b77fd3f85d1",
+    "createdAt": "2026-07-22T09:42:41.804Z",
+    "updatedAt": "2026-07-22T09:42:41.804Z",
+    "__v": 0
+  }
+}

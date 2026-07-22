@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-HWUGL",
+    "description": "Desc-HWUGL",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a60906b10804b77fd3f8554",
+    "_id": "6a60906d10804b77fd3f8557",
+    "createdAt": "2026-07-22T09:42:05.202Z",
+    "updatedAt": "2026-07-22T09:42:05.202Z",
+    "__v": 0
+  }
+}

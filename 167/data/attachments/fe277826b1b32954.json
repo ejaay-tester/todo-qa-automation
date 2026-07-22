@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-YRCSB",
+    "description": "Desc-YRCSB",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a60907210804b77fd3f856a",
+    "_id": "6a60907410804b77fd3f856d",
+    "createdAt": "2026-07-22T09:42:12.088Z",
+    "updatedAt": "2026-07-22T09:42:12.088Z",
+    "__v": 0
+  }
+}
