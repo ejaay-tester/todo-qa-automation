@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Todos retrieved successfully",
+  "data": [
+    {
+      "_id": "6a6213db29dcbc18800ec33d",
+      "title": "Todo-OS68W",
+      "description": "Desc-OS68W",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a6213d929dcbc18800ec336",
+      "createdAt": "2026-07-23T13:15:07.387Z",
+      "updatedAt": "2026-07-23T13:15:07.387Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a6213db29dcbc18800ec33b",
+      "title": "Todo-1RWX5",
+      "description": "Desc-1RWX5",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a6213d929dcbc18800ec336",
+      "createdAt": "2026-07-23T13:15:07.237Z",
+      "updatedAt": "2026-07-23T13:15:07.237Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a6213db29dcbc18800ec339",
+      "title": "Todo-A46KL",
+      "description": "Desc-A46KL",
+      "completed": false,
+      "priority": "medium",
+      "userId": "6a6213d929dcbc18800ec336",
+      "createdAt": "2026-07-23T13:15:07.212Z",
+      "updatedAt": "2026-07-23T13:15:07.212Z",
+      "__v": 0
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "totalItems": 3,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

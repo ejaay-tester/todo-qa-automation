@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-8KJVG",
+    "description": "Desc-8KJVG",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a6213e329dcbc18800ec35d",
+    "_id": "6a6213e529dcbc18800ec360",
+    "createdAt": "2026-07-23T13:15:17.126Z",
+    "updatedAt": "2026-07-23T13:15:17.126Z",
+    "__v": 0
+  }
+}

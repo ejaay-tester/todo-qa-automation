@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-YGTU2",
+    "description": "Desc-YGTU2",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a6213cd29dcbc18800ec307",
+    "_id": "6a6213cf29dcbc18800ec30e",
+    "createdAt": "2026-07-23T13:14:55.094Z",
+    "updatedAt": "2026-07-23T13:14:55.094Z",
+    "__v": 0
+  }
+}

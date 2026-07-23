@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-3QHBX",
+    "description": "Desc-3QHBX",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a6213ec29dcbc18800ec383",
+    "_id": "6a6213ed29dcbc18800ec386",
+    "createdAt": "2026-07-23T13:15:25.525Z",
+    "updatedAt": "2026-07-23T13:15:25.525Z",
+    "__v": 0
+  }
+}

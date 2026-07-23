@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-1RWX5",
+    "description": "Desc-1RWX5",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a6213d929dcbc18800ec336",
+    "_id": "6a6213db29dcbc18800ec33b",
+    "createdAt": "2026-07-23T13:15:07.237Z",
+    "updatedAt": "2026-07-23T13:15:07.237Z",
+    "__v": 0
+  }
+}

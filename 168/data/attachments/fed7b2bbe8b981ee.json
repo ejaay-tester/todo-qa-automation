@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-IR2D6",
+    "description": "Desc-IR2D6",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a6213d329dcbc18800ec325",
+    "_id": "6a6213d529dcbc18800ec328",
+    "createdAt": "2026-07-23T13:15:01.228Z",
+    "updatedAt": "2026-07-23T13:15:01.228Z",
+    "__v": 0
+  }
+}

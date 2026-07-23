@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-GTAIR",
+    "description": "Desc-GTAIR",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a6213d729dcbc18800ec32e",
+    "_id": "6a6213d829dcbc18800ec331",
+    "createdAt": "2026-07-23T13:15:04.816Z",
+    "updatedAt": "2026-07-23T13:15:04.816Z",
+    "__v": 0
+  }
+}

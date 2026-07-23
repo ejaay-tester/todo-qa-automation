@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Todo created successfully",
+  "data": {
+    "title": "Todo-MCGKT",
+    "description": "Desc-MCGKT",
+    "completed": false,
+    "priority": "medium",
+    "userId": "6a6213ca29dcbc18800ec2ff",
+    "_id": "6a6213cc29dcbc18800ec302",
+    "createdAt": "2026-07-23T13:14:52.561Z",
+    "updatedAt": "2026-07-23T13:14:52.561Z",
+    "__v": 0
+  }
+}
